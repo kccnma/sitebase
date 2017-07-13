@@ -1,0 +1,134 @@
+/* Header & Footer */
+.site-header,
+.site-footer {
+    a {
+        color: #333;
+    }
+
+    a:hover {
+        color: $link-color-dark;
+        text-decoration: none;
+    }
+}
+
+/* Header Only */
+.site-header {
+    .container {
+        padding-top: 1em;
+        padding-bottom: 0;
+    }
+    .container:after {
+        display: block;
+        padding-top: .5em;
+        border-bottom: 1px solid $border-color;
+    }
+    &.no-border .container:after {
+        border-bottom: none;
+    }
+}
+
+/* Site Branding */
+.site-branding {
+    text-align: center;
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: normal;
+        font-style: normal;
+        margin: 0;
+        color: #666;
+        padding: .5em 0 .4em 0;
+
+        a {
+            font-weight: bold;
+            display: inline-block;
+        }
+    }
+
+    @media (min-width: $breakpoint-small)  {
+            float: left;
+    }
+}
+
+/* Footer Only */
+.site-footer {
+    .container{
+        padding-top: 0;
+        padding-bottom: 1em;
+    }
+    .container:before {
+        display: block;
+        content: '';
+        border-top: 1px solid $border-color;
+        padding-top: .5em;
+    }
+    &.no-border .container:before {
+        border-top: none;
+    }
+}
+
+
+
+/* Main Sections */
+section {
+    padding: 1.5em 0;
+}
+
+
+
+/* Hero Sections */
+.hero {
+    background: $accent-color;
+    padding: 4em 1em 3em 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    h1, h2 {
+        font-size: 3em;
+        line-height: 1.1em;
+        max-width: 10em;
+    }
+
+    p {
+        max-width: 22em;
+    }
+
+    &.text-centered {
+        h1,h2,h3,h4,h5,h6, p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &.full-width {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* Colored Sections */
+
+section.superlightgrey {
+    background: #f0f0f0;
+    padding: 5em 0 2em 0;
+}
+
+section.lightgrey {
+    background: #e0e0e0;
+    padding: 5em 0 2em 0;
+}
+
+section.darkgrey {
+    background: #222;
+    color: #fff;
+    padding: 5em 0 2em 0;
+}
+
+section.hero {
+
+    &.superlightgrey,
+    &.lightgrey,
+    &.darkgrey {
+        padding: 6em 1em 5em 1em;
+    }
+}
