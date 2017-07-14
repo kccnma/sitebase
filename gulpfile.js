@@ -36,7 +36,7 @@ function onWarning(error) { return handleError.call(this, 'warning', error) }
 gulp.task('sync', function() {
     browserSync.init('', {
         server: {
-            baseDir: 'dist/'
+            baseDir: ''
         }
     })
 })
@@ -53,6 +53,7 @@ gulp.task('sass', function() {
     return gulp.src('src/scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(browserSync.reload({ stream: true }))
 })
 
@@ -68,6 +69,7 @@ gulp.task('images', function() {
 gulp.task('js', function() {
     return gulp.src('src/js/**/*.js')
         .pipe(gulp.dest('dist/js/'))
+        .pipe(gulp.dest('docs/js/'))
         .pipe(browserSync.reload({ stream: true }))
 })
 

@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Site Base | Documentation</title>
+
+<!-- HTML5 -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    
+<!-- VIEWPORT FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<!-- MAIN CSS FILE -->    
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- GITHUB EMBED CSS FILE --> 
+<link rel="stylesheet" type="text/css" href="css/github-embed.css">
+
+    
+</head>
+
+<body> 
+    
+<header class="site-header toggle-nav">
+    <div class="container">
+        <div class="site-branding">
+            <h1><a href="index.html">Site Base</a> / Docs</h1>
+        </div>
+        <nav class="site-navigation">
+            <div class="menu navicon">Menu</div>
+            <ul class="nav">
+                <li class="hidden"><a href="index.html">Home</a></li>
+                <!--<li><a href="lessons.html">Get Started</a></li>-->
+                <li><a href="documentation.html">Documentation</a></li>
+                <!--<li><a href="examples.html">Examples</a></li>-->
+            </ul>
+        </nav>
+    </div><!-- END CONTAINER -->
+</header>
+
+<main class="site-main">
+    <div class="container">
+        
+            <section class="hero text-centered">
+                <h2>Site Base Docs</h2>
+                <p>An overview of framework features including core HTML elements and default CSS settings.</p>
+            </section>
+        
+        <div class="subpage-main">
+            
+            <section id="getstarted">
+                
+                <h2 class="section-header">Folder Structure</h2>
+                <pre><code>
+base/
+├── index.html
+├── css/
+│   ├── style.css
+└── js/
+    ├── scripts.js
+    
+</code></pre>
+                
+                
+                <h2 class="section-header">Starter Template</h2>
+                
+                <h3>Github embed test</h3>
+                <div class="github-embedder" id="githubembed-1"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+                <script src="js/github-embed.min.js"></script>
+                <script>
+                    githubEmbed('#githubembed-1', {
+                        "owner": "kccnma",
+                        "repo": "sitebase",
+                        "ref": "master",
+                        "embed": [
+                            {
+                                "type": "html",
+                                "label": "HTML",
+                                "path": "src/index.html"
+                            }
+                        ]
+                    });
+                </script>
+                
+                <h3 id="html">HTML</h3>
+                <p>HTML5 and Mobile ready with links to external CSS and JS files.</p>
+<pre><code>
+&#60;!doctype html&#62;
+&#60;html lang="en"&#62;
+&#60;head&#62;
+    &#60;meta charset="utf-8" /&#62;
+    &#60;title&#62;&#60;/title&#62;
+    
+    &#60;!-- HTML5 --&#62;
+    &#60;!--[if lt IE 9]&#62;
+        &#60;script src="http://html5shim.googlecode.com/svn/trunk/html5.js">&#60;/script&#62;
+    &#60;![endif]--&#62;
+    
+    &#60;!-- VIEWPORT FOR MOBILE --&#62;
+    &#60;meta name="viewport" content="width=device-width, initial-scale=1"&#62;
+    
+    &#60;!-- MAIN CSS --&#62;
+    &#60;link href="css/style.css" rel="stylesheet" type="text/css"&#62;
+    
+&#60;/head&#62;
+&#60;body&#62;
+
+&#60;!-- MAIN JS --&#62;
+&#60;script src="js/script.js">&#60;/script&#62; 
+
+&#60;/body&#62;
+&#60;/html&#62;
+
+</code></pre>
+                
+                <h3 id="css">CSS</h3>
+                <p>Modular CSS inside of one style.css file.</p>
+<pre><code>
+#BASE CSS (Initital Setup)
+--------------------------
+    #BASE START 
+        #HTML5
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS 
+            #PARAGRAPHS
+            #LINKS
+            #LISTS
+            #BLOCKQUOTES
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+            #FORMS
+    #BASE LAYOUT
+        #MEDIAQUERIES
+        #GRID
+            #CLEARFIX
+    #BASE SITE
+        #STRUCTURE
+            #HEADER
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #NAVIGATION
+            #TOGGLE-NAV (Default)
+</code></pre>
+                
+                <h3 id="css">JS</h3>
+                <p>Vanilla Javascript inside of one script.js file.</p>
+<pre><code>
+document.addEventListener('DOMContentLoaded', function() {
+
+    //JAVASCRIPT FUNCTIONS GO HERE
+    
+})
+</code></pre>
+                
+                <p><a class="button" href="#">Download Base Starter Files</a></p>
+                
+            </section>
+        
+            <section id="typography">
+                <h2 class="section-header">Typography</h2>
+
+                <h1 id="headings">This is a Heading 1</h1>
+                <h2>This is a Heading 2</h2>
+                <h3>This is a Heading 3</h3>
+                <h4>This is a Heading 4</h4>
+                <h5>This is a Heading 5</h5>
+                <h6>This is a Heading 6</h6>
+                
+<pre><code>&#60;h1&#62;This is a Heading 1&#60;/h1&#62;
+&#60;h2&#62;This is a Heading 2&#60;/h2&#62;
+&#60;h3&#62;This is a Heading 3&#60;/h3&#62;
+&#60;h4&#62;This is a Heading 4&#60;/h4&#62;
+&#60;h5&#62;This is a Heading 5&#60;/h5&#62;
+&#60;h6&#62;This is a Heading 6&#60;/h6&#62;
+</code></pre>
+
+                <p id="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla porttitor sagittis.</p>
+
+                <p>Suspendisse pulvinar bibendum laoreet. Suspendisse eget dignissim risus. Cras eget sodales enim. Phasellus accumsan dui metus, quis vulputate turpis congue at. Praesent rutrum consequat rhoncus. Maecenas adipiscing justo vitae massa porta pretium. In egestas orci vehicula, tempus lorem ut, facilisis metus. </p>
+
+                <p>Vivamus eu mollis velit. Maecenas id massa libero. Aliquam accumsan mauris vulputate purus volutpat vestibulum. Phasellus sed tellus id tortor ornare molestie. Quisque massa sapien, elementum sed tortor vitae, suscipit congue massa. Curabitur tempor arcu eget leo placerat, a porta augue pharetra. Nulla velit nibh, laoreet at hendrerit sit amet, adipiscing eget dolor. </p>
+                
+<pre><code>&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
+</code></pre>
+
+
+                <h4 id="lists">Unordered List:</h4>
+                <ul>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                    <li>Nested Unordered List:
+                        <ul>
+                          <li>List Item</li>
+                          <li>List Item</li>
+                        </ul>
+                    </li>
+                    <li>Nested Ordered List:
+                        <ol>
+                          <li>List Item</li>
+                          <li>List Item</li>
+                        </ol>
+                    </li>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                </ul>
+                
+<pre><code>&#60;ul&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+&#60;/ul&#62;
+</code></pre>
+
+                <h4>Ordered List:</h4>
+                <ol>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                    <li>Nested Unordered List:
+                        <ul>
+                          <li>List Item</li>
+                          <li>List Item</li>
+                        </ul>
+                    </li>
+                    <li>Nested Ordered List:
+                        <ol>
+                          <li>List Item</li>
+                          <li>List Item</li>
+                        </ol>
+                    </li>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                </ol>
+                
+<pre><code>&#60;ol&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+&#60;/ol&#62;
+</code></pre>
+
+                <h4 id="links">Links:</h4>
+                <p>This is a <a href="#">link</a>.</p>
+                
+<pre><code>&#60;a href="#"&#62;link&#60;/a&#62;
+</code></pre>
+
+                <h4 id="blockquotes">Blockquotes:</h4>
+                <blockquote>
+                    <p>This is a blockquote. Donec sed rhoncus massa. Suspendisse rutrum viverra felis. Vestibulum augue lacus, ullamcorper non suscipit nec, ornare et mauris. Proin mattis fermentum nibh quis gravida.</p>
+                    <cite>Citation Source</cite>
+                </blockquote>
+                
+<pre><code>&#60;blockquote&#62;
+    &#60;p&#62;This is a blockquote. Donec sed rhoncus massa. Suspendisse 
+    rutrum viverra felis. Vestibulum augue lacus, ullamcorper non 
+    suscipit nec, ornare et mauris. Proin mattis.&#60;/p&#62;
+    &#60;cite&#62;Citation Source&#60;/cite&#62;
+&#60;/blockquote&#62;
+</code></pre>
+
+
+                <h4 id="helpers">Helpers:</h4>
+                <p class="text-centered">This is center-aligned text</p>
+                
+<pre><code>&#60;p  class="text-centered"&#62;This is center-aligned text&#60;/p&#62;
+</code></pre>
+
+            </section>
+
+            <section id="media">
+
+                <h2 class="section-header">Media</h2>
+
+                <p id="images">This is a responsive image:</p>
+                <img src="http://placehold.it/1500x500" class="scale-with-grid" alt="placeholder">
+                
+<pre><code>&#60;img src="path/to/image.jpg" class="scale-with-grid" alt="placeholder" /&#62;
+</code></pre>
+
+            </section>
+
+            <section id="components">
+
+                <h2 class="section-header">UI Components</h2>
+
+                <h4 id="buttons">Buttons:</h4>
+
+                <a href="#" class="button">Default Link Button</a>
+                <a href="#" class="button alt">Alt Link Button</a>
+                <button>Default Button Element</button>
+                
+<pre><code>&#60;a href="#" class="button"&#62;Default Link Button&#60;/a&#62;
+&#60;a href="#" class="button alt"&#62;Alt Link Button&#60;/a&#62;
+&#60;button&#62;Default Button Element&#60;/button&#62;
+</code></pre>
+
+            </section>
+
+
+
+            <section class="demo">
+
+                <h2 id="mediaqueries" class="section-header">Media Queries</h2>
+                <p>Mobile-first media queries with four target screen sizes:</p>
+                <ul>
+                    <li>Small (Mobile): 0-767px+</li>
+                    <li>Medium (Tablet): min-width: 768px+</li>
+                    <li>Large (Notebook): min-width: 1050px+</li>
+                    <li>ExtraLarge (Desktop+): min-width: 1250px+</li>
+                </ul>
+                
+<pre><code>@media (min-width:  768px) { // FOR MEDIUM/TABLET SCREENS }
+@media (min-width: 1050px) { // FOR LARGE/NOTEBOOK SCREENS }
+@media (min-width: 1250px) { // FOR EXTRALARGE/DESKTOP+ SCREENS }
+</code></pre>
+
+                <h2 id="container" class="section-header">Container</h2>
+                <p>Reusable container div that is fluid width (percentage based) on small screens and fixed width on large screens.</p>
+                
+<pre><code>&#60;div class="container"&#62;&#60;/div&#62;
+</code></pre>
+
+                <h2 id="grid" class="section-header">Grid</h2>
+
+                <div class="row">
+                    <div class="one-whole column">
+                        <p>One Whole Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-half column">
+                        <p>One-half Column</p>
+                    </div>
+                    <div class="one-half column">
+                        <p>One-half Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                    <div class="two-thirds column">
+                        <p>Two-thirds Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                </div>
+                
+<pre><code>&#60;div class="row"&#62;
+    &#60;div class="one-half column"&#62;
+        &#60;p&#62;One-half Column&#60;/p&#62;
+    &#60;/div&#62;
+    &#60;div class="one-half column"&#62;
+        &#60;p&#62;One-half Column&#60;/p&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+</code></pre>
+                
+
+                <div class="row">
+                    <div class="one-half column centered">
+                        <p>One-half Column Centered</p>
+                    </div>
+                </div>
+                
+<pre><code>&#60;div class="row"&#62;
+    &#60;div class="one-half column centered"&#62;
+        &#60;p&#62;One-half Column Centered&#60;/p&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+</code></pre>
+
+            </section>
+
+            <section id="sitestructure">
+
+                <h2 class="section-header">Site Structure</h2>
+
+                <h3 id="headermainfooter">Header, Main Content Area, &amp; Footer</h3>
+
+                <p id="images">The base site structure consists of three main parts of a web page: the header, main, and footer.</p>
+                
+<pre><code>&#60;body&#62;
+
+    &#60;header class="site-header"&#62;
+    &#60;/header&#62;
+
+    &#60;main class="site-main"&#62;
+    &#60;/main&#62;
+
+    &#60;footer class="site-footer"&#62;
+    &#60;/footer&#62;
+
+&#60;/body&#62;
+</code></pre>
+
+                <h3 id="navigation">Page Sections</h3>
+
+                <p id="images">The main content area of all pages can be divided into multiple sections that can be placed either within a container (to constrain the content width) or outside of a container (to extend to the full-width of the browser). This base also includes default styling for a "hero" section.</p>
+                
+<pre><code>&#60;main class="site-main"&#62;
+
+    &#60;section class="hero"&#62;
+        &#60;div class="container"&#62;
+            HERO SECTION CONTENT
+        &#60;/div&#62;
+    &#60;/section&#62;
+    
+    &#60;div class="container"&#62;
+        &#60;section&#62;
+            SECTION CONTENT
+        &#60;/section&#62;
+        &#60;section&#62;
+            SECTION CONTENT
+        &#60;/section&#62;
+    &#60;/div&#62;
+    
+&#60;/main&#62;
+</code></pre>
+
+                <h3 id="navigation">Site Navigation</h3>
+
+                <p id="images">This base consists of two default site navigation areas: main/top nav (header) and bottom nav (footer), both using a "site-navigation" class.</p>
+                
+<pre><code>&#60;nav class="site-navigation"&#62;
+    &#60;ul class="nav"&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;
+</code></pre>
+
+            </section>
+            
+        </div>
+        
+        
+         
+        <aside class="subpage-sidebar">
+            <h4 class="subheader">Overview</h4>
+            <nav class="subpage-navigation">
+                <ul class="nav group">
+                    <li><a href="#folder">Folder Structure</a></li>
+                    <li><a href="#startertemplate">Starter Template</a>
+                        <ul>
+                            <li><a href="#html">HTML</a></li>
+                            <li><a href="#css">CSS</a></li>
+                            <li><a href="#js">JS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h4 class="subheader">Core CSS</h4>
+            <nav class="subpage-navigation">
+                <ul class="nav group">
+                    <li><a href="#typography">Typography</a>
+                        <ul>
+                            <li><a href="#headings">Headings</a></li>
+                            <li><a href="#bodytext">Body Text</a></li>
+                            <li><a href="#lists">Lists</a></li>
+                            <li><a href="#links">Links</a></li>
+                            <li><a href="#blockquotes">Blockquotes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#media">Media</a>
+                        <ul>
+                            <li><a href="#images">Images</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#components">Components</a>
+                        <ul>
+                            <li><a href="#buttons">Buttons</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h4 class="subheader">Layout</h4>
+            <nav class="subpage-navigation">
+                <ul class="nav group">
+                    <li><a href="#mediaqueries">Media Queries</a></li>
+                    <li><a href="#container">Container</a>
+                    <li><a href="#grid">Grid System</a></li>
+                </ul>
+            </nav>
+            <h4 class="subheader">Site Structure</h4>
+            <nav class="subpage-navigation">
+                <ul class="nav group">
+                    <li><a href="#headermainfooter">Header, Main, &amp; Footer</a>
+                    <li><a href="#sections">Page Sections</a>
+                    <li><a href="#subpages">Sub Pages</a>
+                    <li><a href="#navigation">Navigation</a>
+                </ul>
+            </nav>
+        </aside>
+
+    </div><!-- END CONTAINER -->
+</main>
+    
+<footer class="site-footer">
+    <div class="container">
+		<nav class="site-navigation">
+			<ul class="nav group">
+                <li class="hidden"><a href="index.html">Site Base Home</a></li>
+                <!--<li><a href="lessons.html">Get Started</a></li>-->
+                <li><a href="documentation.html">Documentation</a></li>
+                <!--<li><a href="examples.html">Examples</a></li>-->
+			</ul>
+		</nav>
+    </div><!-- END CONTAINER -->
+</footer>
+
+
+<!-- MAIN JS -->
+<script src="js/script.js"></script>
+
+
+    
+</body>
+</html>

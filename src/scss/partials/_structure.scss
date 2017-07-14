@@ -132,3 +132,75 @@ section.hero {
         padding: 6em 1em 5em 1em;
     }
 }
+
+/* Sub Pages with Multiple Column Layout */
+
+.subpage-sidebar {
+    @media (min-width: $breakpoint-small)  {
+        float: left;
+        width: 21%;
+        padding-right: 4%; 
+    }
+    
+    .subheader {
+        font-size: 1em;
+        font-style: normal;
+        font-weight: normal;
+        margin-top: .5em;
+        margin-bottom: 0;
+        padding: .5em 0;
+        border-bottom: 1px solid $border-color;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: #aaa;
+    }
+}
+
+.subpage-main {
+    @media (min-width: $breakpoint-small)  {
+        float: right;
+        width: 70%;
+        padding-left: 4%;
+        border-left: 1px solid $border-color; 
+    }
+    
+    section:first-child {
+        padding-top: 0;
+    }
+    
+    section:last-child {
+        padding-bottom: 5em;    
+    }
+}
+
+.subpage-navigation {
+    padding: 0;
+    ul {
+        //border-top: 1px solid #eee;
+        li {
+            list-style: none;
+            margin-left: 0;
+            
+            a {
+                text-decoration: none;
+                display: block;
+                padding: .5em .875em;
+                border-bottom: 1px solid $border-color;
+            }
+            
+            a:hover {
+                //background: #fcfcfc;
+            }
+            
+            ul {
+                border-top: none;
+                li {
+                    a {
+                        padding-left: 1.875em;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

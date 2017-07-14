@@ -119,3 +119,32 @@ blockquote cite:before {
   top: -9999px;
   left: -9999px;
 }
+
+.subheader {
+    opacity: .8;
+    margin-top: 1em;
+    font-style: normal;
+    font-weight: normal;
+    clear: both;  
+} 
+
+/* #CODE  */
+
+pre, code {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: .875em;
+}
+
+pre {
+    margin: 1.5em 0 3em 0;
+    line-height: 1.2em;
+}
+
+code {
+    display: block;
+    padding: 1em 1.875em;
+    background: #f9f9f9;
+    border: 1px solid $border-color;
+    border-left: 2px solid #ccc;
+    overflow-x: auto; 
+}
