@@ -36,7 +36,7 @@ function onWarning(error) { return handleError.call(this, 'warning', error) }
 gulp.task('sync', function() {
     browserSync.init('', {
         server: {
-            baseDir: ''
+            baseDir: './'
         }
     })
 })
