@@ -1,0 +1,38 @@
+/* #SITE NAVIGATION  */
+/* Default Site-Navigation Menu (both header & footer) */
+.site-navigation .menu {
+  display: none; }
+
+.site-navigation ul {
+  border-top: 1px solid #ddd;
+  margin: 1em 0 -.5em 0;
+  padding: .5em 0;
+  text-align: center; }
+  .site-navigation ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+    .site-navigation ul li a {
+      display: block;
+      padding: .5em .75em .4em .75em; }
+
+@media (min-width: 768px) {
+  .site-navigation ul {
+    border-top: none;
+    margin: 0;
+    padding: 0; }
+    .site-navigation ul li {
+      display: inline-block; }
+      .site-navigation ul li a {
+        margin: 0;
+        padding: 1em 1em .75em 1em; } }
+
+/* Default Site-Navigation (header only) */
+@media (min-width: 768px) {
+  .site-header .site-navigation {
+    float: right; } }
+
+/* Default Site-Navigation (footer only) */
+.site-footer .site-navigation ul {
+  border-top: none;
+  margin: 0; }

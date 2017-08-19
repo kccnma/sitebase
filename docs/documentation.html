@@ -55,84 +55,46 @@
                 <h2 class="section-header">Folder Structure</h2>
                 <pre><code>
 base/
-├── index.html
+├── <a href="https://github.com/kccnma/sitebase/blob/master/docs/demos/base-blank-starter/index.html">index.html</a>
 ├── css/
-│   ├── style.css [<a href="https://github.com/kccnma/sitebase/blob/master/src/scss/style.scss">style.scss</a>]
+│   ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/css/style.css">style.css</a>
 └── js/
-    ├── scripts.js [<a href="https://github.com/kccnma/sitebase/blob/master/src/js/script.js">scripts.js</a>]
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/js/script.js">scripts.js</a>
     
 </code></pre>
                 
                 
                 <h2 class="section-header">Starter Template</h2>
                 
-                <h3>Github gist embed test</h3>
-                <script src="https://gist.github.com/kccnma/242163d9a5f67b896750365d5581f94f.js"></script>
-                
                 <h3 id="html">HTML</h3>
                 <p>HTML5 and Mobile ready with links to external CSS and JS files.</p>
-<pre><code>
-&#60;!doctype html&#62;
-&#60;html lang="en"&#62;
-&#60;head&#62;
-    &#60;meta charset="utf-8" /&#62;
-    &#60;title&#62;&#60;/title&#62;
-    
-    &#60;!-- HTML5 --&#62;
-    &#60;!--[if lt IE 9]&#62;
-        &#60;script src="http://html5shim.googlecode.com/svn/trunk/html5.js">&#60;/script&#62;
-    &#60;![endif]--&#62;
-    
-    &#60;!-- VIEWPORT FOR MOBILE --&#62;
-    &#60;meta name="viewport" content="width=device-width, initial-scale=1"&#62;
-    
-    &#60;!-- MAIN CSS --&#62;
-    &#60;link href="css/style.css" rel="stylesheet" type="text/css"&#62;
-    
-&#60;/head&#62;
-&#60;body&#62;
-
-&#60;!-- MAIN JS --&#62;
-&#60;script src="js/script.js">&#60;/script&#62; 
-
-&#60;/body&#62;
-&#60;/html&#62;
-
-</code></pre>
+                <script src="https://gist.github.com/kccnma/242163d9a5f67b896750365d5581f94f.js"></script>
                 
                 <h3 id="css">CSS</h3>
-                <p>Modular CSS inside of one style.css file.</p>
-<pre><code>
-#BASE CSS (Initital Setup)
---------------------------
-    #BASE START 
-        #HTML5
-    #BASE CONTENT
-        #TYPOGRAPHY
-            #BODY
-            #HEADINGS 
-            #PARAGRAPHS
-            #LINKS
-            #LISTS
-            #BLOCKQUOTES
-            #HELPERS
-        #MEDIA
-            #IMAGES
-        #COMPONENTS
-            #BUTTONS
-            #FORMS
-    #BASE LAYOUT
-        #MEDIAQUERIES
-        #GRID
-            #CLEARFIX
-    #BASE SITE
-        #STRUCTURE
-            #HEADER
-            #FOOTER
-            #SECTIONS
-            #SUB PAGES
-        #NAVIGATION
-            #TOGGLE-NAV (Default)
+                <p>CSS Table of Contents:</p>
+                <script src="https://gist.github.com/kccnma/3cce7281cfe835b687fedfe80c099c12.js"></script>
+
+                <p>Modular SASS partials compiled into one style.css file.</p>
+                <p>SASS File Structure:</p>
+                <pre><code>
+base/
+├── css/
+│   ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/css/style.css">style.css</a>
+└── scss/
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/style.scss">style.scss</a>
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/_variables.scss">_variables.scss</a>
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/_base.scss">_base.scss</a>
+    ├── partials/
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_toc-base.scss">_toc-base.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_html5.scss">_html5.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_typography.scss">_typography.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_media.scss">_media.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_components.scss">_components.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_layout.scss">_layout.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_structure.scss">_structure.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_site-navigation.scss">_site-navigation.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_site-navigation-togglenav.scss">_site-navigation-togglenav.scss</a>
+    
 </code></pre>
                 
                 <h3 id="css">JS</h3>

@@ -1,13 +1,5 @@
-/* Variables */
-$text-color: #333;
-$link-color: #39c;
-$link-color-dark: #069;
-$border-color: #ddd;
-$accent-color: #ccc;
-$breakpoint-small: 768px;
-$breakpoint-medium: 1050px;
-$breakpoint-large: 1250px;
-
+@import "variables";
+@import "partials/toc-base";
 @import "partials/html5";
 @import "partials/typography";
 @import "partials/media";

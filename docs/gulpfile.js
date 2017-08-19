@@ -3,7 +3,6 @@ var gutil = require('gulp-util');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 var cache = require('gulp-cache');
-var imagemin = require('gulp-imagemin');
 
 /*********************
  * Error Handling (ref. https://gist.github.com/noahmiller/61699ad1b0a7cc65ae2d)
@@ -36,54 +35,27 @@ function onWarning(error) { return handleError.call(this, 'warning', error) }
 gulp.task('sync', function() {
     browserSync.init('', {
         server: {
-            baseDir: './dist/'
+            baseDir: './'
         }
     })
 })
 
-// HTML
-gulp.task('html', function() {
-    return gulp.src('src/**/*.html')
-        .pipe(gulp.dest('dist/'))
-        .pipe(browserSync.reload({ stream: true }))
-})
-
 // SASS
 gulp.task('sass', function() {
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src('./**/*.scss', {base: './'})
         .pipe(sass())
-        .pipe(gulp.dest('dist/css'))
-        .pipe(gulp.dest('docs/css')) // DELETE IF NOT CREATING DOCUMENTATION
+        .pipe(gulp.dest('./'))
         .pipe(browserSync.reload({ stream: true }))
 })
 
-// JAVASCRIPT
-gulp.task('js', function() {
-    return gulp.src('src/js/**/*.js')
-        .pipe(gulp.dest('dist/js/'))
-        .pipe(gulp.dest('docs/js/')) // DELETE IF NOT CREATING DOCUMENTATION
-        .pipe(browserSync.reload({ stream: true }))
-})
-
-// IMAGES
-gulp.task('images', function() {
-    return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
-        .pipe(cache(imagemin()))
-        .pipe(gulp.dest('dist/img/'))
-        .pipe(gulp.dest('docs/img/')) // DELETE IF NOT CREATING DOCUMENTATION
-        .pipe(browserSync.reload({ stream: true }))
-})
 
 // BUILD SITE
-gulp.task('build', ['sass', 'html', 'js', 'images']) 
+gulp.task('build', ['sass']) 
 
 // WATCH
 gulp.task('watch', ['build', 'sync'], function() {
     global.isWatching = true 
-    gulp.watch('src/**/*.html', ['html']); 
-    gulp.watch('src/scss/**/*.scss', ['sass']);
-    gulp.watch('src/js/**/*.js', ['js']); 
-    gulp.watch('src/img/**/*.+(png|jpg|jpeg|gif|svg)', ['images']); 
+    gulp.watch('./**/*.scss', ['sass']);
 })
 
 gulp.task('default', ['watch'])
