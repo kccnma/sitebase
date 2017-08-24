@@ -1,5 +1,5 @@
 /* Navicon Menu */
-.menu.navicon {
+.menu-button.navicon {
     color: rgba(255,255,255,0);
 
     &.expanded {
@@ -35,41 +35,44 @@
         float: left;
     }
 
-    .menu,
-    .menu.expanded {
+    .menu-button,
+    .menu-button.expanded {
         display: none;
     }
 
-    .menu::selection {
+    .menu-button::selection {
         background: rgba(255,255,255,0);
     }
 
     @media (max-width: $breakpoint-small - 1)  {
 
-        .menu,
-        .menu.expanded {
+        .menu-button,
+        .menu-button.expanded {
             display: block;
             float: right;
             margin-top: .9em;
             margin-bottom: 1em;
         }
 
-        .menu.expanded {
+        .menu-button.expanded {
         }
 
-        .menu:hover {
+        .menu-button:hover {
             cursor: pointer;
         }
 
-        .menu + ul,
-        .menu.expanded + ul{
+        .menu-button + ul,
+        .menu-button + div ul,
+        .menu-button.expanded + ul,
+        .menu-button.expanded + div ul {
             clear: both;
             display: block;
             margin: 0;
             padding: .5em 0;
         }
 
-        .menu + ul {
+        .menu-button + ul, 
+        .menu-button + div ul {
             display: none;
 
             li{
@@ -93,7 +96,8 @@
 
         }
 
-        .menu.expanded + ul {
+        .menu-button.expanded + ul,
+        .menu-button.expanded + div ul {
             display: block;
             text-align: center;
         }
@@ -105,7 +109,8 @@
 
 @media (max-width: $breakpoint-small - 1)  {
 
-    .toggle-nav.animated .menu + ul{
+    .toggle-nav.animated .menu-button + ul,
+    .toggle-nav.animated .menu-button + div ul {
         display: block;
         max-height: 0;
         overflow: hidden;
@@ -115,7 +120,8 @@
         transition: all .3s ease;
     }
 
-    .toggle-nav.animated .menu.expanded + ul {
+    .toggle-nav.animated .menu-button.expanded + ul,
+    .toggle-nav.animated .menu-button.expanded + div ul {
         max-height: 138em;
         opacity: 1;
         padding: .5em 0;
@@ -123,30 +129,29 @@
         transition: all .6s ease;
     }
 
-    .toggle-nav.animated .menu + ul li{
+    .toggle-nav.animated .menu-button + ul li,
+    .toggle-nav.animated .menu-button + div ul li{
         padding: 0;
         opacity: 0;
         transition: all .3s ease;
     }
 
-    .toggle-nav.animated .menu.expanded + ul li{
+    .toggle-nav.animated .menu-button.expanded + ul li,
+    .toggle-nav.animated .menu-button.expanded + div ul li {
         padding: .25em;
         opacity: 1;
         transition: all .6s ease .2s;
     }
 
-    .toggle-nav.animated .menu + ul li a{
+    .toggle-nav.animated .menu-button + ul li a,
+    .toggle-nav.animated .menu-button + div ul li a{
         padding: 0;
         transition: all .3s ease;
     }
 
-    .toggle-nav.animated .menu.expanded + ul li a{
+    .toggle-nav.animated .menu-button.expanded + ul li a,
+    .toggle-nav.animated .menu-button.expanded + div ul li a{
         padding: .75em;
-    }
-
-    .toggle-nav.animated .menu + ul,
-    .toggle-nav.animated .menu + ul li,
-    .toggle-nav.animated .menu + ul li a{
     }
 
 }

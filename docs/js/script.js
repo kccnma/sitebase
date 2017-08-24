@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     //TOGGLE MENU NAV
-    var menu = document.getElementsByClassName("menu");
+    var menubutton = document.getElementsByClassName("menu-button");
     var i;
-    for (i = 0; i < menu.length; i++) {
-        menu[i].onclick = function(){
+    for (i = 0; i < menubutton.length; i++) {
+        menubutton[i].onclick = function(){
             this.classList.toggle("expanded");
         }
-    }
-
+    } 
 })
