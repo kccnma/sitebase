@@ -95,7 +95,7 @@ p {
 
 /* #LINKS */
 a {
-  color: #069;
+  color: #39c;
   text-decoration: none; }
 
 a:hover {
@@ -186,8 +186,8 @@ button {
 
 button, a.button {
   display: inline-block;
-  background-color: #069;
-  border: 1px solid #069;
+  background-color: #39c;
+  border: 1px solid #39c;
   color: #fff;
   padding: .75em 1em;
   -webkit-border-radius: .32em;
@@ -201,8 +201,8 @@ button, a.button {
 
 button.alt, a.button.alt {
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #069;
-  color: #069; }
+  border: 1px solid #39c;
+  color: #39c; }
 
 button:hover, a.button:hover {
   background-color: #069;
@@ -543,11 +543,11 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
       .toggle-nav .menu-button + div ul li a {
         padding: .75em;
         transition: all .3s ease;
-        color: #069; }
+        color: #39c; }
       .toggle-nav .menu-button + ul li a:hover,
       .toggle-nav .menu-button + div ul li a:hover {
         color: #fff;
-        background: #069; }
+        background: #39c; }
   .toggle-nav .menu-button.expanded + ul,
   .toggle-nav .menu-button.expanded + div ul {
     display: block;
