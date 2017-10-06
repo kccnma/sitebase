@@ -73,7 +73,8 @@ base/
                 <h3 id="css">CSS</h3>
                 <p>CSS Table of Contents:</p>
                 <script src="https://gist.github.com/kccnma/3cce7281cfe835b687fedfe80c099c12.js"></script>
-
+                
+                <h3 id="scss">SCSS</h3>
                 <p>Modular SASS partials compiled into one style.css file.</p>
                 <p>SASS File Structure:</p>
                 <pre><code>
@@ -97,7 +98,7 @@ base/
     
 </code></pre>
                 
-                <h3 id="css">JS</h3>
+                <h3 id="js">JS</h3>
                 <p>Vanilla Javascript inside of one script.js file.</p>
 <pre><code>
 document.addEventListener('DOMContentLoaded', function() {
@@ -107,6 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 </code></pre>
                 
+                <h3 id="jquery">JQuery</h3>
+                <p>Jquery can easily be used as an alternative to vanilla JS. It is 100% compatible. It is not included as part of the default build because site base was designed to be a minimal, lightweight starter framework for small,  custom web site projects.</p>
+                <p>If you choose to use Jquery, you will either need to download it and add it manually, or you can use the cdn:</p>
+<pre><code>                
+&#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&#62;&#60;/script&#62;
+</code></pre>
                 <!--<p><a class="button" href="#">Download Base Starter Files</a></p>-->
                 
             </section>
@@ -359,7 +366,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 
                 <h3 id="headermainfooter">Header, Main Content Area, &amp; Footer</h3>
 
-                <p id="images">The base site structure consists of three main parts of a web page: the header, main, and footer.</p>
+                <p>The base site structure consists of three main parts of a web page: the header, main, and footer.</p>
                 
 <pre><code>&#60;body&#62;
 
@@ -375,9 +382,9 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 &#60;/body&#62;
 </code></pre>
 
-                <h3 id="navigation">Page Sections</h3>
+                <h3 id="pagesections">Page Sections</h3>
 
-                <p id="images">The main content area of all pages can be divided into multiple sections that can be placed either within a container (to constrain the content width) or outside of a container (to extend to the full-width of the browser). This base also includes default styling for a "hero" section.</p>
+                <p>The main content area of all pages can be divided into multiple sections that can be placed either within a container (to constrain the content width) or outside of a container (to extend to the full-width of the browser). This base also includes default styling for a "hero" section.</p>
                 
 <pre><code>&#60;main class="site-main"&#62;
 
@@ -401,7 +408,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 
                 <h3 id="navigation">Site Navigation</h3>
 
-                <p id="images">This base consists of two default site navigation areas: main/top nav (header) and bottom nav (footer), both using a "site-navigation" class.</p>
+                <p>This base consists of two default site navigation areas: main/top nav (header) and bottom nav (footer), both using a "site-navigation" class.</p>
                 
 <pre><code>&#60;nav class="site-navigation"&#62;
     &#60;ul class="nav"&#62;
@@ -410,6 +417,33 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
         &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
     &#60;/ul&#62;
 &#60;/nav&#62;
+</code></pre>
+                
+                <h3 id="mobilemenu">Mobile Menu</h3>
+
+                <p>For small screens, this base uses a toggle-nav using a navicon as a menu button. Javascript is used to toggle the menu on/off by adding/removing a class named "expanded" on the element. CSS is used to control the appearance of the menu.</p>
+                
+                <p>Mobile menu HTML:</p>
+                
+<pre><code>&#60;nav class="site-navigation"&#62;
+    &#60;ul class="nav"&#62;
+        <strong>&#60;div class="menu-button navicon"&#62;Menu&#60;/div&#62;</strong>
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;
+</code></pre>
+                <p>Mobile menu Javascript:</p>
+<pre><code>
+    //TOGGLE MENU NAV
+    var menubutton = document.getElementsByClassName("menu-button");
+    var i;
+    for (i = 0; i &#60; menubutton.length; i++) {
+        menubutton[i].onclick = function(){
+            this.classList.toggle("expanded");
+        }
+    } 
 </code></pre>
 
             </section>
@@ -427,6 +461,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
                         <ul>
                             <li><a href="#html">HTML</a></li>
                             <li><a href="#css">CSS</a></li>
+                            <li><a href="#scss">SCSS</a></li>
                             <li><a href="#js">JS</a></li>
                         </ul>
                     </li>
@@ -467,10 +502,14 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             <h4 class="subheader">Site Structure</h4>
             <nav class="subpage-navigation">
                 <ul class="nav group">
-                    <li><a href="#headermainfooter">Header, Main, &amp; Footer</a>
-                    <li><a href="#sections">Page Sections</a>
-                    <li><a href="#subpages">Sub Pages</a>
+                    <li><a href="#headermainfooter">Header, Main, &amp; Footer</a></li>
+                    <li><a href="#pagesections">Page Sections</a></li>
+                    <li><a href="#subpages">Sub Pages</a></li>
                     <li><a href="#navigation">Navigation</a>
+                        <ul>
+                            <li><a href="#mobilemenu">Mobile Menu</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </aside>

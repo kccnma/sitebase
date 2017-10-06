@@ -1,8 +1,32 @@
+/* Typography */
+$body-font-family: Georgia, Times, "Times New Roman", serif;
+$heading-font-family: Helvetica, Arial, sans-serif;
+$navigation-font-family: Helvetica, Arial, sans-serif;
+
+/* Light Colors */
 $text-color: #333;
+$text-color-light: #666;
 $link-color: #39c;
 $link-color-dark: #069;
 $border-color: #ddd;
 $accent-color: #ccc;
+$background-color-body: #fff;
+$background-color-header: #fff;
+$background-color-footer: #fff;
+
+/* Dark Colors
+$text-color: #ccc;
+$text-color-light: #999;
+$link-color: #39c;
+$link-color-dark: #6cf;
+$border-color: #222;
+$accent-color: #444;
+$background-color-body: #000;
+$background-color-header: #000;
+$background-color-footer: #000;
+*/
+
+/* Breakpoints */ 
 $breakpoint-small: 768px;
 $breakpoint-medium: 1050px;
 $breakpoint-large: 1250px;  

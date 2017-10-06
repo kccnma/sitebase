@@ -10,10 +10,11 @@
 	125%   => 20px
 */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  color: $text-color;
-  font-size: 87.5%; /* 14px; */
-  line-height: 1.5em; /* 14px x 1.5em = 21px */
+    font-family: $body-font-family;
+    color: $text-color;
+    background: $background-color-body;
+    font-size: 87.5%; /* 14px; */
+    line-height: 1.5em; /* 14px x 1.5em = 21px */
 }
 
 /* #HEADINGS
@@ -21,7 +22,8 @@ body {
     48, 36, 24, 21, 18, 16
 */
 h1, h2, h3, h4, h5, h6 {
-  margin: .5em 0;
+    font-family: $heading-font-family;
+    margin: .5em 0;
 }
 
 h1 {

@@ -2,7 +2,7 @@
 .site-header,
 .site-footer {
     a {
-        color: #333;
+        color: $text-color;
     }
 
     a:hover {
@@ -13,6 +13,7 @@
 
 /* Header Only */
 .site-header {
+    background: $background-color-header;
     .container {
         padding-top: 1em;
         padding-bottom: 0;
@@ -36,7 +37,7 @@
         font-weight: normal;
         font-style: normal;
         margin: 0;
-        color: #666;
+        color: $text-color-light;
         padding: .5em 0 .4em 0;
 
         a {
@@ -52,6 +53,7 @@
 
 /* Footer Only */
 .site-footer {
+    background: $background-color-footer;
     .container{
         padding-top: 0;
         padding-bottom: 1em;
@@ -152,7 +154,7 @@ section.hero {
         border-bottom: 1px solid $border-color;
         text-transform: uppercase;
         letter-spacing: .1em;
-        color: #aaa;
+        color: $text-color-light;
     }
 }
 
@@ -174,6 +176,7 @@ section.hero {
 }
 
 .subpage-navigation {
+    font-family: $navigation-font-family;
     padding: 0;
     ul {
         //border-top: 1px solid #eee;
