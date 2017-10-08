@@ -27,21 +27,13 @@
         <nav class="site-navigation ">
             <div class="menu-button navicon">Menu</div>
             <ul class="nav">
-                <li class="hidden"><a href="index.html">Home</a></li>
-                <li class="selected"><a href="#">Pages</a>
+                <li><a href="index.html">Home</a></li>
+                <li class="selected"><a href="pages.html">Pages</a>
                     <ul>
                         <li><a href="page.html">Sub Page</a></li>
-                        <li><a href="page.html">Sub Page w/ Sidebar</a></li>
+                        <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Ipsum</a>
-                    <ul>
-                        <li><a href="page.html">Sub Page</a></li>
-                        <li><a href="page.html">Sub Page</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Dolorem</a></li>
-                <li><a href="#">Consectetur</a></li> 
             </ul>
         </nav>
     </div><!-- END CONTAINER -->
@@ -50,75 +42,94 @@
 <main class="site-main">
         
     <section class="hero text-centered">
-        <h1>Sub Page w/ Sidebar</h1>
-        <p>This is a sub page example with a two column layout consisting of a main content area and a sidebar with sub-navigation.</p>
+        <h1>Sub Page</h1>
+        <p>This is a full-width sub page example.</p>
     </section>
     
     <div class="container">
         
-        <div class="subpage-main">
+        <section>
             
-            <section id="section1">
-                
-                <h2>Section 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
-                
-            </section>
+            <h1>This is a Heading 1</h1>
+            <h2>This is a Heading 2</h2>
+            <h3>This is a Heading 3</h3>
+            <h4>This is a Heading 4</h4>
+            <h5>This is a Heading 5</h5>
+            <h6>This is a Heading 6</h6> 
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla porttitor sagittis.</p>
+
+            <p>Suspendisse pulvinar bibendum laoreet. Suspendisse eget dignissim risus. Cras eget sodales enim. Phasellus accumsan dui metus, quis vulputate turpis congue at. Praesent rutrum consequat rhoncus. Maecenas adipiscing justo vitae massa porta pretium. In egestas orci vehicula, tempus lorem ut, facilisis metus. </p>
+
+            <p>Vivamus eu mollis velit. Maecenas id massa libero. Aliquam accumsan mauris vulputate purus volutpat vestibulum. Phasellus sed tellus id tortor ornare molestie. Quisque massa sapien, elementum sed tortor vitae, suscipit congue massa. Curabitur tempor arcu eget leo placerat, a porta augue pharetra. Nulla velit nibh, laoreet at hendrerit sit amet, adipiscing eget dolor. </p>
+
+
+            <h4>Unordered List:</h4>
+            <ul>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>Nested Unordered List:
+                    <ul>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                    </ul>
+                </li>
+                <li>Nested Ordered List:
+                    <ol>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                    </ol>
+                </li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ul>
+
+            <h4>Ordered List:</h4>
+            <ol>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>Nested Unordered List:
+                    <ul>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                    </ul>
+                </li>
+                <li>Nested Ordered List:
+                    <ol>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                    </ol>
+                </li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ol>
+
+            <h4>Links:</h4>
+            <p>This is a <a href="#">link</a>.</p>
+
+            <h4>Block Quotes:</h4>
+            <blockquote>
+                This is a blockquote. Donec sed rhoncus massa. Suspendisse rutrum viverra felis. Vestibulum augue lacus, ullamcorper non suscipit nec, ornare et mauris. Proin mattis fermentum nibh quis gravida.
+                <cite>Citation Source</cite>
+            </blockquote>
+
+            <h4>Helper Classes:</h4>
+            <p class="text-centered">This is center-aligned text</p>
+
+            <h4>Buttons:</h4>
+            <a href="#" class="button">Default Link Button</a>
+            <a href="#" class="button alt">Alt Link Button</a>
+            <button>Default Button Element</button>
+
+            <h4>Images:</h4>
+            <img src="http://placehold.it/1500x500" class="scale-with-grid">
             
-            <section id="section2">
-                
-                <h2>Section 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
-                
-            </section>
-            
-            <section id="section3">
-                
-                <h2>Section 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
-                
-            </section>
-            
-            <section id="section4">
-                
-                <h2>Section 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
-                
-            </section>
-            
-            <section id="section5">
-                
-                <h2>Section 5</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
-                
-            </section>
-            
-                
-        </div>
-        <aside class="subpage-sidebar">
-            <h4 class="subheader">Sub Header 1</h4>
-            <nav class="subpage-navigation">
-                <ul class="nav group">
-                    <li><a href="#section1">Section 1</a></li>
-                    <li><a href="#section2">Section 2</a></li>
-                    <li><a href="#section3">Section 3</a></li>
-                </ul>
-            </nav>
-            <h4 class="subheader">Sub Header 2</h4>
-            <nav class="subpage-navigation">
-                <ul class="nav group">
-                    <li><a href="#section4">Section 4</a></li>
-                    <li><a href="#section5">Section 5</a></li>
-                </ul>
-            </nav>
-        </aside>
-        
-        
+            <h4>Videos:</h4>
+            <div class="video">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/ru_mj49u_Xc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </section>
         
         
 
@@ -130,10 +141,7 @@
         <nav class="site-navigation">
             <ul class="nav group">
                 <li><a href="index.html">Home</a></li>
-                <li class="selected"><a href="page.html">Page</a></li>
-                <li><a href="#">Ipsum</a></li>
-                <li><a href="#">Dolorem</a></li>
-                <li><a href="#">Consectetur</a></li> 
+                <li class="selected"><a href="pages.html">Sub Pages</a></li>
             </ul>
         </nav>
     </div><!-- END CONTAINER -->

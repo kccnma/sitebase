@@ -70,3 +70,33 @@
         }
     }
 }
+
+/* Sub page with list items */
+.list-item {
+    padding: 2em 0;
+    
+    .featured-image {
+        width: 30%;
+        margin-right: 5%;
+        float: left;
+    }
+
+    article {
+        margin-left: 35%;
+        
+        h2 {
+            margin-top: 0;
+        }
+    }
+    
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+.list-item + .list-item {
+    margin-top: 2em;
+    border-top: 1px solid #eee;
+    padding-top: 4em;
+}
