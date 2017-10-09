@@ -1,9 +1,28 @@
-// Typography
-$body-font-family: Georgia, Times, "Times New Roman", serif;
+// Typography: Georgia + Helvetica (default)
+//$body-font-family: Georgia, Times, "Times New Roman", serif;
+//$heading-font-family: Helvetica, Arial, sans-serif;
+//$navigation-font-family: Helvetica, Arial, sans-serif;
+
+// Typography: Helvetica 
+$body-font-family: Helvetica, Arial, sans-serif;
 $heading-font-family: Helvetica, Arial, sans-serif;
 $navigation-font-family: Helvetica, Arial, sans-serif;
 
-// Light Colors
+// Typography: Mixed 
+//$body-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+//$heading-font-family: 'Zilla Slab', Helvetica, Arial, sans-serif;
+//$navigation-font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+//<!-- GOOGLE FONTS --> 
+//<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Open+Sans:300,400|Zilla+Slab:500" rel="stylesheet">
+
+// Typography: Wireframe
+//$body-font-family: 'Caveat', cursive;
+//$heading-font-family: 'Caveat', cursive;
+//$navigation-font-family: 'Caveat', cursive;
+//<!-- GOOGLE FONTS --> 
+//<link href="https://fonts.googleapis.com/css?family=Caveat:400,700" rel="stylesheet">
+
+// Colors: Light Colors (default)
 $text-color: #333;
 $text-color-light: #999;
 $link-color: #39c;
@@ -11,11 +30,23 @@ $link-color-dark: #069;
 $border-color: #ccc;
 $accent-color: #000;
 $background-color-body: #fff;
-$background-color-header: #ddd;
+$background-color-header: #e3e3e3;
 $background-color-footer: #eee;
-$background-color-hero: #eee;
+$background-color-hero: #f0f0f0;
 
-// Dark Colors
+// Colors: Wireframe
+//$text-color: #333;
+//$text-color-light: #999;
+//$link-color: #222;
+//$link-color-dark: #000;
+//$border-color: #ccc;
+//$accent-color: #000;
+//$background-color-body: #fff;
+//$background-color-header: #e3e3e3;
+//$background-color-footer: #eee;
+//$background-color-hero: #f0f0f0;
+
+// Colors: Dark Colors
 //$text-color: #ccc;
 //$text-color-light: #999;
 //$link-color: #39c;
@@ -25,7 +56,6 @@ $background-color-hero: #eee;
 //$background-color-body: #000;
 //$background-color-header: #000;
 //$background-color-footer: #000;
-
 
 // Breakpoints 
 $breakpoint-small: 768px;

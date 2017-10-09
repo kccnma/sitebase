@@ -59,6 +59,7 @@
                 ul {
                     text-align: left;
                     position: absolute;
+                    z-index: 100;
                     left: -9000px;
                     background: $background-color-header;
                     margin-left: .5em;
@@ -70,7 +71,8 @@
                 }
             
                 /* SELECTED STATE */
-                &.selected {
+                &.selected,
+                &.current-menu-item {
                     a {
                         font-weight: bold;
                     }

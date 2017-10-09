@@ -45,7 +45,7 @@ header, section, footer, aside, nav, main, article, figure {
 	125%   => 20px
 */
 body {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: #333;
   font-size: 87.5%;
   /* 14px; */
@@ -100,8 +100,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: #069;
-  text-decoration: underline; }
+  color: #069; }
 
 /* #LISTS */
 ul, ol, li {

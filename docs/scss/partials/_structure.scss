@@ -70,6 +70,7 @@ body {
 /* Main Site Section (Main Content Area) */
 .site-main {
     background: $background-color-body;
+    //padding-bottom: 1.5em;
 }
 
 /* Main Sections */
@@ -118,7 +119,7 @@ section {
 /* Colored Sections */
 
 section.superlightgrey {
-    background: #f0f0f0;
+    background: #f9f9f9;
     padding: 5em 0 2em 0;
 }
 
@@ -179,6 +180,7 @@ section.hero {
     section:last-child {
         padding-bottom: 5em;    
     }
+    margin-bottom: 1.5em;
 }
 
 .subpage-navigation {
