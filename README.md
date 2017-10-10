@@ -8,4 +8,4 @@ Latest development version of Sitebase, a work-in-progress minimal HTML + CSS + 
 Work-in-progress links:
 * [sitebase home](https://kccnma.github.io/sitebase/ "Sitebase Home")
 * [sitebase documentation](https://kccnma.github.io/sitebase/documentation.html "Sitebase Docs (incomplete)")
-* [sitebase demo](https://kccnma.github.io/docs/versions/sitebase1/ "Sitebase Home")
+* [sitebase demo](https://kccnma.github.io/sitebase/docs/versions/sitebase1/ "Sitebase Home")
