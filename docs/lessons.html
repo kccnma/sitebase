@@ -31,7 +31,7 @@
                 <li class="hidden"><a href="index.html">Home</a></li>
                 <li class="selected"><a href="lessons.html">Get Started</a></li>
                 <li><a href="documentation.html">Documentation</a></li>
-                <!--<li><a href="examples.html">Examples</a></li>-->
+                <li><a href="examples.html">Examples</a></li>
             </ul>
         </nav>
     </div><!-- END CONTAINER -->
@@ -45,37 +45,14 @@
             <p>Step-by-step guides to learn the basics of front-end development by manually hand-coding a simple boilerplate framework.</p>
         </section>
         
-        <section class="text-centered">
-            <div class="row">
-                <div class="one-third column">
-                    <h4>Site Base 1.0</h4>
-                    <p><em>Static CSS Version</em></p>
-                    <p>A basic front-end framework for beginners learning how to code from scratch by hand, line-by-line. No build tools. Straight up HTML, CSS, &amp; JS.</p>
-                    <p><a class="button" href="#lessons1">1.0 Lessons</a></p>
-                </div>
-                <div class="one-third column">
-                    <h4>Site Base 2.0</h4>
-                    <p><em>Sassy Prepros Version</em></p>
-                    <p>Same as version 1.0, but using SASS to organize and modularize the CSS and Prepros, a GUI-based compiler and task manager, to build and deploy.</p>
-                    <p><a class="button" href="#lessons2">2.0 Lessons</a></p>
-                </div>
-                <div class="one-third column">
-                    <h4>Site Base 3.0</h4>
-                    <p><em>NPM Gulp Version</em></p>
-                    <p>Similar to version 2.0, but using a CLI-based workflow for all build tools. NPM for package management. Gulp for tasks. Github for version control.</p>
-                    <p><a class="button" href="#lessons3">3.0 Lessons</a></p>
-                </div>
-            </div>
-        </section>
-        
-        <section>
+        <section id="sitebase1">
             
-            <h3 id="sitebase1">Site Base 1.0 Lessons</h3>
+            <h3>Site Base 1.0 Lessons</h3>
             <p>Site Base 1.0 is a static HTML + CSS + JS front-end base (starter/boilerplate). The lessons below are for those interested in coding a basic front-end framework for a simple static site from scratch by hand, line-by-line. No prior web design or coding experience required. Designed for first-time front-end coders, Site Base 1.0 uses no pre-processing (e.g. SASS), no command line interface (CLI), and no special software. All you need is a text editor and a browser.</p>
             
             <div class="accordian">
                 <h4>Step 1 <span class="light nomobile">Base Blank</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -113,7 +90,7 @@
             
             <div class="accordian">
                 <h4>Step 2 <span class="light nomobile">Base Content</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -157,7 +134,7 @@
             
             <div class="accordian">
                 <h4>Step 3 <span class="light nomobile">Base Layout</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -194,7 +171,7 @@
             
             <div class="accordian">
                 <h4>Step 4 <span class="light nomobile">Base Site Structure</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -240,7 +217,7 @@
             </div>
             <div class="accordian">
                 <h4>Step 5 <span class="light nomobile">Mobile Menu (Toggle Nav)</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -272,7 +249,7 @@
             
             <div class="accordian">
                 <h4>Step 6 <span class="light nomobile">Sub Page(s)</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -311,7 +288,7 @@
             
             <!--<div class="accordian">
                 <h4>Step 7 <span class="light nomobile">Single Page Site</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -348,7 +325,7 @@
             
             <div class="accordian">
                 <h4>Step 7 <span class="light nomobile">Custom Site</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     <p>Override the base styling with site-specific styling and custom HTML, CSS, &amp; JS.</p>
                     <ol>
                         <li>Add a section entitled "SITE SPECIFIC CSS" to the bottom of your base style.css file and use this area to add any custom site-specific (e.g. project-specific, client-specific, etc) styling. Try not to edit your "BASE CSS" above. Instead, try to <em>override</em> the base styles at the bottom of your style sheet in this designated area that is seperate from your base styles.
@@ -375,9 +352,9 @@
             
         </section>
         
-        <section>
+        <section id="sitebase2">
             
-            <h3 id="sitebase2">Site Base 2.0 Lessons</h3>
+            <h3>Site Base 2.0 Lessons</h3>
             <p>Site Base 2.0 builds upon Site Base 1.0 by adding support for SASS. Designed for those with a basic understanding of how to build a static site with straight-up HTML, CSS, and JS, looking for an intermediate-level front-end workflow and build environment that is not too complicated or advanced. No command line (CLI) required for version 2.0. Instead, the GUI-based software application Prepros is used to manage all build tasks (e.g. to compile SASS) and for deployment.</p>
             
             <p>[ Lessons coming soon ]</p>
@@ -385,7 +362,7 @@
             <!--
             <div class="accordian">
                 <h4>Step 1 <span class="light nomobile">Base Blank</span> <div class="arrow"></div></h4>
-                <div class="collapsedbox">
+                <div class="collapsible">
                     
                     <div class="row">
                         <div class="one-half column">
@@ -423,9 +400,9 @@
             -->
         </section>
         
-        <section>
+        <section id="sitebase3">
             
-            <h3 id="sitebase2">Site Base 3.0 Lessons</h3>
+            <h3>Site Base 3.0 Lessons</h3>
             <p>Site Base 3.0 builds upon Site Base 2.0 by using a command line interface (CLI) workflow to manage all build tools, including NPM, a package manager to setup and install  project dependencies, Gulp, a task manager, to handle various build processes such as compiling SASS and optimizing images, and Git (via Github) for version control. Designed for those looking to learn how to set up a more advanced front-end development workflow.</p>
             
             <p>[ Lessons coming soon ]</p>
@@ -442,7 +419,7 @@
                 <li><a href="index.html">Site Base Home</a></li>
                 <li class="selected"><a href="lessons.html">Get Started</a></li>
                 <li><a href="documentation.html">Documentation</a></li>
-                <!--<li><a href="examples.html">Examples</a></li>-->
+                <li><a href="examples.html">Examples</a></li>
 			</ul>
 		</nav>
     </div><!-- END CONTAINER -->

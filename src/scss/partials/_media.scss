@@ -12,6 +12,11 @@ img.float-left {
   clear: both;
 }
 
+/* Circular images */
+img.circular {
+    border-radius: 100%;
+}
+
 /* VIDEO */
 .video {
     width: 100%;

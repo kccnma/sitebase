@@ -16,22 +16,38 @@ gulp.task('sync', function() {
     })
 })
 
+// COPY HTML FROM ROOT SRC
+gulp.task('copy-html-root', function() {
+    return gulp.src('../src/**/*.html')
+        .pipe(gulp.dest('./versions/sitebase1/'))
+        .pipe(gulp.dest('./versions/sitebase2/'))
+})
+
 // COPY SASS FROM ROOT SRC
 gulp.task('copy-sass-root', function() {
     return gulp.src('../src/**/*.scss')
         .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./versions/sitebase2/'))
 })
 
 // COPY JS FROM ROOT SRC
 gulp.task('copy-js-root', function() {
     return gulp.src('../src/**/*.js')
         .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./versions/sitebase1/'))
+        .pipe(gulp.dest('./versions/sitebase2/'))
+        .pipe(gulp.dest('./examples/productsite/'))
+        .pipe(gulp.dest('./examples/singlepageportfolio/'))
 })
 
 // COPY IMAGES FROM ROOT SRC
 gulp.task('copy-images-root', function() {
     return gulp.src('../src/**/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./versions/sitebase1/'))
+        .pipe(gulp.dest('./versions/sitebase2/'))
+        .pipe(gulp.dest('./examples/productsite/'))
+        .pipe(gulp.dest('./examples/singlepageportfolio/'))
 })
 
 
@@ -40,6 +56,10 @@ gulp.task('sass-root', function() {
     return gulp.src('scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('css/'))
+        .pipe(gulp.dest('./versions/sitebase1/css/'))
+        .pipe(gulp.dest('./versions/sitebase2/css/'))
+        .pipe(gulp.dest('./examples/productsite/css/'))
+        .pipe(gulp.dest('./examples/singlepageportfolio/css/'))
 })
 
 // SASS LESSON1
@@ -132,15 +152,43 @@ gulp.task('zip-lesson6', function() {
         .pipe(gulp.dest('lessons/'));
 })
 
+// ZIP VERSION1
+gulp.task('zip-version1', function() {
+    return gulp.src('versions/sitebase1/**/*')
+        .pipe(zip('sitebase1.zip'))
+        .pipe(gulp.dest('versions/'));
+})
+
+// ZIP VERSION1
+gulp.task('zip-version2', function() {
+    return gulp.src('versions/sitebase2/**/*')
+        .pipe(zip('sitebase2.zip'))
+        .pipe(gulp.dest('versions/'));
+})
+
+// ZIP EXAMPLE1
+gulp.task('zip-example1', function() {
+    return gulp.src('examples/productsite/**/*')
+        .pipe(zip('productsite.zip'))
+        .pipe(gulp.dest('examples/'));
+})
+
+// ZIP EXAMPLE2
+gulp.task('zip-example2', function() {
+    return gulp.src('examples/singlepageportfolio/**/*')
+        .pipe(zip('singlepageportfolio.zip'))
+        .pipe(gulp.dest('examples/'));
+})
+
 
 
 // BUILD SITE
-gulp.task('build', gulpSequence(['copy-sass-root','copy-js-root','copy-images-root'], 'sass-root', ['sass-lesson1', 'sass-lesson2', 'sass-lesson3', 'sass-lesson4', 'sass-lesson5', 'sass-lesson6'],['zip-lesson1', 'zip-lesson2', 'zip-lesson3', 'zip-lesson4', 'zip-lesson5', 'zip-lesson6']))
+gulp.task('build', gulpSequence(['copy-html-root','copy-sass-root','copy-js-root','copy-images-root'], 'sass-root', ['sass-lesson1', 'sass-lesson2', 'sass-lesson3', 'sass-lesson4', 'sass-lesson5', 'sass-lesson6'],['zip-lesson1', 'zip-lesson2', 'zip-lesson3', 'zip-lesson4', 'zip-lesson5', 'zip-lesson6', 'zip-version1', 'zip-version2', 'zip-example1', 'zip-example2']))
 
 // WATCH
 gulp.task('watch', ['build', 'sync'], function() {
     global.isWatching = true 
-    gulp.watch('../dist/css/style.css', ['build']);
+    //gulp.watch('../dist/css/style.css', ['build']);
 })
 
 gulp.task('default', ['watch'])

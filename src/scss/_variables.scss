@@ -22,7 +22,19 @@ $navigation-font-family: Helvetica, Arial, sans-serif;
 //<!-- GOOGLE FONTS --> 
 //<link href="https://fonts.googleapis.com/css?family=Caveat:400,700" rel="stylesheet">
 
-// Colors: Light Colors (default)
+// Colors: Light Grey (default)
+//$text-color: #333;
+//$text-color-light: #999;
+//$link-color: #39c;
+//$link-color-dark: #069;
+//$border-color: #ccc;
+//$accent-color: #000;
+//$background-color-body: #fff;
+//$background-color-header: #e3e3e3;
+//$background-color-footer: #eee;
+//$background-color-hero: #f0f0f0;
+
+// Colors: White
 $text-color: #333;
 $text-color-light: #999;
 $link-color: #39c;
@@ -30,9 +42,9 @@ $link-color-dark: #069;
 $border-color: #ccc;
 $accent-color: #000;
 $background-color-body: #fff;
-$background-color-header: #e3e3e3;
-$background-color-footer: #eee;
-$background-color-hero: #f0f0f0;
+$background-color-header: #fff;
+$background-color-footer: #fff;
+$background-color-hero: #ddd;
 
 // Colors: Wireframe
 //$text-color: #333;

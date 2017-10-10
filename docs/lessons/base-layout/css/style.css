@@ -150,6 +150,13 @@ blockquote cite:before {
   font-weight: normal;
   clear: both; }
 
+/* HORIZONTAL RULES */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 2em 0; }
+
 /* #CODE  */
 pre, code {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -178,6 +185,10 @@ img.float-left {
   margin-right: 1em;
   margin-bottom: 1em;
   clear: both; }
+
+/* Circular images */
+img.circular {
+  border-radius: 100%; }
 
 /* VIDEO */
 .video {

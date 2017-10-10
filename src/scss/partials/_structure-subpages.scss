@@ -100,3 +100,121 @@
     border-top: 1px solid #eee;
     padding-top: 4em;
 }
+
+/* Swap the display order of two columns */
+.orderswap .one-half.column:first-child {
+    float: right;
+    margin-right: 0;
+}
+
+/* Articles */
+article {
+    max-width: 38em;
+    margin: 0 auto 8em auto; 
+    
+    h1 {
+	   text-align: center;
+    }
+    
+    h1 + h2 {
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1.25em;
+        font-weight: normal;
+        margin-bottom: 1em;
+    }
+
+    .date {
+        text-align: center;
+        font-size: .625em;
+        line-height: .625em;
+        color: #999;
+        font-weight: normal;
+    }
+
+    .date + p {
+        margin-top: 2em;
+    }
+    
+}
+
+/* Thumb Lists */
+ul.thumblist {
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 3em 0;
+        clear: both; 
+        
+        img {
+            max-width: 30%;
+            margin: 0 2em 1em 0;
+            float: left;
+        }
+        
+    }
+    
+    li+li {
+        border-top: 1px solid #ddd;
+    }
+    
+    @media (max-width: 767px) {
+        li img {
+            max-width: 100%;
+            margin: 0 0 1em 0;
+            float: none;
+        }
+    }
+    
+}
+
+ul.thumblist-grid {
+    
+    margin: 2em 0;
+    
+    li {
+        list-style: none;
+        margin-left: 0;
+        margin-bottom: 2em;
+        width: 46%;
+        margin-right: 8%;
+        float: left;
+        text-align: center;
+        font-size: .8em;
+        
+        a {
+            outline: none;
+        }
+        
+        a img {
+            transition: border-color .3s ease;
+            border-color: #fff;
+        } 
+        
+        a img:hover {
+            border: 3px solid #39c;
+            margin: -3px;
+        }
+        
+        h5, p {
+            line-height: 1.2em;
+        }
+        
+    }
+    li:nth-child(even) {
+        margin-right: 0;
+    }
+    
+    @media (min-width: 768px) {
+        li {
+            width: 19%;
+            //margin-right: 8%;
+        }
+        li:nth-child(even) {
+            margin-right: 8%;
+        }
+        li:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
+}

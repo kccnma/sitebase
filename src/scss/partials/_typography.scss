@@ -129,8 +129,16 @@ blockquote cite:before {
     clear: both;  
 } 
 
-/* #CODE  */
+/* HORIZONTAL RULES */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 2em 0;
+}
 
+
+/* #CODE  */
 pre, code {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-size: .875em;
