@@ -19,7 +19,7 @@ body {
 /* Header Only */
 .site-header {
     background: $background-color-header;
-    //border-bottom: 1px solid $border-color;
+    border-bottom: $border-width solid $border-color;
     .container {
         padding-top: .5em;
         
@@ -56,7 +56,7 @@ body {
 /* Footer Only */
 .site-footer {
     background: $background-color-footer;
-    //border-top: 1px solid $border-color;
+    border-top: $border-width solid $border-color;
     .container{
         padding-top: .25em;
         padding-bottom: .25em;
@@ -158,7 +158,7 @@ section.hero {
         margin-top: .5em;
         margin-bottom: 0;
         padding: .5em 0;
-        border-bottom: 1px solid $border-color;
+        border-bottom: $border-width solid $border-color;
         text-transform: uppercase;
         letter-spacing: .1em;
         color: $text-color-light;
@@ -170,7 +170,7 @@ section.hero {
         float: right;
         width: 70%;
         padding-left: 4%;
-        border-left: 1px solid $border-color; 
+        border-left: $border-width solid $border-color; 
     }
     
     section:first-child {
@@ -196,7 +196,7 @@ section.hero {
                 text-decoration: none;
                 display: block;
                 padding: .5em .875em;
-                border-bottom: 1px solid $border-color;
+                border-bottom: $border-width solid $border-color;
             }
             
             a:hover {

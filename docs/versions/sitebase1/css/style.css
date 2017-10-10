@@ -122,8 +122,8 @@ blockquote {
   font-size: 1.142em;
   margin: 1.5em 0;
   padding: 1.5em;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
+  border-top: 0px solid #ccc;
+  border-bottom: 0px solid #ccc; }
 
 blockquote cite {
   display: block;
@@ -144,7 +144,7 @@ blockquote cite:before {
   left: -9999px; }
 
 .subheader {
-  opacity: .8;
+  color: #999;
   margin-top: 1em;
   font-style: normal;
   font-weight: normal;
@@ -403,7 +403,8 @@ body {
 
 /* Header Only */
 .site-header {
-  background: #fff; }
+  background: #fff;
+  border-bottom: 0px solid #ccc; }
   .site-header .container {
     padding-top: .5em; }
     @media (min-width: 768px) {
@@ -429,7 +430,8 @@ body {
 
 /* Footer Only */
 .site-footer {
-  background: #fff; }
+  background: #fff;
+  border-top: 0px solid #ccc; }
   .site-footer .container {
     padding-top: .25em;
     padding-bottom: .25em; }
@@ -500,7 +502,7 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
   margin-top: .5em;
   margin-bottom: 0;
   padding: .5em 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0px solid #ccc;
   text-transform: uppercase;
   letter-spacing: .1em;
   color: #999; }
@@ -512,7 +514,7 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
       float: right;
       width: 70%;
       padding-left: 4%;
-      border-left: 1px solid #ccc; } }
+      border-left: 0px solid #ccc; } }
   .subpage-main section:first-child {
     padding-top: 0; }
   .subpage-main section:last-child {
@@ -528,7 +530,7 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
       text-decoration: none;
       display: block;
       padding: .5em .875em;
-      border-bottom: 1px solid #ccc; }
+      border-bottom: 0px solid #ccc; }
     .subpage-navigation ul li ul {
       border-top: none; }
       .subpage-navigation ul li ul li a {
@@ -791,8 +793,7 @@ ul.thumblist-grid {
     clear: both;
     display: block;
     margin: 0;
-    padding: .5em 0;
-    border-top: 1px solid #ccc; }
+    padding: .5em 0; }
   .toggle-nav .menu-button + ul,
   .toggle-nav .menu-button + div ul {
     display: none; }
@@ -831,7 +832,7 @@ ul.thumblist-grid {
     max-height: 138em;
     opacity: 1;
     padding: .5em 0;
-    border-width: 1px;
+    border-width: 0px;
     transition: all .6s ease; }
   .toggle-nav.animated .menu-button + ul li,
   .toggle-nav.animated .menu-button + div ul li {

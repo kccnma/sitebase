@@ -95,8 +95,8 @@ blockquote {
   font-size: 1.142em;
   margin: 1.5em 0;
   padding: 1.5em;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  border-top: $border-width solid $border-color;
+  border-bottom: $border-width solid $border-color;
 }
 
 blockquote cite {
@@ -122,7 +122,7 @@ blockquote cite:before {
 }
 
 .subheader {
-    opacity: .8;
+    color: $text-color-light;
     margin-top: 1em;
     font-style: normal;
     font-weight: normal;
