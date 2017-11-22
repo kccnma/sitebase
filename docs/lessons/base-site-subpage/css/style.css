@@ -665,7 +665,7 @@ ul.thumblist-grid {
         /* SELECTED STATE */ }
         .site-navigation ul li a {
           margin: 0 .5em;
-          padding: 1em .5em .75em .5em; }
+          padding: .85em .5em .75em .5em; }
         .site-navigation ul li li {
           display: block; }
         .site-navigation ul li ul {
@@ -673,8 +673,9 @@ ul.thumblist-grid {
           position: absolute;
           z-index: 100;
           left: -9000px;
-          background: #fff;
-          margin-left: .5em; }
+          background: #fff; }
+          .site-navigation ul li ul a {
+            color: #999; }
         .site-navigation ul li:hover ul {
           left: auto; }
         .site-navigation ul li.selected a, .site-navigation ul li.current-menu-item a {
@@ -752,7 +753,7 @@ ul.thumblist-grid {
       display: block; }
       .toggle-nav .menu-button + ul li a,
       .toggle-nav .menu-button + div ul li a {
-        padding: .75em;
+        padding: .9em .75em .75em .75em;
         transition: all .3s ease;
         color: #39c; }
       .toggle-nav .menu-button + ul li a:hover,
