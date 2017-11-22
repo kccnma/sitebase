@@ -117,3 +117,14 @@ body {
   clear: both;
   font-size: 0;
 }
+
+/* FOR DEMO PURPOSES */
+
+.demo .column {
+    background-color: $border-color;
+    p {
+        text-align: center;
+        margin: 0;
+        padding: 1em;
+    }
+}

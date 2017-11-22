@@ -92,6 +92,8 @@ base/
         ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_structure.scss">_structure.scss</a>
         ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_site-navigation.scss">_site-navigation.scss</a>
         ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_site-navigation-togglenav.scss">_site-navigation-togglenav.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_forms.scss">_forms.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_animation-pageload-fadein.scss">_animation-pageload-fadein.scss</a>
     
 </code></pre>
                 
@@ -434,7 +436,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
                 <p>Mobile menu Javascript:</p>
 <pre><code>
     //TOGGLE MENU NAV
-    var menubutton = document.getElementsByClassName("menu-button");
+    var menubutton = document.querySelectorAll('.menu-button');
     var i;
     for (i = 0; i &#60; menubutton.length; i++) {
         menubutton[i].onclick = function(){

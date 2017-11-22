@@ -327,6 +327,14 @@ body {
   clear: both;
   font-size: 0; }
 
+/* FOR DEMO PURPOSES */
+.demo .column {
+  background-color: #ccc; }
+  .demo .column p {
+    text-align: center;
+    margin: 0;
+    padding: 1em; }
+
 /* FOR DEMO PURPOSES ONLY */
 .demo {
   padding: 2em 0; }
