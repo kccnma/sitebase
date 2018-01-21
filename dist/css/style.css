@@ -544,6 +544,31 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
       .subpage-navigation ul li ul li a {
         padding-left: 1.875em; }
 
+/* Articles */
+article {
+  max-width: 38em;
+  margin: 0 auto 8em auto; }
+  article h1 {
+    text-align: center; }
+  article h1 + h2 {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: normal;
+    margin-bottom: 1em; }
+  article .date {
+    text-align: center;
+    font-size: 0.625em;
+    line-height: 0.625em;
+    color: #999;
+    font-weight: normal; }
+  article .date + p {
+    margin-top: 2em; }
+
+/* Posts */
+.post {
+  padding: 2em 0; }
+
 /* Sub Pages with Multiple Column Layout */
 @media (min-width: 768px) {
   .subpage-sidebar {
@@ -555,12 +580,12 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
   font-size: 1em;
   font-style: normal;
   font-weight: normal;
-  margin-top: .5em;
+  margin-top: 0.5em;
   margin-bottom: 0;
-  padding: .5em 0;
+  padding: 0.5em 0;
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: #999; }
 
 @media (min-width: 768px) {
@@ -585,7 +610,7 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
     .subpage-navigation ul li a {
       text-decoration: none;
       display: block;
-      padding: .5em .875em;
+      padding: 0.5em 0.875em;
       border-bottom: 1px solid #ccc; }
     .subpage-navigation ul li ul {
       border-top: none; }
@@ -618,27 +643,6 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
   float: right;
   margin-right: 0; }
 
-/* Articles */
-article {
-  max-width: 38em;
-  margin: 0 auto 8em auto; }
-  article h1 {
-    text-align: center; }
-  article h1 + h2 {
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 1.25em;
-    font-weight: normal;
-    margin-bottom: 1em; }
-  article .date {
-    text-align: center;
-    font-size: .625em;
-    line-height: .625em;
-    color: #999;
-    font-weight: normal; }
-  article .date + p {
-    margin-top: 2em; }
-
 /* Thumb Lists */
 ul.thumblist li {
   list-style: none;
@@ -669,16 +673,17 @@ ul.thumblist-grid {
     margin-right: 8%;
     float: left;
     text-align: center;
-    font-size: .8em; }
+    font-size: 0.8em; }
     ul.thumblist-grid li a {
       outline: none; }
     ul.thumblist-grid li a img {
-      transition: border-color .3s ease;
+      transition: border-color 0.3s ease;
       border-color: #fff; }
     ul.thumblist-grid li a img:hover {
       border: 3px solid #39c;
       margin: -3px; }
-    ul.thumblist-grid li h5, ul.thumblist-grid li p {
+    ul.thumblist-grid li h5,
+    ul.thumblist-grid li p {
       line-height: 1.2em; }
   ul.thumblist-grid li:nth-child(even) {
     margin-right: 0; }
