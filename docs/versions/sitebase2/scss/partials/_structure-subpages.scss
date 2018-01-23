@@ -2,6 +2,7 @@
 article {
   max-width: 38em;
   margin: 0 auto 8em auto;
+  padding: 2em 0;
 
   h1 {
     text-align: center;
@@ -25,6 +26,14 @@ article {
 
   .date + p {
     margin-top: 2em;
+  }
+
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    margin-top: 1em;
   }
 }
 

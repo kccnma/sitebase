@@ -1,80 +1,106 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>Site Name</title> 
 
-<!-- HTML5 -->
-<!--[if lt IE 9]>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Name</title>
+
+    <!-- HTML5 -->
+    <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-    
-<!-- VIEWPORT FOR MOBILE -->
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-<!-- MAIN CSS FILE -->    
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- MAIN CSS FILE -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body> 
-    
-<header class="site-header toggle-nav">
-    <div class="container">
-        <div class="site-branding">
-            <h1><a href="index.html">Site Name</a></h1>
-        </div>
-        <nav class="site-navigation toggle-nav">
-            <div class="menu-button navicon">Menu</div>
-            <ul class="nav">
-                <li class="selected"><a href="index.html">Home</a></li>
-                <li><a href="pages.html">Pages</a>
-                    <ul>
-                        <li><a href="page.html">Sub Page</a></li>
-                        <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
-                    </ul>
-                </li> 
-            </ul>
-        </nav>
-    </div><!-- END CONTAINER -->
-</header>
+<body>
 
-<main class="site-main">
-    <div class="container">
-        
-        <section class="hero text-centered">
-            <h2>Home Page</h2>
-            <p>This is an example home page with a hero section at the top with sub sections stacked below.</p>
-            <p><a class="button" href="#">Button</a>
-            <a class="button alt" href="#">Alt Button</a></p>
-        </section>
-        
-        <section>
-            <div class="row">
-                <div class="one-third column">
-                    <img src="img/placeholder-1x1.gif" class="scale-with-grid" alt="placeholder">
-                    <h3>Heading 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                    <p><a class="button" href="#">Button</a></p>
-                </div>
-                <div class="one-third column">
-                    <img src="img/placeholder-1x1.gif" class="scale-with-grid" alt="placeholder">
-                    <h3>Heading 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                    <p><a class="button" href="#">Button</a></p>
-                </div>
-                <div class="one-third column">
-                    <img src="img/placeholder-1x1.gif" class="scale-with-grid" alt="placeholder">
-                    <h3>Heading 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis.</p>
-                    <p><a class="button" href="#">Button</a></p>
-                </div>
+    <header class="site-header toggle-nav">
+        <div class="container">
+            <div class="site-branding">
+                <h1>
+                    <a href="index.html">Site Name</a>
+                </h1>
             </div>
-        </section>
-    </div><!-- END CONTAINER -->
-    
-    
-    <!--    
+            <nav class="site-navigation toggle-nav">
+                <div class="menu-button navicon">Menu</div>
+                <ul class="nav">
+                    <li class="selected">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="pages.html">Pages</a>
+                        <ul>
+                            <li>
+                                <a href="page.html">Sub Page</a>
+                            </li>
+                            <li>
+                                <a href="page-sidebar.html">Sub Page w/ Sidebar</a>
+                            </li>
+                            <li>
+                                <a href="post.html">Post</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- END CONTAINER -->
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+
+            <section class="hero text-centered">
+                <h2>Home Page</h2>
+                <p>This is an example home page with a hero section at the top with sub sections stacked below.</p>
+                <p>
+                    <a class="button" href="#">Button</a>
+                    <a class="button alt" href="#">Alt Button</a>
+                </p>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="one-third column">
+                        <img src="img/placeholder-1x1.gif" class="scale-with-grid" alt="placeholder">
+                        <h3>Heading 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula
+                            dolor interdum dui, quis.</p>
+                        <p>
+                            <a class="button" href="#">Button</a>
+                        </p>
+                    </div>
+                    <div class="one-third column">
+                        <img src="img/placeholder-1x1.gif" class="scale-with-grid" alt="placeholder">
+                        <h3>Heading 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula
+                            dolor interdum dui, quis.</p>
+                        <p>
+                            <a class="button" href="#">Button</a>
+                        </p>
+                    </div>
+                    <div class="one-third column">
+                        <img src="img/placeholder-1x1.gif" class="scale-with-grid" alt="placeholder">
+                        <h3>Heading 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula
+                            dolor interdum dui, quis.</p>
+                        <p>
+                            <a class="button" href="#">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- END CONTAINER -->
+
+
+        <!--    
     <section class="superlightgrey">
         <div class="container">
             <div class="row">
@@ -89,22 +115,28 @@
         </div>
     </section> 
     -->
-    
-</main>
-    
-<footer class="site-footer">
-    <div class="container">
-        <nav class="site-navigation">
-            <ul class="nav group">
-                <li class="selected"><a href="index.html">Home</a></li>
-                <li><a href="pages.html">Sub Pages</a></li>
-            </ul>
-        </nav>
-    </div><!-- END CONTAINER -->
-</footer>
 
-<!-- MAIN JS -->
-<script src="js/script.js"></script>
-    
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="site-navigation">
+                <ul class="nav group">
+                    <li class="selected">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="pages.html">Sub Pages</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- END CONTAINER -->
+    </footer>
+
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

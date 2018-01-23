@@ -56,9 +56,14 @@ body {
     Based on a Traditional Typographic Scale
     48, 36, 24, 21, 18, 16
 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Helvetica, Arial, sans-serif;
-  margin: .5em 0; }
+  margin: 0.5em 0; }
 
 h1 {
   font-size: 3em;
@@ -92,7 +97,7 @@ h6 {
 
 /* #PARAGRAPHS */
 p {
-  margin: 0 0 .5em 0; }
+  margin: 0 0 0.5em 0; }
 
 /* #LINKS */
 a {
@@ -103,14 +108,20 @@ a:hover {
   color: #069; }
 
 /* #LISTS */
-ul, ol, li {
+ul,
+ol,
+li {
   margin: 0;
   padding: 0; }
 
-ul, ol {
+ul,
+ol {
   padding-bottom: 1em; }
 
-ul li ul, ul li ol, ol li ul, ol li ol {
+ul li ul,
+ul li ol,
+ol li ul,
+ol li ol {
   margin: 0;
   padding-bottom: 0; }
 
@@ -127,12 +138,12 @@ blockquote {
 
 blockquote cite {
   display: block;
-  opacity: .8;
-  font-size: .875em; }
+  opacity: 0.8;
+  font-size: 0.875em; }
 
 blockquote cite:before {
-  content: '\2014';
-  margin-right: .25em; }
+  content: "\2014";
+  margin-right: 0.25em; }
 
 /* #HELPERS */
 .text-centered {
@@ -158,9 +169,10 @@ hr {
   margin: 2em 0; }
 
 /* #CODE  */
-pre, code {
+pre,
+code {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-  font-size: .875em; }
+  font-size: 0.875em; }
 
 pre {
   margin: 1.5em 0 3em 0;
@@ -487,7 +499,8 @@ section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
 /* Articles */
 article {
   max-width: 38em;
-  margin: 0 auto 8em auto; }
+  margin: 0 auto 8em auto;
+  padding: 2em 0; }
   article h1 {
     text-align: center; }
   article h1 + h2 {
@@ -504,6 +517,12 @@ article {
     font-weight: normal; }
   article .date + p {
     margin-top: 2em; }
+  article p + h2,
+  article p + h3,
+  article p + h4,
+  article p + h5,
+  article p + h6 {
+    margin-top: 1em; }
 
 /* Posts */
 .post {
@@ -805,3 +824,45 @@ ul.thumblist-grid {
   .toggle-nav.animated .menu-button.expanded + ul li a,
   .toggle-nav.animated .menu-button.expanded + div ul li a {
     padding: .75em; } }
+
+/* FORMS */
+form {
+  margin: 1.75em 0; }
+
+form label {
+  display: block; }
+
+form input,
+form textarea {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.15em;
+  display: block;
+  margin-bottom: 1.25em;
+  width: 100%;
+  color: #666;
+  padding: .25em;
+  border: 1px solid #ccc; }
+
+form textarea {
+  border: 1px solid #ccc;
+  min-height: 6em; }
+
+form input[type=button],
+form input[type=submit],
+form input[type=reset] {
+  width: auto;
+  background-color: #39c;
+  border: 1px solid #39c;
+  color: #fff;
+  padding: .75em 1em;
+  -webkit-border-radius: .32em;
+  -moz-border-radius: .32em;
+  border-radius: .32em;
+  margin-top: .5em;
+  margin-bottom: .5em; }
+  form input[type=button]:hover,
+  form input[type=submit]:hover,
+  form input[type=reset]:hover {
+    background-color: #069;
+    border-color: #069; }
