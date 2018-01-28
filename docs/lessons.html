@@ -67,7 +67,7 @@
                     Site Base 1.0 uses no pre-processing (e.g. SASS), no command line interface (CLI), and no special software.
                     All you need is a text editor and a browser.</p>
 
-                <div class="accordian">
+                <div id="baseblank" class="accordian">
                     <h4>Step 1
                         <span class="light nomobile">Base Blank</span>
                         <div class="arrow"></div>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
 
-                <div class="accordian">
+                <div id="basecontent" class="accordian">
                     <h4>Step 2
                         <span class="light nomobile">Base Content</span>
                         <div class="arrow"></div>
@@ -169,7 +169,7 @@
                     </div>
                 </div>
 
-                <div class="accordian">
+                <div id="baselayout" class="accordian">
                     <h4>Step 3
                         <span class="light nomobile">Base Layout</span>
                         <div class="arrow"></div>
@@ -214,7 +214,7 @@
                     </div>
                 </div>
 
-                <div class="accordian">
+                <div id="basesite" class="accordian">
                     <h4>Step 4
                         <span class="light nomobile">Base Site Structure (Home Page)</span>
                         <div class="arrow"></div>
@@ -274,7 +274,8 @@
 
                     </div>
                 </div>
-                <div class="accordian">
+
+                <div id="basetogglenav" class="accordian">
                     <h4>Step 5
                         <span class="light nomobile">Mobile Menu (Toggle Nav)</span>
                         <div class="arrow"></div>
@@ -316,8 +317,7 @@
                     </div>
                 </div>
 
-
-                <div class="accordian">
+                <div id="basesubpages" class="accordian">
                     <h4>Step 6
                         <span class="light nomobile">Sub Page(s)</span>
                         <div class="arrow"></div>
@@ -544,6 +544,15 @@
 
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
+
+    <script>
+        // Get hash from query string and open the accordian
+        var hash = window.location.hash.substring(1);
+        var target = document.getElementById(hash);
+        if (hash) {
+            document.getElementById(hash).className += " open";
+        }
+    </script>
 
 
 
