@@ -212,6 +212,30 @@ code {
   overflow-x: auto;
 }
 
+/* BLOCKED LOAD */
+.blocked body,
+.blocked h1,
+.blocked h2,
+.blocked h3,
+.blocked h4,
+.blocked h5,
+.blocked h6,
+.blocked p,
+.blocked a,
+.blocked .site-header a,
+.blocked .site-footer a,
+.blocked .site-branding h1,
+.blocked .site-branding h1 a,
+.blocked li,
+.blocked blockquote,
+.blocked a.button,
+.blocked a.button.alt,
+.blocked button {
+  color: #eee;
+  background-color: #eee;
+  border-color: #eee;
+}
+
 /* #MEDIA  */
 /* #IMAGES */
 img.scale-with-grid {
