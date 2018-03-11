@@ -1,0 +1,829 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE START
+        #HTML5
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #LISTS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #MEDIAQUERIES
+        #CONTAINER
+        #GRID SYSTEM
+            #CLEARFIX
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                #SITE-BRANDING (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+/* #HTML5 */
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+
+/* #TYPOGRAPHY  */
+/* Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 87.5%;
+  /* 14px; */
+  line-height: 1.5em;
+  /* 14px x 1.5em = 21px */
+}
+
+/* #HEADINGS
+    Based on a Traditional Typographic Scale
+    48, 36, 24, 21, 18, 16
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0.5em 0;
+}
+
+h1 {
+  font-size: 3em;
+  /* 48px / 16px = 3em */
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2.25em;
+  /* 36px / 16px = 2.25em */
+  line-height: 1.1em;
+}
+
+h3 {
+  font-size: 1.5em;
+  /* 24px / 16px = 1.5em */
+  line-height: 1.2em;
+}
+
+h4 {
+  font-size: 1.3125em;
+  /* 21px / 16px = 1.3125em */
+  line-height: 1.3em;
+}
+
+h5 {
+  font-size: 1.125em;
+  /* 18px / 16px = 1.125em */
+  line-height: 1.4em;
+}
+
+h6 {
+  font-size: 1em;
+  /* 16px / 16px = 1em */
+  line-height: 1.5em;
+}
+
+/* #PARAGRAPHS */
+p {
+  margin: 0 0 0.5em 0;
+}
+
+/* #LINKS */
+a {
+  color: #39c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+}
+
+/* #LISTS */
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding-bottom: 1em;
+}
+
+ul li ul,
+ul li ol,
+ol li ul,
+ol li ol {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+li {
+  margin-left: 1.875em;
+}
+
+/* #BLOCK QUOTES  */
+blockquote {
+  font-size: 1.142em;
+  margin: 1.5em 0;
+  padding: 1.5em;
+  border-top: 0px solid #ccc;
+  border-bottom: 0px solid #ccc;
+}
+
+blockquote cite {
+  display: block;
+  opacity: 0.8;
+  font-size: 0.875em;
+}
+
+blockquote cite:before {
+  content: "\2014";
+  margin-right: 0.25em;
+}
+
+/* #HELPERS */
+.text-centered {
+  text-align: center;
+}
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+@media (max-width: 767px) {
+  .hidden-sm {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-lg {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+}
+
+.subheader {
+  color: #999;
+  margin-top: 1em;
+  font-style: normal;
+  font-weight: normal;
+  clear: both;
+}
+
+/* HORIZONTAL RULES */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 2em 0;
+}
+
+/* #MEDIA  */
+/* #IMAGES */
+img.scale-with-grid {
+  max-width: 100%;
+  height: auto;
+}
+
+img.circular {
+  border-radius: 100%;
+}
+
+/* #COMPONENTS  */
+/* #BUTTONS */
+button {
+  font-size: inherit;
+}
+
+button,
+a.button,
+form input[type="submit"] {
+  display: inline-block;
+  background-color: #39c;
+  border: 1px solid #39c;
+  color: #fff;
+  padding: 0.75em 1em;
+  -webkit-border-radius: 0.32em;
+  -moz-border-radius: 0.32em;
+  border-radius: 0.32em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: none;
+  cursor: pointer;
+  line-height: 1em;
+}
+
+button.alt,
+a.button.alt {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #39c;
+  color: #39c;
+}
+
+button:hover,
+a.button:hover,
+form input[type="submit"]:hover {
+  background-color: #069;
+  color: #fff;
+  border-color: #069;
+  text-decoration: none;
+}
+
+/* LAYOUT */
+/*
+#MEDIA QUERIES (Mobile First)
+	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
+	#SMALL- (Mobile Only Overrides) - max-width: 767px
+	#MEDIUM+ (Tablet) - min-width: 768px
+	#LARGE+ (Desktop) - min-width: 1050px
+	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
+/* SMALL+ (Mobile First Defaults) */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 92%;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
+@media (max-width: 767px) {
+  /* Inherits Small/Mobile Body Type from Above */
+  /* Inherits Small/Mobile Fluid Width from Above */
+}
+
+/* #MEDIUM+ MEDIA QUERY */
+@media (min-width: 768px) {
+  /* Inherits Small/Mobile Body Type from Above */
+  /* Inherits Small/Mobile Fluid Width from Above */
+}
+
+/* #LARGE+ MEDIA QUERY */
+@media (min-width: 1050px) {
+  /* LARGE BODY TYPE */
+  body {
+    font-size: 100%;
+    /* 16px; */
+  }
+  /* FIXED WIDTH */
+  .container {
+    width: 900px;
+    padding: 0 50px;
+  }
+}
+
+/* #EXTRA-LARGE+ MEDIA QUERY */
+@media (min-width: 1250px) {
+  /* EXTRA-LARGE BODY TYPE */
+  body {
+    font-size: 112.5%;
+    /* 18px; */
+  }
+  /* FIXED WIDTH */
+  .container {
+    width: 1100px;
+  }
+}
+
+/* Default Grid (on SMALL+ Screen Sizes) */
+.row {
+  margin: 0;
+}
+
+.column {
+  margin: 0 0 3em 0;
+}
+
+/* Medium Grid (on MEDIUM+ Screen Sizes) */
+@media (min-width: 768px) {
+  .column {
+    float: left;
+    margin-right: 8%;
+  }
+  .column:last-child {
+    margin-right: 0;
+  }
+  .column.centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .one-whole.column {
+    width: 100%;
+  }
+  .one-half.column {
+    width: 46%;
+  }
+  .one-third.column {
+    width: 28%;
+  }
+  .two-thirds.column {
+    width: 64%;
+  }
+  .one-fourth.column {
+    width: 19%;
+  }
+  .one-fifth.column {
+    width: 13.6%;
+  }
+}
+
+/* #CLEARFIXES */
+.group:after,
+.row:after,
+.container:after,
+.nav:after {
+  content: "";
+  display: table;
+  clear: both;
+  font-size: 0;
+}
+
+/* FOR DEMO PURPOSES */
+.demo .column {
+  background-color: #ccc;
+}
+
+.demo .column p {
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+}
+
+/* Header & Footer */
+body {
+  background: #fff;
+}
+
+/* Header & Footer */
+.site-header a,
+.site-footer a {
+  color: #333;
+}
+
+.site-header a:hover,
+.site-footer a:hover {
+  color: #069;
+  text-decoration: none;
+}
+
+/* Header Only */
+.site-header {
+  background: #fff;
+  border-bottom: 0px solid #ccc;
+}
+
+.site-header .container {
+  padding-top: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .site-header .container {
+    padding-top: 0.75em;
+  }
+}
+
+/* Site Branding */
+.site-branding {
+  text-align: center;
+}
+
+.site-branding h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  color: #999;
+  padding: 0.5em 0 0.4em 0;
+}
+
+.site-branding h1 a {
+  font-weight: bold;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .site-branding {
+    float: left;
+  }
+}
+
+/* Footer Only */
+.site-footer {
+  background: #fff;
+  border-top: 0px solid #ccc;
+}
+
+.site-footer .container {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+@media (min-width: 768px) {
+  .site-footer .container {
+    padding-bottom: 0.5em;
+  }
+}
+
+/* Main Site Section (Main Content Area) */
+.site-main {
+  background: #fff;
+}
+
+/* Main Sections */
+section {
+  padding: 3em 0;
+}
+
+/* Hero Sections */
+.container .hero {
+  position: relative;
+  top: 2em;
+  margin-bottom: 3em;
+}
+
+.hero {
+  background: #ddd;
+  border-top: none;
+  padding: 6em 1em 5em 1em;
+  margin-bottom: 1.5em;
+}
+
+.hero h1,
+.hero h2 {
+  font-size: 3em;
+  line-height: 1.1em;
+  max-width: 10em;
+}
+
+.hero p {
+  max-width: 22em;
+}
+
+.hero.text-centered h1,
+.hero.text-centered h2,
+.hero.text-centered h3,
+.hero.text-centered h4,
+.hero.text-centered h5,
+.hero.text-centered h6,
+.hero.text-centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero.full-width {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* #SITE NAVIGATION  */
+/* Default Site-Navigation Menu (both header & footer) */
+.site-navigation {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.site-navigation ul {
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+.site-navigation ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  display: inline-flex;
+}
+
+.site-navigation ul li a {
+  display: block;
+  padding: 0.5em 0.75em 0.4em 0.75em;
+}
+
+.site-navigation ul li ul {
+  border-top: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .site-navigation ul {
+    border-top: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site-navigation ul li {
+    display: inline-block;
+    /* DROP DOWN MENU */
+    /* stack nested lists */
+    /* hide nested lists by default */
+    /* show nested lists on hover */
+    /* SELECTED STATE */
+  }
+  .site-navigation ul li a {
+    margin: 0 0.5em;
+    padding: 0.85em 0.5em 0.75em 0.5em;
+  }
+  .site-navigation ul li li {
+    display: block;
+  }
+  .site-navigation ul li ul {
+    text-align: left;
+    position: absolute;
+    z-index: 100;
+    left: -9000px;
+    background: #fff;
+  }
+  .site-navigation ul li ul a {
+    color: #999;
+  }
+  .site-navigation ul li:hover ul {
+    left: auto;
+  }
+  .site-navigation ul li.selected a,
+  .site-navigation ul li.current-menu-item a {
+    font-weight: bold;
+  }
+  .site-navigation ul li.selected li a,
+  .site-navigation ul li.current-menu-item li a {
+    font-weight: normal;
+  }
+}
+
+/* Default Site-Navigation (header only) */
+@media (min-width: 768px) {
+  .site-header .site-navigation {
+    float: right;
+  }
+}
+
+/* Default Site-Navigation (footer only) */
+.site-footer .site-navigation ul {
+  border-top: none;
+  margin: 0;
+}
+
+/* Navicon */
+
+.navicon {
+  padding: 1em 0;
+  text-align: right;
+}
+
+.navicon:hover {
+  cursor: pointer;
+}
+
+.navicon,
+.navicon::selection {
+  color: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
+}
+
+.navicon:after {
+  content: "\2630";
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.5em;
+  display: block;
+  width: 1em;
+  margin: -0.15em 0 0 0;
+  float: right;
+  transition: 0.2s ease all;
+  transform: rotate(0deg);
+}
+
+.navicon.expanded:after {
+  transform: rotate(90deg);
+  content: "\2715";
+  margin: -0.3em -0.1em 0 0;
+}
+
+/* Toggle Nav */
+.toggle-nav .site-navigation ul {
+  display: none;
+}
+.toggle-nav .site-branding {
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .toggle-nav .site-navigation .menu-button {
+    display: none;
+  }
+
+  .toggle-nav .site-navigation ul {
+    display: block;
+  }
+}
+
+/* toggle nav animated */
+
+@media (max-width: 767px) {
+  .menu-button.expanded + ul {
+    display: block;
+  }
+
+  .menu-button.expanded + ul li {
+    display: block;
+  }
+
+  .menu-button.expanded + ul li a {
+    transition: 0.5s ease-in all;
+  }
+
+  .menu-button.expanded + ul li a:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .toggle-nav.animated .site-navigation ul {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+  }
+  .toggle-nav.animated .menu-button.expanded + ul {
+    display: block;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: 0.3s ease-in all;
+    padding: 0.5em 0;
+    opacity: 1;
+  }
+}
+
+/* ARTICLES */
+
+/* Articles */
+article {
+  max-width: 650px;
+  margin: 0 auto 8em auto;
+  padding: 2em 0;
+}
+
+article h1 {
+  text-align: center;
+}
+
+article h1 + h2 {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+article .date {
+  text-align: center;
+  font-size: 0.75em;
+  line-height: 1;
+  color: #999;
+  font-weight: normal;
+}
+
+article .date + p {
+  margin-top: 2.5em;
+}
+
+article p + h2,
+article p + h3,
+article p + h4,
+article p + h5,
+article p + h6 {
+  margin-top: 1.5em;
+}
+
+/*
+article p:first-of-type:first-letter {
+  float: left;
+  font-size: 3em;
+  margin-right: 0.3em;
+  background-color: #333;
+  color: #fff;
+  padding: 0.45em;
+}
+*/
+
+/* FORMS */
+
+form {
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+form label,
+form input,
+form textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-size: 1em;
+}
+
+form label {
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+
+form input[type="text"],
+form textarea {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  color: #666;
+}
+
+form textarea {
+  min-height: 10em;
+  line-height: 1.5;
+}
+
+form input[type="submit"] {
+  margin-top: 1.5em;
+  width: auto;
+}
+
+/* SITE SPECIFIC CSS */
+
+/* STICKY header - works with a class="sticky" on .site-header */
+.site-header.sticky {
+  position: fixed;
+  width: 100%;
+}
+
+.site-footer.sticky {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.site-header.sticky + main {
+  padding-top: 3em;
+}
+
+.section-title {
+  padding-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  margin: 0.5em auto;
+}
+
+#about {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#contact {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Vertical Media Query to add height to contact page on large screens - credit goed to Romina for this idea! */
+@media (min-height: 600px) {
+  #contact {
+    padding-bottom: 20em;
+  }
+}
