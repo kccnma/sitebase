@@ -1,131 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Site Base | Docs</title> 
+  <head>
+    <meta charset="UTF-8" />
+    <title>Site Base | Docs</title>
 
-<!-- HTML5 -->
-<!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-    
-<!-- VIEWPORT FOR MOBILE -->
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-<!-- MAIN CSS FILE -->    
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- MAIN CSS FILE -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-    
-</head>
-
-<body> 
-    
-<header class="site-header toggle-nav animated">
-    <div class="container">
+  <body>
+    <header class="site-header toggle-nav animated">
+      <div class="container">
         <div class="site-branding">
-            <h1><a href="index.html">Site Base</a></h1>
+          <h1><a href="index.html">Site Base</a></h1>
         </div>
         <nav class="site-navigation">
-            <div class="menu-button navicon">Menu</div>
-            <ul class="nav">
-                <li class="hidden"><a href="index.html">Home</a></li>
-                <li><a href="lessons.html">Get Started</a></li>
-                <li><a href="documentation.html">Documentation</a></li>
-                <li><a href="examples.html">Examples</a></li>
-            </ul>
+          <div class="menu-button navicon">Menu</div>
+          <ul class="nav">
+            <li class="hidden"><a href="index.html">Home</a></li>
+            <li><a href="lessons.html">Get Started</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="examples.html">Examples</a></li>
+          </ul>
         </nav>
-    </div><!-- END CONTAINER -->
-</header>
+      </div>
+      <!-- END CONTAINER -->
+    </header>
 
-<main class="site-main">
-    <div class="container">
-        
+    <main class="site-main">
+      <div class="container">
         <section class="hero text-centered">
-            <h1>Site Base</h1>
-            <p>A minimalistic HTML + CSS + JS base front-end framework for simple web site projects.</p>
-            <p><a class="button" href="documentation.html">See the Docs</a></p>
+          <h1>Site Base</h1>
+          <p>
+            A minimalistic HTML + CSS + JS base front-end framework for simple
+            web site projects.
+          </p>
+          <p><a class="button" href="documentation.html">See the Docs</a></p>
         </section>
-        
-        <section class="text-centered">
-            <div class="row">
-                <div class="one-third column">
-                    <h3>Student Friendly</h3>
-                    <p>Designed for web designers and front-end developers, Site Base is a simple HTML + CSS + JS framework created for students learning how to code a basic front-end framework from scratch by hand, line-by-line.</p>
-                    <!--<p><a class="button alt" href="base-lessons.html">Step-by-Step Lessons</a></p>-->
-                </div>
-                <div class="one-third column">
-                    <h3>Nothing Required</h3>
-                    <p>No prior web design experience is required. Designed for first-time front-end coders, Site Base 1.0 uses no pre-processing, no command line, and no special software. All you need is a text editor and a browser.</p>
-                    <!--<p><a class="button alt" href="base-docs.html">Documentation</a></p>-->
-                </div>
-                <div class="one-third column">
-                    <h3>Customizable CSS</h3>
-                    <p>All styling is intentionally minimal for simple, basic web sites. Core CSS includes base typography, a simple responsive grid, and a default site structure with a mobile-friendly navigation system.</p>
-                    <!--<p><a class="button alt" href="index.html">Demo Site Example</a></p>-->
-                </div>
-            </div>
-        </section>
-        
-        
-        
-        <section class="text-centered">
-            <div class="row">
-                <div class="one-whole column">
-                    <h2>Modular, Scalable, and Extensible</h2>
-                    <p>There are three different versions of Sitebase, each one is designed for different users and contexts.</p>
-                </div>
-            </div>
-        </section>
-        
-        
-        
-        <section class="text-centered">
-            <div class="row">
-                <div class="one-third column">
-                    <h4>Site Base 1.0</h4>
-                    <p><em>Static CSS Version</em></p>
-                    <p>A basic front-end framework for beginners learning how to code from scratch by hand, line-by-line. No build tools. Straight up HTML, CSS, &amp; JS.</p>
-                    <p><a class="button" href="https://github.com/kccnma/sitebase/tree/master/docs/versions">1.0 on Github</a> <a class="button alt" href="lessons.html#sitebase1">1.0  Lessons</a></p>
-                </div>
-                <div class="one-third column">
-                    <h4>Site Base 2.0</h4>
-                    <p><em>Sassy Prepros Version</em></p>
-                    <p>Same as version 1.0, but using SASS to organize and modularize the CSS and Prepros, a GUI-based compiler and task manager, to build and deploy.</p>
-                    <p><a class="button" href="https://github.com/kccnma/sitebase/tree/master/docs/versions">2.0 on Github</a> <a class="button alt" href="lessons.html#sitebase2">2.0  Lessons</a></p>
-                </div>
-                <div class="one-third column">
-                    <h4>Site Base 3.0</h4>
-                    <p><em>NPM Gulp Version</em></p>
-                    <p>Similar to version 2.0, but using a CLI-based workflow for all build tools. NPM for package management. Gulp for tasks. Github for version control.</p>
-                    <p><a class="button" href="https://github.com/kccnma/sitebase">3.0 on Github</a> <a class="button alt" href="lessons.html#sitebase3">3.0  Lessons</a></p>
-                </div>
-            </div>
-        </section>
-        
-        
-        
-        
 
-    </div><!-- END CONTAINER -->
-</main>
-    
-<footer class="site-footer">
-    <div class="container">
+        <section class="text-centered">
+          <div class="row">
+            <div class="one-third column">
+              <h3>Student Friendly</h3>
+              <p>
+                Designed for web designers and front-end developers, Site Base
+                is a simple HTML + CSS + JS framework created for students
+                learning how to code a basic front-end framework from scratch by
+                hand, line-by-line.
+              </p>
+              <!--
+                <p><a class="button alt" href="base-lessons.html">Step-by-Step Lessons</a></p>
+              -->
+            </div>
+            <div class="one-third column">
+              <h3>Nothing Required</h3>
+              <p>
+                No prior web design experience is required. Designed for
+                first-time front-end coders, Site Base 1.0 uses no
+                pre-processing, no command line, and no special software. All
+                you need is a text editor and a browser.
+              </p>
+              <!--
+                <p><a class="button alt" href="base-docs.html">Documentation</a></p>
+              -->
+            </div>
+            <div class="one-third column">
+              <h3>Customizable CSS</h3>
+              <p>
+                All styling is intentionally minimal for simple, basic web
+                sites. Core CSS includes base typography, a simple responsive
+                grid, and a default site structure with a mobile-friendly
+                navigation system.
+              </p>
+              <!--
+                <p><a class="button alt" href="index.html">Demo Site Example</a></p>
+              -->
+            </div>
+          </div>
+        </section>
+
+        <section class="text-centered">
+          <div class="row">
+            <div class="one-whole column">
+              <h2>Modular, Scalable, and Extensible</h2>
+              <p>
+                There are three different versions of Sitebase, each one is
+                designed for different users and contexts.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-centered">
+          <div class="row">
+            <div class="one-third column">
+              <h4>Site Base 1.0</h4>
+              <p><em>Static CSS Version</em></p>
+              <p>
+                A basic front-end framework for beginners learning how to code
+                from scratch by hand, line-by-line. No build tools. Straight up
+                HTML, CSS, &amp; JS.
+              </p>
+              <p>
+                <a
+                  class="button"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/versions"
+                  >1.0 on Github</a
+                >
+                <a class="button alt" href="lessons.html#sitebase1"
+                  >1.0 Lessons</a
+                >
+              </p>
+            </div>
+            <div class="one-third column">
+              <h4>Site Base 2.0</h4>
+              <p><em>Sassy Prepros Version</em></p>
+              <p>
+                Same as version 1.0, but using SASS to organize and modularize
+                the CSS and Prepros, a GUI-based compiler and task manager, to
+                build and deploy.
+              </p>
+              <p>
+                <a
+                  class="button"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/versions"
+                  >2.0 on Github</a
+                >
+                <a class="button alt" href="lessons.html#sitebase2"
+                  >2.0 Lessons</a
+                >
+              </p>
+            </div>
+            <div class="one-third column">
+              <h4>Site Base 3.0</h4>
+              <p><em>NPM Gulp Version</em></p>
+              <p>
+                Similar to version 2.0, but using a CLI-based workflow for all
+                build tools. NPM for package management. Gulp for tasks. Github
+                for version control.
+              </p>
+              <p>
+                <a class="button" href="https://github.com/kccnma/sitebase"
+                  >3.0 on Github</a
+                >
+                <a class="button alt" href="lessons.html#sitebase3"
+                  >3.0 Lessons</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- END CONTAINER -->
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
         <nav class="site-navigation">
-            <ul class="nav group">
-                <li><a href="#">Home</a></li>
-                <li><a href="lessons.html">Get Started</a></li>
-                <li><a href="documentation.html">Documentation</a></li>
-                <li><a href="examples.html">Examples</a></li>
-            </ul>
+          <ul class="nav group">
+            <li><a href="#">Home</a></li>
+            <li><a href="lessons.html">Get Started</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="examples.html">Examples</a></li>
+          </ul>
         </nav>
-    </div><!-- END CONTAINER -->
-</footer>
+      </div>
+      <!-- END CONTAINER -->
+    </footer>
 
-
-<!-- MAIN JS -->
-<script src="js/script.js"></script>
-    
-</body>
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+  </body>
 </html>

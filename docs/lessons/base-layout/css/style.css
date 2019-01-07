@@ -242,13 +242,17 @@ button:hover, a.button:hover {
 	#LARGE+ (Desktop) - min-width: 1050px
 	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
 /* SMALL+ (Mobile First Defaults) */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
 .container {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   padding: 0 4%;
 }
@@ -274,7 +278,7 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 900px;
+    width: 1000px;
     padding: 0 50px;
   }
 }
@@ -288,73 +292,69 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 1100px;
+    width: 1200px;
   }
 }
 
-/* Default Grid (on SMALL+ Screen Sizes) */
-.row {
-  margin: 0;
+.row > .column {
+  margin-bottom: 2%;
 }
 
-.column {
-  margin: 0 0 3em 0;
-}
-
-/* Medium Grid (on MEDIUM+ Screen Sizes) */
 @media (min-width: 768px) {
-  .column {
-    float: left;
-    margin-right: 8%;
+  .row {
+    margin-left: -1%;
+    margin-right: -1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .column:last-child {
-    margin-right: 0;
+  .row.swapped {
+    flex-direction: row-reverse;
   }
-  .column.centered {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+  .row.centered {
+    flex-direction: column;
   }
-  .one-whole.column {
-    width: 100%;
+  .row.centered .column {
+    flex-grow: 0;
   }
-  .one-half.column {
-    width: 46%;
+  .row > .column {
+    margin: 0 1% 2% 1%;
+    flex-grow: 1;
   }
-  .one-third.column {
-    width: 28%;
+  .row > .column.one-half {
+    width: 48%;
   }
-  .two-thirds.column {
-    width: 64%;
+  .row > .column.one-third {
+    width: 31.3333%;
   }
-  .one-fourth.column {
-    width: 19%;
+  .row > .column.two-thirds {
+    width: 64.6666%;
   }
-  .one-fifth.column {
-    width: 13.6%;
+  .row > .column.one-fourth {
+    width: 23%;
+  }
+  .row > .column.three-fourths {
+    width: 73%;
+  }
+  .row > .column.push-one-third {
+    margin-left: 34.3333%;
+  }
+  .row > .column.push-one-fourth {
+    margin-left: 26%;
+  }
+  .row > .column.centered {
+    flex-grow: 0;
   }
 }
 
-/* #CLEARFIXES */
-.group:after,
-.row:after,
-.container:after,
-.nav:after {
-  content: "";
-  display: table;
-  clear: both;
-  font-size: 0;
-}
-
-/* FOR DEMO PURPOSES */
 .demo .column {
-  background-color: #ccc;
+  padding: 1em;
+  background: #ddd;
+  text-align: center;
 }
 
 .demo .column p {
-  text-align: center;
   margin: 0;
-  padding: 1em;
 }
 
 /* FOR DEMO PURPOSES ONLY */

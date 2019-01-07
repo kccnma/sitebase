@@ -242,13 +242,17 @@ button:hover, a.button:hover {
 	#LARGE+ (Desktop) - min-width: 1050px
 	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
 /* SMALL+ (Mobile First Defaults) */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
 .container {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   padding: 0 4%;
 }
@@ -274,7 +278,7 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 900px;
+    width: 1000px;
     padding: 0 50px;
   }
 }
@@ -288,73 +292,69 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 1100px;
+    width: 1200px;
   }
 }
 
-/* Default Grid (on SMALL+ Screen Sizes) */
-.row {
-  margin: 0;
+.row > .column {
+  margin-bottom: 2%;
 }
 
-.column {
-  margin: 0 0 3em 0;
-}
-
-/* Medium Grid (on MEDIUM+ Screen Sizes) */
 @media (min-width: 768px) {
-  .column {
-    float: left;
-    margin-right: 8%;
+  .row {
+    margin-left: -1%;
+    margin-right: -1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .column:last-child {
-    margin-right: 0;
+  .row.swapped {
+    flex-direction: row-reverse;
   }
-  .column.centered {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+  .row.centered {
+    flex-direction: column;
   }
-  .one-whole.column {
-    width: 100%;
+  .row.centered .column {
+    flex-grow: 0;
   }
-  .one-half.column {
-    width: 46%;
+  .row > .column {
+    margin: 0 1% 2% 1%;
+    flex-grow: 1;
   }
-  .one-third.column {
-    width: 28%;
+  .row > .column.one-half {
+    width: 48%;
   }
-  .two-thirds.column {
-    width: 64%;
+  .row > .column.one-third {
+    width: 31.3333%;
   }
-  .one-fourth.column {
-    width: 19%;
+  .row > .column.two-thirds {
+    width: 64.6666%;
   }
-  .one-fifth.column {
-    width: 13.6%;
+  .row > .column.one-fourth {
+    width: 23%;
+  }
+  .row > .column.three-fourths {
+    width: 73%;
+  }
+  .row > .column.push-one-third {
+    margin-left: 34.3333%;
+  }
+  .row > .column.push-one-fourth {
+    margin-left: 26%;
+  }
+  .row > .column.centered {
+    flex-grow: 0;
   }
 }
 
-/* #CLEARFIXES */
-.group:after,
-.row:after,
-.container:after,
-.nav:after {
-  content: "";
-  display: table;
-  clear: both;
-  font-size: 0;
-}
-
-/* FOR DEMO PURPOSES */
 .demo .column {
-  background-color: #ccc;
+  padding: 1em;
+  background: #ddd;
+  text-align: center;
 }
 
 .demo .column p {
-  text-align: center;
   margin: 0;
-  padding: 1em;
 }
 
 /* Header & Footer */
@@ -386,6 +386,8 @@ body {
 
 @media (min-width: 768px) {
   .site-header .container {
+    display: flex;
+    justify-content: space-between;
     padding-top: 0.75em;
   }
 }
@@ -409,12 +411,6 @@ body {
   display: inline-block;
 }
 
-@media (min-width: 768px) {
-  .site-branding {
-    float: left;
-  }
-}
-
 /* Footer Only */
 .site-footer {
   background: #fff;
@@ -428,6 +424,8 @@ body {
 
 @media (min-width: 768px) {
   .site-footer .container {
+    display: flex;
+    justify-content: center;
     padding-bottom: 0.5em;
   }
 }
@@ -494,7 +492,7 @@ section {
 }
 
 .site-navigation ul {
-  padding: .5em 0;
+  padding: 0.5em 0;
   text-align: center;
 }
 
@@ -507,7 +505,7 @@ section {
 
 .site-navigation ul li a {
   display: block;
-  padding: .5em .75em .4em .75em;
+  padding: 0.5em 0.75em 0.4em 0.75em;
 }
 
 .site-navigation ul li ul {
@@ -531,8 +529,8 @@ section {
     /* SELECTED STATE */
   }
   .site-navigation ul li a {
-    margin: 0 .5em;
-    padding: .85em .5em .75em .5em;
+    margin: 0 0.5em;
+    padding: 0.85em 0.5em 0.75em 0.5em;
   }
   .site-navigation ul li li {
     display: block;
@@ -559,12 +557,6 @@ section {
 }
 
 /* Default Site-Navigation (header only) */
-@media (min-width: 768px) {
-  .site-header .site-navigation {
-    float: right;
-  }
-}
-
 /* Default Site-Navigation (footer only) */
 .site-footer .site-navigation ul {
   border-top: none;
@@ -587,26 +579,21 @@ section {
 .menu-button.navicon:after {
   cursor: pointer;
   color: #333;
-  content: '\2630';
+  content: "\2630";
   font-size: 1.5em;
-  margin-top: -.1em;
-  margin-left: .5em;
+  margin-top: -0.1em;
+  margin-left: 0.5em;
   width: 1em;
   height: 1em;
   line-height: 1em;
   display: block;
-  float: right;
 }
 
 .menu-button.navicon.expanded:after {
-  content: '\2715';
+  content: "\2715";
 }
 
 /* Toggle-Nav */
-.toggle-nav .site-branding {
-  float: left;
-}
-
 .toggle-nav .menu-button,
 .toggle-nav .menu-button.expanded {
   display: none;
@@ -620,8 +607,7 @@ section {
   .toggle-nav .menu-button,
   .toggle-nav .menu-button.expanded {
     display: block;
-    float: right;
-    margin-top: .9em;
+    margin-top: 0.9em;
     margin-bottom: 1em;
   }
   .toggle-nav .menu-button:hover {
@@ -634,7 +620,7 @@ section {
     clear: both;
     display: block;
     margin: 0;
-    padding: .5em 0;
+    padding: 0.5em 0;
   }
   .toggle-nav .menu-button + ul,
   .toggle-nav .menu-button + div ul {
@@ -648,8 +634,8 @@ section {
   }
   .toggle-nav .menu-button + ul li a,
   .toggle-nav .menu-button + div ul li a {
-    padding: .9em .75em .75em .75em;
-    transition: all .3s ease;
+    padding: 0.9em 0.75em 0.75em 0.75em;
+    transition: all 0.3s ease;
     color: #39c;
   }
   .toggle-nav .menu-button + ul li a:hover,
@@ -674,35 +660,35 @@ section {
     opacity: 0;
     padding: 0;
     border-width: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   .toggle-nav.animated .menu-button.expanded + ul,
   .toggle-nav.animated .menu-button.expanded + div ul {
     max-height: 138em;
     opacity: 1;
-    padding: .5em 0;
+    padding: 0.5em 0;
     border-width: 0px;
-    transition: all .6s ease;
+    transition: all 0.6s ease;
   }
   .toggle-nav.animated .menu-button + ul li,
   .toggle-nav.animated .menu-button + div ul li {
     padding: 0;
     opacity: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   .toggle-nav.animated .menu-button.expanded + ul li,
   .toggle-nav.animated .menu-button.expanded + div ul li {
-    padding: .25em;
+    padding: 0.25em;
     opacity: 1;
-    transition: all .6s ease .2s;
+    transition: all 0.6s ease 0.2s;
   }
   .toggle-nav.animated .menu-button + ul li a,
   .toggle-nav.animated .menu-button + div ul li a {
     padding: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   .toggle-nav.animated .menu-button.expanded + ul li a,
   .toggle-nav.animated .menu-button.expanded + div ul li a {
-    padding: .75em;
+    padding: 0.75em;
   }
 }

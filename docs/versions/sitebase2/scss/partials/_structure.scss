@@ -24,6 +24,8 @@ body {
     padding-top: 0.5em;
 
     @media (min-width: $breakpoint-small) {
+      display: flex;
+      justify-content: space-between;
       padding-top: 0.75em;
       //padding-bottom: .5em;
     }
@@ -50,7 +52,7 @@ body {
 
   //default-layout (Logo left)
   @media (min-width: $breakpoint-small) {
-    float: left;
+    //float: left;
   }
 }
 
@@ -63,6 +65,8 @@ body {
     padding-bottom: 0.25em;
 
     @media (min-width: $breakpoint-small) {
+      display: flex;
+      justify-content: center;
       padding-bottom: 0.5em;
     }
   }

@@ -1,56 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Site Base | Documentation</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Site Base | Documentation</title>
 
-<!-- HTML5 -->
-<!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-    
-<!-- VIEWPORT FOR MOBILE -->
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-<!-- MAIN CSS FILE -->    
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    
-</head>
+    <!-- MAIN CSS FILE -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body> 
-    
-<header class="site-header toggle-nav animated">
-    <div class="container">
+  <body>
+    <header class="site-header toggle-nav animated">
+      <div class="container">
         <div class="site-branding">
-            <h1><a href="index.html">Site Base</a> / Docs</h1>
+          <h1><a href="index.html">Site Base</a> / Docs</h1>
         </div>
         <nav class="site-navigation">
-            <div class="menu-button navicon">Menu</div>
-            <ul class="nav">
-                <li class="hidden"><a href="index.html">Home</a></li>
-                <li><a href="lessons.html">Get Started</a></li>
-                <li class="selected"><a href="documentation.html">Documentation</a></li>
-                <li><a href="examples.html">Examples</a></li>
-            </ul>
+          <div class="menu-button navicon">Menu</div>
+          <ul class="nav">
+            <li class="hidden"><a href="index.html">Home</a></li>
+            <li><a href="lessons.html">Get Started</a></li>
+            <li class="selected">
+              <a href="documentation.html">Documentation</a>
+            </li>
+            <li><a href="examples.html">Examples</a></li>
+          </ul>
         </nav>
-    </div><!-- END CONTAINER -->
-</header>
+      </div>
+      <!-- END CONTAINER -->
+    </header>
 
-<main class="site-main">
-    <div class="container">
-        
-            <section class="hero text-centered">
-                <h2>Site Base Docs</h2>
-                <p>An overview of framework features including core HTML elements and default CSS settings.</p>
-            </section>
-        
+    <main class="site-main">
+      <div class="container">
+        <section class="hero text-centered">
+          <h2>Site Base Docs</h2>
+          <p>
+            An overview of framework features including core HTML elements and
+            default CSS settings.
+          </p>
+        </section>
+
         <div class="subpage-main">
-            
-            <section id="getstarted">
-                
-                <h2 class="section-header">Folder Structure</h2>
-                <pre><code>
+          <section id="getstarted">
+            <h2 class="section-header">Folder Structure</h2>
+            <pre><code>
 base/
 ├── <a href="https://github.com/kccnma/sitebase/blob/master/docs/demos/base-blank-starter/index.html">index.html</a>
 ├── css/
@@ -59,22 +54,21 @@ base/
     ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/js/script.js">scripts.js</a>
     
 </code></pre>
-                
-                
-                <h2 class="section-header">Starter Template</h2>
-                
-                <h3 id="html">HTML</h3>
-                <p>HTML5 and Mobile ready with links to external CSS and JS files.</p>
-                <script src="https://gist.github.com/kccnma/242163d9a5f67b896750365d5581f94f.js"></script>
-                
-                <h3 id="css">CSS</h3>
-                <p>CSS Table of Contents:</p>
-                <script src="https://gist.github.com/kccnma/3cce7281cfe835b687fedfe80c099c12.js"></script>
-                
-                <h3 id="scss">SCSS</h3>
-                <p>Modular SASS partials compiled into one style.css file.</p>
-                <p>SASS File Structure:</p>
-                <pre><code>
+
+            <h2 class="section-header">Starter Template</h2>
+
+            <h3 id="html">HTML</h3>
+            <p>Mobile ready with links to external CSS and JS files.</p>
+            <script src="https://gist.github.com/kccnma/242163d9a5f67b896750365d5581f94f.js"></script>
+
+            <h3 id="css">CSS</h3>
+            <p>CSS Table of Contents:</p>
+            <script src="https://gist.github.com/kccnma/3cce7281cfe835b687fedfe80c099c12.js"></script>
+
+            <h3 id="scss">SCSS</h3>
+            <p>Modular SASS partials compiled into one style.css file.</p>
+            <p>SASS File Structure:</p>
+            <pre><code>
 base/
 ├── css/
 │   ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/css/style.css">style.css</a>
@@ -96,38 +90,47 @@ base/
         ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_animation-pageload-fadein.scss">_animation-pageload-fadein.scss</a>
     
 </code></pre>
-                
-                <h3 id="js">JS</h3>
-                <p>Vanilla Javascript inside of one script.js file.</p>
-<pre><code>
+
+            <h3 id="js">JS</h3>
+            <p>Vanilla Javascript inside of one script.js file.</p>
+            <pre><code>
 document.addEventListener('DOMContentLoaded', function() {
 
     //JAVASCRIPT FUNCTIONS GO HERE
     
 })
 </code></pre>
-                
-                <h3 id="jquery">JQuery</h3>
-                <p>Jquery can easily be used as an alternative to vanilla JS. It is 100% compatible. It is not included as part of the default build because site base was designed to be a minimal, lightweight starter framework for small,  custom web site projects.</p>
-                <p>If you choose to use Jquery, you will either need to download it and add it manually, or you can use the cdn:</p>
-<pre><code>                
+
+            <h3 id="jquery">JQuery</h3>
+            <p>
+              Jquery can easily be used as an alternative to vanilla JS. It is
+              100% compatible. It is not included as part of the default build
+              because site base was designed to be a minimal, lightweight
+              starter framework for small, custom web site projects.
+            </p>
+            <p>
+              If you choose to use Jquery, you will either need to download it
+              and add it manually, or you can use the cdn:
+            </p>
+            <pre><code>                
 &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&#62;&#60;/script&#62;
 </code></pre>
-                <!--<p><a class="button" href="#">Download Base Starter Files</a></p>-->
-                
-            </section>
-        
-            <section id="typography">
-                <h2 class="section-header">Typography</h2>
+            <!--
+              <p><a class="button" href="#">Download Base Starter Files</a></p>
+            -->
+          </section>
 
-                <h1 id="headings">This is a Heading 1</h1>
-                <h2>This is a Heading 2</h2>
-                <h3>This is a Heading 3</h3>
-                <h4>This is a Heading 4</h4>
-                <h5>This is a Heading 5</h5>
-                <h6>This is a Heading 6</h6>
-                
-<pre><code>&#60;h1&#62;This is a Heading 1&#60;/h1&#62;
+          <section id="typography">
+            <h2 class="section-header">Typography</h2>
+
+            <h1 id="headings">This is a Heading 1</h1>
+            <h2>This is a Heading 2</h2>
+            <h3>This is a Heading 3</h3>
+            <h4>This is a Heading 4</h4>
+            <h5>This is a Heading 5</h5>
+            <h6>This is a Heading 6</h6>
+
+            <pre><code>&#60;h1&#62;This is a Heading 1&#60;/h1&#62;
 &#60;h2&#62;This is a Heading 2&#60;/h2&#62;
 &#60;h3&#62;This is a Heading 3&#60;/h3&#62;
 &#60;h4&#62;This is a Heading 4&#60;/h4&#62;
@@ -135,82 +138,110 @@ document.addEventListener('DOMContentLoaded', function() {
 &#60;h6&#62;This is a Heading 6&#60;/h6&#62;
 </code></pre>
 
-                <p id="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla porttitor sagittis.</p>
+            <p id="bodytext">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut
+              fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris
+              elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id
+              elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis
+              orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla
+              porttitor sagittis.
+            </p>
 
-                <p>Suspendisse pulvinar bibendum laoreet. Suspendisse eget dignissim risus. Cras eget sodales enim. Phasellus accumsan dui metus, quis vulputate turpis congue at. Praesent rutrum consequat rhoncus. Maecenas adipiscing justo vitae massa porta pretium. In egestas orci vehicula, tempus lorem ut, facilisis metus. </p>
+            <p>
+              Suspendisse pulvinar bibendum laoreet. Suspendisse eget dignissim
+              risus. Cras eget sodales enim. Phasellus accumsan dui metus, quis
+              vulputate turpis congue at. Praesent rutrum consequat rhoncus.
+              Maecenas adipiscing justo vitae massa porta pretium. In egestas
+              orci vehicula, tempus lorem ut, facilisis metus.
+            </p>
 
-                <p>Vivamus eu mollis velit. Maecenas id massa libero. Aliquam accumsan mauris vulputate purus volutpat vestibulum. Phasellus sed tellus id tortor ornare molestie. Quisque massa sapien, elementum sed tortor vitae, suscipit congue massa. Curabitur tempor arcu eget leo placerat, a porta augue pharetra. Nulla velit nibh, laoreet at hendrerit sit amet, adipiscing eget dolor. </p>
-                
-<pre><code>&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p>
+              Vivamus eu mollis velit. Maecenas id massa libero. Aliquam
+              accumsan mauris vulputate purus volutpat vestibulum. Phasellus sed
+              tellus id tortor ornare molestie. Quisque massa sapien, elementum
+              sed tortor vitae, suscipit congue massa. Curabitur tempor arcu
+              eget leo placerat, a porta augue pharetra. Nulla velit nibh,
+              laoreet at hendrerit sit amet, adipiscing eget dolor.
+            </p>
+
+            <pre><code>&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 </code></pre>
 
-
-                <h4 id="lists">Unordered List:</h4>
+            <h4 id="lists">Unordered List:</h4>
+            <ul>
+              <li>List Item</li>
+              <li>List Item</li>
+              <li>
+                Nested Unordered List:
                 <ul>
-                    <li>List Item</li>
-                    <li>List Item</li>
-                    <li>Nested Unordered List:
-                        <ul>
-                          <li>List Item</li>
-                          <li>List Item</li>
-                        </ul>
-                    </li>
-                    <li>Nested Ordered List:
-                        <ol>
-                          <li>List Item</li>
-                          <li>List Item</li>
-                        </ol>
-                    </li>
-                    <li>List Item</li>
-                    <li>List Item</li>
+                  <li>List Item</li>
+                  <li>List Item</li>
                 </ul>
-                
-<pre><code>&#60;ul&#62;
+              </li>
+              <li>
+                Nested Ordered List:
+                <ol>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ol>
+              </li>
+              <li>List Item</li>
+              <li>List Item</li>
+            </ul>
+
+            <pre><code>&#60;ul&#62;
     &#60;li&#62;List Item&#60;li/&#62;
     &#60;li&#62;List Item&#60;li/&#62;
 &#60;/ul&#62;
 </code></pre>
 
-                <h4>Ordered List:</h4>
+            <h4>Ordered List:</h4>
+            <ol>
+              <li>List Item</li>
+              <li>List Item</li>
+              <li>
+                Nested Unordered List:
+                <ul>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ul>
+              </li>
+              <li>
+                Nested Ordered List:
                 <ol>
-                    <li>List Item</li>
-                    <li>List Item</li>
-                    <li>Nested Unordered List:
-                        <ul>
-                          <li>List Item</li>
-                          <li>List Item</li>
-                        </ul>
-                    </li>
-                    <li>Nested Ordered List:
-                        <ol>
-                          <li>List Item</li>
-                          <li>List Item</li>
-                        </ol>
-                    </li>
-                    <li>List Item</li>
-                    <li>List Item</li>
+                  <li>List Item</li>
+                  <li>List Item</li>
                 </ol>
-                
-<pre><code>&#60;ol&#62;
+              </li>
+              <li>List Item</li>
+              <li>List Item</li>
+            </ol>
+
+            <pre><code>&#60;ol&#62;
     &#60;li&#62;List Item&#60;li/&#62;
     &#60;li&#62;List Item&#60;li/&#62;
 &#60;/ol&#62;
 </code></pre>
 
-                <h4 id="links">Links:</h4>
-                <p>This is a <a href="#">link</a>.</p>
-                
-<pre><code>&#60;a href="#"&#62;link&#60;/a&#62;
+            <h4 id="links">Links:</h4>
+            <p>This is a <a href="#">link</a>.</p>
+
+            <pre><code>&#60;a href="#"&#62;link&#60;/a&#62;
 </code></pre>
 
-                <h4 id="blockquotes">Blockquotes:</h4>
-                <blockquote>
-                    <p>This is a blockquote. Donec sed rhoncus massa. Suspendisse rutrum viverra felis. Vestibulum augue lacus, ullamcorper non suscipit nec, ornare et mauris. Proin mattis fermentum nibh quis gravida.</p>
-                    <cite>Citation Source</cite>
-                </blockquote>
-                
-<pre><code>&#60;blockquote&#62;
+            <h4 id="blockquotes">Blockquotes:</h4>
+            <blockquote>
+              <p>
+                This is a blockquote. Donec sed rhoncus massa. Suspendisse
+                rutrum viverra felis. Vestibulum augue lacus, ullamcorper non
+                suscipit nec, ornare et mauris. Proin mattis fermentum nibh quis
+                gravida.
+              </p>
+              <cite>Citation Source</cite>
+            </blockquote>
+
+            <pre><code>&#60;blockquote&#62;
     &#60;p&#62;This is a blockquote. Donec sed rhoncus massa. Suspendisse 
     rutrum viverra felis. Vestibulum augue lacus, ullamcorper non 
     suscipit nec, ornare et mauris. Proin mattis.&#60;/p&#62;
@@ -218,122 +249,102 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 &#60;/blockquote&#62;
 </code></pre>
 
+            <h4 id="helpers">Helpers:</h4>
+            <p class="text-centered">This is center-aligned text</p>
 
-                <h4 id="helpers">Helpers:</h4>
-                <p class="text-centered">This is center-aligned text</p>
-                
-<pre><code>&#60;p  class="text-centered"&#62;This is center-aligned text&#60;/p&#62;
+            <pre><code>&#60;p  class="text-centered"&#62;This is center-aligned text&#60;/p&#62;
+</code></pre>
+          </section>
+
+          <section id="media">
+            <h2 class="section-header">Media</h2>
+
+            <p id="images">This is a responsive image:</p>
+            <img
+              src="http://placehold.it/1500x500"
+              class="scale-with-grid"
+              alt="placeholder"
+            />
+
+            <pre><code>img {
+    max-width: 100%;
+    height: auto;
+}
 </code></pre>
 
-            </section>
-
-            <section id="media">
-
-                <h2 class="section-header">Media</h2>
-
-                <p id="images">This is a responsive image:</p>
-                <img src="http://placehold.it/1500x500" class="scale-with-grid" alt="placeholder">
-                
-<pre><code>&#60;img src="path/to/image.jpg" class="scale-with-grid" alt="placeholder" /&#62;
+            <pre><code>&#60;img src="path/to/image.jpg" alt="placeholder" /&#62;
 </code></pre>
+          </section>
 
-            </section>
+          <section id="components">
+            <h2 class="section-header">UI Components</h2>
 
-            <section id="components">
+            <h4 id="buttons">Buttons:</h4>
 
-                <h2 class="section-header">UI Components</h2>
+            <a href="#" class="button">Default Link Button</a>
+            <a href="#" class="button alt">Alt Link Button</a>
+            <button>Default Button Element</button>
 
-                <h4 id="buttons">Buttons:</h4>
-
-                <a href="#" class="button">Default Link Button</a>
-                <a href="#" class="button alt">Alt Link Button</a>
-                <button>Default Button Element</button>
-                
-<pre><code>&#60;a href="#" class="button"&#62;Default Link Button&#60;/a&#62;
+            <pre><code>&#60;a href="#" class="button"&#62;Default Link Button&#60;/a&#62;
 &#60;a href="#" class="button alt"&#62;Alt Link Button&#60;/a&#62;
 &#60;button&#62;Default Button Element&#60;/button&#62;
 </code></pre>
+          </section>
 
-            </section>
+          <section class="demo">
+            <h2 id="mediaqueries" class="section-header">Media Queries</h2>
+            <p>Mobile-first media queries with four target screen sizes:</p>
+            <ul>
+              <li>Small (Mobile): 0-767px+</li>
+              <li>Medium (Tablet): min-width: 768px+</li>
+              <li>Large (Notebook): min-width: 1050px+</li>
+              <li>ExtraLarge (Desktop+): min-width: 1250px+</li>
+            </ul>
 
-
-
-            <section class="demo">
-
-                <h2 id="mediaqueries" class="section-header">Media Queries</h2>
-                <p>Mobile-first media queries with four target screen sizes:</p>
-                <ul>
-                    <li>Small (Mobile): 0-767px+</li>
-                    <li>Medium (Tablet): min-width: 768px+</li>
-                    <li>Large (Notebook): min-width: 1050px+</li>
-                    <li>ExtraLarge (Desktop+): min-width: 1250px+</li>
-                </ul>
-                
-<pre><code>@media (min-width:  768px) { // FOR MEDIUM/TABLET SCREENS }
+            <pre><code>@media (min-width:  768px) { // FOR MEDIUM/TABLET SCREENS }
 @media (min-width: 1050px) { // FOR LARGE/NOTEBOOK SCREENS }
 @media (min-width: 1250px) { // FOR EXTRALARGE/DESKTOP+ SCREENS }
 </code></pre>
 
-                <h2 id="container" class="section-header">Container</h2>
-                <p>Reusable container div that is fluid width (percentage based) on small screens and fixed width on large screens.</p>
-                
-<pre><code>&#60;div class="container"&#62;&#60;/div&#62;
+            <h2 id="container" class="section-header">Container</h2>
+            <p>
+              Reusable container div that is fluid width (percentage based) on
+              small screens and fixed width on large screens.
+            </p>
+
+            <pre><code>&#60;div class="container"&#62;&#60;/div&#62;
 </code></pre>
 
-                <h2 id="grid" class="section-header">Grid</h2>
+            <h2 id="grid" class="section-header">Grid</h2>
 
-                <div class="row">
-                    <div class="one-whole column">
-                        <p>One Whole Column</p>
-                    </div>
-                </div>
+            <div class="row">
+              <div class="one-whole column"><p>One Whole Column</p></div>
+            </div>
 
-                <div class="row">
-                    <div class="one-half column">
-                        <p>One-half Column</p>
-                    </div>
-                    <div class="one-half column">
-                        <p>One-half Column</p>
-                    </div>
-                </div>
+            <div class="row">
+              <div class="one-half column"><p>One-half Column</p></div>
+              <div class="one-half column"><p>One-half Column</p></div>
+            </div>
 
-                <div class="row">
-                    <div class="one-third column">
-                        <p>One-third Column</p>
-                    </div>
-                    <div class="one-third column">
-                        <p>One-third Column</p>
-                    </div>
-                    <div class="one-third column">
-                        <p>One-third Column</p>
-                    </div>
-                </div>
+            <div class="row">
+              <div class="one-third column"><p>One-third Column</p></div>
+              <div class="one-third column"><p>One-third Column</p></div>
+              <div class="one-third column"><p>One-third Column</p></div>
+            </div>
 
-                <div class="row">
-                    <div class="one-third column">
-                        <p>One-third Column</p>
-                    </div>
-                    <div class="two-thirds column">
-                        <p>Two-thirds Column</p>
-                    </div>
-                </div>
+            <div class="row">
+              <div class="one-third column"><p>One-third Column</p></div>
+              <div class="two-thirds column"><p>Two-thirds Column</p></div>
+            </div>
 
-                <div class="row">
-                    <div class="one-fourth column">
-                        <p>One-fourth Column</p>
-                    </div>
-                    <div class="one-fourth column">
-                        <p>One-fourth Column</p>
-                    </div>
-                    <div class="one-fourth column">
-                        <p>One-fourth Column</p>
-                    </div>
-                    <div class="one-fourth column">
-                        <p>One-fourth Column</p>
-                    </div>
-                </div>
-                
-<pre><code>&#60;div class="row"&#62;
+            <div class="row">
+              <div class="one-fourth column"><p>One-fourth Column</p></div>
+              <div class="one-fourth column"><p>One-fourth Column</p></div>
+              <div class="one-fourth column"><p>One-fourth Column</p></div>
+              <div class="one-fourth column"><p>One-fourth Column</p></div>
+            </div>
+
+            <pre><code>&#60;div class="row"&#62;
     &#60;div class="one-half column"&#62;
         &#60;p&#62;One-half Column&#60;/p&#62;
     &#60;/div&#62;
@@ -342,32 +353,34 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
     &#60;/div&#62;
 &#60;/div&#62;
 </code></pre>
-                
 
-                <div class="row">
-                    <div class="one-half column centered">
-                        <p>One-half Column Centered</p>
-                    </div>
-                </div>
-                
-<pre><code>&#60;div class="row"&#62;
+            <div class="row">
+              <div class="one-half column centered">
+                <p>One-half Column Centered</p>
+              </div>
+            </div>
+
+            <pre><code>&#60;div class="row"&#62;
     &#60;div class="one-half column centered"&#62;
         &#60;p&#62;One-half Column Centered&#60;/p&#62;
     &#60;/div&#62;
 &#60;/div&#62;
 </code></pre>
+          </section>
 
-            </section>
+          <section id="sitestructure">
+            <h2 class="section-header">Site Structure</h2>
 
-            <section id="sitestructure">
+            <h3 id="headermainfooter">
+              Header, Main Content Area, &amp; Footer
+            </h3>
 
-                <h2 class="section-header">Site Structure</h2>
+            <p>
+              The base site structure consists of three main parts of a web
+              page: the header, main, and footer.
+            </p>
 
-                <h3 id="headermainfooter">Header, Main Content Area, &amp; Footer</h3>
-
-                <p>The base site structure consists of three main parts of a web page: the header, main, and footer.</p>
-                
-<pre><code>&#60;body&#62;
+            <pre><code>&#60;body&#62;
 
     &#60;header class="site-header"&#62;
     &#60;/header&#62;
@@ -381,11 +394,17 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 &#60;/body&#62;
 </code></pre>
 
-                <h3 id="pagesections">Page Sections</h3>
+            <h3 id="pagesections">Page Sections</h3>
 
-                <p>The main content area of all pages can be divided into multiple sections that can be placed either within a container (to constrain the content width) or outside of a container (to extend to the full-width of the browser). This base also includes default styling for a "hero" section.</p>
-                
-<pre><code>&#60;main class="site-main"&#62;
+            <p>
+              The main content area of all pages can be divided into multiple
+              sections that can be placed either within a container (to
+              constrain the content width) or outside of a container (to extend
+              to the full-width of the browser). This base also includes default
+              styling for a "hero" section.
+            </p>
+
+            <pre><code>&#60;main class="site-main"&#62;
 
     &#60;section class="hero"&#62;
         &#60;div class="container"&#62;
@@ -405,11 +424,15 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 &#60;/main&#62;
 </code></pre>
 
-                <h3 id="navigation">Site Navigation</h3>
+            <h3 id="navigation">Site Navigation</h3>
 
-                <p>This base consists of two default site navigation areas: main/top nav (header) and bottom nav (footer), both using a "site-navigation" class.</p>
-                
-<pre><code>&#60;nav class="site-navigation"&#62;
+            <p>
+              This base consists of two default site navigation areas: main/top
+              nav (header) and bottom nav (footer), both using a
+              "site-navigation" class.
+            </p>
+
+            <pre><code>&#60;nav class="site-navigation"&#62;
     &#60;ul class="nav"&#62;
         &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
         &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
@@ -417,14 +440,19 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
     &#60;/ul&#62;
 &#60;/nav&#62;
 </code></pre>
-                
-                <h3 id="mobilemenu">Mobile Menu</h3>
 
-                <p>For small screens, this base uses a toggle-nav using a navicon as a menu button. Javascript is used to toggle the menu on/off by adding/removing a class named "expanded" on the element. CSS is used to control the appearance of the menu.</p>
-                
-                <p>Mobile menu HTML:</p>
-                
-<pre><code>&#60;nav class="site-navigation"&#62;
+            <h3 id="mobilemenu">Mobile Menu</h3>
+
+            <p>
+              For small screens, this base uses a toggle-nav using a navicon as
+              a menu button. Javascript is used to toggle the menu on/off by
+              adding/removing a class named "expanded" on the element. CSS is
+              used to control the appearance of the menu.
+            </p>
+
+            <p>Mobile menu HTML:</p>
+
+            <pre><code>&#60;nav class="site-navigation"&#62;
     &#60;ul class="nav"&#62;
         <strong>&#60;div class="menu-button navicon"&#62;Menu&#60;/div&#62;</strong>
         &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
@@ -433,8 +461,8 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
     &#60;/ul&#62;
 &#60;/nav&#62;
 </code></pre>
-                <p>Mobile menu Javascript:</p>
-<pre><code>
+            <p>Mobile menu Javascript:</p>
+            <pre><code>
     //TOGGLE MENU NAV
     var menubutton = document.querySelectorAll('.menu-button');
     var i;
@@ -444,96 +472,98 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
         }
     } 
 </code></pre>
-
-            </section>
-            
+          </section>
         </div>
-        
-        
-         
+
         <aside class="subpage-sidebar">
-            <h4 class="subheader">Overview</h4>
-            <nav class="subpage-navigation">
-                <ul class="nav group">
-                    <li><a href="#folder">Folder Structure</a></li>
-                    <li><a href="#startertemplate">Starter Template</a>
-                        <ul>
-                            <li><a href="#html">HTML</a></li>
-                            <li><a href="#css">CSS</a></li>
-                            <li><a href="#scss">SCSS</a></li>
-                            <li><a href="#js">JS</a></li>
-                        </ul>
-                    </li>
+          <h4 class="subheader">Overview</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav group">
+              <li><a href="#folder">Folder Structure</a></li>
+              <li>
+                <a href="#startertemplate">Starter Template</a>
+                <ul>
+                  <li><a href="#html">HTML</a></li>
+                  <li><a href="#css">CSS</a></li>
+                  <li><a href="#scss">SCSS</a></li>
+                  <li><a href="#js">JS</a></li>
                 </ul>
-            </nav>
-            <h4 class="subheader">Core CSS</h4>
-            <nav class="subpage-navigation">
-                <ul class="nav group">
-                    <li><a href="#typography">Typography</a>
-                        <ul>
-                            <li><a href="#headings">Headings</a></li>
-                            <li><a href="#bodytext">Body Text</a></li>
-                            <li><a href="#lists">Lists</a></li>
-                            <li><a href="#links">Links</a></li>
-                            <li><a href="#blockquotes">Blockquotes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#media">Media</a>
-                        <ul>
-                            <li><a href="#images">Images</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#components">Components</a>
-                        <ul>
-                            <li><a href="#buttons">Buttons</a></li>
-                        </ul>
-                    </li>
+              </li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Core CSS</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav group">
+              <li>
+                <a href="#typography">Typography</a>
+                <ul>
+                  <li><a href="#headings">Headings</a></li>
+                  <li><a href="#bodytext">Body Text</a></li>
+                  <li><a href="#lists">Lists</a></li>
+                  <li><a href="#links">Links</a></li>
+                  <li><a href="#blockquotes">Blockquotes</a></li>
                 </ul>
-            </nav>
-            <h4 class="subheader">Layout</h4>
-            <nav class="subpage-navigation">
-                <ul class="nav group">
-                    <li><a href="#mediaqueries">Media Queries</a></li>
-                    <li><a href="#container">Container</a>
-                    <li><a href="#grid">Grid System</a></li>
+              </li>
+              <li>
+                <a href="#media">Media</a>
+                <ul>
+                  <li><a href="#images">Images</a></li>
                 </ul>
-            </nav>
-            <h4 class="subheader">Site Structure</h4>
-            <nav class="subpage-navigation">
-                <ul class="nav group">
-                    <li><a href="#headermainfooter">Header, Main, &amp; Footer</a></li>
-                    <li><a href="#pagesections">Page Sections</a></li>
-                    <li><a href="#subpages">Sub Pages</a></li>
-                    <li><a href="#navigation">Navigation</a>
-                        <ul>
-                            <li><a href="#mobilemenu">Mobile Menu</a></li>
-                        </ul>
-                    </li>
+              </li>
+              <li>
+                <a href="#components">Components</a>
+                <ul>
+                  <li><a href="#buttons">Buttons</a></li>
                 </ul>
-            </nav>
+              </li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Layout</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav group">
+              <li><a href="#mediaqueries">Media Queries</a></li>
+              <li><a href="#container">Container</a></li>
+              <li><a href="#grid">Grid System</a></li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Site Structure</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav group">
+              <li>
+                <a href="#headermainfooter">Header, Main, &amp; Footer</a>
+              </li>
+              <li><a href="#pagesections">Page Sections</a></li>
+              <li><a href="#subpages">Sub Pages</a></li>
+              <li>
+                <a href="#navigation">Navigation</a>
+                <ul>
+                  <li><a href="#mobilemenu">Mobile Menu</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </aside>
+      </div>
+      <!-- END CONTAINER -->
+    </main>
 
-    </div><!-- END CONTAINER -->
-</main>
-    
-<footer class="site-footer">
-    <div class="container">
-		<nav class="site-navigation">
-			<ul class="nav group">
-                <li><a href="index.html">Site Base Home</a></li>
-                <li><a href="lessons.html">Get Started</a></li>
-                <li class="selected"><a href="documentation.html">Documentation</a></li>
-                <li><a href="examples.html">Examples</a></li>
-			</ul>
-		</nav>
-    </div><!-- END CONTAINER -->
-</footer>
+    <footer class="site-footer">
+      <div class="container">
+        <nav class="site-navigation">
+          <ul class="nav group">
+            <li><a href="index.html">Site Base Home</a></li>
+            <li><a href="lessons.html">Get Started</a></li>
+            <li class="selected">
+              <a href="documentation.html">Documentation</a>
+            </li>
+            <li><a href="examples.html">Examples</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- END CONTAINER -->
+    </footer>
 
-
-<!-- MAIN JS -->
-<script src="js/script.js"></script>
-
-
-    
-</body>
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+  </body>
 </html>

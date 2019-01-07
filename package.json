@@ -11,8 +11,8 @@
   "author": "Designer",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.9.1",
     "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8"
   },
