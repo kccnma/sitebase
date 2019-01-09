@@ -111,12 +111,12 @@ p {
 
 /* #LINKS */
 a {
-  color: #39c;
+  color: #036;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #003;
 }
 
 /* #LISTS */
@@ -206,8 +206,8 @@ button {
 
 button, a.button {
   display: inline-block;
-  background-color: #39c;
-  border: 1px solid #39c;
+  background-color: #036;
+  border: 1px solid #036;
   color: #fff;
   padding: .75em 1em;
   -webkit-border-radius: .32em;
@@ -222,14 +222,14 @@ button, a.button {
 
 button.alt, a.button.alt {
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #39c;
-  color: #39c;
+  border: 1px solid #036;
+  color: #036;
 }
 
 button:hover, a.button:hover {
-  background-color: #069;
+  background-color: #003;
   color: #fff;
-  border-color: #069;
+  border-color: #003;
   text-decoration: none;
 }
 
@@ -370,7 +370,7 @@ body {
 
 .site-header a:hover,
 .site-footer a:hover {
-  color: #069;
+  color: #003;
   text-decoration: none;
 }
 
@@ -857,12 +857,12 @@ ul.thumblist-grid li:nth-child(even) {
   .toggle-nav .menu-button + div ul li a {
     padding: 0.9em 0.75em 0.75em 0.75em;
     transition: all 0.3s ease;
-    color: #39c;
+    color: #036;
   }
   .toggle-nav .menu-button + ul li a:hover,
   .toggle-nav .menu-button + div ul li a:hover {
     color: #fff;
-    background: #39c;
+    background: #036;
   }
   .toggle-nav .menu-button.expanded + ul,
   .toggle-nav .menu-button.expanded + div ul {

@@ -111,12 +111,12 @@ p {
 
 /* #LINKS */
 a {
-  color: #39c;
+  color: #036;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #003;
 }
 
 /* #LISTS */
@@ -206,8 +206,8 @@ button {
 
 button, a.button {
   display: inline-block;
-  background-color: #39c;
-  border: 1px solid #39c;
+  background-color: #036;
+  border: 1px solid #036;
   color: #fff;
   padding: .75em 1em;
   -webkit-border-radius: .32em;
@@ -222,14 +222,14 @@ button, a.button {
 
 button.alt, a.button.alt {
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #39c;
-  color: #39c;
+  border: 1px solid #036;
+  color: #036;
 }
 
 button:hover, a.button:hover {
-  background-color: #069;
+  background-color: #003;
   color: #fff;
-  border-color: #069;
+  border-color: #003;
   text-decoration: none;
 }
 
