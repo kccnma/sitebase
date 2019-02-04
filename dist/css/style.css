@@ -1,7 +1,5 @@
 /* #BASE CSS (Initital Setup)
 ---------------------------------
-    #BASE START
-        #HTML5
     #BASE CONTENT
         #TYPOGRAPHY
             #BODY
@@ -238,7 +236,7 @@ code {
 
 /* #MEDIA  */
 /* #IMAGES */
-img.scale-with-grid {
+img {
   max-width: 100%;
   height: auto;
 }
