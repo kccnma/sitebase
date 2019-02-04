@@ -516,6 +516,7 @@ body {
 
 .demo .column p {
   margin: 0;
+  max-width: none;
 }
 
 /* Header & Footer */

@@ -352,6 +352,7 @@ body {
 
 .demo .column p {
   margin: 0;
+  max-width: none;
 }
 
 /* FOR DEMO PURPOSES ONLY */
