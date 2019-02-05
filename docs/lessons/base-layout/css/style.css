@@ -319,6 +319,7 @@ body {
   }
 }
 
+/* FOR DEMO PURPOSES ONLY */
 .demo .column {
   padding: 1em;
   background: #ddd;
@@ -327,10 +328,10 @@ body {
 
 .demo .column p {
   margin: 0;
+  padding: 0 .5em;
   max-width: none;
 }
 
-/* FOR DEMO PURPOSES ONLY */
 .demo {
   padding: 2em 0;
 }
@@ -366,18 +367,6 @@ body {
     content: 'Extra Large (1250px +)';
     background: #0099cc;
   }
-}
-
-.demo .column {
-  padding: 1em;
-  background: #ddd;
-  text-align: center;
-}
-
-.demo .column p {
-  margin: 0;
-  padding: 0 .5em;
-  max-width: none;
 }
 
 .demo .column p:last-child {

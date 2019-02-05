@@ -124,12 +124,15 @@ $grid-column-gap: 2%;
   }
 }
 
+/* FOR DEMO PURPOSES ONLY */
+
 .demo .column {
   padding: 1em;
   background: #ddd;
   text-align: center;
   p {
     margin: 0;
+    padding: 0 .5em; 
     max-width: none;
   }
 }
