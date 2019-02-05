@@ -369,13 +369,15 @@ body {
 }
 
 .demo .column {
-  padding: 1.5em 0;
-  background: rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  background: #ddd;
   text-align: center;
 }
 
 .demo .column p {
+  margin: 0;
   padding: 0 .5em;
+  max-width: none;
 }
 
 .demo .column p:last-child {
