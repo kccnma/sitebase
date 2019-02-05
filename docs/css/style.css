@@ -6,7 +6,6 @@
             #HEADINGS
             #PARAGRAPHS
             #LINKS
-            #LISTS
             #HELPERS
         #MEDIA
             #IMAGES
@@ -116,31 +115,6 @@ a {
 
 a:hover {
   color: #003;
-}
-
-/* #LISTS */
-ul,
-ol,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  padding-bottom: 1em;
-}
-
-ul li ul,
-ul li ol,
-ol li ul,
-ol li ol {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-li {
-  margin-left: 1.875em;
 }
 
 /* #BLOCK QUOTES  */
@@ -750,6 +724,11 @@ article p + h6 {
 
 .subpage-navigation {
   font-family: Helvetica, Arial, sans-serif;
+  padding: 0;
+}
+
+.subpage-navigation ul {
+  margin: 0;
   padding: 0;
 }
 

@@ -77,31 +77,6 @@ a:hover {
   //text-decoration: underline;
 }
 
-/* #LISTS */
-ul,
-ol,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  padding-bottom: 1em;
-}
-
-ul li ul,
-ul li ol,
-ol li ul,
-ol li ol {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-li {
-  margin-left: 1.875em;
-}
-
 /* #BLOCK QUOTES  */
 blockquote {
   font-size: 1.142em;
