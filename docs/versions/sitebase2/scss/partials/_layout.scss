@@ -21,7 +21,7 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 4%;
+  padding: 0 4%; 
 }
 
 /* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
@@ -45,8 +45,7 @@ body {
 
   /* FIXED WIDTH */
   .container {
-    width: $breakpoint-medium - 50;
-    padding: 0 50px;
+    max-width: $breakpoint-medium - 50;
   }
 }
 
@@ -59,7 +58,7 @@ body {
 
   /* FIXED WIDTH */
   .container {
-    width: $breakpoint-large - 50;
+    max-width: $breakpoint-large - 50;
   }
 }
 

@@ -249,8 +249,7 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 1000px;
-    padding: 0 50px;
+    max-width: 1000px;
   }
 }
 
@@ -263,7 +262,7 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -562,6 +561,7 @@ section {
   height: 1em;
   line-height: 1em;
   display: block;
+  float: right;
 }
 
 .menu-button.navicon.expanded:after {
@@ -569,6 +569,10 @@ section {
 }
 
 /* Toggle-Nav */
+.toggle-nav .site-branding {
+  float: left;
+}
+
 .toggle-nav .menu-button,
 .toggle-nav .menu-button.expanded {
   display: none;

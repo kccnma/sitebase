@@ -21,7 +21,7 @@
     height: 1em;
     line-height: 1em;
     display: block;
-    //float: right;
+    float: right;
   }
 
   &.expanded:after {
@@ -31,9 +31,9 @@
 
 /* Toggle-Nav */
 .toggle-nav {
-  //   .site-branding {
-  //     float: left;
-  //   }
+    .site-branding {
+      float: left;
+    }
 
   .menu-button,
   .menu-button.expanded {

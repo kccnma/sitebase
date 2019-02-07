@@ -249,8 +249,7 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 1000px;
-    padding: 0 50px;
+    max-width: 1000px;
   }
 }
 
@@ -263,7 +262,7 @@ body {
   }
   /* FIXED WIDTH */
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
