@@ -22,6 +22,18 @@ Work-in-progress links:
 
 ## Updates
 
+- 03-28-19
+  - Fixed various old legacy example bugs
+- 02/06/09
+  - Updated the grid to flexbox
+  - Added a max-width to all paragraphs
+  - Switched to box-sizing: border-box
 - 12-17-18
   - Updated gulp (with gulp.series)
   - Removed old HTML5 conditional in head
+
+## Roadmap
+
+- Refactor mobile nav Javascript
+- Add more reusable components and design patterns
+- Add more layout examples
