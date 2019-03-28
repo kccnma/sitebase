@@ -24,10 +24,12 @@ Work-in-progress links:
 
 - 03-28-19
   - Fixed various old legacy example bugs
-- 02/06/09
+- 02/06/19
   - Updated the grid to flexbox
   - Added a max-width to all paragraphs
   - Switched to box-sizing: border-box
+  - Added meta description to head
+  - Removed Google shiv
 - 12-17-18
   - Updated gulp (with gulp.series)
   - Removed old HTML5 conditional in head
