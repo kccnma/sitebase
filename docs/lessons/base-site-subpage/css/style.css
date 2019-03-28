@@ -600,9 +600,20 @@ article p + h6 {
 }
 
 /* Swap the display order of two columns */
+.orderswap {
+  flex-direction: row-reverse;
+}
+
+/* OLD/LEGACY SUPPORT FOR PRE-FLEXBOX ORDERSWAP */
 .orderswap .one-half.column:first-child {
   float: right;
   margin-right: 0;
+}
+
+/* OLD VERTICAL CENTERING MARKUP PRE-FLEXBOX */
+.vert-parent .column {
+  display: flex;
+  align-items: center;
 }
 
 /* Thumb Lists */
@@ -617,6 +628,10 @@ ul.thumblist li img {
   max-width: 30%;
   margin: 0 2em 1em 0;
   float: left;
+}
+
+ul.thumblist li p {
+  max-width: none;
 }
 
 ul.thumblist li + li {
@@ -657,7 +672,6 @@ ul.thumblist-grid li a img {
 
 ul.thumblist-grid li a img:hover {
   border: 3px solid #39c;
-  margin: -3px;
 }
 
 ul.thumblist-grid li h5,

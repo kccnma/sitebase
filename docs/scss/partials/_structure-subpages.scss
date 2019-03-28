@@ -147,10 +147,22 @@ article {
 }
 
 /* Swap the display order of two columns */
+.orderswap  {
+  flex-direction: row-reverse;
+}
+
+/* OLD/LEGACY SUPPORT FOR PRE-FLEXBOX ORDERSWAP */
 .orderswap .one-half.column:first-child {
   float: right;
   margin-right: 0;
 }
+
+/* OLD VERTICAL CENTERING MARKUP PRE-FLEXBOX */
+.vert-parent .column {
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+} 
 
 /* Thumb Lists */
 ul.thumblist {
@@ -164,6 +176,9 @@ ul.thumblist {
       max-width: 30%;
       margin: 0 2em 1em 0;
       float: left;
+    }
+    p {
+      max-width: none;
     }
   }
 
@@ -204,7 +219,7 @@ ul.thumblist-grid {
 
     a img:hover {
       border: 3px solid #39c;
-      margin: -3px;
+      //margin: -3px;
     }
 
     h5,
@@ -229,3 +244,4 @@ ul.thumblist-grid {
     }
   }
 }
+

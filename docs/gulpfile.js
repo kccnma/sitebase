@@ -8,7 +8,7 @@ var gulpSequence = require("gulp-sequence");
 var zip = require("gulp-zip");
 
 // BROWSER-SYNC
-gulp.task("sync", function() {
+gulp.task("sync", function () {
   browserSync.init("", {
     server: {
       baseDir: "./"
@@ -17,7 +17,7 @@ gulp.task("sync", function() {
 });
 
 // COPY HTML FROM ROOT SRC
-gulp.task("copy-html-root", function() {
+gulp.task("copy-html-root", function () {
   return gulp
     .src("../src/**/*.html")
     .pipe(gulp.dest("./versions/sitebase1/"))
@@ -25,7 +25,7 @@ gulp.task("copy-html-root", function() {
 });
 
 // COPY SASS FROM ROOT SRC
-gulp.task("copy-sass-root", function() {
+gulp.task("copy-sass-root", function () {
   return gulp
     .src("../src/**/*.scss")
     .pipe(gulp.dest("./"))
@@ -33,24 +33,26 @@ gulp.task("copy-sass-root", function() {
 });
 
 // COPY JS FROM ROOT SRC
-gulp.task("copy-js-root", function() {
+gulp.task("copy-js-root", function () {
   return gulp
     .src("../src/**/*.js")
     .pipe(gulp.dest("./"))
     .pipe(gulp.dest("./versions/sitebase1/"))
     .pipe(gulp.dest("./versions/sitebase2/"))
     .pipe(gulp.dest("./examples/productsite/"))
+    .pipe(gulp.dest("./examples/sitename-singlepagesite/"))
     .pipe(gulp.dest("./examples/singlepageportfolio/"));
 });
 
 // COPY IMAGES FROM ROOT SRC
-gulp.task("copy-images-root", function() {
+gulp.task("copy-images-root", function () {
   return gulp
     .src("../src/**/*.+(png|jpg|jpeg|gif|svg)")
     .pipe(gulp.dest("./"))
     .pipe(gulp.dest("./versions/sitebase1/"))
     .pipe(gulp.dest("./versions/sitebase2/"))
     .pipe(gulp.dest("./examples/productsite/"))
+    .pipe(gulp.dest("./examples/sitename-singlepagesite"))
     .pipe(gulp.dest("./examples/singlepageportfolio/"));
 });
 
@@ -58,7 +60,7 @@ gulp.task("copy-images-root", function() {
 var sassOptions = {
   outputStyle: "expanded"
 };
-gulp.task("sass-root", function() {
+gulp.task("sass-root", function () {
   return gulp
     .src("scss/**/*.scss")
     .pipe(sass(sassOptions))
@@ -66,11 +68,12 @@ gulp.task("sass-root", function() {
     .pipe(gulp.dest("./versions/sitebase1/css/"))
     .pipe(gulp.dest("./versions/sitebase2/css/"))
     .pipe(gulp.dest("./examples/productsite/css/"))
+    //.pipe(gulp.dest("./examples/sitename-singlepagesite/css/"))
     .pipe(gulp.dest("./examples/singlepageportfolio/css/"));
 });
 
 // SASS LESSON1
-gulp.task("sass-lesson1", function() {
+gulp.task("sass-lesson1", function () {
   return gulp
     .src("lessons/base-blank.scss")
     .pipe(sass(sassOptions))
@@ -79,7 +82,7 @@ gulp.task("sass-lesson1", function() {
 });
 
 // SASS LESSON2
-gulp.task("sass-lesson2", function() {
+gulp.task("sass-lesson2", function () {
   return gulp
     .src("lessons/base-content.scss")
     .pipe(sass(sassOptions))
@@ -88,7 +91,7 @@ gulp.task("sass-lesson2", function() {
 });
 
 // SASS LESSON3
-gulp.task("sass-lesson3", function() {
+gulp.task("sass-lesson3", function () {
   return gulp
     .src("lessons/base-layout.scss")
     .pipe(sass(sassOptions))
@@ -97,7 +100,7 @@ gulp.task("sass-lesson3", function() {
 });
 
 // SASS LESSON4
-gulp.task("sass-lesson4", function() {
+gulp.task("sass-lesson4", function () {
   return gulp
     .src("lessons/base-site.scss")
     .pipe(sass(sassOptions))
@@ -106,7 +109,7 @@ gulp.task("sass-lesson4", function() {
 });
 
 // SASS LESSON5
-gulp.task("sass-lesson5", function() {
+gulp.task("sass-lesson5", function () {
   return gulp
     .src("lessons/base-site-togglenav.scss")
     .pipe(sass(sassOptions))
@@ -115,7 +118,7 @@ gulp.task("sass-lesson5", function() {
 });
 
 // SASS LESSON6
-gulp.task("sass-lesson6", function() {
+gulp.task("sass-lesson6", function () {
   return gulp
     .src("lessons/base-site-subpage.scss")
     .pipe(sass(sassOptions))
@@ -124,7 +127,7 @@ gulp.task("sass-lesson6", function() {
 });
 
 // ZIP LESSON1
-gulp.task("zip-lesson1", function() {
+gulp.task("zip-lesson1", function () {
   return gulp
     .src("lessons/base-blank/**/*")
     .pipe(zip("base-blank.zip"))
@@ -132,7 +135,7 @@ gulp.task("zip-lesson1", function() {
 });
 
 // ZIP LESSON2
-gulp.task("zip-lesson2", function() {
+gulp.task("zip-lesson2", function () {
   return gulp
     .src("lessons/base-content/**/*")
     .pipe(zip("base-content.zip"))
@@ -140,7 +143,7 @@ gulp.task("zip-lesson2", function() {
 });
 
 // ZIP LESSON3
-gulp.task("zip-lesson3", function() {
+gulp.task("zip-lesson3", function () {
   return gulp
     .src("lessons/base-layout/**/*")
     .pipe(zip("base-layout.zip"))
@@ -148,7 +151,7 @@ gulp.task("zip-lesson3", function() {
 });
 
 // ZIP LESSON4
-gulp.task("zip-lesson4", function() {
+gulp.task("zip-lesson4", function () {
   return gulp
     .src("lessons/base-site/**/*")
     .pipe(zip("base-site.zip"))
@@ -156,7 +159,7 @@ gulp.task("zip-lesson4", function() {
 });
 
 // ZIP LESSON5
-gulp.task("zip-lesson5", function() {
+gulp.task("zip-lesson5", function () {
   return gulp
     .src("lessons/base-site-togglenav/**/*")
     .pipe(zip("base-site-togglenav.zip"))
@@ -164,7 +167,7 @@ gulp.task("zip-lesson5", function() {
 });
 
 // ZIP LESSON6
-gulp.task("zip-lesson6", function() {
+gulp.task("zip-lesson6", function () {
   return gulp
     .src("lessons/base-site-subpage/**/*")
     .pipe(zip("base-site-subpage.zip"))
@@ -172,7 +175,7 @@ gulp.task("zip-lesson6", function() {
 });
 
 // ZIP VERSION1
-gulp.task("zip-version1", function() {
+gulp.task("zip-version1", function () {
   return gulp
     .src("versions/sitebase1/**/*")
     .pipe(zip("sitebase1.zip"))
@@ -180,7 +183,7 @@ gulp.task("zip-version1", function() {
 });
 
 // ZIP VERSION1
-gulp.task("zip-version2", function() {
+gulp.task("zip-version2", function () {
   return gulp
     .src("versions/sitebase2/**/*")
     .pipe(zip("sitebase2.zip"))
@@ -188,7 +191,7 @@ gulp.task("zip-version2", function() {
 });
 
 // ZIP EXAMPLE1
-gulp.task("zip-example1", function() {
+gulp.task("zip-example1", function () {
   return gulp
     .src("examples/productsite/**/*")
     .pipe(zip("productsite.zip"))
@@ -196,10 +199,18 @@ gulp.task("zip-example1", function() {
 });
 
 // ZIP EXAMPLE2
-gulp.task("zip-example2", function() {
+gulp.task("zip-example2", function () {
   return gulp
     .src("examples/singlepageportfolio/**/*")
     .pipe(zip("singlepageportfolio.zip"))
+    .pipe(gulp.dest("examples/"));
+});
+
+// ZIP EXAMPLE3
+gulp.task("zip-example3", function () {
+  return gulp
+    .src("examples/sitename-singlepagesite/**/*")
+    .pipe(zip("sitename-singlepagesite.zip"))
     .pipe(gulp.dest("examples/"));
 });
 
@@ -227,13 +238,14 @@ gulp.task(
       "zip-version1",
       "zip-version2",
       "zip-example1",
-      "zip-example2"
+      "zip-example2",
+      "zip-example3"
     ]
   )
 );
 
 // WATCH
-gulp.task("watch", ["build", "sync"], function() {
+gulp.task("watch", ["build", "sync"], function () {
   global.isWatching = true;
   //gulp.watch('../dist/css/style.css', ['build']);
 });
