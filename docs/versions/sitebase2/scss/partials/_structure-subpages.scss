@@ -243,5 +243,13 @@ ul.thumblist-grid {
       margin-right: 0;
     }
   }
+
+  /* TEMP FIX FOR NOW, NEED TO GET RID OF FLOAT AND USE FLEXBOX OR GRID!! */
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 }
 

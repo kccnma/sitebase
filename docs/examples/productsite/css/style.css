@@ -833,6 +833,7 @@ ul.thumblist li + li {
 
 ul.thumblist-grid {
   margin: 2em 0;
+  /* TEMP FIX FOR NOW, NEED TO GET RID OF FLOAT AND USE FLEXBOX OR GRID!! */
 }
 
 ul.thumblist-grid li {
@@ -878,6 +879,12 @@ ul.thumblist-grid li:nth-child(even) {
   ul.thumblist-grid li:nth-child(4n) {
     margin-right: 0;
   }
+}
+
+ul.thumblist-grid:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* #SITE NAVIGATION  */
