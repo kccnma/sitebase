@@ -1,1 +1,9 @@
+# Node/npm related
 node_modules
+
+# Mac related
+*.DS_Store
+
+# DEV related
+.vscode/*
+settings.json

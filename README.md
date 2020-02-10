@@ -22,6 +22,9 @@ Work-in-progress links:
 
 ## Updates
 
+- 02-10-20
+  - Added meta descriptions to head for all sub pages and lessons
+  - Added meta http-equiv to head for ie/edge
 - 03-28-19
   - Fixed various old legacy example bugs
 - 02/06/19
