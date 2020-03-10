@@ -1,22 +1,23 @@
 {
   "name": "sitebase",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "A minimal HTML + CSS + JS base front-end framework for simple web site projects.",
   "main": "index.html",
   "repository": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "Designer",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
-    "gulp-util": "^3.0.8"
-  },
-  "devDependencies": {
+    "gulp-util": "^3.0.8",
     "gulp-cache": "^0.4.6",
     "gulp-imagemin": "^3.3.0",
     "gulp-rename": "^1.2.2",

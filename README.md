@@ -2,9 +2,10 @@
 
 Latest development version of Sitebase, a work-in-progress minimal HTML + CSS + JS base front-end framework for simple web site projects. This dev version contains all work-in-progress temp files, documentation and lessons, pre-compiled source files, and multiple versions for different users and development environments.
 
-- Version 1.0 - a Static CSS Version
-- Version 2.0 - a Sassy CSS Version (GUI workflow using Prepros)
-- Version 3.0 - a NPM/Gulp Version (CLI workflow)
+- Version 1 - a Static CSS Version
+- Version 2 - a Sassy CSS Version (GUI workflow using Prepros)
+- Version 3 - a NPM/Gulp Version (CLI workflow)
+- Version 4 - a Parcel Version (CLI workflow)
 
 ## Documentation coming soon
 
@@ -19,6 +20,7 @@ Work-in-progress links:
 - [sitebase1-static](https://github.com/kccnma/sitebase1-static)
 - [sitebase2-sassy](https://github.com/kccnma/sitebase2-sassy)
 - [sitebase3-npmgulp](https://github.com/kccnma/sitebase3-npmgulp)
+- [sitebase4-parcel](https://github.com/kccnma/sitebase4-parcel)
 
 ## Updates
 
