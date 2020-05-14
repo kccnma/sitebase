@@ -24,6 +24,8 @@ Work-in-progress links:
 
 ## Updates
 
+- 03-09-20
+  - Added parcel version
 - 02-10-20
   - Added meta descriptions to head for all sub pages and lessons
   - Added meta http-equiv to head for ie/edge
