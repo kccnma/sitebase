@@ -1,11 +1,11 @@
 # [sitebase](https://kccnma.github.io/sitebase/ "Sitebase Demo")
 
-Latest development version of Sitebase, a work-in-progress minimal HTML + CSS + JS base front-end framework for simple web site projects. This dev version contains all work-in-progress temp files, documentation and lessons, pre-compiled source files, and multiple versions for different users and development environments.
+Latest development version of Sitebase, a work-in-progress minimal HTML + CSS + JS base front-end framework for simple web site projects. This dev version contains all work-in-progress temp files, documentation and lessons, pre-compiled source files, and multiple variations for different users and development environments.
 
-- Version 1 - a Static CSS Version
-- Version 2 - a Sassy CSS Version (GUI workflow using Prepros)
-- Version 3 - a NPM/Gulp Version (CLI workflow)
-- Version 4 - a Parcel Version (CLI workflow)
+- Variation 1 - a Static CSS Variation
+- Variation 2 - a Sassy CSS Variation (GUI workflow using Prepros)
+- Variation 3 - a NPM/Gulp Variation (CLI workflow)
+- Variation 4 - a Parcel Variation (CLI workflow)
 
 ## Documentation coming soon
 
@@ -13,9 +13,9 @@ Work-in-progress links:
 
 - [sitebase home](https://kccnma.github.io/sitebase/ "Sitebase Home")
 - [sitebase documentation](https://kccnma.github.io/sitebase/documentation.html "Sitebase Docs (incomplete)")
-- [sitebase demo](https://kccnma.github.io/sitebase/versions/sitebase1/ "Sitebase Home")
+- [sitebase demo](https://kccnma.github.io/sitebase/variations/sitebase1/ "Sitebase Home")
 
-## Links to stand-alone versions
+## Links to stand-alone variation repos
 
 - [sitebase1-static](https://github.com/kccnma/sitebase1-static)
 - [sitebase2-sassy](https://github.com/kccnma/sitebase2-sassy)
@@ -23,7 +23,9 @@ Work-in-progress links:
 - [sitebase4-parcel](https://github.com/kccnma/sitebase4-parcel)
 
 ## Updates
-
+- 01-04-21
+  - Updated gulpfile.js to Gulp 4
+  - Consolidated gulp docs into main gulpfile (removable at the bottom, temp fix for now)
 - 03-09-20
   - Added parcel version
 - 02-10-20
@@ -43,6 +45,6 @@ Work-in-progress links:
 
 ## Roadmap
 
-- Refactor mobile nav Javascript
+- Refactor mobile nav Javascript (w/ data attributes)
 - Add more reusable components and design patterns
 - Add more layout examples

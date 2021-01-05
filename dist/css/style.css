@@ -107,6 +107,10 @@ p {
   max-width: 38em;
 }
 
+strong {
+  font-weight: 700;
+}
+
 /* #LINKS */
 a {
   color: #036;
@@ -261,8 +265,6 @@ a.button {
   border: 1px solid #036;
   color: #fff;
   padding: 0.75em 1em;
-  -webkit-border-radius: 0.32em;
-  -moz-border-radius: 0.32em;
   border-radius: 0.32em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -1010,6 +1012,10 @@ ul.thumblist-grid:after {
   display: none;
 }
 
+.toggle-nav .menu-button::-moz-selection {
+  background: rgba(255, 255, 255, 0);
+}
+
 .toggle-nav .menu-button::selection {
   background: rgba(255, 255, 255, 0);
 }
@@ -1139,8 +1145,6 @@ form input[type=reset] {
   border: 1px solid #39c;
   color: #fff;
   padding: .75em 1em;
-  -webkit-border-radius: .32em;
-  -moz-border-radius: .32em;
   border-radius: .32em;
   margin-top: .5em;
   margin-bottom: .5em;
@@ -1163,15 +1167,6 @@ form input[type=reset]:hover {
   }
 }
 
-@-moz-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -1184,14 +1179,11 @@ form input[type=reset]:hover {
 main {
   /* call our keyframe named fade-in, use animattion ease-in and repeat it only 1 time */
   -webkit-animation: fade-in ease-in 1;
-  -moz-animation: fade-in ease-in 1;
   animation: fade-in ease-in 1;
   /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: .5s;
-  -moz-animation-duration: .5s;
   animation-duration: .5s;
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "sitebase",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "A minimal HTML + CSS + JS base front-end framework for simple web site projects.",
   "main": "index.html",
   "repository": "",
@@ -14,15 +14,24 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.26.13",
-    "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.6",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sequence": "^0.4.6",
-    "gulp-util": "^3.0.8",
-    "gulp-zip": "^4.0.0",
-    "minimist": "^1.2.5"
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "gulp-zip": "^5.0.2",
+    "lodash": ">=4.17.13",
+    "lodash.mergewith": ">=4.6.2",
+    "mixin-deep": "^2.0.1",
+    "node-sass": "^4.13.1",
+    "set-value": "^3.0.1"
   }
 }
