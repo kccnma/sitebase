@@ -19,7 +19,7 @@
     #BASE SITE
         #SITE STRUCTURE
             #HEADER
-                #SITE-BRANDING (LOGO)
+                # site-id (LOGO)
             #FOOTER
             #SECTIONS
             #SUB PAGES
@@ -201,8 +201,8 @@ code {
 .blocked a,
 .blocked .site-header a,
 .blocked .site-footer a,
-.blocked .site-branding h1,
-.blocked .site-branding h1 a,
+.blocked .site-id h1,
+.blocked .site-id h1 a,
 .blocked li,
 .blocked blockquote,
 .blocked a.button,
@@ -534,12 +534,12 @@ body {
   }
 }
 
-/* Site Branding */
-.site-branding {
+/* Site ID */
+.site-id {
   text-align: center;
 }
 
-.site-branding h1 {
+.site-id h1 {
   font-size: 1.5em;
   font-weight: normal;
   font-style: normal;
@@ -548,7 +548,7 @@ body {
   padding: 0.5em 0 0.4em 0;
 }
 
-.site-branding h1 a {
+.site-id h1 a {
   font-weight: bold;
   display: inline-block;
 }
@@ -1005,7 +1005,7 @@ ul.thumblist-grid:after {
 }
 
 /* Toggle-Nav */
-.toggle-nav .site-branding {
+.toggle-nav .site-id {
   float: left;
 }
 
@@ -1210,7 +1210,7 @@ main {
 		#BODY
 		#CONTAINER
     #NAVIGATION
-        #SITE-BRANDING
+        # site-id
         #SITE-NAVIGATION
     #CONTENT
         #SECTIONS
