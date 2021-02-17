@@ -89,7 +89,7 @@ exports.build = parallel(html, css, js, imageMin);
 
 //
 //
-// ******* END STANDARD SITEBASE GULP CONFIG *******
+// ******* END STANDARD SiteBase GULP CONFIG *******
 //
 //
 
