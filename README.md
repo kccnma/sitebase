@@ -1,4 +1,4 @@
-# [sitebase](https://kccnma.github.io/sitebase/ "SiteBase Demo")
+# [SiteBase](https://kccnma.github.io/sitebase/ "SiteBase Demo")
 
 Latest development version of Sitebase, a work-in-progress minimal HTML + CSS + JS base front-end framework for simple web site projects. This dev version contains all work-in-progress temp files, documentation and lessons, pre-compiled source files, and multiple variations for different users and development environments.
 
