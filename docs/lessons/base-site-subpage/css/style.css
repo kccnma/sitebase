@@ -611,11 +611,6 @@ article p + h6 {
 }
 
 /* OLD/LEGACY SUPPORT FOR PRE-FLEXBOX ORDERSWAP */
-.orderswap .one-half.column:first-child {
-  float: right;
-  margin-right: 0;
-}
-
 /* OLD VERTICAL CENTERING MARKUP PRE-FLEXBOX */
 .vert-parent .column {
   display: flex;
