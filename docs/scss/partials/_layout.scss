@@ -15,11 +15,10 @@
 
 body {
   margin: 0;
-  padding: 0;
 }
 
 .container {
-  width: 100%;
+  max-width: $breakpoint-medium - 50;
   margin: 0 auto;
   padding: 0 4%; 
 }
@@ -42,11 +41,6 @@ body {
   body {
     font-size: 100%; /* 16px; */
   }
-
-  /* FIXED WIDTH */
-  .container {
-    max-width: $breakpoint-medium - 50;
-  }
 }
 
 /* #EXTRA-LARGE+ MEDIA QUERY */
@@ -66,8 +60,6 @@ body {
 
 $grid-column-gap: 2%;
 
-//.row {}
-
 .row > .column {
   margin-bottom: $grid-column-gap;
 }
@@ -77,17 +69,15 @@ $grid-column-gap: 2%;
     margin-left: -$grid-column-gap/2;
     margin-right: -$grid-column-gap/2;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // align-items: center;
     justify-content: center;
     &.swapped {
       flex-direction: row-reverse;
     }
     &.centered {
-      flex-direction: column;
-      .column {
-        flex-grow: 0;
-      }
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -96,19 +86,19 @@ $grid-column-gap: 2%;
     flex-grow: 1;
     //semantic width-based class names
     &.one-half {
-      width: 50 - $grid-column-gap;
+      max-width: 50 - $grid-column-gap;
     }
     &.one-third {
-      width: 33.3333 - $grid-column-gap;
+      max-width: 33.3333 - $grid-column-gap;
     }
     &.two-thirds {
-      width: 66.6666 - $grid-column-gap;
+      max-width: 66.6666 - $grid-column-gap;
     }
     &.one-fourth {
-      width: 25 - $grid-column-gap;
+      max-width: 25 - $grid-column-gap;
     }
     &.three-fourths {
-      width: 75 - $grid-column-gap;
+      max-width: 75 - $grid-column-gap;
     }
     //semantic pushes
     &.push-one-third {
@@ -116,9 +106,6 @@ $grid-column-gap: 2%;
     }
     &.push-one-fourth {
       margin-left: 25 + $grid-column-gap/2;
-    }
-    &.centered {
-      flex-grow: 0;
     }
   }
 }
@@ -134,4 +121,4 @@ $grid-column-gap: 2%;
     padding: 0 .5em; 
     max-width: none;
   }
-}
+} 
