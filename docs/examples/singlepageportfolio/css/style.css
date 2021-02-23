@@ -642,6 +642,27 @@ section.darkgrey {
   padding: 5em 0 2em 0;
 }
 
+section.darkgrey a.button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+section.darkgrey a.button:hover {
+  background-color: white;
+}
+
+section.darkgrey a.button.alt {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+section.darkgrey a.button.alt:hover {
+  background-color: white;
+  color: black;
+  border-color: transparent;
+}
+
 section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
   padding: 6em 1em 5em 1em;
 }

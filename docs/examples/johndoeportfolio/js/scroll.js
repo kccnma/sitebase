@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //offset = (document.querySelector('.site-header').offsetHeight) - (document.querySelector('.site-navigation').offsetHeight);
       //var headerheight = window.getComputedStyle(siteheader).getPropertyValue("height");
       //offset = parseFloat(headerheight, 10);
-      offset = (document.querySelector('. site-id').offsetHeight) + 15;
+      offset = (document.querySelector('.site-id').offsetHeight) + 15;
     } else {
       offset = 0;
     }
