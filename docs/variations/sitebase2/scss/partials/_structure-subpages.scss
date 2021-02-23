@@ -165,7 +165,8 @@ article {
 } 
 
 /* Thumb Lists */
-ul.thumblist {
+.thumblist {
+  padding: 0;
   li {
     list-style: none;
     margin: 0;
@@ -195,16 +196,17 @@ ul.thumblist {
   }
 }
 
-ul.thumblist-grid {
+.thumblist-grid {
   margin: 2em 0;
-
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   li {
     list-style: none;
     margin-left: 0;
     margin-bottom: 2em;
     width: 46%;
     margin-right: 8%;
-    float: left;
     text-align: center;
     font-size: 0.8em;
 
@@ -244,12 +246,7 @@ ul.thumblist-grid {
     }
   }
 
-  /* TEMP FIX FOR NOW, NEED TO GET RID OF FLOAT AND USE FLEXBOX OR GRID!! */
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+
 
 } 
 

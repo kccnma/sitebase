@@ -243,6 +243,13 @@ img.float-left {
   clear: both;
 }
 
+/* Clear Floats */
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* Circular images */
 img.circular {
   border-radius: 100%;
@@ -824,89 +831,88 @@ article p + h6 {
 }
 
 /* Thumb Lists */
-ul.thumblist li {
+.thumblist {
+  padding: 0;
+}
+
+.thumblist li {
   list-style: none;
   margin: 0;
   padding: 3em 0;
   clear: both;
 }
 
-ul.thumblist li img {
+.thumblist li img {
   max-width: 30%;
   margin: 0 2em 1em 0;
   float: left;
 }
 
-ul.thumblist li p {
+.thumblist li p {
   max-width: none;
 }
 
-ul.thumblist li + li {
+.thumblist li + li {
   border-top: 1px solid #ddd;
 }
 
 @media (max-width: 767px) {
-  ul.thumblist li img {
+  .thumblist li img {
     max-width: 100%;
     margin: 0 0 1em 0;
     float: none;
   }
 }
 
-ul.thumblist-grid {
+.thumblist-grid {
   margin: 2em 0;
-  /* TEMP FIX FOR NOW, NEED TO GET RID OF FLOAT AND USE FLEXBOX OR GRID!! */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-ul.thumblist-grid li {
+.thumblist-grid li {
   list-style: none;
   margin-left: 0;
   margin-bottom: 2em;
   width: 46%;
   margin-right: 8%;
-  float: left;
   text-align: center;
   font-size: 0.8em;
 }
 
-ul.thumblist-grid li a {
+.thumblist-grid li a {
   outline: none;
 }
 
-ul.thumblist-grid li a img {
+.thumblist-grid li a img {
   transition: border-color 0.3s ease;
   border-color: #fff;
 }
 
-ul.thumblist-grid li a img:hover {
+.thumblist-grid li a img:hover {
   border: 3px solid #39c;
 }
 
-ul.thumblist-grid li h5,
-ul.thumblist-grid li p {
+.thumblist-grid li h5,
+.thumblist-grid li p {
   line-height: 1.2em;
 }
 
-ul.thumblist-grid li:nth-child(even) {
+.thumblist-grid li:nth-child(even) {
   margin-right: 0;
 }
 
 @media (min-width: 768px) {
-  ul.thumblist-grid li {
+  .thumblist-grid li {
     width: 19%;
   }
-  ul.thumblist-grid li:nth-child(even) {
+  .thumblist-grid li:nth-child(even) {
     margin-right: 8%;
   }
-  ul.thumblist-grid li:nth-child(4n) {
+  .thumblist-grid li:nth-child(4n) {
     margin-right: 0;
   }
-}
-
-ul.thumblist-grid:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* #SITE NAVIGATION  */
