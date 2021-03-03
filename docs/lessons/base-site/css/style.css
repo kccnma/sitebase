@@ -472,6 +472,7 @@ section {
 }
 
 .site-navigation ul {
+  margin: 0;
   padding: 0.5em 0;
   text-align: center;
 }
@@ -480,6 +481,9 @@ section {
   margin: 0;
   padding: 0;
   display: inline-block;
+}
+
+.site-navigation ul li li {
   display: inline-flex;
 }
 
@@ -536,7 +540,13 @@ section {
   }
 }
 
-/* Default Site-Navigation (header only) */
+@media (max-width: 767px) {
+  .site-navigation ul li,
+  .site-navigation ul li ul li {
+    display: block;
+  }
+}
+
 /* Default Site-Navigation (footer only) */
 .site-footer .site-navigation ul {
   border-top: none;

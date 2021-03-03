@@ -153,11 +153,11 @@ const sassOptions = {
 function sassroot(cb) {
   gulp.src("src/scss/**/*.scss")
     .pipe(sass(sassOptions))
-    .pipe(gulp.dest("css/"))
+    .pipe(gulp.dest("docs/css/"))
     .pipe(gulp.dest("docs/variations/sitebase1/css/"))
     .pipe(gulp.dest("docs/variations/sitebase2/css/"))
     .pipe(gulp.dest("docs/examples/productsite/css/"))
-    //.pipe(gulp.dest("docs/examples/sitename-singlepagesite/css/"))
+    .pipe(gulp.dest("docs/examples/sitename-singlepagesite/css/"))
     .pipe(gulp.dest("docs/examples/singlepageportfolio/css/"));
   cb();
 }

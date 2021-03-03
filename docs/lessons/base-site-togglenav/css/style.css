@@ -472,6 +472,7 @@ section {
 }
 
 .site-navigation ul {
+  margin: 0;
   padding: 0.5em 0;
   text-align: center;
 }
@@ -480,6 +481,9 @@ section {
   margin: 0;
   padding: 0;
   display: inline-block;
+}
+
+.site-navigation ul li li {
   display: inline-flex;
 }
 
@@ -536,109 +540,72 @@ section {
   }
 }
 
-/* Default Site-Navigation (header only) */
+@media (max-width: 767px) {
+  .site-navigation ul li,
+  .site-navigation ul li ul li {
+    display: block;
+  }
+}
+
 /* Default Site-Navigation (footer only) */
 .site-footer .site-navigation ul {
   border-top: none;
   margin: 0;
 }
 
-/* Navicon Menu */
-.menu-button.navicon {
-  color: rgba(255, 255, 255, 0);
-}
-
-.menu-button.navicon.expanded {
-  color: rgba(255, 255, 255, 0);
-}
-
-.menu-button.navicon:hover {
-  cursor: default;
-}
-
-.menu-button.navicon:after {
-  cursor: pointer;
-  color: #333;
-  content: "\2630";
-  font-size: 1.5em;
-  margin-top: -0.1em;
-  margin-left: 0.5em;
-  width: 1em;
-  height: 1em;
-  line-height: 1em;
-  display: block;
-  float: right;
-}
-
-.menu-button.navicon.expanded:after {
-  content: "\2715";
-}
-
-/* Toggle-Nav */
-.toggle-nav .site-id {
-  float: left;
-}
-
-.toggle-nav .menu-button,
-.toggle-nav .menu-button.expanded {
-  display: none;
-}
-
-.toggle-nav .menu-button::selection {
-  background: rgba(255, 255, 255, 0);
-}
-
+/* TOGGLE NAV */
 @media (max-width: 767px) {
-  .toggle-nav .menu-button,
-  .toggle-nav .menu-button.expanded {
-    display: block;
-    margin-top: 0.9em;
-    margin-bottom: 1em;
+  .toggle-nav {
+    text-align: right;
+    /* MENU BUTTON */
+    /* TOGGLE NAV UL */
   }
-  .toggle-nav .menu-button:hover {
-    cursor: pointer;
+  .toggle-nav .site-id {
+    position: absolute;
   }
-  .toggle-nav .menu-button + ul,
-  .toggle-nav .menu-button + div ul,
-  .toggle-nav .menu-button.expanded + ul,
-  .toggle-nav .menu-button.expanded + div ul {
-    clear: both;
-    display: block;
-    margin: 0;
-    padding: 0.5em 0;
-  }
-  .toggle-nav .menu-button + ul,
-  .toggle-nav .menu-button + div ul {
-    display: none;
-  }
-  .toggle-nav .menu-button + ul li,
-  .toggle-nav .menu-button + div ul li {
-    clear: both;
-    margin: 0;
-    display: block;
-  }
-  .toggle-nav .menu-button + ul li a,
-  .toggle-nav .menu-button + div ul li a {
-    padding: 0.9em 0.75em 0.75em 0.75em;
-    transition: all 0.3s ease;
-    color: #036;
-  }
-  .toggle-nav .menu-button + ul li a:hover,
-  .toggle-nav .menu-button + div ul li a:hover {
+  .toggle-nav li a:hover {
     color: #fff;
     background: #036;
   }
-  .toggle-nav .menu-button.expanded + ul,
-  .toggle-nav .menu-button.expanded + div ul {
-    display: block;
-    text-align: center;
+  .toggle-nav .menu-button {
+    margin: .8em 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .toggle-nav .menu-button::selection {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .toggle-nav .menu-button.navicon {
+    color: rgba(255, 255, 255, 0);
+  }
+  .toggle-nav .menu-button.navicon::after {
+    color: #333;
+    content: "\2630";
+    font-size: 1.5em;
+    margin-top: -0.1em;
+    margin-left: 0.5em;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    display: inline-block;
+  }
+  .toggle-nav[data-navstate="open"] .menu-button.navicon::after {
+    content: "\2715";
+  }
+  .toggle-nav ul {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .toggle-nav[data-navstate="open"] ul {
+    max-height: none;
+    padding: 1em 0;
   }
 }
 
 /* Animated Toggle-Nav Menu */
 @media (max-width: 767px) {
-  .toggle-nav.animated .menu-button + ul,
-  .toggle-nav.animated .menu-button + div ul {
+  .toggle-nav.animated ul {
     display: block;
     max-height: 0;
     overflow: hidden;
@@ -647,33 +614,28 @@ section {
     border-width: 0;
     transition: all 0.3s ease;
   }
-  .toggle-nav.animated .menu-button.expanded + ul,
-  .toggle-nav.animated .menu-button.expanded + div ul {
+  .toggle-nav.animated[data-navstate="open"] ul {
     max-height: 138em;
     opacity: 1;
     padding: 0.5em 0;
     border-width: 0px;
     transition: all 0.6s ease;
   }
-  .toggle-nav.animated .menu-button + ul li,
-  .toggle-nav.animated .menu-button + div ul li {
+  .toggle-nav.animated li {
     padding: 0;
     opacity: 0;
     transition: all 0.3s ease;
   }
-  .toggle-nav.animated .menu-button.expanded + ul li,
-  .toggle-nav.animated .menu-button.expanded + div ul li {
+  .toggle-nav.animated[data-navstate="open"] li {
     padding: 0.25em;
     opacity: 1;
     transition: all 0.6s ease 0.2s;
   }
-  .toggle-nav.animated .menu-button + ul li a,
-  .toggle-nav.animated .menu-button + div ul li a {
+  .toggle-nav.animated li a {
     padding: 0;
     transition: all 0.3s ease;
   }
-  .toggle-nav.animated .menu-button.expanded + ul li a,
-  .toggle-nav.animated .menu-button.expanded + div ul li a {
+  .toggle-nav.animated[data-navstate="open"] li a {
     padding: 0.75em;
   }
 }

@@ -34,7 +34,7 @@ article {
   p + h5,
   p + h6 {
     margin-top: 1em;
-  }
+  } 
 }
 
 /* Posts */
@@ -44,9 +44,14 @@ article {
 
 /* Sub Pages with Multiple Column Layout */
 
+@media (min-width: $breakpoint-small) {
+  .subpage-twocol {
+    display: flex;
+  } 
+}
+
 .subpage-sidebar {
   @media (min-width: $breakpoint-small) {
-    float: left;
     width: 21%;
     padding-right: 4%;
   }
@@ -61,13 +66,12 @@ article {
     border-bottom: 1px solid $border-color;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: $text-color-light;
+    color: $text-color-light; 
   }
 }
 
 .subpage-main {
   @media (min-width: $breakpoint-small) {
-    float: right;
     width: 70%;
     padding-left: 4%;
     border-left: 1px solid $border-color;
