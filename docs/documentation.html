@@ -542,20 +542,15 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             <p>
               For small screens, this base uses a toggle-nav using a navicon as
               a menu button. Javascript is used to toggle the menu on/off by
-              adding/removing a class named "expanded" on the element. CSS is
+              changing the value of a data-attribute. CSS is then
               used to control the appearance of the menu.
             </p>
-
-            <p>NOTE: In the next version, this will be updated to use a button element and a data attribute (instead of
-              a
-              div and a class
-              toggle).</p>
 
             <p>Mobile menu HTML:</p>
 
             <pre><code>&#60;nav class="site-navigation"&#62;
+    <strong>&#60;div class="menu-button navicon"&#62;Menu&#60;/div&#62;</strong>
     &#60;ul class="nav"&#62;
-        <strong>&#60;div class="menu-button navicon"&#62;Menu&#60;/div&#62;</strong>
         &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
         &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
         &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
@@ -564,14 +559,16 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 </code></pre>
             <p>Mobile menu Javascript:</p>
             <pre><code>
-    //TOGGLE MENU NAV
-    var menubutton = document.querySelectorAll('.menu-button');
-    var i;
-    for (i = 0; i &#60; menubutton.length; i++) {
-        menubutton[i].onclick = function(){
-            this.classList.toggle("expanded");
-        }
-    } 
+  //TOGGLE MENU NAV VIA ADDING/REMOVING A DATA-ATTRIBUTE
+  const menubutton = document.querySelector('.menu-button');
+  const menunav = document.querySelector('.toggle-nav'); 
+  menubutton.addEventListener('click', function() {
+    if (menunav.getAttribute('data-navstate') === 'open') {
+        menunav.setAttribute('data-navstate', 'closed');
+    } else {
+        menunav.setAttribute('data-navstate', 'open');
+    }
+  }); 
 </code></pre>
           </section>
         </div>
