@@ -10,12 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       menunav.setAttribute('data-navstate', 'open');
     }
-  }); //TOGGLE MENU NAV VIA ADDING/REMOVING A CLASS
-  // const menubutton = document.querySelector('.menu-button');
-  // menubutton.addEventListener('mouseover', () => {
-  //     this.classList.toggle("expanded");
-  // });
-  //TOGGLE ACCORDIAN VIA ADDING/REMOVING A CLASS
+  }); //TOGGLE ACCORDIAN VIA ADDING/REMOVING A CLASS
 
   var acc = document.querySelectorAll('.accordian');
   var i;

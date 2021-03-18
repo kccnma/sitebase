@@ -632,6 +632,19 @@ section {
   margin-bottom: 0;
 }
 
+/* STICKY header - works with a class="sticky" on .site-header */
+.site-header.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.site-header.sticky + .site-main {
+  padding-top: 3em;
+}
+
 /* Colored Sections */
 section.superlightgrey {
   background: #f9f9f9;
@@ -1058,6 +1071,9 @@ article p + h6 {
   .toggle-nav[data-navstate="open"] ul {
     max-height: none;
     padding: 1em 0;
+  }
+  .toggle-nav[data-navstate="open"] ul ul {
+    padding: 0;
   }
 }
 

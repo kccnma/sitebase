@@ -1,5 +1,17 @@
-/* Colored Sections */
+/* STICKY header - works with a class="sticky" on .site-header */
+.site-header.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;;
+}
 
+.site-header.sticky + .site-main {
+  padding-top: 3em;
+}
+
+/* Colored Sections */
 section.superlightgrey {
   background: #f9f9f9;
   padding: 5em 0 2em 0;

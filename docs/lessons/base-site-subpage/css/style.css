@@ -846,6 +846,9 @@ article p + h6 {
     max-height: none;
     padding: 1em 0;
   }
+  .toggle-nav[data-navstate="open"] ul ul {
+    padding: 0;
+  }
 }
 
 /* Animated Toggle-Nav Menu */

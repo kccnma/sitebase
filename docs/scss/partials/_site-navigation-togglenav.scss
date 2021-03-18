@@ -57,6 +57,9 @@
       ul {
         max-height: none;
         padding: 1em 0;
+        ul {
+          padding: 0;
+        }
       }
     }
   }
