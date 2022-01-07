@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const { parallel, series } = require("gulp");
 
 const htmlmin = require("gulp-htmlmin");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const concat = require("gulp-concat");
