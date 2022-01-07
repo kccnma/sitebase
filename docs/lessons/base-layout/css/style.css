@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* #BASE CSS (Initital Setup)
 ---------------------------------
     #BASE CONTENT
@@ -137,7 +138,7 @@ blockquote cite {
 }
 
 blockquote cite:before {
-  content: "\2014";
+  content: "—";
   margin-right: 0.25em;
 }
 
@@ -249,13 +250,11 @@ body {
   /* Inherits Small/Mobile Body Type from Above */
   /* Inherits Small/Mobile Fluid Width from Above */
 }
-
 /* #MEDIUM+ MEDIA QUERY */
 @media (min-width: 768px) {
   /* Inherits Small/Mobile Body Type from Above */
   /* Inherits Small/Mobile Fluid Width from Above */
 }
-
 /* #LARGE+ MEDIA QUERY */
 @media (min-width: 1050px) {
   /* LARGE BODY TYPE */
@@ -264,7 +263,6 @@ body {
     /* 16px; */
   }
 }
-
 /* #EXTRA-LARGE+ MEDIA QUERY */
 @media (min-width: 1250px) {
   /* EXTRA-LARGE BODY TYPE */
@@ -272,12 +270,12 @@ body {
     font-size: 112.5%;
     /* 18px; */
   }
+
   /* FIXED WIDTH */
   .container {
     max-width: 1200px;
   }
 }
-
 /* Grid */
 .row > .column {
   margin-bottom: 2%;
@@ -297,6 +295,7 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
   .row > .column {
     margin: 0 1% 2% 1%;
     flex-grow: 1;
@@ -323,17 +322,15 @@ body {
     margin-left: 26%;
   }
 }
-
 /* FOR DEMO PURPOSES ONLY */
 .demo .column {
   padding: 1em;
   background: #ddd;
   text-align: center;
 }
-
 .demo .column p {
   margin: 0;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   max-width: none;
 }
 
@@ -348,32 +345,29 @@ body {
   padding: 5px;
   text-align: center;
   width: 100%;
-  content: 'Small (less than 768px)';
+  content: "Small (less than 768px)";
   color: #fff;
   background: #993333;
 }
 
 @media (min-width: 768px) {
   body.demo:after {
-    content: 'Medium (768px - 1049px)';
+    content: "Medium (768px - 1049px)";
     background: #bcb83d;
   }
 }
-
 @media (min-width: 1050px) {
   body.demo:after {
-    content: 'Large (1050px - 1249px)';
+    content: "Large (1050px - 1249px)";
     background: #669933;
   }
 }
-
 @media (min-width: 1250px) {
   body.demo:after {
-    content: 'Extra Large (1250px +)';
+    content: "Extra Large (1250px +)";
     background: #0099cc;
   }
 }
-
 .demo .column p:last-child {
   margin-bottom: 0;
 }

@@ -973,6 +973,9 @@ article p + h6 {
   .toggle-nav .menu-button {
     margin: 0.8em 0;
     display: inline-block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
     cursor: pointer;
   }
   .toggle-nav .menu-button::-moz-selection {

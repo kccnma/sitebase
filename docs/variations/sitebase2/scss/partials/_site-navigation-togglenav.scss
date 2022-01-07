@@ -18,6 +18,9 @@
     .menu-button {
       margin: .8em 0;
       display: inline-block;
+      background-color: transparent;
+      border: none;
+      padding: 0;
       cursor: pointer;
 
       &::selection {

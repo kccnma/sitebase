@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* #BASE CSS (Initital Setup)
 ---------------------------------
     #BASE CONTENT
@@ -137,7 +138,7 @@ blockquote cite {
 }
 
 blockquote cite:before {
-  content: "\2014";
+  content: "—";
   margin-right: 0.25em;
 }
 
