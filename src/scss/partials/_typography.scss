@@ -65,6 +65,10 @@ p {
   margin: 0 0 0.5em 0;
   max-width: 38em; 
 }
+.centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 strong {
   font-weight: 700;

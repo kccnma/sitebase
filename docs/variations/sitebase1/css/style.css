@@ -109,6 +109,11 @@ p {
   max-width: 38em;
 }
 
+.centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 strong {
   font-weight: 700;
 }
