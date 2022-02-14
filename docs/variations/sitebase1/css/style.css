@@ -1089,8 +1089,8 @@ form input[type=button],
 form input[type=submit],
 form input[type=reset] {
   width: auto;
-  background-color: #39c;
-  border: 1px solid #39c;
+  background-color: #036;
+  border: 1px solid #036;
   color: #fff;
   padding: 0.75em 1em;
   -webkit-border-radius: 0.32em;
@@ -1102,8 +1102,8 @@ form input[type=reset] {
 form input[type=button]:hover,
 form input[type=submit]:hover,
 form input[type=reset]:hover {
-  background-color: #069;
-  border-color: #069;
+  background-color: #003;
+  border-color: #003;
 }
 
 /* make keyframes that tell the start state and the end state of our object */
