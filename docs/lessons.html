@@ -403,6 +403,11 @@
                   href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-site-togglenav">View
                   Source</a>
                 <p>
+                  <strong>UPDATE:</strong> In 2022, the markup for the menu-button was updated from a div
+                  to a button element. To implement this, a few new lines of css were added to .menu-button: a
+                  reset of the border (border: none;) and the back-ground-color (background-color: transparent;). FYI.
+                </p>
+                <p>
                   <strong>UPDATE:</strong> In 2021, the JavaScript toggle-nav function was re-written to change the
                   value of a data-attribute instead of toggling a class. Most of the examples provided have been updated
                   with this new approach, but as a heads up: you might come across links to older examples that used a
@@ -538,7 +543,9 @@
                     <ul>
                       <li>add <a
                           href="http://nma.kcc.hawaii.edu/gargiulo/data/JohnDoe/spring/art128/2017/base-site-singlepagesite/js/scroll.min.js">scroll.min.js</a>
-                        to js folder</li>
+                        to your js folder, or use <a href="https://github.com/bendc/anchor-scroll">the original
+                          anchor-scroll</a> js code from Benjamin De Cock
+                      </li>
                       <li>add a link to scroll.min.js file at the bottom of your html file</li>
                       <li>add a class="scroll" to each link that will utilize scroll.js</li>
                     </ul>
