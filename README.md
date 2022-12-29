@@ -12,8 +12,8 @@ Latest development version of Sitebase, an ongoing, always-a-work-in-progress mi
 
 ## Demos
 
-- [SiteBase home](https://kccnma.github.io/sitebase/ "SiteBase Website")
-- [SiteBase demo](https://kccnma.github.io/sitebase/variations/sitebase1/ "SiteBase Static Demo (No Frills)")
+- [SiteBase Website](https://kccnma.github.io/sitebase/ "SiteBase Website")
+- [SiteBase Static Demo (No Frills)](https://kccnma.github.io/sitebase/variations/sitebase1/ "SiteBase Static Demo (No Frills)")
 
 ## Links to stand-alone variation repos
 
