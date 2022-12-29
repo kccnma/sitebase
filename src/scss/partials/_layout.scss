@@ -57,7 +57,6 @@ body {
 }
 
 /* Grid */ 
-
 $grid-column-gap: 2%;
 
 .row > .column {
@@ -71,11 +70,13 @@ $grid-column-gap: 2%;
     display: flex;
     // flex-wrap: wrap;
     // align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    // gap: $grid-column-gap;
     &.swapped {
       flex-direction: row-reverse;
     }
     &.centered {
+      justify-content: center;
       margin-left: auto;
       margin-right: auto;
     }
@@ -106,6 +107,10 @@ $grid-column-gap: 2%;
     }
     &.push-one-fourth {
       margin-left: 25 + calc($grid-column-gap / 2);
+    }
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
