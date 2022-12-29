@@ -23,7 +23,7 @@ Latest development version of Sitebase, an ongoing, always-a-work-in-progress mi
 - [sitebase4-parcel](https://github.com/kccnma/sitebase4-parcel)
 
 ## To Run the full dev version locally
-- make sure that you have node and gulp installed locally/globally
+- make sure that you already have node and gulp installed
 ```
 $ npm install
 $ npm run dev
