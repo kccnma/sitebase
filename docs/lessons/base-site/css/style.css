@@ -282,49 +282,55 @@ body {
   }
 }
 /* Grid */
-.row > .column {
-  margin-bottom: 2%;
+section,
+.container {
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
   .row {
-    margin-left: -1%;
-    margin-right: -1%;
+    margin-left: -2%;
+    margin-right: -2%;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
   }
   .row.swapped {
     flex-direction: row-reverse;
   }
   .row.centered {
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
   }
 
   .row > .column {
-    margin: 0 1% 2% 1%;
+    margin: 0 2% 2% 2%;
     flex-grow: 1;
   }
   .row > .column.one-half {
-    max-width: 48%;
+    max-width: 46%;
   }
   .row > .column.one-third {
-    max-width: 31.3333%;
+    max-width: 29.3333%;
   }
   .row > .column.two-thirds {
-    max-width: 64.6666%;
+    max-width: 62.6666%;
   }
   .row > .column.one-fourth {
-    max-width: 23%;
+    max-width: 21%;
   }
   .row > .column.three-fourths {
-    max-width: 73%;
+    max-width: 71%;
   }
   .row > .column.push-one-third {
-    margin-left: 34.3333%;
+    margin-left: 35.3333%;
   }
   .row > .column.push-one-fourth {
-    margin-left: 26%;
+    margin-left: 27%;
+  }
+  .row > .column.centered {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /* FOR DEMO PURPOSES ONLY */
@@ -359,12 +365,10 @@ body {
 .site-header {
   background: #fff;
   border-bottom: 0px solid #ccc;
-}
-.site-header .container {
-  padding-top: 0.5em;
+  padding: 0.5em 4%;
 }
 @media (min-width: 768px) {
-  .site-header .container {
+  .site-header {
     display: flex;
     justify-content: space-between;
     padding-top: 0.75em;
@@ -470,7 +474,7 @@ section {
   display: inline-block;
 }
 .site-navigation ul li li {
-  display: inline-flex;
+  white-space: nowrap;
 }
 .site-navigation ul li a {
   display: block;
@@ -514,6 +518,7 @@ section {
   }
   .site-navigation ul li:hover ul {
     left: auto;
+    right: 0;
   }
   .site-navigation ul li.selected a, .site-navigation ul li.current-menu-item a {
     font-weight: bold;

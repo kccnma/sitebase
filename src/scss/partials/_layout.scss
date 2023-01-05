@@ -24,7 +24,7 @@ body {
 }
 
 /* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
-@media (max-width: $breakpoint-small - 1) {
+@media (max-width: ($breakpoint-small - 1)) {
   /* Inherits Small/Mobile Body Type from Above */
   /* Inherits Small/Mobile Fluid Width from Above */
 }
@@ -57,21 +57,20 @@ body {
 }
 
 /* Grid */ 
-$grid-column-gap: 2%;
+$grid-column-gap: 4%;
 
-.row > .column {
-  margin-bottom: $grid-column-gap;
+section,
+.container {
+  overflow-x: hidden;
 }
+
 
 @media (min-width: $breakpoint-small) {
   .row {
-    margin-left: -(calc($grid-column-gap / 2));
-    margin-right: -(calc($grid-column-gap / 2));
+    margin-left: calc($grid-column-gap / 2 * -1);
+    margin-right: calc($grid-column-gap / 2 * -1);
     display: flex;
-    // flex-wrap: wrap;
-    // align-items: center;
-    justify-content: space-between;
-    // gap: $grid-column-gap;
+    flex-wrap: wrap;
     &.swapped {
       flex-direction: row-reverse;
     }
@@ -83,7 +82,7 @@ $grid-column-gap: 2%;
   }
 
   .row > .column {
-    margin: 0 calc($grid-column-gap / 2) $grid-column-gap calc($grid-column-gap / 2);
+    margin: 0 calc($grid-column-gap / 2) calc($grid-column-gap / 2) calc($grid-column-gap / 2);
     flex-grow: 1;
     //semantic width-based class names
     &.one-half {

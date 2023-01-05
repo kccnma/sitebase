@@ -18,7 +18,9 @@
       padding: 0;
       display: inline-block;
       li {
-        display: inline-flex; //for nest nav items
+        // display: inline-flex; //for nest nav items
+        // min-width: 300px;
+        white-space: nowrap;
       }
 
       a {
@@ -73,6 +75,7 @@
         /* show nested lists on hover */
         &:hover ul {
           left: auto;
+          right: 0;
         }
 
         /* SELECTED STATE */
@@ -91,7 +94,7 @@
 }
 
 // FIX FOR DROP DOWNS 
-@media (max-width: $breakpoint-small - 1) {
+@media (max-width: ($breakpoint-small - 1)) {
   .site-navigation ul li,
   .site-navigation ul li ul li {
     display: block;

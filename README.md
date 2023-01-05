@@ -23,13 +23,18 @@ Latest development version of Sitebase, an ongoing, always-a-work-in-progress mi
 - [sitebase4-parcel](https://github.com/kccnma/sitebase4-parcel)
 
 ## To Run the full dev version locally
-- make sure that you already have node and gulp installed
+- make sure that you already have [node](https://nodejs.org/en/) and [gulp](https://gulpjs.com/) installed
 ```
 $ npm install
 $ npm run dev
 ```
 
 ## Updates
+- 01-04-23
+  - Fixed grid system to no longer throw a scrollbar when used at full-width outside of a container
+  - Removed all nested containers inside of site headers for a default full-width site header.
+- 03-03-22
+  - Refactored mobile nav Javascript w/ data attributes
 - 01-04-21
   - Updated gulpfile.js to Gulp 4
   - Consolidated gulp docs into main gulpfile (removable at the bottom, temp fix for now)
@@ -51,7 +56,6 @@ $ npm run dev
   - Removed old HTML5 conditional in head
 
 ## Roadmap
-
-- Refactor mobile nav Javascript (w/ data attributes)
+- Add support for global CSS custom properites
 - Add more reusable components and design patterns
-- Add more layout examples
+- Add more modern layout examples

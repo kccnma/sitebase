@@ -1,7 +1,7 @@
 /* TOGGLE NAV */
 .toggle-nav {
 
-  @media (max-width: $breakpoint-small - 1) {
+  @media (max-width: ($breakpoint-small - 1)) {
 
     text-align: right;
 
@@ -70,7 +70,7 @@
 }
 
 /* Animated Toggle-Nav Menu */
-@media (max-width: $breakpoint-small - 1) {
+@media (max-width: ($breakpoint-small - 1)) {
   .toggle-nav.animated ul { 
     display: block;
     max-height: 0;
