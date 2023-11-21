@@ -30,6 +30,8 @@ $ npm run dev
 ```
 
 ## Updates
+- 11-20-23
+  - Removed IE/Edge meta tag from head
 - 01-04-23
   - Fixed grid system to no longer throw a scrollbar when used at full-width outside of a container
   - Removed all nested containers inside of site headers for a default full-width site header.
