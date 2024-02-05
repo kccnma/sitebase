@@ -30,11 +30,14 @@ $ npm run dev
 ```
 
 ## Updates
+- 02-05-24
+  - Added width and height attributes to all inline images
+  - removed blank space and closing forward slashes on all self-closing elements
 - 11-20-23
   - Removed IE/Edge meta tag from head
 - 01-04-23
   - Fixed grid system to no longer throw a scrollbar when used at full-width outside of a container
-  - Removed all nested containers inside of site headers for a default full-width site header.
+  - Removed all nested containers inside of site headers for a default full-width site header
 - 03-03-22
   - Refactored mobile nav Javascript w/ data attributes
 - 01-04-21
