@@ -64,3 +64,5 @@ $ npm run dev
 - Add support for global CSS custom properites
 - Add more reusable components and design patterns
 - Add more modern layout examples
+- Update the outdated responsive video css locked at 16:9
+- Remove misspelled accordian component and replace with details summary

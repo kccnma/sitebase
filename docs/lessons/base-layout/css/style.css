@@ -17,7 +17,6 @@
         #MEDIAQUERIES
         #CONTAINER
         #GRID SYSTEM
-            #CLEARFIX
     #BASE SITE
         #SITE STRUCTURE
             #HEADER
@@ -125,6 +124,7 @@ a {
 
 a:hover {
   color: #003;
+  text-decoration: underline;
 }
 
 /* #BLOCK QUOTES  */

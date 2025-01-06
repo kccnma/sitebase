@@ -46,10 +46,6 @@ body {
     }
   }
 
-  //default-layout (Logo left)
-  @media (min-width: $breakpoint-small) {
-    //float: left;
-  }
 }
 
 /* Footer Only */
@@ -65,6 +61,7 @@ body {
       justify-content: center;
       padding-bottom: 0.5em;
     }
+    
   }
 }
 

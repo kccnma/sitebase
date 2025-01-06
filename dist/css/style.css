@@ -17,7 +17,6 @@
         #MEDIAQUERIES
         #CONTAINER
         #GRID SYSTEM
-            #CLEARFIX
     #BASE SITE
         #SITE STRUCTURE
             #HEADER
@@ -125,6 +124,7 @@ a {
 
 a:hover {
   color: #003;
+  text-decoration: underline;
 }
 
 /* #BLOCK QUOTES  */
@@ -546,6 +546,7 @@ body {
   font-weight: bold;
   display: inline-block;
 }
+
 /* Footer Only */
 .site-footer {
   background: #fff;
@@ -1126,8 +1127,12 @@ form input[type=reset]:hover {
 }
 main {
   /* call our keyframe named fade-in, use animattion ease-in and repeat it only 1 time */
-  -webkit-animation: fade-in ease-in 1;
-  animation: fade-in ease-in 1;
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
   /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1138,29 +1143,7 @@ main {
 /* #SITE SPECIFIC CUSTOM CSS (e.g. Base Overrides)
 ---------------------------------
 	#TYPOGRAPHY OVERRIDES
-		#@FONT-FACE
-        #BODY
-		#HEADINGS
-		#PARAGRAPHS
-    #LAYOUT OVERRIDES
 		#BODY
-		#CONTAINER
-    #NAVIGATION
-        # site-id
-        #SITE-NAVIGATION
-    #CONTENT
-        #SECTIONS
+		#HEADINGS
+		...
 --------------------------------- */
-/* Custom Overrides */
-/*
-body {
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-}
-*/
