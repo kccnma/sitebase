@@ -1,4 +1,4 @@
-# [SiteBase1](https://kccnma.github.io/sitebase/ "SiteBase1 Demo")
+# [SiteBase (v1)](https://kccnma.github.io/sitebase/ "SiteBase v1 Demo")
 
 This is the initial (v1) development version of Sitebase, a minimal HTML + CSS + JS base front-end framework for simple web site projects. This is the full dev version that contains all uncompiled source files, documentation, lessons, and post-build pre-compiled static-rendered files in multiple variations for different users and development environments.
 
@@ -8,12 +8,12 @@ This is the initial (v1) development version of Sitebase, a minimal HTML + CSS +
 - Variation 4 - a Parcel Variation (CLI workflow)
 
 ## Documentation
-- [SiteBase1 documentation](https://kccnma.github.io/sitebase/documentation.html "SiteBase Docs (incomplete)")
+- [SiteBase v1 documentation](https://kccnma.github.io/sitebase/documentation.html "SiteBase Docs (incomplete)")
 
 ## Demos
 
-- [SiteBase1 Website](https://kccnma.github.io/sitebase/ "SiteBase Website")
-- [SiteBase1 Static Demo (No Frills)](https://kccnma.github.io/sitebase/variations/sitebase1/ "SiteBase Static Demo (No Frills)")
+- [SiteBase v1 Website](https://kccnma.github.io/sitebase/ "SiteBase Website")
+- [SiteBase v1 Static Demo (No Frills)](https://kccnma.github.io/sitebase/variations/sitebase1/ "SiteBase Static Demo (No Frills)")
 
 ## Links to stand-alone variation repos
 
@@ -63,7 +63,7 @@ $ npm run dev
   - Updated gulp (with gulp.series)
   - Removed old HTML5 conditional in head
 
-## Roadmap
+## Roadmap (ON HOLD)
 - Add support for global CSS custom properites
 - Add more reusable components and design patterns
 - Add more modern layout examples
