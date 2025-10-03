@@ -35,3 +35,7 @@ If you'd like, I can:
 - Reintroduce secure image optimization using `sharp` and a small gulp wrapper.
 - Revert specific upgrades if you have constraints on package versions.
 
+Small runtime tweak
+-------------------
+- Added `{ encoding: false }` to image copy `gulp.src` calls so binary images are read/written as raw bytes (prevents accidental text encoding in some environments).
+

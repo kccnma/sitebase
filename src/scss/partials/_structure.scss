@@ -1,5 +1,8 @@
+@use '../variables' as *;
+
 /* Header & Footer */
 body {
+
   background: $background-color-footer;
 }
 

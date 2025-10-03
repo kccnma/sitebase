@@ -41,10 +41,8 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #333;
-  font-size: 87.5%;
-  /* 14px; */
-  line-height: 1.5;
-  /* 14px x 1.5em = 21px */
+  font-size: 87.5%; /* 14px; */
+  line-height: 1.5; /* 14px x 1.5em = 21px */
 }
 
 /* #HEADINGS
@@ -62,38 +60,32 @@ h6 {
 }
 
 h1 {
-  font-size: 3em;
-  /* 48px / 16px = 3em */
+  font-size: 3em; /* 48px / 16px = 3em */
   line-height: 1;
 }
 
 h2 {
-  font-size: 2.25em;
-  /* 36px / 16px = 2.25em */
+  font-size: 2.25em; /* 36px / 16px = 2.25em */
   line-height: 1.1;
 }
 
 h3 {
-  font-size: 1.5em;
-  /* 24px / 16px = 1.5em */
+  font-size: 1.5em; /* 24px / 16px = 1.5em */
   line-height: 1.2;
 }
 
 h4 {
-  font-size: 1.3125em;
-  /* 21px / 16px = 1.3125em */
+  font-size: 1.3125em; /* 21px / 16px = 1.3125em */
   line-height: 1.3;
 }
 
 h5 {
-  font-size: 1.125em;
-  /* 18px / 16px = 1.125em */
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
   line-height: 1.4;
 }
 
 h6 {
-  font-size: 1em;
-  /* 16px / 16px = 1em */
+  font-size: 1em; /* 16px / 16px = 1em */
   line-height: 1.5;
 }
 
@@ -264,18 +256,15 @@ body {
 @media (min-width: 1050px) {
   /* LARGE BODY TYPE */
   body {
-    font-size: 100%;
-    /* 16px; */
+    font-size: 100%; /* 16px; */
   }
 }
 /* #EXTRA-LARGE+ MEDIA QUERY */
 @media (min-width: 1250px) {
   /* EXTRA-LARGE BODY TYPE */
   body {
-    font-size: 112.5%;
-    /* 18px; */
+    font-size: 112.5%; /* 18px; */
   }
-
   /* FIXED WIDTH */
   .container {
     max-width: 1200px;
@@ -302,7 +291,6 @@ section,
     margin-left: auto;
     margin-right: auto;
   }
-
   .row > .column {
     margin: 0 2% 2% 2%;
     flex-grow: 1;
@@ -494,18 +482,20 @@ section {
   }
   .site-navigation ul li {
     display: inline-block;
-    /* DROP DOWN MENU */
-    /* stack nested lists */
-    /* hide nested lists by default */
-    /* show nested lists on hover */
-    /* SELECTED STATE */
   }
   .site-navigation ul li a {
     margin: 0 0.5em;
     padding: 0.85em 0.5em 0.75em 0.5em;
   }
+  .site-navigation ul li {
+    /* DROP DOWN MENU */
+    /* stack nested lists */
+  }
   .site-navigation ul li li {
     display: block;
+  }
+  .site-navigation ul li {
+    /* hide nested lists by default */
   }
   .site-navigation ul li ul {
     text-align: left;
@@ -517,9 +507,15 @@ section {
   .site-navigation ul li ul a {
     color: #999;
   }
+  .site-navigation ul li {
+    /* show nested lists on hover */
+  }
   .site-navigation ul li:hover ul {
     left: auto;
     right: 0;
+  }
+  .site-navigation ul li {
+    /* SELECTED STATE */
   }
   .site-navigation ul li.selected a, .site-navigation ul li.current-menu-item a {
     font-weight: bold;
@@ -531,7 +527,7 @@ section {
 
 @media (max-width: 767px) {
   .site-navigation ul li,
-.site-navigation ul li ul li {
+  .site-navigation ul li ul li {
     display: block;
   }
 }

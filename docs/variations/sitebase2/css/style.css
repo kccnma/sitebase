@@ -41,10 +41,8 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #333;
-  font-size: 87.5%;
-  /* 14px; */
-  line-height: 1.5;
-  /* 14px x 1.5em = 21px */
+  font-size: 87.5%; /* 14px; */
+  line-height: 1.5; /* 14px x 1.5em = 21px */
 }
 
 /* #HEADINGS
@@ -62,38 +60,32 @@ h6 {
 }
 
 h1 {
-  font-size: 3em;
-  /* 48px / 16px = 3em */
+  font-size: 3em; /* 48px / 16px = 3em */
   line-height: 1;
 }
 
 h2 {
-  font-size: 2.25em;
-  /* 36px / 16px = 2.25em */
+  font-size: 2.25em; /* 36px / 16px = 2.25em */
   line-height: 1.1;
 }
 
 h3 {
-  font-size: 1.5em;
-  /* 24px / 16px = 1.5em */
+  font-size: 1.5em; /* 24px / 16px = 1.5em */
   line-height: 1.2;
 }
 
 h4 {
-  font-size: 1.3125em;
-  /* 21px / 16px = 1.3125em */
+  font-size: 1.3125em; /* 21px / 16px = 1.3125em */
   line-height: 1.3;
 }
 
 h5 {
-  font-size: 1.125em;
-  /* 18px / 16px = 1.125em */
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
   line-height: 1.4;
 }
 
 h6 {
-  font-size: 1em;
-  /* 16px / 16px = 1em */
+  font-size: 1em; /* 16px / 16px = 1em */
   line-height: 1.5;
 }
 
@@ -260,8 +252,7 @@ img.circular {
 .video {
   width: 100%;
   position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
+  padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
   margin-bottom: 1em;
@@ -419,18 +410,15 @@ body {
 @media (min-width: 1050px) {
   /* LARGE BODY TYPE */
   body {
-    font-size: 100%;
-    /* 16px; */
+    font-size: 100%; /* 16px; */
   }
 }
 /* #EXTRA-LARGE+ MEDIA QUERY */
 @media (min-width: 1250px) {
   /* EXTRA-LARGE BODY TYPE */
   body {
-    font-size: 112.5%;
-    /* 18px; */
+    font-size: 112.5%; /* 18px; */
   }
-
   /* FIXED WIDTH */
   .container {
     max-width: 1200px;
@@ -457,7 +445,6 @@ section,
     margin-left: auto;
     margin-right: auto;
   }
-
   .row > .column {
     margin: 0 2% 2% 2%;
     flex-grow: 1;
@@ -645,7 +632,7 @@ section.darkgrey a.button {
   color: black;
 }
 section.darkgrey a.button:hover {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 section.darkgrey a.button.alt {
   background-color: transparent;
@@ -653,7 +640,7 @@ section.darkgrey a.button.alt {
   border-color: rgba(255, 255, 255, 0.8);
 }
 section.darkgrey a.button.alt:hover {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: black;
   border-color: transparent;
 }
@@ -915,18 +902,20 @@ article p + h6 {
   }
   .site-navigation ul li {
     display: inline-block;
-    /* DROP DOWN MENU */
-    /* stack nested lists */
-    /* hide nested lists by default */
-    /* show nested lists on hover */
-    /* SELECTED STATE */
   }
   .site-navigation ul li a {
     margin: 0 0.5em;
     padding: 0.85em 0.5em 0.75em 0.5em;
   }
+  .site-navigation ul li {
+    /* DROP DOWN MENU */
+    /* stack nested lists */
+  }
   .site-navigation ul li li {
     display: block;
+  }
+  .site-navigation ul li {
+    /* hide nested lists by default */
   }
   .site-navigation ul li ul {
     text-align: left;
@@ -938,9 +927,15 @@ article p + h6 {
   .site-navigation ul li ul a {
     color: #999;
   }
+  .site-navigation ul li {
+    /* show nested lists on hover */
+  }
   .site-navigation ul li:hover ul {
     left: auto;
     right: 0;
+  }
+  .site-navigation ul li {
+    /* SELECTED STATE */
   }
   .site-navigation ul li.selected a, .site-navigation ul li.current-menu-item a {
     font-weight: bold;
@@ -952,7 +947,7 @@ article p + h6 {
 
 @media (max-width: 767px) {
   .site-navigation ul li,
-.site-navigation ul li ul li {
+  .site-navigation ul li ul li {
     display: block;
   }
 }
@@ -966,8 +961,6 @@ article p + h6 {
 @media (max-width: 767px) {
   .toggle-nav {
     text-align: right;
-    /* MENU BUTTON */
-    /* TOGGLE NAV UL */
   }
   .toggle-nav .site-id {
     position: absolute;
@@ -975,6 +968,9 @@ article p + h6 {
   .toggle-nav li a:hover {
     color: #fff;
     background: #036;
+  }
+  .toggle-nav {
+    /* MENU BUTTON */
   }
   .toggle-nav .menu-button {
     margin: 0.8em 0;
@@ -1004,6 +1000,9 @@ article p + h6 {
   .toggle-nav[data-navstate=open] .menu-button.navicon::after {
     content: "✕";
   }
+  .toggle-nav {
+    /* TOGGLE NAV UL */
+  }
   .toggle-nav ul {
     max-height: 0;
     overflow: hidden;
@@ -1029,7 +1028,6 @@ article p + h6 {
     border-width: 0;
     transition: all 0.3s ease;
   }
-
   .toggle-nav.animated[data-navstate=open] ul {
     max-height: 138em;
     opacity: 1;
@@ -1037,24 +1035,20 @@ article p + h6 {
     border-width: 0px;
     transition: all 0.6s ease;
   }
-
   .toggle-nav.animated li {
     padding: 0;
     opacity: 0;
     transition: all 0.3s ease;
   }
-
   .toggle-nav.animated[data-navstate=open] li {
     padding: 0.25em;
     opacity: 1;
     transition: all 0.6s ease 0.2s;
   }
-
   .toggle-nav.animated li a {
     padding: 0;
     transition: all 0.3s ease;
   }
-
   .toggle-nav.animated[data-navstate=open] li a {
     padding: 0.75em;
   }

@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 /* #CODE  */
 pre,
 code {
@@ -15,6 +17,7 @@ code {
   display: block;
   padding: 1em 1.875em;
   background: #f9f9f9;
+
   border: 1px solid $border-color;
   border-left: 2px solid #ccc;
   overflow-x: auto;

@@ -1,7 +1,14 @@
+@use '../variables' as *;
+
 /* #MEDIA  */
 
 /* #IMAGES */
 img {
   max-width: 100%;
   height: auto;
-} 
+}
+
+@media (min-width: $breakpoint-small) {
+  /* media query rules intentionally left blank (kept for structure) */
+
+}

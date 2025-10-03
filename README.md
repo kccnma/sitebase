@@ -1,6 +1,6 @@
-# [SiteBase](https://kccnma.github.io/sitebase/ "SiteBase Demo")
+# [SiteBase1](https://kccnma.github.io/sitebase/ "SiteBase1 Demo")
 
-Latest development version of Sitebase, an ongoing, always-a-work-in-progress minimal HTML + CSS + JS base front-end framework for simple web site projects. This is the full dev version that contains the uncompiled source files, documentation, lessons, and post-build pre-compiled static-rendered files in multiple variations for different users and development environments.
+This is the initial (v1) development version of Sitebase, a minimal HTML + CSS + JS base front-end framework for simple web site projects. This is the full dev version that contains all uncompiled source files, documentation, lessons, and post-build pre-compiled static-rendered files in multiple variations for different users and development environments.
 
 - Variation 1 - a Static CSS Variation
 - Variation 2 - a Sassy CSS Variation (GUI workflow using Prepros)
@@ -8,19 +8,19 @@ Latest development version of Sitebase, an ongoing, always-a-work-in-progress mi
 - Variation 4 - a Parcel Variation (CLI workflow)
 
 ## Documentation
-- [SiteBase documentation](https://kccnma.github.io/sitebase/documentation.html "SiteBase Docs (incomplete)")
+- [SiteBase1 documentation](https://kccnma.github.io/sitebase/documentation.html "SiteBase Docs (incomplete)")
 
 ## Demos
 
-- [SiteBase Website](https://kccnma.github.io/sitebase/ "SiteBase Website")
-- [SiteBase Static Demo (No Frills)](https://kccnma.github.io/sitebase/variations/sitebase1/ "SiteBase Static Demo (No Frills)")
+- [SiteBase1 Website](https://kccnma.github.io/sitebase/ "SiteBase Website")
+- [SiteBase1 Static Demo (No Frills)](https://kccnma.github.io/sitebase/variations/sitebase1/ "SiteBase Static Demo (No Frills)")
 
 ## Links to stand-alone variation repos
 
 - [sitebase1-static](https://github.com/kccnma/sitebase1-static)
-- [sitebase2-sassy](https://github.com/kccnma/sitebase2-sassy)
-- [sitebase3-npmgulp](https://github.com/kccnma/sitebase3-npmgulp)
-- [sitebase4-parcel](https://github.com/kccnma/sitebase4-parcel)
+- [sitebase1-sassy](https://github.com/kccnma/sitebase1-sassy)
+- [sitebase1-npmgulp](https://github.com/kccnma/sitebase1-npmgulp)
+- [sitebase1-parcel](https://github.com/kccnma/sitebase1-parcel)
 
 ## To Run the full dev version locally
 - make sure that you already have [node](https://nodejs.org/en/) and [gulp](https://gulpjs.com/) installed
@@ -30,6 +30,9 @@ $ npm run dev
 ```
 
 ## Updates
+- 10-03-25
+  - ran npm audit fix --force and addressed all dependency warnings and errors
+  - updated gulp and removed image optimization from imagemin function due to not able to fix it (simply piping/copying images from src to dist instead)
 - 02-05-24
   - Added width and height attributes to all inline images
   - removed blank space and closing forward slashes on all self-closing elements
