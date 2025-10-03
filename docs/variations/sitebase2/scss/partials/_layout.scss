@@ -7,6 +7,8 @@
 	#LARGE+ (Desktop) - min-width: 1050px
 	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
 
+@use '../variables' as *;
+
 /* SMALL+ (Mobile First Defaults) */
 
 * {
@@ -18,6 +20,7 @@ body {
 }
 
 .container {
+
   max-width: $breakpoint-medium - 50;
   margin: 0 auto;
   padding: 0 4%; 

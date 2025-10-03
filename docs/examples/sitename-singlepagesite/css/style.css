@@ -228,16 +228,16 @@ img {
   height: auto;
 }
 
+@media (min-width: 768px) {
+  /* media query rules intentionally left blank (kept for structure) */
+}
 /* Image Floats */
 img.float-left {
   float: left;
   margin-right: 1em;
   margin-bottom: 1em;
   clear: both;
-}
-
-/* Clear Floats */
-.group::after {
+  /* VIDEO */
   content: "";
   display: table;
   clear: both;
@@ -302,6 +302,8 @@ a.button:hover {
 }
 
 /* #ACCORDIAN */
+/* #ACCORDIAN */
+/* accordian */
 .accordian {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;

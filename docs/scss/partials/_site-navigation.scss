@@ -1,6 +1,9 @@
+@use '../variables' as *;
+
 /* #SITE NAVIGATION  */
 /* Default Site-Navigation Menu (both header & footer) */
 .site-navigation { 
+
   font-family: $navigation-font-family;
 
   .menu-button {

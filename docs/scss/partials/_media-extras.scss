@@ -1,13 +1,13 @@
+@use '../variables' as *;
+
 /* Image Floats */
 img.float-left {
   float: left;
   margin-right: 1em;
   margin-bottom: 1em;
   clear: both;
-}
 
-/* Clear Floats */
-.group::after {
+/* VIDEO */
   content: "";
   display: table;
   clear: both;

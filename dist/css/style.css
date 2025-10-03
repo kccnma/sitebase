@@ -273,6 +273,7 @@ button {
 
 button,
 a.button {
+  display: inline-block;
   background-color: #036;
   border: 1px solid #036;
   color: #fff;

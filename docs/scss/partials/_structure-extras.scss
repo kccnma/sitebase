@@ -1,3 +1,6 @@
+@use '../variables' as *;
+
+// extra structure styles
 /* STICKY header - works with a class="sticky" on .site-header */
 .site-header.sticky {
   position: fixed;
