@@ -6,10 +6,24 @@ const sass = require('gulp-sass')(require('sass'));
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create(); //https://browsersync.io/docs/gulp
-const autoprefixer = require('gulp-autoprefixer');
+// gulp-autoprefixer v10 is ESM-only; load it dynamically at runtime so this CommonJS gulpfile remains compatible.
+let autoprefixer;
+async function getAutoprefixer() {
+  if (autoprefixer) return autoprefixer;
+  const mod = await import('gulp-autoprefixer');
+  autoprefixer = mod.default || mod;
+  return autoprefixer;
+}
 const babel = require('gulp-babel');
 const rename = require("gulp-rename");
-const zip = require('gulp-zip');
+// gulp-zip v6 is ESM-only; load it dynamically so this CommonJS gulpfile continues to work.
+let zip;
+async function getZip() {
+  if (zip) return zip;
+  const mod = await import('gulp-zip');
+  zip = mod.default || mod;
+  return zip;
+}
 
 // /*
 // TOP LEVEL FUNCTIONS
@@ -42,17 +56,17 @@ function html(cb) {
 }
 
 // SCSS
-function css(cb) {
-  gulp.src("src/scss/**/*.scss")
+async function css() {
+  const ap = await getAutoprefixer();
+  return gulp.src("src/scss/**/*.scss")
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
-    .pipe(autoprefixer({
+    .pipe(ap({
       overrideBrowserslist: ['last 2 versions'],
       cascade: false
     }))
     .pipe(gulp.dest("dist/css"))
     // Stream changes to all browsers
     .pipe(browserSync.stream());
-  cb();
 }
 
 // JS
@@ -230,91 +244,91 @@ function sasslesson6(cb) {
 
 
 // ZIP LESSON1
-function ziplesson1(cb) {
-  gulp.src("docs/lessons/base-blank/**/*")
-    .pipe(zip("base-blank.zip"))
+async function ziplesson1() {
+  const z = await getZip();
+  return gulp.src("docs/lessons/base-blank/**/*")
+    .pipe(z("base-blank.zip"))
     .pipe(gulp.dest("docs/lessons/"));
-  cb();
 }
 
 // ZIP LESSON2
-function ziplesson2(cb) {
-  gulp.src("docs/lessons/base-content/**/*")
-    .pipe(zip("base-content.zip"))
+async function ziplesson2() {
+  const z = await getZip();
+  return gulp.src("docs/lessons/base-content/**/*")
+    .pipe(z("base-content.zip"))
     .pipe(gulp.dest("docs/lessons/"));
-  cb();
 }
 
 // ZIP LESSON3
-function ziplesson3(cb) {
-  gulp.src("docs/lessons/base-layout/**/*")
-    .pipe(zip("base-layout.zip"))
+async function ziplesson3() {
+  const z = await getZip();
+  return gulp.src("docs/lessons/base-layout/**/*")
+    .pipe(z("base-layout.zip"))
     .pipe(gulp.dest("docs/lessons/"));
-  cb();
 }
 
 // ZIP LESSON4
-function ziplesson4(cb) {
-  gulp.src("docs/lessons/base-site/**/*")
-    .pipe(zip("base-site.zip"))
+async function ziplesson4() {
+  const z = await getZip();
+  return gulp.src("docs/lessons/base-site/**/*")
+    .pipe(z("base-site.zip"))
     .pipe(gulp.dest("docs/lessons/"));
-  cb();
 }
 
 // ZIP LESSON5
-function ziplesson5(cb) {
-  gulp.src("docs/lessons/base-site-togglenav/**/*")
-    .pipe(zip("base-site-togglenav.zip"))
+async function ziplesson5() {
+  const z = await getZip();
+  return gulp.src("docs/lessons/base-site-togglenav/**/*")
+    .pipe(z("base-site-togglenav.zip"))
     .pipe(gulp.dest("docs/lessons/"));
-  cb();
 }
 
 // ZIP LESSON6
-function ziplesson6(cb) {
-  gulp.src("docs/lessons/base-site-subpage/**/*")
-    .pipe(zip("base-site-subpage.zip"))
+async function ziplesson6() {
+  const z = await getZip();
+  return gulp.src("docs/lessons/base-site-subpage/**/*")
+    .pipe(z("base-site-subpage.zip"))
     .pipe(gulp.dest("docs/lessons/"));
-  cb();
 }
 
 // ZIP VERSION1
-function zipvariation1(cb) {
-  gulp.src("docs/variations/sitebase1/**/*")
-    .pipe(zip("sitebase1.zip"))
+async function zipvariation1() {
+  const z = await getZip();
+  return gulp.src("docs/variations/sitebase1/**/*")
+    .pipe(z("sitebase1.zip"))
     .pipe(gulp.dest("docs/variations/"));
-  cb();
 }
 
 // ZIP VARIATION2
-function zipvariation2(cb) {
-  gulp.src("docs/variations/sitebase2/**/*")
-    .pipe(zip("sitebase2.zip"))
+async function zipvariation2() {
+  const z = await getZip();
+  return gulp.src("docs/variations/sitebase2/**/*")
+    .pipe(z("sitebase2.zip"))
     .pipe(gulp.dest("docs/variations/"));
-  cb();
 }
 
 // ZIP EXAMPLE1
-function zipexample1(cb) {
-  gulp.src("docs/examples/productsite/**/*")
-    .pipe(zip("productsite.zip"))
+async function zipexample1() {
+  const z = await getZip();
+  return gulp.src("docs/examples/productsite/**/*")
+    .pipe(z("productsite.zip"))
     .pipe(gulp.dest("docs/examples/"));
-  cb();
 }
 
 // ZIP EXAMPLE2
-function zipexample2(cb) {
-  gulp.src("docs/examples/singlepageportfolio/**/*")
-    .pipe(zip("singlepageportfolio.zip"))
+async function zipexample2() {
+  const z = await getZip();
+  return gulp.src("docs/examples/singlepageportfolio/**/*")
+    .pipe(z("singlepageportfolio.zip"))
     .pipe(gulp.dest("docs/examples/"));
-  cb();
 }
 
 // ZIP EXAMPLE3
-function zipexample3(cb) {
-  gulp.src("docs/examples/sitename-singlepagesite/**/*")
-    .pipe(zip("sitename-singlepagesite.zip"))
+async function zipexample3() {
+  const z = await getZip();
+  return gulp.src("docs/examples/sitename-singlepagesite/**/*")
+    .pipe(z("sitename-singlepagesite.zip"))
     .pipe(gulp.dest("docs/examples/"));
-  cb();
 }
 
 // WATCH DOCS
