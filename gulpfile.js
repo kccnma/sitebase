@@ -69,7 +69,7 @@ function js(cb) {
 
 // IMAGES - simple copy (removed binary-based optimizers for security/reliability)
 function imageMin() {
-  return gulp.src("src/img/**/*")
+  return gulp.src("src/img/**/*", { encoding: false })
     .pipe(gulp.dest("dist/img"));
 }
 
@@ -141,7 +141,7 @@ function copyjsroot(cb) {
 
 // COPY IMAGES FROM ROOT SRC
 function copyimagesroot(cb) {
-  gulp.src("src/**/*.+(png|jpg|jpeg|gif|svg)")
+  gulp.src("src/**/*.+(png|jpg|jpeg|gif|svg)", { encoding: false })
     .pipe(gulp.dest("docs/"))
     .pipe(gulp.dest("docs/variations/sitebase1/"))
     .pipe(gulp.dest("docs/variations/sitebase2/"))
