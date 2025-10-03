@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       menunav.setAttribute('data-navstate', 'open');
     }
-  }); //TOGGLE ACCORDIAN VIA ADDING/REMOVING A CLASS
+  });
 
+  //TOGGLE ACCORDIAN VIA ADDING/REMOVING A CLASS
   var acc = document.querySelectorAll('.accordian');
   var i;
-
   for (i = 0; i < acc.length; i++) {
     acc[i].getElementsByTagName('h4')[0].onclick = function () {
       this.parentElement.classList.toggle("open");

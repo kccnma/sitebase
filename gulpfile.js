@@ -1,10 +1,9 @@
 const gulp = require("gulp");
 const { parallel, series } = require("gulp");
 
-const htmlmin = require("gulp-htmlmin");
+const { minify } = require('html-minifier-terser');
 const sass = require('gulp-sass')(require('sass'));
 const uglify = require("gulp-uglify");
-const imagemin = require("gulp-imagemin");
 const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create(); //https://browsersync.io/docs/gulp
 const autoprefixer = require('gulp-autoprefixer');
@@ -23,15 +22,23 @@ const zip = require('gulp-zip');
 
 // HTML
 function html(cb) {
-  gulp.src("src/**/*.html")
+  return gulp.src("src/**/*.html")
     .pipe(gulp.dest("dist"))
-    .pipe(
-      htmlmin({
-        collapseWhitespace: false
-      })
-    )
+    // minify using html-minifier-terser
+    .pipe(require('through2').obj(async function (file, _, next) {
+      if (file.isBuffer()) {
+        try {
+          const content = file.contents.toString();
+          const minified = await minify(content, { collapseWhitespace: true, removeComments: true });
+          file.contents = Buffer.from(minified);
+        } catch (err) {
+          return next(err);
+        }
+      }
+      this.push(file);
+      next();
+    }))
     .pipe(gulp.dest("dist"));
-  cb();
 }
 
 // SCSS
@@ -39,7 +46,7 @@ function css(cb) {
   gulp.src("src/scss/**/*.scss")
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(autoprefixer({
-      browserlist: ['last 2 versions'],
+      overrideBrowserslist: ['last 2 versions'],
       cascade: false
     }))
     .pipe(gulp.dest("dist/css"))
@@ -50,7 +57,7 @@ function css(cb) {
 
 // JS
 function js(cb) {
-  gulp.src("src/js/**/*js")
+  gulp.src("src/js/**/*.js")
     .pipe(babel({
       presets: ['@babel/preset-env']
     }))
@@ -60,12 +67,10 @@ function js(cb) {
   cb();
 }
 
-// IMAGES
-function imageMin(cb) {
-  gulp.src("src/img/**/*")
-    .pipe(imagemin())
+// IMAGES - simple copy (removed binary-based optimizers for security/reliability)
+function imageMin() {
+  return gulp.src("src/img/**/*")
     .pipe(gulp.dest("dist/img"));
-  cb();
 }
 
 // WATCH
