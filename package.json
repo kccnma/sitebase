@@ -27,7 +27,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^6.1.0",
     "html-minifier-terser": "^7.2.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "lodash.mergewith": ">=4.6.2",
     "mixin-deep": "^2.0.1",
     "resolve": "^1.22.10",
