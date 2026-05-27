@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Site Name | Sub Title</title>
-  <meta name="description" content="A sub-page example for SiteBase, minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+  <meta name="description"
+    content="A sub-page example for SiteBase, minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
 
   <!-- VIEWPORT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,11 +16,13 @@
 
 <body>
   <header class="site-header toggle-nav">
-    <div class="site-id">
-      <h1><a href="index.html">Site Name</a> / Sub Title</h1>
+    <div class="site-logo">
+      <a href="index.html"><img src="img/placeholder-logo-500x500.svg" alt="Placeholder Logo" width="45"
+          height="45"></a>
+      <h1><a href="index.html">Site Name</a></h1>
     </div>
     <nav class="site-navigation">
-      <button class="menu-button navicon">Menu</button>
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li class="selected">
@@ -27,7 +30,8 @@
           <ul>
             <li><a href="page.html">Sub Page</a></li>
             <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
-            <li><a href="post.html">Post</a></li>
+            <li><a href="post.html">Sample Post</a></li>
+            <li><a href="styleguide.html">Sample Style Guide</a></li>
           </ul>
         </li>
       </ul>
@@ -44,7 +48,7 @@
       <div class="list-item">
         <div class="featured-image">
           <a href="page.html" title="Featured Image">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
           </a>
         </div>
 
@@ -77,7 +81,7 @@
       <div class="list-item">
         <div class="featured-image">
           <a href="page-sidebar.html" title="Featured Image">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
           </a>
         </div>
 
@@ -110,7 +114,7 @@
       <div class="list-item">
         <div class="featured-image">
           <a href="post.html" title="Featured Image">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
           </a>
         </div>
 
@@ -137,20 +141,75 @@
                 -->
         </article>
       </div>
+
+      <div class="list-item">
+        <div class="featured-image">
+          <a href="styleguide.html" title="Featured Image">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
+          </a>
+        </div>
+
+        <article>
+          <h2 class="post-title"><a href="styleguide.html">Style Guide</a></h2>
+
+          <!--
+                <p class="date">January 1, 2000</p>
+                <p class="author">By Author Name</p>
+                -->
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut
+            fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris
+            elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id
+            elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis
+            orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla
+            porttitor sagittis.
+          </p>
+          <p><a href="styleguide.html" class="button">Button</a></p>
+
+          <!--
+                <p><a href="styleguide.html" class="more-link">Read more &gt;</a></p>
+                -->
+        </article>
+      </div>
+
     </div>
     <!-- END CONTAINER -->
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav group">
-          <li><a href="index.html">Home</a></li>
-          <li class="selected"><a href="pages.html">Sub Pages</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>SiteBase</h3>
+          <p>SiteBase is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke static
+            websites. It was created for students learning the fundamentals of front-end web development. It can be used
+            as a blank starter for custom websites, or as a hands-on learning experience by going through a series of
+            lessons and exercises manually recoding it from scratch.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages.html">List of Sub Pages</a>
+                <ul>
+                  <li><a href="page.html">Standard Sub Page</a></li>
+                  <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
+                  <li><a href="post.html">Post Example</a></li>
+                  <li><a href="styleguide.html">Style Guide Example</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- MAIN JS -->

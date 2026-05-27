@@ -1,21 +1,25 @@
-// Typography: Helvetica (default)
-$body-font-family: Helvetica, Arial, sans-serif;
-$heading-font-family: Helvetica, Arial, sans-serif;
-$navigation-font-family: Helvetica, Arial, sans-serif;
+// Typography: System UI > Helvetica (default)
+$body-font-family: system-ui, Helvetica, Arial, sans-serif;
+$heading-font-family: system-ui, Helvetica, Arial, sans-serif;
+$navigation-font-family: system-ui, Helvetica, Arial, sans-serif;
 
 // Colors (default theme)
-$text-color: #333;
-$text-color-light: #999;
-$link-color: #036;
-$link-color-dark: #003;
-$accent-color: #000;
-$background-color-body: #fff;
-$background-color-header: #fff;
-$background-color-footer: #fff;
-$background-color-hero: #ddd;
+$text-color: rgb(0 0 0 / .8);
+$text-color-light: rgb(0 0 0 / .6);
+$text-color-dark: rgb(0 0 0 / 1);
+
+$link-color: rgb(0, 51, 102);
+$link-color-dark: rgb(0, 0, 51);
+$link-color-light: rgb(221, 255, 255);
+
+$accent-color: #888;
+$background-color-body: rgb(255, 255, 255);
+$background-color-header: transparent;
+$background-color-footer: rgb(0 0 0 / .05);
+$background-color-hero: rgb(221, 221, 221);
 
 // Borders
-$border-color: #ccc;
+$border-color: rgb(136 136 136 / .5);
 $border-width: 0px;
 
 // Breakpoints
@@ -26,12 +30,15 @@ $breakpoint-large: 1250px;
 // Themes
 
 $theme: "default";
-@if ($theme == "lightgrey") {
+
+@if ($theme =="lightgrey") {
   // Light Grey
   $text-color: #333;
   $text-color-light: #999;
+  $text-color-dark: rgb(0, 0, 0);
   $link-color: #39c;
   $link-color-dark: #069;
+  $link-color-light: rgb(191, 232, 252);
   $accent-color: #000;
   $background-color-body: #fff;
   $background-color-header: #e3e3e3;
@@ -39,12 +46,16 @@ $theme: "default";
   $background-color-hero: #f0f0f0;
   $border-color: #ccc;
   $border-width: 0px;
-} @else if ($theme == "darkgrey") {
+}
+
+@else if ($theme =="darkgrey") {
   // Dark Grey
   $text-color: #ccc;
   $text-color-light: #999;
-  $link-color: #39c;
-  $link-color-dark: #6cf;
+  $text-color-dark: rgb(255, 255, 255);
+  $link-color: rgb(130, 205, 243);
+  $link-color-dark: rgb(212, 241, 255);
+  $link-color-light: rgb(0, 53, 79);
   $accent-color: #444;
   $background-color-body: #000;
   $background-color-header: #000;
@@ -52,7 +63,9 @@ $theme: "default";
   $background-color-hero: #333;
   $border-color: #222;
   $border-width: 0px;
-} @else if ($theme == "wireframe") {
+}
+
+@else if ($theme =="wireframe") {
   // Wireframe
   $body-font-family: "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", monospace;
@@ -71,7 +84,9 @@ $theme: "default";
   $background-color-hero: #f0f0f0;
   $border-color: #ccc;
   $border-width: 0px;
-} @else if ($theme == "white") {
+}
+
+@else if ($theme =="white") {
   // White (default)
   $text-color: #333;
   $text-color-light: #999;

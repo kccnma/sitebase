@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>SiteBase | Examples</title>
-  <meta name="description" content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+  <meta name="description"
+    content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
 
   <!-- VIEWPORT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,16 +16,18 @@
 
 <body>
   <header class="site-header toggle-nav animated">
-    <div class="site-id">
-      <h1><a href="index.html">SiteBase</a> / Examples</h1>
+    <div class="site-logo">
+      <h1><a href="../index.html">SiteBase</a></h1>
     </div>
     <nav class="site-navigation">
-      <button class="menu-button navicon">Menu</button>
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
       <ul class="nav">
-        <li class="hidden"><a href="index.html">Home</a></li>
-        <li><a href="lessons.html">Get Started</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
+        <li class="hidden"><a href="../index.html">Home</a></li>
+        <!-- <li><a href="../dist/index.html">Demo</a></li> -->
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="index.html">Docs</a></li>
         <li class="selected"><a href="examples.html">Examples</a></li>
+        <li><a class="button" href="variations/sitebase-static.zip">Download</a></li>
       </ul>
     </nav>
   </header>
@@ -33,7 +36,8 @@
     <section class="hero text-centered">
       <h2>SiteBase Examples</h2>
       <p>
-        The following are examples of how SiteBase can be used in applied
+        In addition to the bare bare-bones <a href="../dist/index.html">SiteBase demo</a>, the following are basic
+        examples of how SiteBase can be used in applied
         contexts.
       </p>
     </section>
@@ -42,10 +46,23 @@
       <div class="container">
         <ul class="thumblist-grid">
           <li>
+            <a href="../dist/index.html">
+              <img src="img/example-sitebasedemo.gif" alt="Example Site: SiteBase Demo" width="750" height="750">
+            </a>
+            <h5><a href="../dist/index.html">SiteBase Basic Pages</a></h5>
+            <p>
+              A bare-bones demo of SiteBase with some standard page layouts as examples.
+            </p>
+            <p>
+              <a class="button" href="../dist/index.html">Demo</a>
+              <a class="button alt" href="variations/sitebase-static.zip">Download</a>
+            </p>
+          </li>
+          <li>
             <a href="examples/productsite/index.html">
               <img src="img/example-sitename.gif" alt="Example Site: Product Site" width="750" height="750">
             </a>
-            <h5><a href="sitename.html">Product Site</a></h5>
+            <h5><a href="examples/productsite/index.html">A Simple Product Site</a></h5>
             <p>
               A no-frills, small static product site suitable for small
               businesses and personal portfolios.
@@ -59,7 +76,7 @@
             <a href="examples/sitename-singlepagesite/index.html">
               <img src="img/example-singlepagesite.jpg" alt="Example Site: Single Page Site" width="750" height="750">
             </a>
-            <h5><a href="sitename.html">Single Page Site</a></h5>
+            <h5><a href="examples/sitename-singlepagesite/index.html">A Single Page Site</a></h5>
             <p>
               A simple base for a small single page site suitable for small
               businesses and personal sites.
@@ -71,10 +88,11 @@
           </li>
           <li>
             <a href="examples/singlepageportfolio/index.html">
-              <img src="img/example-singlepageportfolio.gif" alt="Example Site: Single Page Portfolio Site" width="750" height="750">
+              <img src="img/example-singlepageportfolio.gif" alt="Example Site: Single Page Portfolio Site" width="750"
+                height="750">
             </a>
             <h5>
-              <a href="examples/singlepageportfolio/index.html">Single Page Portfolio</a>
+              <a href="examples/singlepageportfolio/index.html">A Single Page Portfolio</a>
             </h5>
             <p>
               A simple one page portfolio site suitable for individuals and
@@ -87,10 +105,11 @@
           </li>
           <li>
             <a href="examples/johndoeportfolio/index.html">
-              <img src="img/example-johndoeportfolio.jpg" alt="Example Site: Designer Single Page Portfolio Site" width="750" height="750">
+              <img src="img/example-johndoeportfolio.jpg" alt="Example Site: Designer Single Page Portfolio Site"
+                width="750" height="750">
             </a>
             <h5>
-              <a href="examples/johndoeportfolio/index.html">Designer Single Page Portfolio</a>
+              <a href="examples/johndoeportfolio/index.html">A Custom Single Page Portfolio</a>
             </h5>
             <p>A simple one page portfolio site with some custom styling.</p>
             <p>
@@ -105,16 +124,34 @@
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav group">
-          <li><a href="index.html">SiteBase Home</a></li>
-          <li><a href="lessons.html">Get Started</a></li>
-          <li><a href="documentation.html">Documentation</a></li>
-          <li class="selected"><a href="examples.html">Examples</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>SiteBase</h3>
+          <p>SiteBase is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke static
+            websites. It was created for students learning the fundamentals of front-end web development. It can be used
+            as a blank starter for custom websites, or as a hands-on learning experience by going through a series of
+            lessons and exercises manually recoding it from scratch.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="lessons.html">Lessons</a></li>
+              <li class="selected">
+                <a href="index.html">Documentation</a>
+              </li>
+              <li><a href="examples.html">Examples</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- MAIN JS -->

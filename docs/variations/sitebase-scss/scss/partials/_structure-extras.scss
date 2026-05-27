@@ -1,0 +1,59 @@
+/* STICKY header - works with a class="sticky" on .site-header */
+.site-header.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  ;
+}
+
+.site-header.sticky+.site-main {
+  padding-top: 4em;
+}
+
+/* Colored Sections */
+section.superlightgrey {
+  background: #f9f9f9;
+  color: #333;
+}
+
+section.lightgrey {
+  background: #e0e0e0;
+}
+
+section.darkgrey {
+  background: #222;
+  color: #fff;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+
+  a.button,
+  form input[type=submit] {
+    background-color: rgba(255, 255, 255, .8);
+    color: black;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  a.button.alt {
+    background-color: transparent;
+    color: rgba(255, 255, 255, .8);
+    border-color: rgba(255, 255, 255, .8);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      color: black;
+      border-color: transparent;
+    }
+  }
+}

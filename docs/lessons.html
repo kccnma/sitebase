@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>SiteBase | Lessons</title>
-  <meta name="description" content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+  <meta name="description"
+    content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
 
   <!-- VIEWPORT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,16 +16,18 @@
 
 <body>
   <header class="site-header toggle-nav animated">
-    <div class="site-id">
-      <h1><a href="index.html">SiteBase</a> / Get Started</h1>
+    <div class="site-logo">
+      <h1><a href="../index.html">SiteBase</a></h1>
     </div>
     <nav class="site-navigation">
-      <button class="menu-button navicon">Menu</button>
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
       <ul class="nav">
-        <li class="hidden"><a href="index.html">Home</a></li>
-        <li class="selected"><a href="lessons.html">Get Started</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
+        <li class="hidden"><a href="../index.html">Home</a></li>
+        <!-- <li><a href="../dist/index.html">Demo</a></li> -->
+        <li class="selected"><a href="lessons.html">Lessons</a></li>
+        <li><a href="index.html">Docs</a></li>
         <li><a href="examples.html">Examples</a></li>
+        <li><a class="button" href="variations/sitebase-static.zip">Download</a></li>
       </ul>
     </nav>
   </header>
@@ -33,29 +36,29 @@
     <section class="hero text-centered">
       <h2>SiteBase Lessons</h2>
       <p>
-        Step-by-step guides to learn the basics of front-end development by
-        manually hand-coding a simple boilerplate framework.
+        This page contains a step-by-step lessons to manually recode SiteBase from scratch, by hand, as a way to learn
+        the basics of front-end development.
       </p>
     </section>
 
-    <section id="sitebase1">
+    <section id="sitebase">
       <div class="container">
-        <h3>SiteBase 1.0 Lessons</h3>
+        <h3>SiteBase Lessons</h3>
         <p>
-          SiteBase 1.0 is a static HTML + CSS + JS front-end base
+          SiteBase is a static HTML + CSS + JS front-end base
           (starter/boilerplate). The lessons below are for those interested in
           coding a basic front-end framework for a simple static site from
           scratch by hand, line-by-line. No prior web design or coding
-          experience required. Designed for first-time front-end coders, Site
-          Base 1.0 uses no pre-processing (e.g. SASS), no command line
+          experience required. Designed for first-time front-end coders, SiteBase uses no pre-processing (e.g. SASS),
+          no command line
           interface (CLI), and no special software. All you need is a text
           editor and a browser.
         </p>
-        <a class="button" href="https://youtu.be/qf99ZceaTYY">Watch an Intro Video</a>
+        <!-- <a class="button" href="https://youtu.be/qf99ZceaTYY">Watch an Intro Video</a> -->
 
-        <div id="baseblank" class="accordian">
+        <div id="baseboilerplate" class="accordian">
           <h4>
-            Step 1 <span class="light nomobile">Base Blank</span>
+            Step 1 <span class="light nomobile">Static Site Boilerplate</span>
             <div class="arrow"></div>
           </h4>
           <div class="collapsible">
@@ -64,52 +67,121 @@
                 <h5>Description:</h5>
                 <p>
                   Set up your local development environment by creating a basic folder structure
-                  and file system containing only the core essential code required for a bare-bones, no content starter
-                  setup suitable for any project.
+                  and file system containing only the core essential boilerplate code required for a bare-bones, no
+                  content starter
+                  setup suitable for any simple static site project.
                 </p>
                 <ol>
-                  <li>Create a "base-blank" root folder</li>
+                  <li>Create a "base-boilerplate" root folder</li>
                   <li>Create "css" and "js" sub folders</li>
                   <li>
                     Add an index.html file
                     <ul>
-                      <li>Add starter markup</li>
+                      <li>Add boilerplate markup</li>
                     </ul>
                   </li>
                   <li>
                     Link to a style.css file
                     <ul>
-                      <li>Add starter css table of contents</li>
+                      <li>Add sample css table of contents</li>
                     </ul>
                   </li>
                   <li>Link to a script.js file</li>
                 </ol>
-                <a class="button" href="lessons/base-blank.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-blank">View
+                <a class="button" href="lessons/base-boilerplate.zip">Download Zip</a>
+                <a class="button alt"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-boilerplate">View
                   Source</a>
-                <!-- <p>
-                  <strong>UPDATE:</strong> As of 2019, the Google shiv/shim has been removed along with the block-level
-                  css settings for common HTML5 elements (no longer necessary).
-                </p> -->
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
-                <a href="lessons/base-blank/index.html">
-                  <img src="img/base-blankstarter.jpg" alt="Base Blank Starter" width="1280" height="720">
+                <a href="lessons/base-boilerplate/index.html">
+                  <img src="img/base-boilerplatestarter.jpg" alt="Base Biolerplate Starter" width="1280" height="720">
                 </a>
                 <p>
-                  <a class="button" href="lessons/base-blank/index.html">View Demo</a>
-                  <a class="button alt" href="https://youtu.be/SN-4BaqQQgs">View Video Lesson</a>
+                  <a class="button" href="lessons/base-boilerplate/index.html">View Demo</a>
+                  <a class="button alt" href="https://youtu.be/XOJjqSWtVUY">View Video Lesson</a>
                 </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="baseglobals" class="accordian">
+          <h4>
+            Step 2 <span class="light nomobile">Base Globals</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
                 <p>
-                  Note: You might
-                  notice some differences between the markup shown within the video
-                  lesson and the markup provided within the source code. These are changes that have been made in the years safter the video lesson was recorded.
+                  A general best-practice is to set any global-level (site-wide) styling at the top of your style.css
+                  document. This approach allows for the writing of DRY ("Don't Repeat Yourself") code and takes
+                  advantage of helpful CSS features such as inheritance via the cascade (The "C" is "CSS"). Examples of
+                  global settings include site-wide resets (e.g. the removal of body margins and setting the box-sizing
+                  defaults for all elements), css custom properties (defining any reusable site-wide variables such as
+                  commonly used colors, fonts, and spacing units), and any high-level/site-wide styles for commonly used
+                  elements, such as the body background and text colors, link colors, and font settings for headings
+                  that will be commonly re-used across the site.
                 </p>
-                <p>Some notable updates/changes:</p>
-                <ul>
-                  <li>For self-closing elements (e.g. meta tags), you no longer need to have an empty space and a closing forward slash. This is a relatively new recommendation.</li>
-                </ul>
+                <ol>
+                  <li>
+                    Duplicate your "base-boilerplate" folder and rename it to
+                    "base-globals"
+                  </li>
+                  <li>
+                    Delete your "js" folder and link to it (we will add it
+                    back later)
+                  </li>
+                  <li>
+                    OPTIONAL: Delete your meta description and keywords from your html head for now. YOu should add
+                    these back in for client work production sites.
+                  </li>
+                  <li>
+                    Add some temporary initial starter content to your index.html file that will allow you to see the
+                    impact of your global styles to your style.css file:
+                    <ul>
+                      <li>
+                        Temporary starter content:
+                        <ul>
+                          <li>
+                            A paragraph containing commonly used inline text markup, such as links, bold text, and
+                            italic text.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>Global Styles to include
+                        <ul>
+                          <li>Global variables: define a basic starter set of commonly used custom properties that you
+                            will likley need, such as site-wide colors and fonts.</li>
+                          <li>Global resets: remove the default body margins and set the box-sizing defaults for all
+                            elements to border-box.</li>
+                          <li>Global colors: set the colors for common elements such as the body background color, text
+                            color, and link colors.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <a class="button" href="lessons/base-globals.zip">Download Zip</a>
+                <a class="button alt"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-globals">View
+                  Source</a>
+
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-globals/index.html">
+                  <img src="img/base-globals.jpg" alt="Base Globals" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-globals/index.html">View Demo</a>
+                  <a class="button alt" href="https://youtu.be/mrZYmcJs08k">View Video Lesson</a>
+                </p>
+
               </div>
             </div>
           </div>
@@ -117,7 +189,7 @@
 
         <div id="basecontent" class="accordian">
           <h4>
-            Step 2 <span class="light nomobile">Base Content</span>
+            Step 3 <span class="light nomobile">Base Content</span>
             <div class="arrow"></div>
           </h4>
           <div class="collapsible">
@@ -133,73 +205,40 @@
                 </p>
                 <ol>
                   <li>
-                    Duplicate your "base-blank" folder and rename it to
+                    Duplicate your "base-globals" folder and rename it to
                     "base-content"
                   </li>
                   <li>
-                    Delete your "js" folder and link to it (we will add it
-                    back later)
-                  </li>
-                  <li>
-                    Add base content markup to your index.html file and base
+                    Add more starter/base content markup to your index.html file and accompanying base
                     content styles to your style.css file:
                     <ul>
                       <li>
                         Base Typography
                         <ul>
-                          <li>
-                            Body, Headings, Paragraphs, Links, <del>Lists</del>,
-                            Blockquotes, &amp; Helpers
-                          </li>
+                          <li>Add all headings h1-h6 and manually set the default typographic scale.</li>
+                          <li>Add two sets of lists: unordered and ordered (no styling needed).</li>
                         </ul>
                       </li>
                       <li>
-                        Base Media
+                        Base Media (Responsive)
                         <ul>
-                          <li>Images</li>
+                          <li>Add an inline image with global styling for all images to be responsive by default.</li>
                         </ul>
                       </li>
                       <li>
                         Base Components
                         <ul>
-                          <li>Buttons</li>
+                          <li>Buttons (it is optional to add an alternate style/version).</li>
                         </ul>
                       </li>
                     </ul>
                   </li>
                 </ol>
                 <a class="button" href="lessons/base-content.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-content">View
+                <a class="button alt"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-content">View
                   Source</a>
-                <p>
-                  Note: You might
-                  notice some additional css that may not be represented within the markup or addressed within the video
-                  lesson, such as horizontal rules (hr) and various helper classes. These exist within the SiteBase core
-                  and while they may
-                  not required for all projects, they are included here as an example for how one could choose to extend
-                  and customize SiteBase.
-                </p>
-                <p>
-                  Note: You might also
-                  notice some differences between the markup shown within the video
-                  lesson and the markup provided within the source code. These are changes that have been made in the years safter the video lesson was recorded.
-                </p>
-                <p>Some notable content-related updates/changes:</p>
-                <ul>
-                  <li>For all inline images (img tags) it is now recommended that you also include width="" and height="" attributes. This helps to eliminate Cumulative Layout Shift (CLS).</li>
-                </ul>
-                <!-- <p>
-                  Note: if you are coding your own base from scratch by
-                  following along with these lessons step-by-step, you might
-                  want to skip the css for horizontal rules (hr) and code
-                  (pre,code). These exist within the SiteBase core, but are
-                  not required.
-                </p>
-                <p>
-                  <strong>UPDATE:</strong> As of 2019, SiteBase no longer includes a reset of styling for lists, all
-                  images are responsive by default (no longer requiring the scale-with-grid class), and all paragraphs
-                  hava a default max-width (max-width: 38em) to help control horizontal measure.
-                </p> -->
+
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
@@ -208,12 +247,9 @@
                 </a>
                 <p>
                   <a class="button" href="lessons/base-content/index.html">View Demo</a>
-                  <a class="button alt" href="https://youtu.be/EaWGweTzIZk">View Video Lesson</a>
+                  <a class="button alt" href="https://youtu.be/GWSZBReOxck">View Video Lesson</a>
                 </p>
-                <!--<h5>Video Lesson:</h5>
-                            <div class="video">
-                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/LJktejaUK2g?rel=0" frameborder="0" allowfullscreen></iframe>
-                            </div>-->
+
               </div>
             </div>
           </div>
@@ -221,7 +257,7 @@
 
         <div id="baselayout" class="accordian">
           <h4>
-            Step 3 <span class="light nomobile">Base Layout</span>
+            Step 4 <span class="light nomobile">Base Layout</span>
             <div class="arrow"></div>
           </h4>
           <div class="collapsible">
@@ -243,10 +279,8 @@
                     markup
                   </li>
                   <li>
-                    Add a simple reset, media queries, and a simple grid to your style.css file
+                    Add a basic set of media queries and a simple grid to your style.css file
                     <ul>
-                      <li>Simple Reset (set all elements to box-sizing: border-box and remove your default body margins)
-                      </li>
                       <li>
                         Media Queries (with body font-size settings and a
                         "container" with a fixed width for large screens and
@@ -260,14 +294,9 @@
                   </li>
                 </ol>
                 <a class="button" href="lessons/base-layout.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-layout">View
+                <a class="button alt"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-layout">View
                   Source</a>
-                <!-- <p>
-                  <strong>UPDATE:</strong> As of 2019, the grid was rebuilt with flexbox instead of floats and
-                  box-sizing: border-box was used. Semantic
-                  column classnames remain, along with
-                  media queries at breakpoints for targetted customization.
-                </p> -->
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
@@ -276,27 +305,16 @@
                 </a>
                 <p>
                   <a class="button" href="lessons/base-layout/index.html">View Demo</a>
-                  <a class="button alt" href="https://youtu.be/_kGPn9-Y4HE">View Video Lesson</a>
+                  <a class="button alt" href="https://youtu.be/ztIWXlab-Og">View Video Lesson</a>
                 </p>
-                <!-- <p>
-                  <strong>NOTE ON VIDEO LESSON:</strong> After approx. 45 minutes, the above video lesson demonstrates
-                  how to code a float-based grid. As of 2019, the new SiteBase grid uses flexbox instead, so please be
-                  sure to look at the source code (see layout section of the <a
-                    href="https://github.com/kccnma/sitebase/blob/master/docs/lessons/base-layout/css/style.css">style.css</a>
-                  file) for the current (newer) grid system.
-                </p> -->
-                <!--<h5>Video Lesson:</h5>
-                            <div class="video">
-                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/uisYuE2gAiI?rel=0" frameborder="0" allowfullscreen></iframe>
-                            </div>-->
               </div>
             </div>
           </div>
         </div>
 
-        <div id="basesite" class="accordian">
+        <div id="basestructure" class="accordian">
           <h4>
-            Step 4
+            Step 5
             <span class="light nomobile">Base Site Structure (Home Page)</span>
             <div class="arrow"></div>
           </h4>
@@ -312,7 +330,7 @@
                 <ol>
                   <li>
                     Duplicate your "base-layout" folder and rename it to
-                    "base-site"
+                    "base-structure"
                   </li>
                   <li>
                     Remove all content from index.html and add base structural
@@ -342,42 +360,20 @@
                     </ul>
                   </li>
                 </ol>
-                <a class="button" href="lessons/base-site.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-site">View
-                  Source</a>
-                <!-- <p>
-                  <strong>UPDATE:</strong> In 2018, all header borders were removed (header bottom border and nav top
-                  border on mobile). In 2019, site-branding was renamed to site-id. Also in 2019, it was noted that
-                  floated header
-                  elements still need to be converted to flexbox. Please note the latter float > flexbox change has not
-                  yet been
-                  implemented. In the meantime, you can download the latest standalone flexbox-based header version
-                  below:
-                </p>
-                <a class="button"
-                  href="https://github.com/kccnma/teachingmaterials/blob/master/sitebase-2019/base-site-structure-2019.zip?raw=true">Download
-                  2019 Zip</a>
+                <a class="button" href="lessons/base-site-structure.zip">Download Zip</a>
                 <a class="button alt"
-                  href="https://github.com/kccnma/teachingmaterials/tree/master/sitebase-2019/base-site-structure-2019">View
-                  2019
-                  Source</a> -->
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-site-structure">View
+                  Source</a>
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
-                <a href="lessons/base-site/index.html">
-                  <img src="img/base-site.jpg" alt="Base Site Screenshot" width="1280" height="720">
+                <a href="lessons/base-site-structure/index.html">
+                  <img src="img/base-site-structure.jpg" alt="Base Site Structure Screenshot" width="1280" height="720">
                 </a>
                 <p>
-                  <a class="button" href="lessons/base-site/index.html">View Demo</a>
-                  <a class="button alt" href="https://youtu.be/4VSXy4ey8Pg">View Video Lesson</a>
+                  <a class="button" href="lessons/base-site-structure/index.html">View Demo</a>
+                  <a class="button alt" href="https://youtu.be/MTuZDNnG8Co">View Video Lesson</a>
                 </p>
-
-                <!--
-                            <h5>Video Lesson:</h5>
-                            <div class="video">
-                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/kE1gz0fJeaI?rel=0" frameborder="0" allowfullscreen></iframe> 
-                            </div>
-                            -->
               </div>
             </div>
           </div>
@@ -385,7 +381,7 @@
 
         <div id="basetogglenav" class="accordian">
           <h4>
-            Step 5
+            Step 6
             <span class="light nomobile">Mobile Menu (Toggle Nav)</span>
             <div class="arrow"></div>
           </h4>
@@ -398,6 +394,10 @@
                   navigation for small screen sizes.
                 </p>
                 <ol>
+                  <li>
+                    Duplicate your "base-structure" folder and rename it to
+                    "base-togglenav"
+                  </li>
                   <li>Add back a "js" folder and script.js file</li>
                   <li>Add a "menu" element to your main navigation.</li>
                   <li>
@@ -408,34 +408,10 @@
                   <li>Style the menu to look like a three-bar navicon.</li>
                 </ol>
                 <a class="button" href="lessons/base-site-togglenav.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-site-togglenav">View
-                  Source</a>
-                <p>
-                  <strong>UPDATE:</strong> In 2022, the markup for the menu-button was updated from a div
-                  to a button element. To implement this, a few new lines of css were added to .menu-button: a
-                  reset of the border (border: none;) and the back-ground-color (background-color: transparent;). FYI.
-                </p>
-                <p>
-                  <strong>UPDATE:</strong> In 2021, the JavaScript toggle-nav function was re-written to change the
-                  value of a data-attribute instead of toggling a class. Most of the examples provided have been updated
-                  with this new approach, but as a heads up: you might come across links to older examples that used a
-                  class toggling system. FYI.
-                </p>
-                <!-- <p>
-                  <strong>UPDATE:</strong> In 2019, the JavaScript toggle-nav function will be re-written for one
-                  instance of toggle-nav using querySelector (as opposed to multiple toggle-navs using querySelectorAll)
-                  and the "expanded" class will be moved to the site-header (as opposed to the menu-button) to allow for
-                  cleaner and leaner CSS. Also in 2019, simple mobile nav and navicon animations will be added. Please
-                  note that these changes have not been implemented yet. They will be posted
-                  soon.In the meantime, you can download the latest standaline versions below:
-                </p>
-                <a class="button"
-                  href="https://github.com/kccnma/teachingmaterials/blob/master/sitebase-2019/base-site-togglenav-2019.zip?raw=true">Download
-                  2019 Zip</a>
                 <a class="button alt"
-                  href="https://github.com/kccnma/teachingmaterials/tree/master/sitebase-2019/base-site-togglenav-2019">View
-                  2019
-                  Source</a> -->
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-site-togglenav">View
+                  Source</a>
+
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
@@ -444,22 +420,56 @@
                 </a>
                 <p>
                   <a class="button" href="lessons/base-site-togglenav/index.html">View Demo</a>
-                  <a class="button alt" href="https://youtu.be/6ycUN5QpbSo">View Video Lesson</a>
+                  <a class="button alt" href="https://youtu.be/57BbQJWExiQ">View Video Lesson</a>
                 </p>
-                <!--
-                            <h5>Video Lesson:</h5>
-                            <div class="video">
-                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/Dt5YltgtyvA?rel=0" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            -->
               </div>
             </div>
           </div>
         </div>
 
+        <div id="singlepagesite" class="accordian">
+          <h4>Step 7 <span class="light nomobile">Single Page Site w/ Sub Sections</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>Create a single page web site with multiple sub sections that can be accessed via the inline
+                  page anchors in the site navigation or by scrolling the long, vertical layout of the page.</p>
+                <ol>
+                  <li>Duplicate your "base-togglenav" folder and rename it to
+                    "base-singlepagesite"</li>
+                  <li>Working with one main index.html file, update the site navigation to link to page anchors (ID's)
+                    for each of the main sub sections (e.g. a href="#section1" or href="#about")</li>
+                  <li>Add sub sections with ID's and headings for each major sub sections (e.g. section id="section1" or
+                    id="about")</li>
+                  <li>Create sub sections that are commonly found and well suited for single page websites,
+                    such as a short about section, a brief overview of services section, and a brief contact section
+                    with basic contact information. </li>
+                </ol>
+                <a class="button" href="lessons/base-singlepagesite.zip">Download Zip</a>
+                <a class="button alt"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-singlepagesite/">View
+                  Source</a>
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="../base-singlepagesite/index.html"><img src="img/base-site-singlepagesite.jpg"
+                    alt="Base Site Screenshot" width="1280" height="720"></a>
+                <a class="button" href="lessons/base-singlepagesite/index.html">View Demo</a>
+                <a class="button alt" href="https://youtu.be/O7cy3gQqIlE">View Single Page Site Video
+                  Lesson</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         <div id="basesubpages" class="accordian">
           <h4>
-            Step 6 <span class="light nomobile">Sub Page(s)</span>
+            Step 8 <span class="light nomobile">Multiple Page Site w/ Sub Pages</span>
             <div class="arrow"></div>
           </h4>
           <div class="collapsible">
@@ -467,15 +477,15 @@
               <div class="one-half column">
                 <h5>Description:</h5>
                 <p>
-                  Create sub pages that are well suited for specific content,
-                  such as an about or post page with long form content (e.g.
-                  articles for reading) or a traditional two-column sub page
-                  with a main content area and sidebar with a sub nav. Other
-                  sub page examples include a contact page with a simple
-                  contact form, a post/product/image listing page, and a
-                  product/feature detail page.
+                  Create sub pages that are commonly used and well suited for specific content,
+                  such as a standalone about page, a services or products listing page, and a contact page with a cust
+                  contact form. Other sub pages to consider would be article pages or blog posts with longer form
+                  content, or a traditional two-column sub page
+                  with a main content area and sidebar with a sub nav.
                 </p>
                 <ol>
+                  <li>Duplicate your "base-singlepagesite" folder and rename it to
+                    "base-multiplepagesite"</li>
                   <li>
                     Update the index.html page site navigation to link to the
                     following example sub pages;
@@ -487,7 +497,7 @@
                     </ul>
                   </li>
                   <li>
-                    Copy/paste the index.html page and to create each of the
+                    Duplicate the index.html page and to create each of the
                     above example sub pages
                   </li>
                   <li>
@@ -495,126 +505,40 @@
                     sub pages and sub page content:
                     <ul>
                       <li>
-                        Articles, forms, inline page anchors, responsive grids
-                        for lists and thumbnail images, and popular design
-                        patterns and UI components such as modal tabs,
-                        overlays, carousels, and accordians/collapsible
+                        Custom hero sections for each page, custom forms with custom styling, common content layouts
+                        such as responsive grids
+                        for lists and thumbnail images, and other popular design
+                        patterns and UI components such as module tabs,
+                        overlays/modlas, carousels, and accordians/collapsible
                         panels.
                       </li>
                     </ul>
                   </li>
                 </ol>
-                <a class="button" href="lessons/base-site-subpage.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-site-subpage">View
+                <a class="button" href="lessons/base-multipagesite.zip">Download Zip</a>
+                <a class="button alt"
+                  href="https://github.com/kccnma/sitebase/tree/master/docs/lessons/base-multipagesite/">View
                   Source</a>
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
-                <a href="lessons/base-site-subpage/index.html">
+                <a href="lessons/base-multipagesite/index.html">
                   <img src="img/base-site-subpage-about.jpg" alt="Base Site Screenshot" width="1280" height="720">
                 </a>
                 <p>
-                  <a class="button" href="lessons/base-site-subpage/about.html">About Pg Demo</a>
-                  <a class="button" href="lessons/base-site-subpage/contact.html">Contact Pg Demo</a>
-                  <a class="button" href="lessons/base-site-subpage/subpage-withsidebar.html">Sub Pg w/ Sidebar Demo</a>
-                  <a class="button alt" href="https://www.youtube.com/watch?v=dTj4JlIgY2Y">About Pg. Video Lesson</a>
-                  <a class="button alt" href="https://www.youtube.com/watch?v=Snx4GYh8odA">Contact Pg. Video Lesson</a>
+                  <a class="button" href="lessons/base-multipagesite/index.html">Home Pg Demo</a>
+                  <a class="button" href="lessons/base-multipagesite/about.html">About Pg Demo</a>
+                  <a class="button" href="lessons/base-multipagesite/contact.html">Contact Pg Demo</a>
+                  <!-- <a class="button" href="lessons/base-multipagesite/subpage-withsidebar.html">Sub Pg w/ Sidebar
+                    Demo</a> -->
+                  <a class="button alt" href="https://youtu.be/FxyicHTiSq8">View Multi Page Site Video Lesson</a>
                 </p>
-
-                <!--<h5>Video Lesson:</h5>
-                            <div class="video">
-                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/Dt5YltgtyvA?rel=0" frameborder="0" allowfullscreen></iframe>
-                            </div>-->
               </div>
             </div>
           </div>
         </div>
 
-        <div id="singlepagesite" class="accordian">
-          <h4>Step 7 <span class="light nomobile">Single Page Site</span>
-            <div class="arrow"></div>
-          </h4>
-          <div class="collapsible">
 
-            <div class="row">
-              <div class="one-half column">
-                <h5>Description:</h5>
-                <p>Create a single page web site with multiple sub sections that can be accessed either via the inline
-                  page anchors in the site navigation or by scrolling the long, vertical layout of the page.</p>
-                <ol>
-
-                  <li>Working with one main index.html file, update the site navigation to link to page anchors (ID's)
-                    for each of the main sub sections (e.g. a href="#section1" or href="#about")</li>
-                  <li>Add ID's to all main sub sections (e.g. section id="section1" or id="about")</li>
-                  <li>Once the page anchors are tested and working, use javascript to add animation
-                    <ul>
-                      <li>add this <a href="https://raw.githubusercontent.com/kccnma/sitebase/master/docs/examples/sitename-singlepagesite/js/scroll.js">scroll.js</a>
-                        file
-                        to your js folder, or use <a href="https://github.com/bendc/anchor-scroll">the original
-                          anchor-scroll</a> js code from Benjamin De Cock
-                      </li>
-                      <li>add a link to scroll.min.js file at the bottom of your html file</li>
-                      <li>add a class="scroll" to each link that will utilize scroll.js</li>
-                    </ul>
-                  </li>
-                </ol>
-                <a class="button" href="../examples/sitename-singlepagesite.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase/tree/master/docs/examples/sitename-singlepagesite">View
-                  Source</a>
-              </div>
-              <div class="one-half column">
-                <h5>Screenshot:</h5>
-                <a href="../base-site-singlepagesite/index.html"><img src="img/base-site-singlepagesite.jpg" alt="Base Site Screenshot" width="1280" height="720"></a>
-                <a class="button" href="examples/sitename-singlepagesite/index.html">View Demo</a>
-                <a class="button alt" href="https://www.youtube.com/watch?v=9zZOcU2ua-I">View Single Page Site Video
-                  Lesson</a>
-
-                <!-- <h5>Video Lesson:</h5>
-                <div class="video">
-                  <iframe width="1280" height="720" src="http://www.youtube.com/embed/Dt5YltgtyvA?rel=0" frameborder="0"
-                    allowfullscreen></iframe>
-                </div> -->
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div id="standalone" class="accordian">
-          <h4>
-            Step 8 <span class="light nomobile">Create Standalone Repos (Optional)</span>
-            <div class="arrow"></div>
-          </h4>
-          <div class="collapsible">
-            <p>
-              Now that you have succesfully created both a code base for a multi-page site and a single-page site,
-              consider creating separate re-usable (i.e. easily clone-able) repos for each of them, so can refer to them
-              as "your" (or "my") site bases for
-              personal use in the future.
-            </p>
-            <ol>
-              <li>
-                Copy your "base-site-subpage" directory and paste it into a new repo named "My SiteBase for Multi-Page
-                Sites" (or something like that). Similar to how to did so for your single page site, change the titles
-                (e.g. Site ID's) for each page to "Site Name" to distiniguish it from your "sub pages" SiteBase steps 6A
-                &amp; 6B. Feel free to adjust the base colors to suit your personal preferences.
-                <ul>
-                  <li>Example: <a href="https://github.com/johndoenma/mysitebase-2021">John Doe's 2021 "MySiteBase"
-                      Multi-page Site</a></li>
-                </ul>
-              </li>
-              <li>
-                Copy your "site-name-subpage" directory and paste it into a new repo named "My SiteBase for Single-Page
-                Sites" (or something like that). Feel free to adjust the base colors to suit your personal preferences.
-                <ul>
-                  <li>Example: <a href="https://github.com/johndoenma/mysitebase-2021-singlepage">John Doe's 2021
-                      "MySiteBase"
-                      Single-page Site</a></li>
-                </ul>
-              </li>
-            </ol>
-          </div>
-        </div>
 
         <div id="customsite" class="accordian">
           <h4>
@@ -676,105 +600,38 @@
       </div>
     </section>
 
-    <section id="sitebase2">
-      <div class="container">
-        <h3>SiteBase Sassy Lessons</h3>
-        <p>
-          The SiteBase Sass variation builds upon the core SiteBase static code by adding support for SASS.
-          Designed for those with a basic understanding of how to build a
-          static site with straight-up HTML, CSS, and JS, looking for an
-          intermediate-level front-end workflow and build environment that is
-          not too complicated or advanced. No command line (CLI) required for
-          version 2.0. Instead, the GUI-based software application Prepros is
-          used to manage all build tasks (e.g. to compile SASS) and for
-          deployment.
-        </p>
-
-        <div class="accordian">
-          <h4>
-            Lesson
-            <span class="light nomobile">Modular SASS Partials (via Prepros)</span>
-            <div class="arrow"></div>
-          </h4>
-          <div class="collapsible">
-            <div class="row">
-              <div class="one-half column">
-                <h5>Description:</h5>
-                <p>
-                  In this lesson, we will convert SiteBase Static into Sitebase
-                  Sassy by working backwards, starting with the static css
-                  stylesheet and converting the single-file CSS system into an
-                  organized multi-file SASS system.
-                </p>
-                <ol>
-                  <li>
-                    <strong>Setup a local front-end web development environment to
-                      compile SASS.</strong>
-                    In this step, we  will use a Prepros, a GUI-based
-                    front-end compiler. In another lesson, we will use Gulp.
-                  </li>
-                  <li>
-                    <strong>Establish a custom organizational file system</strong>
-                    using SASS partials that embraces best practices and
-                    strategies from popular CSS methodologies (e.g. SMACSS).
-                  </li>
-                  <li>
-                    <strong>Convert the CSS to SASS</strong> by reverse
-                    engineering the original, singular CSS file and separating
-                    it into a modular system of multiple SASS partial files.
-                    The new SCSS files will embrace SASS features to improve
-                    the coding experience, such as variables and nesting.
-                  </li>
-                </ol>
-                <a class="button" href="variations/sitebase2.zip">Download Zip</a>
-              </div>
-              <div class="one-half column">
-                <h5>Screenshot:</h5>
-                <a href="documentation.html#scss">
-                  <img src="img/base-site-sasspartials.jpg" alt="Base Blank Starter" width="1280" height="720">
-                </a>
-                <p>
-                  <a class="button" href="variations/sitebase1/index.html">View Demo</a>
-                  <a class="button alt" href="https://www.creativemedia.space/lessons/intro-to-sass-via-prepros/">Related
-                    Lesson</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sitebase3">
-      <div class="container">
-        <h3>SiteBase Gulp Lessons</h3>
-        <p>
-          SiteBase GUlp builds upon the SiteBase Sass variation by using a command line
-          interface (CLI) workflow to manage all build tools, including NPM, a
-          package manager to setup and install project dependencies, Gulp, a
-          task manager, to handle various build processes such as compiling
-          SASS and optimizing images, and Git (via Github) for version
-          control. Designed for those looking to learn how to set up a more
-          advanced front-end development workflow.
-        </p>
-
-        <p>[ Lessons coming soon ]</p>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav group">
-          <li><a href="index.html">SiteBase Home</a></li>
-          <li class="selected"><a href="lessons.html">Get Started</a></li>
-          <li><a href="documentation.html">Documentation</a></li>
-          <li><a href="examples.html">Examples</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>SiteBase</h3>
+          <p>SiteBase is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke static
+            websites. It was created for students learning the fundamentals of front-end web development. It can be used
+            as a blank starter for custom websites, or as a hands-on learning experience by going through a series of
+            lessons and exercises manually recoding it from scratch.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="lessons.html">Lessons</a></li>
+              <li class="selected">
+                <a href="index.html">Documentation</a>
+              </li>
+              <li><a href="examples.html">Examples</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- MAIN JS -->

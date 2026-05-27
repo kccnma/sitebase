@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Site Name | Sub Title</title>
-  <meta name="description" content="A sub-page example for SiteBase, minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+  <meta name="description"
+    content="A sub-page example for SiteBase, minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
 
   <!-- VIEWPORT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,11 +16,13 @@
 
 <body>
   <header class="site-header toggle-nav">
-    <div class="site-id">
-      <h1><a href="index.html">Site Name</a> / Sub Title</h1>
+    <div class="site-logo">
+      <a href="index.html"><img src="img/placeholder-logo-500x500.svg" alt="Placeholder Logo" width="45"
+          height="45"></a>
+      <h1><a href="index.html">Site Name</a></h1>
     </div>
     <nav class="site-navigation">
-      <button class="menu-button navicon">Menu</button>
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li class="selected">
@@ -27,7 +30,8 @@
           <ul>
             <li><a href="page.html">Sub Page</a></li>
             <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
-            <li><a href="post.html">Post</a></li>
+            <li><a href="post.html">Sample Post</a></li>
+            <li><a href="styleguide.html">Sample Style Guide</a></li>
           </ul>
         </li>
       </ul>
@@ -37,134 +41,151 @@
   <main class="site-main">
     <section class="hero text-centered">
       <h1>Sub Page</h1>
-      <p>This is a standard sigle column sub page example.</p>
+      <p>This is a standard single column sub page example.</p>
     </section>
 
     <section>
       <div class="container">
-        <h1>This is a Heading 1</h1>
-        <h2>This is a Heading 2</h2>
-        <h3>This is a Heading 3</h3>
-        <h4>This is a Heading 4</h4>
-        <h5>This is a Heading 5</h5>
-        <h6>This is a Heading 6</h6>
+        <h2>Section</h2>
+        <p class="full-width">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus hic accusantium omnis
+          earum! Magni, nihil accusamus. Pariatur delectus veritatis maxime architecto libero commodi qui officiis
+          doloremque nulla neque, iusto magni voluptate accusantium accusamus! Molestias consectetur velit est autem
+          error minima totam laboriosam praesentium quia facere laudantium porro nihil cum iure impedit temporibus odio
+          suscipit voluptates corporis, ex, vel qui quam. Neque laudantium atque iusto totam voluptatum delectus
+          perspiciatis, nisi quas a! Quis voluptates, assumenda porro omnis quia sequi ipsam atque, cumque minus
+          repellendus quos adipisci eaque? Quia illum ad accusantium, aliquam incidunt ipsum delectus ex voluptate nulla
+          voluptatibus quas eos?</p>
+        <p class="full-width">Sit assumenda voluptatum tempora amet voluptate. Earum qui pariatur minima nemo minus
+          suscipit autem beatae voluptate, sunt deleniti architecto illo repellat ipsum recusandae sit veniam quo,
+          voluptatem porro magnam numquam labore voluptatum corrupti natus cum? Doloribus, perspiciatis quidem! Numquam
+          porro hic similique dignissimos culpa sapiente totam, ipsa sit necessitatibus officia doloremque incidunt
+          harum molestias dolorem. Modi, quo ad aperiam sunt aliquid ex ipsam iste repudiandae. Ea possimus, rem
+          aspernatur quam eius, esse cum consequatur adipisci optio, commodi labore voluptates totam! Quisquam
+          voluptates quod esse, nemo, suscipit deserunt quos repellat et, atque in sint mollitia doloremque. Doloremque
+          animi aliquam placeat. Temporibus, nostrum?</p>
+      </div>
+    </section>
 
-        <p>
-          This is a paragraph. Here is <strong>bold text</strong> and <em>italic text</em>. Here is a <a href="#">text
-            link</a>. Lorem ipsum dolor
-          sit
-          amet, consectetur adipiscing elit. Duis ut
-          fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris
-          elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id
-          elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis
-          orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla
-          porttitor sagittis.
-        </p>
-
-        <p>
-          Suspendisse pulvinar bibendum laoreet. Suspendisse eget dignissim
-          risus. Cras eget sodales enim. Phasellus accumsan dui metus, quis
-          vulputate turpis congue at. Praesent rutrum consequat rhoncus.
-          Maecenas adipiscing justo vitae massa porta pretium. In egestas orci
-          vehicula, tempus lorem ut, facilisis metus.
-        </p>
-
-        <p>
-          Vivamus eu mollis velit. Maecenas id massa libero. Aliquam accumsan
-          mauris vulputate purus volutpat vestibulum. Phasellus sed tellus id
-          tortor ornare molestie. Quisque massa sapien, elementum sed tortor
-          vitae, suscipit congue massa. Curabitur tempor arcu eget leo
-          placerat, a porta augue pharetra. Nulla velit nibh, laoreet at
-          hendrerit sit amet, adipiscing eget dolor.
-        </p>
-
-        <h4>Unordered List:</h4>
-        <ul>
-          <li>List Item</li>
-          <li>List Item</li>
-          <li>
-            Nested Unordered List:
-            <ul>
-              <li>List Item</li>
-              <li>List Item</li>
-            </ul>
-          </li>
-          <li>
-            Nested Ordered List:
-            <ol>
-              <li>List Item</li>
-              <li>List Item</li>
-            </ol>
-          </li>
-          <li>List Item</li>
-          <li>List Item</li>
-        </ul>
-
-        <h4>Ordered List:</h4>
-        <ol>
-          <li>List Item</li>
-          <li>List Item</li>
-          <li>
-            Nested Unordered List:
-            <ul>
-              <li>List Item</li>
-              <li>List Item</li>
-            </ul>
-          </li>
-          <li>
-            Nested Ordered List:
-            <ol>
-              <li>List Item</li>
-              <li>List Item</li>
-            </ol>
-          </li>
-          <li>List Item</li>
-          <li>List Item</li>
-        </ol>
-
-        <h4>Links:</h4>
-        <p>This is a <a href="#">link</a>.</p>
-
-        <h4>Block Quotes:</h4>
-        <blockquote>
-          This is a blockquote. Donec sed rhoncus massa. Suspendisse rutrum
-          viverra felis. Vestibulum augue lacus, ullamcorper non suscipit nec,
-          ornare et mauris. Proin mattis fermentum nibh quis gravida.
-          <cite>Citation Source</cite>
-        </blockquote>
-
-        <h4>Helper Classes:</h4>
-        <p class="text-centered">This is center-aligned text</p>
-
-        <h4>Buttons:</h4>
-        <a href="#" class="button">Default Link Button</a>
-        <a href="#" class="button alt">Alt Link Button</a>
-        <button>Default Button Element</button>
-
-        <h4>Horizontal Rule:</h4>
-        <hr />
-
-        <h4>Images:</h4>
-        <img src="https://via.placeholder.com/1500x500" alt="placeholder" width="1500" height="500">
-
-        <h4>Videos:</h4>
-        <div class="video">
-          <iframe width="1280" height="720" src="https://www.youtube.com/embed/ru_mj49u_Xc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <section>
+      <div class="container">
+        <h2>A Simple Three-Column Layout</h2>
+        <div class="row">
+          <div class="one-third">
+            <img src="img/placeholder-3x2.gif" alt="Placeholder Image" width="1200" height="800">
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+          </div>
+          <div class="one-third">
+            <img src="img/placeholder-3x2.gif" alt="Placeholder Image" width="1200" height="800">
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+          </div>
+          <div class="one-third">
+            <img src="img/placeholder-3x2.gif" alt="Placeholder Image" width="1200" height="800">
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+          </div>
         </div>
       </div>
     </section>
+
+    <section>
+      <div class="container">
+
+
+        <h2>Simple Content Layouts</h2>
+
+        <div class="row">
+          <div class="one-half column">
+            <img src="img/placeholder-1x1.jpg" alt="Placeholder">
+          </div>
+          <div class="one-half column">
+            <h3>Text on the Right</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium illum excepturi maiores tenetur
+              repellendus vero quia commodi, totam tempore nobis quae explicabo adipisci fuga accusantium pariatur
+              laborum. Possimus nam odio error dolorum. Perferendis unde dolores culpa eligendi nesciunt doloremque sit
+              earum ut beatae. Natus expedita accusantium adipisci assumenda quo quam soluta quod, praesentium quae
+              eligendi dolores rerum totam alias saepe veritatis ducimus corrupti dolorum eius, doloribus mollitia!
+              Debitis sed quod harum labore id cum aliquam tenetur! Adipisci tenetur ullam dicta ea tempora laudantium,
+              modi, asperiores porro quis rem similique nobis ex, a provident. Et eligendi molestiae quod, nam quidem
+              illum?</p>
+          </div>
+        </div>
+
+        <div class="row swapped">
+          <div class="one-half column">
+            <img src="img/placeholder-1x1.jpg" alt="Placeholder">
+          </div>
+          <div class="one-half column">
+            <h3>Text on the Left</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium illum excepturi maiores tenetur
+              repellendus vero quia commodi, totam tempore nobis quae explicabo adipisci fuga accusantium pariatur
+              laborum. Possimus nam odio error dolorum. Perferendis unde dolores culpa eligendi nesciunt doloremque sit
+              earum ut beatae. Natus expedita accusantium adipisci assumenda quo quam soluta quod, praesentium quae
+              eligendi dolores rerum totam alias saepe veritatis ducimus corrupti dolorum eius, doloribus mollitia!
+              Debitis sed quod harum labore id cum aliquam tenetur! Adipisci tenetur ullam dicta ea tempora laudantium,
+              modi, asperiores porro quis rem similique nobis ex, a provident. Et eligendi molestiae quod, nam quidem
+              illum?</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-half column centered">
+            <img src="img/placeholder-1x1.jpg" alt="Placeholder">
+            <h3>Centered Column</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium illum excepturi maiores tenetur
+              repellendus vero quia commodi, totam tempore nobis quae explicabo adipisci fuga accusantium pariatur
+              laborum. Possimus nam odio error dolorum. Perferendis unde dolores culpa eligendi nesciunt doloremque sit
+              earum ut beatae. Natus expedita accusantium adipisci assumenda quo quam soluta quod, praesentium quae
+              eligendi dolores rerum totam alias saepe veritatis ducimus corrupti dolorum eius, doloribus mollitia!
+              Debitis sed quod harum labore id cum aliquam tenetur! Adipisci tenetur ullam dicta ea tempora laudantium,
+              modi, asperiores porro quis rem similique nobis ex, a provident. Et eligendi molestiae quod, nam quidem
+              illum?</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav group">
-          <li><a href="index.html">Home</a></li>
-          <li class="selected"><a href="pages.html">Sub Pages</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>SiteBase</h3>
+          <p>SiteBase is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke static
+            websites. It was created for students learning the fundamentals of front-end web development. It can be used
+            as a blank starter for custom websites, or as a hands-on learning experience by going through a series of
+            lessons and exercises manually recoding it from scratch.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages.html">List of Sub Pages</a>
+                <ul>
+                  <li><a href="page.html">Standard Sub Page</a></li>
+                  <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
+                  <li><a href="post.html">Post Example</a></li>
+                  <li><a href="styleguide.html">Style Guide Example</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- MAIN JS -->

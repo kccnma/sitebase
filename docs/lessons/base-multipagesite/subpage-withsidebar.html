@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Base | Site Sub Page</title>
+  <meta name="description"
+    content="SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+
+  <!-- VIEWPORT FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MAIN CSS FILE -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header class="site-header toggle-nav animated">
+    <div class="site-logo">
+      <h1><a href="index.html">Base Site</a></h1>
+    </div>
+    <nav class="site-navigation ">
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
+      <ul class="nav">
+        <li class="hidden"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <section class="hero text-centered">
+      <h1>Sub Page w/ Sidebar</h1>
+      <p>
+        This is a sub page example with a two column layout consisting of a
+        main content area and a sidebar with sub-navigation.
+      </p>
+    </section>
+
+    <div class="container">
+      <div class="subpage-twocol">
+
+        <aside class="subpage-sidebar">
+          <h4 class="subheader">Sub Header 1</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li><a href="#section1">Section 1</a></li>
+              <li>
+                <a href="#section2">Section 2</a>
+                <ul>
+                  <li><a href="#section2a">Sub-Section 2A</a></li>
+                  <li><a href="#section2b">Sub-Section 2B</a></li>
+                  <li><a href="#section2c">Sub-Section 2C</a></li>
+                </ul>
+              </li>
+              <li><a href="#section3">Section 3</a></li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Sub Header 2</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li><a href="#section4">Section 4</a></li>
+              <li><a href="#section5">Section 5</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div class="subpage-main">
+          <section id="section1">
+            <h2>Section 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+            <p>
+              Consectetur adipiscing elit. Morbi semper, nunc quis euismod
+              porta, ligula dolor interdum dui, quis consectetur neque neque et
+              urna.Consectetur adipiscing elit.
+            </p>
+          </section>
+
+          <section id="section2">
+            <h2>Section 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+            <p>
+              Consectetur adipiscing elit. Morbi semper, nunc quis euismod
+              porta, ligula dolor interdum dui, quis consectetur neque neque et
+              urna.Consectetur adipiscing elit.
+            </p>
+
+            <h3 id="section2a">Sub-section 2A</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+
+            <h3 id="section2b">Sub-section 2B</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+
+            <h3 id="section2c">Sub-section 2C</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+          </section>
+
+          <section id="section3">
+            <h2>Section 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+            <p>
+              Consectetur adipiscing elit. Morbi semper, nunc quis euismod
+              porta, ligula dolor interdum dui, quis consectetur neque neque et
+              urna.Consectetur adipiscing elit.
+            </p>
+          </section>
+
+          <section id="section4">
+            <h2>Section 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+            <p>
+              Consectetur adipiscing elit. Morbi semper, nunc quis euismod
+              porta, ligula dolor interdum dui, quis consectetur neque neque et
+              urna.Consectetur adipiscing elit.
+            </p>
+          </section>
+
+          <section id="section5">
+            <h2>Section 5</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui, quis.
+            </p>
+            <p>
+              Consectetur adipiscing elit. Morbi semper, nunc quis euismod
+              porta, ligula dolor interdum dui, quis consectetur neque neque et
+              urna.Consectetur adipiscing elit.
+            </p>
+          </section>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="two-thirds">
+          <img src="img/placeholder-1x1.jpg" alt="Placeholder for Footer Logo" width="100" height="100">
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>Site Base</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat qui optio cupiditate ducimus iusto nam
+            unde, dolores voluptatem ad magnam, in quis hic corporis illum. Tempora recusandae possimus impedit mollitia
+            pariatur deleniti consequuntur dicta nam minima sit.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- MAIN JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

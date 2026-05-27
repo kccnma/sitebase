@@ -1,0 +1,62 @@
+/* ------ SITE NAVIGATION EXTRAS ------ */
+
+/* ADD SUPPORT FOR NESTED LISTS AS DROP DOWN MENUS */
+
+.site-header {
+
+  .site-navigation li li {
+    /* Prevent nested lsts from wrapping to multiple lines */
+    white-space: nowrap;
+  }
+
+  @media (width >=$breakpoint-small) {
+    .site-navigation li {
+
+      /* Make each list item a parent to any nested uls */
+      position: relative;
+
+      li {
+        /* Stack nested lists */
+        display: block;
+      }
+
+      ul {
+        display: block;
+        text-align: left;
+
+        /* Hide nested lists by default via absolute positioning them off screen */
+        position: absolute;
+        z-index: 100;
+        left: -9000px;
+
+        /* Give nested lists some padding and a background color */
+        padding-block-end: 1em;
+        background-color: $background-color-header;
+
+        // FIX BG COLOR OF NESTED NAV IF DEFAULT THEME IS WHITE
+        @if ($theme =="default") {
+          background-color: white;
+        }
+
+        a {
+          /* Style nested list links slighlty differently than parent links */
+          color: $text-color-light;
+        }
+      }
+
+      &:hover ul {
+        /* Show nested lists on hover and anchor them to the Left by Default*/
+        left: 0;
+      }
+
+      &:last-child:hover ul {
+        /* Anchor the Nested list to the right edge of the parent if it's the last child */
+        right: 0;
+        left: auto;
+      }
+
+    }
+
+  }
+
+}

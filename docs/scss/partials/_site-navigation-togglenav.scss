@@ -1,47 +1,57 @@
-@use '../variables' as *;
-
 /* TOGGLE NAV */
-.toggle-nav {
+.site-header.toggle-nav {
 
-  @media (max-width: ($breakpoint-small - 1)) {
+  @media (width < $breakpoint-small) {
 
+    /* Align the inline-block menu button to the right on small screens */
     text-align: right;
 
-    .site-id {
-      position:absolute; 
-    } 
+    .site-logo {
+      /* Position the logo absolutely to the left of the nav (intentionally breaking normal flow) */
+      position: absolute;
+    }
+
+    .site-navigation ul li a {
+      /* Increase the padding of nav links on small screens (thumb friendly) */
+      padding: 0.75em;
+    }
+
 
     li a:hover {
+      /* Style the hover/touch state of nav links on small screens */
       color: #fff;
       background: $link-color;
     }
 
-    /* MENU BUTTON */
+
     .menu-button {
-      margin: .8em 0;
+      /* SHOW THE MENU BUTTON if inside of toggle-nav */
       display: inline-block;
+      margin: .6em 0;
       background-color: transparent;
       border: none;
       padding: 0;
       cursor: pointer;
+      color: var(--color-text-headings);
 
       &::selection {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: transparent;
       }
 
       &.navicon {
-        color: rgba(255, 255, 255, 0); 
+        color: transparent;
       }
 
       &.navicon::after {
-        color: #333;
+        color: var(--color-text-body);
         content: "\2630";
-        font-size: 1.5em;
-        margin-top: -0.1em;
-        margin-left: 0.5em;
+        font-size: 2em;
+        margin-top: -.1em;
+        margin-bottom: .1em;
+        margin-left: 0;
         width: 1em;
         height: 1em;
-        line-height: 1em;
+        line-height: 1;
         display: inline-block;
       }
     }
@@ -49,19 +59,24 @@
     &[data-navstate="open"] {
       .menu-button.navicon::after {
         content: "\2715";
+        font-size: 1.6em;
+        margin-top: .2em;
+        margin-right: .1em;
       }
     }
 
-    /* TOGGLE NAV UL */
+
     ul {
       max-height: 0;
       overflow: hidden;
       padding: 0;
     }
+
     &[data-navstate="open"] {
       ul {
         max-height: none;
         padding: 1em 0;
+
         ul {
           padding: 0;
         }
@@ -72,43 +87,9 @@
 }
 
 /* Animated Toggle-Nav Menu */
-@media (max-width: ($breakpoint-small - 1)) {
-  .toggle-nav.animated ul { 
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    padding: 0;
-    border-width: 0;
-    transition: all 0.3s ease;
+@media (width < $breakpoint-small) {
+  .toggle-nav.animated ul {
+    transition: all 0.4s ease-out;
   }
 
-  .toggle-nav.animated[data-navstate="open"] ul {
-    max-height: 138em;
-    opacity: 1;
-    padding: 0.5em 0;
-    border-width: $border-width;
-    transition: all 0.6s ease;
-  }
-
-  .toggle-nav.animated li {
-    padding: 0;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-
-  .toggle-nav.animated[data-navstate="open"] li {
-    padding: 0.25em;
-    opacity: 1;
-    transition: all 0.6s ease 0.2s;
-  }
-
-  .toggle-nav.animated li a {
-    padding: 0;
-    transition: all 0.3s ease;
-  }
-
-  .toggle-nav.animated[data-navstate="open"] li a {
-    padding: 0.75em;
-  }
 }

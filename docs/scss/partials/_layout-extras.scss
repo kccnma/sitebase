@@ -1,0 +1,39 @@
+
+/* ------ GRID SYSTEM EXTRAS -------- */
+
+ /* BONUS COLUMNS & GRID SYSTEM CAN GO HERE (OPTIONAL & EXTENDABLE) */ 
+
+@media (width >= 768px) {
+
+  /* 12 COLUMN GRID SYSTEM */ 
+  .row .col-1 { width: calc( 8.3333% - calc( var(--gridgap) * .9090 ) ); }
+  .row .col-2 { width: calc( 16.6666% - calc( var(--gridgap) * .8333 ) ); }
+  .row .col-3 { width: calc( 25% - calc( var(--gridgap) * .75 ) ); }
+  .row .col-4 { width: calc( 33.3333% - calc( var(--gridgap) * .6666 ) ); }
+  .row .col-5 { width: calc( 41.6666% - calc( var(--gridgap) * .5833 ) ); }
+  .row .col-6 { width: calc( 50% - calc( var(--gridgap) * .5 ) ); }
+  .row .col-7 { width: calc( 58.3333% - calc( var(--gridgap) * .4166 ) ); }
+  .row .col-8 { width: calc( 66.6666% - calc( var(--gridgap) * .3333 ) ); }
+  .row .col-9  { width: calc( 75% - calc( var(--gridgap) * .25 ) ); }
+  .row .col-10 { width: calc( 83.3333% - calc( var(--gridgap) * .1666 ) ); }
+  .row .col-11 { width: calc( 91.6666% - calc( var(--gridgap) * .0833 ) ); }
+  .row .col-12 { width: 100%; }
+
+  /* BONUS PUSH HELPERS FOR A SEMANTIC GRID */
+  .row .push-one-half { margin-left: calc( 50% + calc( var(--gridgap) * .5 ) ); }
+  .row .push-one-third { margin-left: calc( 33.3333% + calc( var(--gridgap) * .3333 ) ); }
+  .row .push-one-fourth { margin-left : calc( 25% + calc( var(--gridgap) * .25 ) ); }
+
+}
+
+/* BONUS LAYOUT HELPER CLASS FOR SMALL SCREENS */
+
+/* TWO COLUMN GRID LAYOUT FOR SMALL SCREENS */
+@media ( width < 768px) {
+  .row:has(.two-col-mobile) { 
+    display: flex; 
+    gap: var(--gridgap); 
+  }
+  .row .two-col-mobile { width: calc( 50% - calc( var(--gridgap) * .5 ) ); }
+}
+

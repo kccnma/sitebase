@@ -1,36 +1,37 @@
 @import "../scss/variables";
 @import "../scss/partials/toc-base";
-//@import "../scss/partials/html5";
+@import "../scss/partials/globals";
 @import "../scss/partials/typography";
 @import "../scss/partials/media";
 @import "../scss/partials/components";
 @import "../scss/partials/layout";
+@import "../scss/partials/layout-extras";
+ 
+// .demo {
+//   padding: 2em 0; }
 
-.demo {
-  padding: 2em 0; }
-
-.demo:after {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  text-align: center;
-  width: 100%;
-  content: 'Small (less than 768px)';
-  color: #fff;
-  background: #993333; }
-  @media (min-width: 768px) {
-    body.demo:after {
-      content: 'Medium (768px - 1049px)';
-      background: #bcb83d; } }
-  @media (min-width: 1050px) {
-    body.demo:after {
-      content: 'Large (1050px - 1249px)';
-      background: #669933; } }
-  @media (min-width: 1250px) {
-    body.demo:after {
-      content: 'Extra Large (1250px +)';
-      background: #0099cc; } }
+// .demo-layout-lesson:after {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   padding: 5px;
+//   text-align: center;
+//   width: 100%;
+//   content: 'Small (less than 768px)';
+//   color: #fff;
+//   background: #993333; }
+//   @media (min-width: 768px) {
+//     body.demo:after {
+//       content: 'Medium (768px - 1049px)';
+//       background: #bcb83d; } }
+//   @media (min-width: 1050px) {
+//     body.demo:after {
+//       content: 'Large (1050px - 1249px)';
+//       background: #669933; } }
+//   @media (min-width: 1250px) {
+//     body.demo:after {
+//       content: 'Extra Large (1250px +)';
+//       background: #0099cc; } }
 
 // .demo .column {
 //   padding: 1em;
@@ -43,5 +44,12 @@
 //   max-width: none;
 // }
 
-.demo .column p:last-child {
-  margin-bottom: 0; }
+// .demo .column p:last-child {
+//   margin-bottom: 0; }
+
+// /* FOR GRID DEMO PURPOSES ONLY */
+// .grid-demo .column {
+//     background-color: #ddd;
+//     padding: 1em;
+//     text-align: center;
+// }

@@ -15,14 +15,14 @@
 
 <body id="top">
   <header class="site-header toggle-nav animated sticky">
-    <div class="site-id">
+    <div class="site-logo">
       <h1>
         <a href="#top" class="scroll">Site Name</a>
-        <span class="hidden-sm"> / single pg version</span>
+        <span class="hidden-sm"></span>
       </h1>
     </div>
     <nav class="site-navigation">
-      <button class="menu-button navicon">Menu</button>
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
       <ul class="nav">
         <li><a class="scroll" href="#top">Home</a></li>
         <li><a class="scroll" href="#about">About</a></li>
@@ -48,7 +48,7 @@
       <div class="container">
         <div class="row">
           <div class="one-third column">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
             <h3>Heading 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
@@ -58,7 +58,7 @@
             <p><a class="button" href="#">Button</a></p>
           </div>
           <div class="one-third column">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
             <h3>Heading 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
@@ -68,7 +68,7 @@
             <p><a class="button" href="#">Button</a></p>
           </div>
           <div class="one-third column">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
             <h3>Heading 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
@@ -272,19 +272,34 @@
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav group">
-          <li><a class="scroll" href="#top">Home</a></li>
-          <li><a class="scroll" href="#about">About</a></li>
-          <li><a class="scroll" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>Site Name</h3>
+          <p>This is an example of a simple single page website that might be suitable for
+            small businesses and personal portfolios. It was built for demonstration purposes using SiteBase, is a
+            minimalistic HTML + CSS + JS base-level front-end starter for bespoke static websites.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Sections</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a class="scroll" href="#top">Home</a></li>
+              <li><a class="scroll" href="#about">About</a></li>
+              <li><a class="scroll" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- SCROLL JS -->
-  <script src="js/scroll.js"></script>
+  <!-- <script src="js/scroll.js"></script> -->
 
   <!-- STICKY NAV JS -->
   <script src="js/stickynav.js"></script>

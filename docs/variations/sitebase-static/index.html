@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Site Name</title>
+  <meta name="description"
+    content="A minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+
+  <!-- VIEWPORT FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MAIN CSS FILE -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header class="site-header toggle-nav animated" data-navstate="closed">
+    <div class="site-logo">
+      <a href="index.html"><img src="img/placeholder-logo-500x500.svg" alt="Placeholder Logo" width="45"
+          height="45"></a>
+      <h1><a href="index.html">Site Name</a></h1>
+    </div>
+    <nav class="site-navigation">
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
+      <ul class="nav">
+        <li class="selected"><a href="index.html">Home</a></li>
+        <li>
+          <a href="pages.html">Pages</a>
+          <ul>
+            <li><a href="page.html">Sub Page</a></li>
+            <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
+            <li><a href="post.html">Sample Post</a></li>
+            <li><a href="styleguide.html">Sample Style Guide</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <section class="hero text-centered">
+      <div class="container">
+        <h2>Home Page</h2>
+        <p>
+          This is an example home page with a hero section at the top with sub
+          sections stacked below.
+        </p>
+        <p>
+          <a class="button" href="#">Button</a>
+          <a class="button alt" href="#">Alt Button</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="one-third column">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
+            <h3>Heading 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui,
+              quis.
+            </p>
+            <p><a class="button" href="#">Button</a></p>
+          </div>
+          <div class="one-third column">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
+            <h3>Heading 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui,
+              quis.
+            </p>
+            <p><a class="button" href="#">Button</a></p>
+          </div>
+          <div class="one-third column">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
+            <h3>Heading 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              semper, nunc quis euismod porta, ligula dolor interdum dui,
+              quis.
+            </p>
+            <p><a class="button" href="#">Button</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>SiteBase</h3>
+          <p>SiteBase is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke static
+            websites. It was created for students learning the fundamentals of front-end web development. It can be used
+            as a blank starter for custom websites, or as a hands-on learning experience by going through a series of
+            lessons and exercises manually recoding it from scratch.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages.html">List of Sub Pages</a>
+                <ul>
+                  <li><a href="page.html">Standard Sub Page</a></li>
+                  <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
+                  <li><a href="post.html">Post Example</a></li>
+                  <li><a href="styleguide.html">Style Guide Example</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- MAIN JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

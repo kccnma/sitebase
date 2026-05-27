@@ -1,0 +1,71 @@
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+
+/* ----- SET GLOBAL VARIABLES ----- */
+:root {  
+
+    /* BASE COLORS */
+    --color-body-background: #{$background-color-body};
+
+    --color-text-body: #{$text-color};
+    --color-text-headings: #{$text-color-dark};
+
+    --color-links: #{$link-color};
+    --color-links-hover: #{$link-color-dark};
+    // --color-links-light: #{$link-color-light};
+
+    // --color-borders: #{$border-color};
+
+    /* BASE TYPOGRAPHY */
+    --font-body: #{$body-font-family};
+    --font-headings: #{$heading-font-family};
+
+}
+
+
+/* GLOBAL RESETS */
+
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* { box-sizing: border-box; }
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body { margin: 0; }
+
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html { scroll-behavior: smooth; } 
+
+
+/* GLOBAL COLORS */
+body {
+
+    /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+    background-color: var(--color-body-background);
+    // background-color: $background-color-body;
+
+    /* SET THE COLOR OF THE MAIN BODY TEXT */
+    color: var(--color-text-body);
+    // color: $text-color;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+  
+}
+
+a {
+    /* SET THE COLOR OF ALL TEXT LINKS */
+    color: var(--color-links);
+    // color: $link-color;
+
+    &:hover {
+        /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+        color: var(--color-links-hover);
+        // color: $link-color-dark;
+    }
+
+}
+ 

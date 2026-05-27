@@ -1,24 +1,5 @@
-@use '../variables' as *;
-
-/* Image Floats */
-img.float-left {
-  float: left;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  clear: both;
-
-/* VIDEO */
-  content: "";
-  display: table;
-  clear: both;
-} 
-
-/* Circular images */
-img.circular {
-  border-radius: 100%;
-} 
- 
-/* VIDEO */
+/* VIDEO HELPER CLASS */
+/* Use this optional class="video" helper class for 16:9 iframe videos only, or adjust the aspect ration manually below via the bottom padding */ 
 .video {
   width: 100%;
   position: relative;
@@ -35,3 +16,39 @@ img.circular {
     height: 100%;
   }
 }
+
+/* Image Floats */
+img.float-left {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  clear: both;
+}
+img.float-left ~ * {
+  margin-top: 0;
+}
+
+/* Clear Floats */
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+
+/* Circular images */
+img.circular {
+  border-radius: 100%;
+} 
+
+/* Social Icons */ 
+.social-icons {
+  --social-icons-color: #333;
+  display: inline-block;
+}
+
+.social-icons svg {
+  max-height: 30px;
+  fill: var(--social-icons-color);
+}
+ 
+

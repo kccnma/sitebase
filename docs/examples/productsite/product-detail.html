@@ -19,11 +19,11 @@
 
 <body>
   <header class="site-header toggle-nav">
-    <div class="site-id">
+    <div class="site-logo">
       <h1><a href="index.html">Site Name</a></h1>
     </div>
     <nav class="site-navigation">
-      <button class="menu-button navicon">Menu</button>
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
       <ul class="nav">
         <li class="hidden"><a href="#">Home</a></li>
         <li><a href="products.html">Products</a></li>
@@ -59,7 +59,7 @@
       <section>
         <div class="row vert-parent">
           <div class="one-half column">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
           </div>
           <div class="one-half column">
             <div class="vert-child">
@@ -75,7 +75,7 @@
         </div>
         <div class="row vert-parent orderswap">
           <div class="one-half column">
-            <img src="img/placeholder-1x1.gif" alt="placeholder" width="1500" height="1500">
+            <img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500" height="1500">
           </div>
           <div class="one-half column">
             <div class="vert-child">
@@ -122,17 +122,33 @@
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav group">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>Site Name</h3>
+          <p>This is an example of a no-frills static product website, such as a small brochure site suitable for
+            small businesses and personal portfolios. It was built for demonstration purposes using SiteBase, is a
+            minimalistic HTML + CSS + JS base-level front-end starter for small,
+            bespoke static websites.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- MAIN JS -->

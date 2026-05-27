@@ -1,0 +1,1216 @@
+@charset "UTF-8";
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-logo (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+                #...
+--------------------------------- */
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL VARIABLES ----- */
+:root {
+  /* BASE COLORS */
+  --color-body-background: white;
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-text-headings: black;
+  --color-links: #003366;
+  --color-links-hover: #000033;
+  /* BASE TYPOGRAPHY */
+  --font-body: system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: system-ui, Helvetica, Arial, sans-serif;
+}
+
+/* GLOBAL RESETS */
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* {
+  box-sizing: border-box;
+}
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body {
+  margin: 0;
+}
+
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* GLOBAL COLORS */
+body {
+  /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+  background-color: var(--color-body-background);
+  /* SET THE COLOR OF THE MAIN BODY TEXT */
+  color: var(--color-text-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+}
+
+a {
+  /* SET THE COLOR OF ALL TEXT LINKS */
+  color: var(--color-links);
+}
+a:hover {
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+  color: var(--color-links-hover);
+}
+
+/* ----------------------------- */
+/* ------ BASE CONTENT --------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL TYPOGRAPHY ----- */
+/* # GLOBAL BODY FONT SETTINGS */
+body {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
+  font-family: var(--font-body);
+  /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
+  /* 100% = 16px */
+  font-size: 100%;
+  /* SET THE DEFAULT LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+  line-height: 1.4;
+}
+
+/* # GLOBAL HEADING SETTINGS */
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
+  font-family: var(--font-headings);
+  /* SET THE DEFAUT MARGINS ALL HEADINGS */
+  margin: 1em 0 0.25em 0;
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+  /* REDUCE TOP MARGIN IF FIRST CHILD */
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0.5em;
+}
+
+/* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
+   (e.g. a "Traditional" Scale) */
+h1 {
+  /* 48px / 16px = 3em */
+  font-size: 3em;
+  line-height: 1;
+}
+
+h2 {
+  /* 36px / 16px = 2.25em */
+  font-size: 2.25em;
+  line-height: 1.1;
+}
+
+h3 {
+  /* 24px / 16px = 1.5em */
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+h4 {
+  /* 21px / 16px = 1.3125em */
+  font-size: 1.3125em;
+  line-height: 1.3;
+}
+
+h5 {
+  /* 18px / 16px = 1.125em */
+  font-size: 1.125em;
+  line-height: 1.4;
+}
+
+h6 {
+  /* 16px / 16px = 1em */
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* # GLOBAL PARAGRAPH SETTINGS */
+p {
+  /* SET THE DEFAUT MARGINS ALL PARAGRAPHS */
+  margin: 0.5em 0;
+  /* SET THE NUMBER OF CHARACTERS PER LINE */
+  max-width: 65ch;
+  /* WIDOW FIXER */
+  text-wrap: pretty;
+}
+
+/* TEXT CENTERING HELPER CLASS */
+.text-centered {
+  text-align: center;
+}
+
+/* CENTER PARAGRAPHS WITH THE TEXT-CENTERED CLASS */
+p.text-centered,
+.text-centered p {
+  margin-inline: auto;
+}
+
+/* TO MAKE ANY ELEMENT FULL WIDTH */
+.full-width {
+  max-width: none;
+  width: 100%;
+}
+
+/* TO CENTER ANY ELEMENT HORIZONTALLY */
+.horiz-center {
+  margin-inline: auto;
+}
+
+/* TO HIDE ELEMENTS VISUALLY, BUT NOT FROM SCREEN READERS */
+.hide,
+.hidden,
+.screen-reader-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* EYEBROWS */
+.eyebrow {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* SECTION TITLES */
+.section-title {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding-block-start: 3em;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  border: 4px solid #ccc;
+  margin: 1em auto;
+}
+
+/* # SUBHEADERS */
+.subheader {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 1em;
+  font-style: normal;
+  font-weight: normal;
+  clear: both;
+}
+
+/* HORIZONTAL RULES */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 3em 0;
+}
+
+/* #CODE and #PRE STYLING */
+pre,
+code {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+pre {
+  margin: 1.5em 0 3em 0;
+  line-height: 1.2em;
+  font-size: 0.875em;
+}
+
+code {
+  padding-inline: 0.2em;
+}
+
+pre code {
+  display: block;
+  padding: 1em 1.875em;
+  background: #f9f9f9;
+  border: 1px solid rgba(136, 136, 136, 0.5);
+  border-left: 2px solid #ccc;
+  overflow-x: auto;
+}
+
+/* BLOCKED DEV HELPER */
+/* Use the optional class="blocked" dev helper class to see elements as grey blocks while developing your website. */
+.blocked body,
+.blocked h1,
+.blocked h2,
+.blocked h3,
+.blocked h4,
+.blocked h5,
+.blocked h6,
+.blocked p,
+.blocked a,
+.blocked .site-header a,
+.blocked .site-footer a,
+.blocked .site-logo h1,
+.blocked .site-logo h1 a,
+.blocked li,
+.blocked blockquote,
+.blocked a.button,
+.blocked a.button.alt,
+.blocked button {
+  color: #eee;
+  background-color: #eee;
+  border-color: #eee;
+}
+
+/* ----- #MEDIA (Images, Videos, etc) -----  */
+/* #IMAGES - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* #VIDEO - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* VIDEO HELPER CLASS */
+/* Use this optional class="video" helper class for 16:9 iframe videos only, or adjust the aspect ration manually below via the bottom padding */
+.video {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 1em;
+}
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image Floats */
+img.float-left {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  clear: both;
+}
+
+img.float-left ~ * {
+  margin-top: 0;
+}
+
+/* Clear Floats */
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Circular images */
+img.circular {
+  border-radius: 100%;
+}
+
+/* Social Icons */
+.social-icons {
+  --social-icons-color: #333;
+  display: inline-block;
+}
+
+.social-icons svg {
+  max-height: 30px;
+  fill: var(--social-icons-color);
+}
+
+/* ----- #COMPONENTS -----  */
+/* #BUTTONS */
+button,
+a.button {
+  display: inline-block;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
+  color: white;
+  padding: 0.75em 1em;
+  border-radius: 0.32em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+}
+
+button.alt,
+a.button.alt {
+  background-color: transparent;
+  border: 1px solid var(--color-links);
+  color: var(--color-links);
+}
+
+button:hover,
+a.button:hover {
+  background-color: var(--color-links-hover);
+  color: #fff;
+  border-color: var(--color-links-hover);
+  text-decoration: none;
+}
+
+/* #ACCORDIAN */
+.accordian {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 2em;
+}
+.accordian + .accordian {
+  border-top: none;
+  margin-top: 0;
+}
+.accordian .collapsible {
+  opacity: 0;
+  max-height: 0;
+  transition: 0.2s ease-in-out all;
+  padding: 0 1.5em;
+  overflow: hidden;
+}
+.accordian.open .collapsible {
+  opacity: 1;
+  max-height: 2000px;
+  padding: 1em 1.5em 3em 1.5em;
+}
+.accordian h4 {
+  margin: 0;
+  padding: 1.5em 1em;
+}
+.accordian h4 span.light {
+  margin-left: 0.3em;
+  font-weight: normal;
+}
+.accordian h4:hover {
+  background: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+.accordian:last-of-type {
+  margin-bottom: 3em;
+}
+.accordian p:last-of-type {
+  margin-bottom: 0;
+}
+.accordian:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ACCORDIAN ARROWS */
+.accordian .arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #888;
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+  margin-right: 0.2em;
+}
+.accordian .arrow.up {
+  border-bottom: 5px solid #888;
+  border-top: none;
+  margin-bottom: 2px;
+}
+
+.accordian.open .arrow {
+  border-bottom: 5px solid #888;
+  border-top: none;
+  margin-bottom: 2px;
+}
+
+/* ----------------------------- */
+/* --------- LAYOUT ------------ */
+/* ----------------------------- */
+/* ----- SITE-WIDE CONTAINER -----  */
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1em;
+}
+
+/* ----- RESPONSIVE TYPE -----  */
+/* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
+/* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
+body {
+  font-size: 87.5%;
+}
+
+/* MIDSIZE / LAPTOP SCREENS = 16px */
+@media (min-width: 1050px) {
+  body {
+    font-size: 100%;
+  }
+}
+/* LARGE / DESKTOP SCREENS = 18px */
+@media (min-width: 1250px) {
+  body {
+    font-size: 112.5%;
+  }
+}
+/* ----- GRID SYSTEM -----  */
+/* A SIMPLE SEMANTIC GRID USING CSS FLEX BOX */
+.row {
+  /* SET THE GAP BETWEEN COLUMNS */
+  --gridgap: 4%;
+}
+
+/* GIVE EACH ROW SOME TOP AND BOTTOM MARGINS VIA THE CHILD COLUMNS */
+.row > * {
+  margin-block: calc(var(--gridgap) * 0.5);
+}
+
+/* ENABLE THE GRID LAYOUT FOR MEDIUM SCREENS AND UP */
+@media (width >= 768px) {
+  .row {
+    display: flex;
+    gap: var(--gridgap);
+  }
+
+  /* SIMPLE SEMANTIC COLUMN WIDTHS */
+  .row .one-whole {
+    width: 100%;
+  }
+
+  .row .one-half {
+    width: calc(50% - var(--gridgap) * 0.5);
+  }
+
+  .row .one-third {
+    width: calc(33.3333% - var(--gridgap) * 0.6666);
+  }
+
+  .row .two-thirds {
+    width: calc(66.6666% - var(--gridgap) * 0.3333);
+  }
+
+  .row .one-fourth {
+    width: calc(25% - var(--gridgap) * 0.75);
+  }
+
+  .row .three-fourths {
+    width: calc(75% - var(--gridgap) * 0.25);
+  }
+
+  /* GRID SPECIFIC HELPER CLASSES  */
+  /* SWAPPED COLUMNS */
+  .row.swapped {
+    flex-direction: row-reverse;
+  }
+
+  /* CENTERED COLUMNS */
+  .row .centered {
+    margin-inline: auto;
+  }
+
+  .row.centered {
+    justify-content: center;
+  }
+}
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .row > * {
+  background-color: #ddd;
+  padding: 1em;
+  text-align: center;
+}
+
+/* ------ GRID SYSTEM EXTRAS -------- */
+/* BONUS COLUMNS & GRID SYSTEM CAN GO HERE (OPTIONAL & EXTENDABLE) */
+@media (width >= 768px) {
+  /* 12 COLUMN GRID SYSTEM */
+  .row .col-1 {
+    width: calc(8.3333% - var(--gridgap) * 0.909);
+  }
+
+  .row .col-2 {
+    width: calc(16.6666% - var(--gridgap) * 0.8333);
+  }
+
+  .row .col-3 {
+    width: calc(25% - var(--gridgap) * 0.75);
+  }
+
+  .row .col-4 {
+    width: calc(33.3333% - var(--gridgap) * 0.6666);
+  }
+
+  .row .col-5 {
+    width: calc(41.6666% - var(--gridgap) * 0.5833);
+  }
+
+  .row .col-6 {
+    width: calc(50% - var(--gridgap) * 0.5);
+  }
+
+  .row .col-7 {
+    width: calc(58.3333% - var(--gridgap) * 0.4166);
+  }
+
+  .row .col-8 {
+    width: calc(66.6666% - var(--gridgap) * 0.3333);
+  }
+
+  .row .col-9 {
+    width: calc(75% - var(--gridgap) * 0.25);
+  }
+
+  .row .col-10 {
+    width: calc(83.3333% - var(--gridgap) * 0.1666);
+  }
+
+  .row .col-11 {
+    width: calc(91.6666% - var(--gridgap) * 0.0833);
+  }
+
+  .row .col-12 {
+    width: 100%;
+  }
+
+  /* BONUS PUSH HELPERS FOR A SEMANTIC GRID */
+  .row .push-one-half {
+    margin-left: calc(50% + var(--gridgap) * 0.5);
+  }
+
+  .row .push-one-third {
+    margin-left: calc(33.3333% + var(--gridgap) * 0.3333);
+  }
+
+  .row .push-one-fourth {
+    margin-left: calc(25% + var(--gridgap) * 0.25);
+  }
+}
+/* BONUS LAYOUT HELPER CLASS FOR SMALL SCREENS */
+/* TWO COLUMN GRID LAYOUT FOR SMALL SCREENS */
+@media (width < 768px) {
+  .row:has(.two-col-mobile) {
+    display: flex;
+    gap: var(--gridgap);
+  }
+
+  .row .two-col-mobile {
+    width: calc(50% - var(--gridgap) * 0.5);
+  }
+}
+/* ----------------------------- */
+/* ----- SITE STRUCTURE -------- */
+/* ----------------------------- */
+/* Site Header */
+.site-header {
+  background-color: transparent;
+  padding: 0.5em 1em;
+}
+@media (width >= 768px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-start: 0.75em;
+  }
+}
+.site-header a {
+  color: var(--color-text-body);
+  text-decoration: none;
+}
+.site-header a:hover {
+  color: var(--color-links-hover);
+}
+.site-header a.button,
+.site-header .site-navigation a.button {
+  color: white;
+}
+
+/* Site Logo */
+.site-logo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.site-logo a img,
+.site-logo a svg {
+  display: block;
+}
+.site-logo h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  color: var(--color-text-body);
+  padding: 0.5em 0 0.4em 0;
+}
+.site-logo h1 a {
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Site Footer */
+.site-footer {
+  background: rgba(0, 0, 0, 0.05);
+  padding-block: 4em;
+}
+
+/* Main Site Section (Main Content Area) */
+/* All Sections */
+section {
+  padding: 3em 0;
+}
+
+/* Hero Sections */
+.hero {
+  background: #dddddd;
+  padding: 4em 1em;
+}
+.hero h1,
+.hero h2 {
+  font-size: 4em;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+}
+.hero h1,
+.hero h2,
+.hero p {
+  text-wrap: balance;
+}
+.hero.full-width {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* STICKY header - works with a class="sticky" on .site-header */
+.site-header.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.site-header.sticky + .site-main {
+  padding-top: 4em;
+}
+
+/* Colored Sections */
+section.superlightgrey {
+  background: #f9f9f9;
+  color: #333;
+}
+
+section.lightgrey {
+  background: #e0e0e0;
+}
+
+section.darkgrey {
+  background: #222;
+  color: #fff;
+}
+section.darkgrey h1,
+section.darkgrey h2,
+section.darkgrey h3,
+section.darkgrey h4,
+section.darkgrey h5,
+section.darkgrey h6 {
+  color: #fff;
+}
+section.darkgrey a.button,
+section.darkgrey form input[type=submit] {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+section.darkgrey a.button:hover,
+section.darkgrey form input[type=submit]:hover {
+  background-color: white;
+}
+section.darkgrey a.button.alt {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+section.darkgrey a.button.alt:hover {
+  background-color: white;
+  color: black;
+  border-color: transparent;
+}
+
+/* Articles */
+article {
+  max-width: 38em;
+  margin: 0 auto 8em auto;
+  padding: 2em 0;
+}
+article h1 {
+  text-align: center;
+}
+article h1 + h2 {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+article .date {
+  text-align: center;
+  font-size: 0.625em;
+  line-height: 0.625em;
+  color: #999;
+  font-weight: normal;
+}
+article .date + p {
+  margin-top: 2em;
+}
+
+/* Posts */
+.post {
+  padding: 2em 0;
+}
+
+.post-title a {
+  text-decoration: none;
+}
+
+/* Sub Pages with Multiple Column Layout */
+@media (min-width: 768px) {
+  .subpage-twocol {
+    display: flex;
+  }
+}
+.subpage-sidebar {
+  padding-top: 2em;
+}
+@media (min-width: 768px) {
+  .subpage-sidebar {
+    width: 21%;
+    padding-right: 2em;
+  }
+}
+.subpage-sidebar .subheader {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.subpage-main {
+  padding-top: 2em;
+}
+@media (min-width: 768px) {
+  .subpage-main {
+    width: 70%;
+    padding-left: 2em;
+    border-left: 1px solid rgba(136, 136, 136, 0.5);
+  }
+}
+.subpage-main section:first-child {
+  padding-top: 0;
+}
+.subpage-main section:last-child {
+  padding-bottom: 5em;
+}
+
+.subpage-navigation {
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+  padding: 0;
+}
+.subpage-navigation ul {
+  margin: 0;
+  padding: 0;
+}
+.subpage-navigation ul li {
+  list-style: none;
+  margin-left: 0;
+}
+.subpage-navigation ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 0.875em;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+}
+.subpage-navigation ul li ul {
+  border-top: none;
+}
+.subpage-navigation ul li ul li a {
+  padding-left: 1.875em;
+}
+
+/* Sub page with list items */
+.list-item {
+  padding: 2em 0;
+}
+.list-item .featured-image {
+  width: 30%;
+  margin-right: 5%;
+  float: left;
+}
+.list-item article {
+  margin-left: 35%;
+}
+.list-item article h2 {
+  margin-top: 0;
+}
+.list-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.list-item + .list-item {
+  margin-top: 2em;
+  border-top: 1px solid #eee;
+  padding-top: 4em;
+}
+
+/* Swap the display order of two columns */
+.orderswap {
+  flex-direction: row-reverse;
+}
+
+/* OLD/LEGACY SUPPORT FOR PRE-FLEXBOX ORDERSWAP */
+/* VERTICAL CENTERING VIA FLEXBOX */
+.vert-parent .column {
+  display: flex;
+  align-items: center;
+}
+
+/* Thumb Lists */
+.thumblist {
+  padding: 0;
+}
+.thumblist li {
+  list-style: none;
+  margin: 0;
+  padding: 3em 0;
+  clear: both;
+}
+.thumblist li img {
+  max-width: 30%;
+  margin: 0 2em 1em 0;
+  float: left;
+}
+.thumblist li p {
+  max-width: none;
+}
+.thumblist li + li {
+  border-top: 1px solid #ddd;
+}
+@media (max-width: 767px) {
+  .thumblist li img {
+    max-width: 100%;
+    margin: 0 0 1em 0;
+    float: none;
+  }
+}
+
+.thumblist-grid {
+  margin: 2em 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumblist-grid li {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 2em;
+  width: 46%;
+  margin-right: 8%;
+  text-align: center;
+  font-size: 0.8em;
+}
+.thumblist-grid li a img {
+  transition: border-color 0.3s ease;
+  border-color: #fff;
+  display: block;
+}
+.thumblist-grid li a img:hover {
+  border: 3px solid #39c;
+}
+.thumblist-grid li h5,
+.thumblist-grid li p {
+  line-height: 1.2em;
+}
+.thumblist-grid li:nth-child(even) {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .thumblist-grid li {
+    width: 19%;
+  }
+  .thumblist-grid li:nth-child(even) {
+    margin-right: 8%;
+  }
+  .thumblist-grid li:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+/* ----- SITE NAVIGATION ------ */
+/* SITE-HEADER SITE-NAVIGATION */
+.site-header {
+  /* RESET THE LIST DEFAULT STYLING */
+  /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
+  /* STYLE NAV LINKS DIFFERENTLY THAN DEFAULT INLINE LINKS*/
+  /* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+}
+.site-header .site-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+@media (width >= 768px) {
+  .site-header .site-navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+}
+.site-header .site-navigation a {
+  text-decoration: none;
+  color: var(--color-text-headings);
+  padding: 0.5em 1em;
+  display: block;
+}
+.site-header .site-navigation .menu-button {
+  display: none;
+}
+
+/* SITE-FOOTER  SITE-NAVIGATION */
+.site-footer {
+  /* RESET THE LIST DEFAULT STYLING */
+}
+.site-footer .site-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ------ SITE NAVIGATION EXTRAS ------ */
+/* ADD SUPPORT FOR NESTED LISTS AS DROP DOWN MENUS */
+.site-header .site-navigation li li {
+  /* Prevent nested lsts from wrapping to multiple lines */
+  white-space: nowrap;
+}
+@media (width >= 768px) {
+  .site-header .site-navigation li {
+    /* Make each list item a parent to any nested uls */
+    position: relative;
+  }
+  .site-header .site-navigation li li {
+    /* Stack nested lists */
+    display: block;
+  }
+  .site-header .site-navigation li ul {
+    display: block;
+    text-align: left;
+    /* Hide nested lists by default via absolute positioning them off screen */
+    position: absolute;
+    z-index: 100;
+    left: -9000px;
+    /* Give nested lists some padding and a background color */
+    padding-block-end: 1em;
+    background-color: transparent;
+    background-color: white;
+  }
+  .site-header .site-navigation li ul a {
+    /* Style nested list links slighlty differently than parent links */
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .site-header .site-navigation li:hover ul {
+    /* Show nested lists on hover and anchor them to the Left by Default*/
+    left: 0;
+  }
+  .site-header .site-navigation li:last-child:hover ul {
+    /* Anchor the Nested list to the right edge of the parent if it's the last child */
+    right: 0;
+    left: auto;
+  }
+}
+
+/* TOGGLE NAV */
+@media (width < 768px) {
+  .site-header.toggle-nav {
+    /* Align the inline-block menu button to the right on small screens */
+    text-align: right;
+  }
+  .site-header.toggle-nav .site-logo {
+    /* Position the logo absolutely to the left of the nav (intentionally breaking normal flow) */
+    position: absolute;
+  }
+  .site-header.toggle-nav .site-navigation ul li a {
+    /* Increase the padding of nav links on small screens (thumb friendly) */
+    padding: 0.75em;
+  }
+  .site-header.toggle-nav li a:hover {
+    /* Style the hover/touch state of nav links on small screens */
+    color: #fff;
+    background: #003366;
+  }
+  .site-header.toggle-nav .menu-button {
+    /* SHOW THE MENU BUTTON if inside of toggle-nav */
+    display: inline-block;
+    margin: 0.6em 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-text-headings);
+  }
+  .site-header.toggle-nav .menu-button::selection {
+    background-color: transparent;
+  }
+  .site-header.toggle-nav .menu-button.navicon {
+    color: transparent;
+  }
+  .site-header.toggle-nav .menu-button.navicon::after {
+    color: var(--color-text-body);
+    content: "☰";
+    font-size: 2em;
+    margin-top: -0.1em;
+    margin-bottom: 0.1em;
+    margin-left: 0;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    display: inline-block;
+  }
+  .site-header.toggle-nav[data-navstate=open] .menu-button.navicon::after {
+    content: "✕";
+    font-size: 1.6em;
+    margin-top: 0.2em;
+    margin-right: 0.1em;
+  }
+  .site-header.toggle-nav ul {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .site-header.toggle-nav[data-navstate=open] ul {
+    max-height: none;
+    padding: 1em 0;
+  }
+  .site-header.toggle-nav[data-navstate=open] ul ul {
+    padding: 0;
+  }
+}
+
+/* Animated Toggle-Nav Menu */
+@media (width < 768px) {
+  .toggle-nav.animated ul {
+    transition: all 0.4s ease-out;
+  }
+}
+/* FORMS */
+form {
+  margin: 1.75em 0;
+}
+
+form label {
+  display: block;
+}
+
+form input,
+form textarea {
+  font-family: var(--font-body);
+  font-size: 1em;
+  line-height: 1.15em;
+  display: block;
+  margin-bottom: 1.25em;
+  width: 100%;
+  color: #666;
+  padding: 0.25em;
+  border: 1px solid #ccc;
+}
+
+form textarea {
+  border: 1px solid #ccc;
+  min-height: 6em;
+}
+
+form input[type=button],
+form input[type=submit],
+form input[type=reset] {
+  width: auto;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
+  color: #fff;
+  padding: 0.75em 1em;
+  border-radius: 0.32em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+form input[type=button]:hover,
+form input[type=submit]:hover,
+form input[type=reset]:hover {
+  background-color: var(--color-links-hover);
+  border-color: var(--color-links-hover);
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main {
+  /* call our keyframe named fade-in, use animattion ease-in and repeat it only 1 time */
+  animation-name: fade-in;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+/* #SITE SPECIFIC CUSTOM CSS (e.g. Base Overrides)
+---------------------------------
+		...
+--------------------------------- */

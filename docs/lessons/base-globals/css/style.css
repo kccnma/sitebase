@@ -1,0 +1,86 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-logo (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+                #...
+--------------------------------- */
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL VARIABLES ----- */
+:root {
+  /* BASE COLORS */
+  --color-body-background: white;
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-text-headings: black;
+  --color-links: #003366;
+  --color-links-hover: #000033;
+  /* BASE TYPOGRAPHY */
+  --font-body: system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: system-ui, Helvetica, Arial, sans-serif;
+}
+
+/* GLOBAL RESETS */
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* {
+  box-sizing: border-box;
+}
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body {
+  margin: 0;
+}
+
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* GLOBAL COLORS */
+body {
+  /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+  background-color: var(--color-body-background);
+  /* SET THE COLOR OF THE MAIN BODY TEXT */
+  color: var(--color-text-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+}
+
+a {
+  /* SET THE COLOR OF ALL TEXT LINKS */
+  color: var(--color-links);
+}
+a:hover {
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+  color: var(--color-links-hover);
+}

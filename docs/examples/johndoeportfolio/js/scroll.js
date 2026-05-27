@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getCoordinates = hash => {
     const start = root.scrollTop;
-    //const offset = document.querySelector('. site-id').offsetHeight;
+    //const offset = document.querySelector('. site-logo').offsetHeight;
     //const offset = document.getElementById("home").offsetHeight - 2;
     function haveClass(elem, className) {
       return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //offset = (document.querySelector('.site-header').offsetHeight) - (document.querySelector('.site-navigation').offsetHeight);
       //var headerheight = window.getComputedStyle(siteheader).getPropertyValue("height");
       //offset = parseFloat(headerheight, 10);
-      offset = (document.querySelector('.site-id').offsetHeight) + 15;
+      offset = (document.querySelector('.site-logo').offsetHeight) + 15;
     } else {
       offset = 0;
     }

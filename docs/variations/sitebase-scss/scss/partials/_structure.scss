@@ -1,0 +1,127 @@
+/* ----------------------------- */
+/* ----- SITE STRUCTURE -------- */
+/* ----------------------------- */
+
+// body {
+//   background: $background-color-footer;
+// }
+
+/* Site Header */
+.site-header {
+  background-color: $background-color-header;
+  // border-bottom: $border-width solid $border-color;
+  padding: 0.5em 1em;
+
+  @media (width >=$breakpoint-small) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-start: 0.75em;
+  }
+
+  a {
+    color: var(--color-text-body);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-links-hover);
+  }
+
+  a.button,
+  .site-navigation a.button {
+    color: white;
+  }
+
+}
+
+/* Site Logo */
+.site-logo {
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5em;
+
+  a img,
+  a svg {
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    color: var(--color-text-body);
+    padding: 0.5em 0 0.4em 0;
+
+    a {
+      font-weight: bold;
+      display: inline-block;
+    }
+  }
+
+}
+
+/* Site Footer */
+.site-footer {
+  background: $background-color-footer;
+  // border-top: $border-width solid $border-color;
+  padding-block: 4em;
+
+  // a {
+  //   color: $text-color;
+  //   text-decoration: none;
+  // }
+
+  // a:hover {
+  //   color: $link-color-dark;
+  // }
+
+}
+
+/* Main Site Section (Main Content Area) */
+.site-main {
+  // background: $background-color-body;
+  // background-color: var(--color-body-background);
+  //padding-bottom: 1.5em;
+}
+
+/* All Sections */
+section {
+  padding: 3em 0;
+}
+
+/* Hero Sections */
+// .container .hero {
+//   position: relative;
+//   top: 2em;
+//   margin-bottom: 3em;
+// }
+.hero {
+  background: $background-color-hero;
+  // border-top: none;
+  //border-bottom: 1px solid $border-color;
+  padding: 4em 1em;
+  // margin-bottom: 1.5em;
+
+  h1,
+  h2 {
+    font-size: 4em;
+    line-height: 1.1em;
+    letter-spacing: -.02em;
+  }
+
+  h1,
+  h2,
+  p {
+    text-wrap: balance
+  }
+
+  &.full-width {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

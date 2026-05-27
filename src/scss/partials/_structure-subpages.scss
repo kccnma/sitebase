@@ -1,5 +1,3 @@
-@use '../variables' as *;
-
 /* Articles */
 article {
   max-width: 38em;
@@ -30,18 +28,21 @@ article {
     margin-top: 2em;
   }
 
-  p + h2,
-  p + h3,
-  p + h4,
-  p + h5,
-  p + h6 {
-    margin-top: 1em;
-  } 
+  // p + h2,
+  // p + h3,
+  // p + h4,
+  // p + h5,
+  // p + h6 {
+  //   margin-top: 1em;
+  // } 
 }
 
 /* Posts */
 .post {
   padding: 2em 0;
+}
+.post-title a{
+  text-decoration: none;
 }
 
 /* Sub Pages with Multiple Column Layout */
@@ -53,9 +54,12 @@ article {
 }
 
 .subpage-sidebar {
+
+  padding-top: 2em;
+
   @media (min-width: $breakpoint-small) {
     width: 21%;
-    padding-right: 4%;
+    padding-right: 2em;
   }
 
   .subheader {
@@ -73,9 +77,12 @@ article {
 }
 
 .subpage-main {
+
+  padding-top: 2em;
+
   @media (min-width: $breakpoint-small) {
     width: 70%;
-    padding-left: 4%;
+    padding-left: 2em;
     border-left: 1px solid $border-color;
   }
 
@@ -89,7 +96,8 @@ article {
 }
 
 .subpage-navigation {
-  font-family: $navigation-font-family;
+  // font-family: var(--font-body);
+  font-family: $body-font-family;
   padding: 0;
   ul {
     margin: 0;
@@ -163,7 +171,7 @@ article {
 //   margin-right: 0;
 // }
 
-/* OLD VERTICAL CENTERING MARKUP PRE-FLEXBOX */
+/* VERTICAL CENTERING VIA FLEXBOX */
 .vert-parent .column {
   display: flex;
   //justify-content: center;
@@ -216,13 +224,10 @@ article {
     text-align: center;
     font-size: 0.8em;
 
-    a {
-      outline: none;
-    }
-
     a img {
       transition: border-color 0.3s ease;
       border-color: #fff;
+      display: block;
     }
 
     a img:hover {

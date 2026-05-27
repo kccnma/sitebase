@@ -1,372 +1,394 @@
-@charset "UTF-8";
 /* #BASE CSS (Initital Setup)
 ---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
     #BASE CONTENT
         #TYPOGRAPHY
             #BODY
             #HEADINGS
             #PARAGRAPHS
             #LINKS
-            #HELPERS
+        #HELPERS
         #MEDIA
             #IMAGES
+            #VIDEO
         #COMPONENTS
             #BUTTONS
     #BASE LAYOUT
-        #SIMPLE RESET
-        #MEDIAQUERIES
         #CONTAINER
+        #MEDIA QUERIES
         #GRID SYSTEM
     #BASE SITE
         #SITE STRUCTURE
             #HEADER
-                # site-id (LOGO)
+                # site-logo (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
             #FOOTER
             #SECTIONS
             #SUB PAGES
-        #SITE NAVIGATION
-            #TOGGLE-NAV (Default for Small Screens)
+                #...
 --------------------------------- */
-/* #TYPOGRAPHY  */
-/* Reference
-	62.5%  => 10px
-	68.8%  => 11px
-	75%    => 12px
-	81.3%  => 13px
-	87.5%  => 14px
-	100%   => 16px
-	112.5% => 18px
-	125%   => 20px
-*/
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL VARIABLES ----- */
+:root {
+  /* BASE COLORS */
+  --color-body-background: white;
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-text-headings: black;
+  --color-links: #003366;
+  --color-links-hover: #000033;
+  /* BASE TYPOGRAPHY */
+  --font-body: system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: system-ui, Helvetica, Arial, sans-serif;
+}
+
+/* GLOBAL RESETS */
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* {
+  box-sizing: border-box;
+}
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #333;
-  font-size: 87.5%; /* 14px; */
-  line-height: 1.5; /* 14px x 1.5em = 21px */
+  margin: 0;
 }
 
-/* #HEADINGS
-    Based on a Traditional Typographic Scale
-    48, 36, 24, 21, 18, 16
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Helvetica, Arial, sans-serif;
-  margin: 0.5em 0;
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
 }
 
+/* GLOBAL COLORS */
+body {
+  /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+  background-color: var(--color-body-background);
+  /* SET THE COLOR OF THE MAIN BODY TEXT */
+  color: var(--color-text-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+}
+
+a {
+  /* SET THE COLOR OF ALL TEXT LINKS */
+  color: var(--color-links);
+}
+a:hover {
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+  color: var(--color-links-hover);
+}
+
+/* ----------------------------- */
+/* ------ BASE CONTENT --------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL TYPOGRAPHY ----- */
+/* # GLOBAL BODY FONT SETTINGS */
+body {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
+  font-family: var(--font-body);
+  /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
+  /* 100% = 16px */
+  font-size: 100%;
+  /* SET THE DEFAULT LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+  line-height: 1.4;
+}
+
+/* # GLOBAL HEADING SETTINGS */
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
+  font-family: var(--font-headings);
+  /* SET THE DEFAUT MARGINS ALL HEADINGS */
+  margin: 1em 0 0.25em 0;
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+  /* REDUCE TOP MARGIN IF FIRST CHILD */
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0.5em;
+}
+
+/* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
+   (e.g. a "Traditional" Scale) */
 h1 {
-  font-size: 3em; /* 48px / 16px = 3em */
+  /* 48px / 16px = 3em */
+  font-size: 3em;
   line-height: 1;
 }
 
 h2 {
-  font-size: 2.25em; /* 36px / 16px = 2.25em */
+  /* 36px / 16px = 2.25em */
+  font-size: 2.25em;
   line-height: 1.1;
 }
 
 h3 {
-  font-size: 1.5em; /* 24px / 16px = 1.5em */
+  /* 24px / 16px = 1.5em */
+  font-size: 1.5em;
   line-height: 1.2;
 }
 
 h4 {
-  font-size: 1.3125em; /* 21px / 16px = 1.3125em */
+  /* 21px / 16px = 1.3125em */
+  font-size: 1.3125em;
   line-height: 1.3;
 }
 
 h5 {
-  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  /* 18px / 16px = 1.125em */
+  font-size: 1.125em;
   line-height: 1.4;
 }
 
 h6 {
-  font-size: 1em; /* 16px / 16px = 1em */
+  /* 16px / 16px = 1em */
+  font-size: 1em;
   line-height: 1.5;
 }
 
-/* #PARAGRAPHS */
+/* # GLOBAL PARAGRAPH SETTINGS */
 p {
-  margin: 0 0 0.5em 0;
-  max-width: 38em;
+  /* SET THE DEFAUT MARGINS ALL PARAGRAPHS */
+  margin: 0.5em 0;
+  /* SET THE NUMBER OF CHARACTERS PER LINE */
+  max-width: 65ch;
+  /* WIDOW FIXER */
+  text-wrap: pretty;
 }
 
-.centered p {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-strong {
-  font-weight: 700;
-}
-
-em {
-  font-style: italic;
-}
-
-/* #LINKS */
-a {
-  color: #036;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #003;
-  text-decoration: underline;
-}
-
-/* #BLOCK QUOTES  */
-blockquote {
-  font-size: 1.142em;
-  margin: 1.5em 0;
-  padding: 1.5em;
-  border-top: 0px solid #ccc;
-  border-bottom: 0px solid #ccc;
-}
-
-blockquote cite {
-  display: block;
-  opacity: 0.8;
-  font-size: 0.875em;
-}
-
-blockquote cite:before {
-  content: "—";
-  margin-right: 0.25em;
-}
-
-/* #HELPERS */
+/* TEXT CENTERING HELPER CLASS */
 .text-centered {
   text-align: center;
 }
 
-.full-width {
-  max-width: none;
-  width: 100%;
+/* CENTER PARAGRAPHS WITH THE TEXT-CENTERED CLASS */
+p.text-centered,
+.text-centered p {
+  margin-inline: auto;
 }
 
-.horiz-center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-.subheader {
-  color: #999;
-  margin-top: 1em;
-  font-style: normal;
-  font-weight: normal;
-  clear: both;
-}
-
-/* HORIZONTAL RULES */
-hr {
-  border: 0;
-  height: 1px;
-  background: #ddd;
-  margin: 2em 0;
-}
-
-/* #MEDIA  */
-/* #IMAGES */
+/* ----- #MEDIA (Images, Videos, etc) -----  */
+/* #IMAGES - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* #COMPONENTS  */
-/* #BUTTONS */
-button {
-  font-size: inherit;
+/* #VIDEO - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
+video {
+  max-width: 100%;
+  height: auto;
 }
 
+/* ----- #COMPONENTS -----  */
+/* #BUTTONS */
 button,
 a.button {
   display: inline-block;
-  background-color: #036;
-  border: 1px solid #036;
-  color: #fff;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
+  color: white;
   padding: 0.75em 1em;
   border-radius: 0.32em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  border: none;
   cursor: pointer;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
   line-height: 1;
 }
 
 button.alt,
 a.button.alt {
   background-color: transparent;
-  border: 1px solid #036;
-  color: #036;
+  border: 1px solid var(--color-links);
+  color: var(--color-links);
 }
 
 button:hover,
 a.button:hover {
-  background-color: #003;
+  background-color: var(--color-links-hover);
   color: #fff;
-  border-color: #003;
+  border-color: var(--color-links-hover);
   text-decoration: none;
 }
 
-/* LAYOUT */
-/*
-#MEDIA QUERIES (Mobile First)
-	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
-	#SMALL- (Mobile Only Overrides) - max-width: 767px
-	#MEDIUM+ (Tablet) - min-width: 768px
-	#LARGE+ (Desktop) - min-width: 1050px
-	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
-/* SMALL+ (Mobile First Defaults) */
-* {
-  box-sizing: border-box;
+/* ----------------------------- */
+/* --------- LAYOUT ------------ */
+/* ----------------------------- */
+/* ----- SITE-WIDE CONTAINER -----  */
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1em;
 }
 
+/* ----- RESPONSIVE TYPE -----  */
+/* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
+/* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
 body {
-  margin: 0;
+  font-size: 87.5%;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 4%;
-}
-
-/* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
-@media (max-width: 767px) {
-  /* Inherits Small/Mobile Body Type from Above */
-  /* Inherits Small/Mobile Fluid Width from Above */
-}
-/* #MEDIUM+ MEDIA QUERY */
-@media (min-width: 768px) {
-  /* Inherits Small/Mobile Body Type from Above */
-  /* Inherits Small/Mobile Fluid Width from Above */
-}
-/* #LARGE+ MEDIA QUERY */
+/* MIDSIZE / LAPTOP SCREENS = 16px */
 @media (min-width: 1050px) {
-  /* LARGE BODY TYPE */
   body {
-    font-size: 100%; /* 16px; */
+    font-size: 100%;
   }
 }
-/* #EXTRA-LARGE+ MEDIA QUERY */
+/* LARGE / DESKTOP SCREENS = 18px */
 @media (min-width: 1250px) {
-  /* EXTRA-LARGE BODY TYPE */
   body {
-    font-size: 112.5%; /* 18px; */
-  }
-  /* FIXED WIDTH */
-  .container {
-    max-width: 1200px;
+    font-size: 112.5%;
   }
 }
-/* Grid */
-section,
-.container {
-  overflow-x: hidden;
+/* ----- GRID SYSTEM -----  */
+/* A SIMPLE SEMANTIC GRID USING CSS FLEX BOX */
+.row {
+  /* SET THE GAP BETWEEN COLUMNS */
+  --gridgap: 4%;
 }
 
-@media (min-width: 768px) {
+/* GIVE EACH ROW SOME TOP AND BOTTOM MARGINS VIA THE CHILD COLUMNS */
+.row > * {
+  margin-block: calc(var(--gridgap) * 0.5);
+}
+
+/* ENABLE THE GRID LAYOUT FOR MEDIUM SCREENS AND UP */
+@media (width >= 768px) {
   .row {
-    margin-left: -2%;
-    margin-right: -2%;
     display: flex;
-    flex-wrap: wrap;
+    gap: var(--gridgap);
   }
+
+  /* SIMPLE SEMANTIC COLUMN WIDTHS */
+  .row .one-whole {
+    width: 100%;
+  }
+
+  .row .one-half {
+    width: calc(50% - var(--gridgap) * 0.5);
+  }
+
+  .row .one-third {
+    width: calc(33.3333% - var(--gridgap) * 0.6666);
+  }
+
+  .row .two-thirds {
+    width: calc(66.6666% - var(--gridgap) * 0.3333);
+  }
+
+  .row .one-fourth {
+    width: calc(25% - var(--gridgap) * 0.75);
+  }
+
+  .row .three-fourths {
+    width: calc(75% - var(--gridgap) * 0.25);
+  }
+
+  /* GRID SPECIFIC HELPER CLASSES  */
+  /* SWAPPED COLUMNS */
   .row.swapped {
     flex-direction: row-reverse;
   }
+
+  /* CENTERED COLUMNS */
+  .row .centered {
+    margin-inline: auto;
+  }
+
   .row.centered {
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .row > .column {
-    margin: 0 2% 2% 2%;
-    flex-grow: 1;
-  }
-  .row > .column.one-half {
-    max-width: 46%;
-  }
-  .row > .column.one-third {
-    max-width: 29.3333%;
-  }
-  .row > .column.two-thirds {
-    max-width: 62.6666%;
-  }
-  .row > .column.one-fourth {
-    max-width: 21%;
-  }
-  .row > .column.three-fourths {
-    max-width: 71%;
-  }
-  .row > .column.push-one-third {
-    margin-left: 35.3333%;
-  }
-  .row > .column.push-one-fourth {
-    margin-left: 27%;
-  }
-  .row > .column.centered {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
-/* FOR DEMO PURPOSES ONLY */
-.demo .column {
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .row > * {
+  background-color: #ddd;
   padding: 1em;
-  background: #ddd;
   text-align: center;
 }
-.demo .column p {
-  margin: 0;
-  padding: 0 0.5em;
-  max-width: none;
-}
 
-.demo {
-  padding: 2em 0;
-}
+/* ------ GRID SYSTEM EXTRAS -------- */
+/* BONUS COLUMNS & GRID SYSTEM CAN GO HERE (OPTIONAL & EXTENDABLE) */
+@media (width >= 768px) {
+  /* 12 COLUMN GRID SYSTEM */
+  .row .col-1 {
+    width: calc(8.3333% - var(--gridgap) * 0.909);
+  }
 
-.demo:after {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  text-align: center;
-  width: 100%;
-  content: "Small (less than 768px)";
-  color: #fff;
-  background: #993333;
-}
+  .row .col-2 {
+    width: calc(16.6666% - var(--gridgap) * 0.8333);
+  }
 
-@media (min-width: 768px) {
-  body.demo:after {
-    content: "Medium (768px - 1049px)";
-    background: #bcb83d;
+  .row .col-3 {
+    width: calc(25% - var(--gridgap) * 0.75);
+  }
+
+  .row .col-4 {
+    width: calc(33.3333% - var(--gridgap) * 0.6666);
+  }
+
+  .row .col-5 {
+    width: calc(41.6666% - var(--gridgap) * 0.5833);
+  }
+
+  .row .col-6 {
+    width: calc(50% - var(--gridgap) * 0.5);
+  }
+
+  .row .col-7 {
+    width: calc(58.3333% - var(--gridgap) * 0.4166);
+  }
+
+  .row .col-8 {
+    width: calc(66.6666% - var(--gridgap) * 0.3333);
+  }
+
+  .row .col-9 {
+    width: calc(75% - var(--gridgap) * 0.25);
+  }
+
+  .row .col-10 {
+    width: calc(83.3333% - var(--gridgap) * 0.1666);
+  }
+
+  .row .col-11 {
+    width: calc(91.6666% - var(--gridgap) * 0.0833);
+  }
+
+  .row .col-12 {
+    width: 100%;
+  }
+
+  /* BONUS PUSH HELPERS FOR A SEMANTIC GRID */
+  .row .push-one-half {
+    margin-left: calc(50% + var(--gridgap) * 0.5);
+  }
+
+  .row .push-one-third {
+    margin-left: calc(33.3333% + var(--gridgap) * 0.3333);
+  }
+
+  .row .push-one-fourth {
+    margin-left: calc(25% + var(--gridgap) * 0.25);
   }
 }
-@media (min-width: 1050px) {
-  body.demo:after {
-    content: "Large (1050px - 1249px)";
-    background: #669933;
+/* BONUS LAYOUT HELPER CLASS FOR SMALL SCREENS */
+/* TWO COLUMN GRID LAYOUT FOR SMALL SCREENS */
+@media (width < 768px) {
+  .row:has(.two-col-mobile) {
+    display: flex;
+    gap: var(--gridgap);
   }
-}
-@media (min-width: 1250px) {
-  body.demo:after {
-    content: "Extra Large (1250px +)";
-    background: #0099cc;
+
+  .row .two-col-mobile {
+    width: calc(50% - var(--gridgap) * 0.5);
   }
-}
-.demo .column p:last-child {
-  margin-bottom: 0;
 }

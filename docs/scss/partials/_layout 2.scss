@@ -1,0 +1,111 @@
+/* ----------------------------- */
+/* --------- LAYOUT ------------ */
+/* ----------------------------- */
+
+/* SITE-WIDE CONTAINER */
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1em;
+}
+
+/* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
+
+/* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
+body { font-size: 87.5%; }
+
+/* MIDSIZE / LAPTOP SCREENS = 16px */
+@media (min-width: 1050px) {
+  body { font-size: 100%; }
+}
+/* LARGE / DESKTOP SCREENS = 18px */
+@media (min-width: 1250px) {
+  body { font-size: 112.5%; }
+}
+
+
+/* A SIMPLE SEMANTIC GRID USING CSS FLEX BOX */
+.row {
+  /* SET THE GAP BETWEEN COLUMNS */
+  --gridgap: 4%;
+}
+
+/* GIVE EACH ROW SOME TOP AND BOTTOM MARGINS VIA THE CHILD COLUMNS */ 
+.row > * {
+  margin-block: calc( var(--gridgap) * .5 );
+}
+
+/* ENABLE THE GRID LAYOUT FOR MEDIUM SCREENS AND UP */ 
+@media (width >= 768px) {
+  .row {
+    display: flex;
+    gap: var(--gridgap);
+  }
+
+  /* SIMPLE SEMANTIC COLUMN WIDTHS */
+  .row .one-whole { width: 100%; }
+  .row .one-half { width: calc( 50% - calc( var(--gridgap) * .5 ) ); }
+  .row .one-third { width: calc( 33.3333% - calc( var(--gridgap) * .6666 ) ); }
+  .row .two-thirds { width: calc( 66.6666% - calc( var(--gridgap) * .3333 ) ); }
+  .row .one-fourth { width: calc( 25% - calc( var(--gridgap) * .75 ) ); }
+  .row .three-fourths { width: calc( 75% - calc( var(--gridgap) * .25 ) ); }
+  
+  // /* ADD SUPPORT FOR SIMPLE ROWS WITH AUTO CHILDREN COLUMNS   */
+  // .row > * { flex-grow: 1; }
+
+  /* GRID SPECIFIC HELPER CLASSES  */
+  
+  /* SWAPPED COLUMNS */
+  .row.swapped { flex-direction: row-reverse; }
+
+  /* CENTERED COLUMNS */
+  .row .centered { margin-inline: auto;}
+  .row.centered { justify-content: center; }
+
+  /* BONUS COLUMNS CAN GO HERE (OPTIONAL & EXTENDABLE) */ 
+
+  /* 12 COLUMN GRID SYSTEM */ 
+  .row .col-1 { width: calc( 8.3333% - calc( var(--gridgap) * .9090 ) ); }
+  .row .col-2 { width: calc( 16.6666% - calc( var(--gridgap) * .8333 ) ); }
+  .row .col-3 { width: calc( 25% - calc( var(--gridgap) * .75 ) ); }
+  .row .col-4 { width: calc( 33.3333% - calc( var(--gridgap) * .6666 ) ); }
+  .row .col-5 { width: calc( 41.6666% - calc( var(--gridgap) * .5833 ) ); }
+  .row .col-6 { width: calc( 50% - calc( var(--gridgap) * .5 ) ); }
+  .row .col-7 { width: calc( 58.3333% - calc( var(--gridgap) * .4166 ) ); }
+  .row .col-8 { width: calc( 66.6666% - calc( var(--gridgap) * .3333 ) ); }
+  .row .col-9  { width: calc( 75% - calc( var(--gridgap) * .25 ) ); }
+  .row .col-10 { width: calc( 83.3333% - calc( var(--gridgap) * .1666 ) ); }
+  .row .col-11 { width: calc( 91.6666% - calc( var(--gridgap) * .0833 ) ); }
+  .row .col-12 { width: 100%; }
+}
+
+/* BONUS LAYOUT HELPER CLASS FOR SMALL SCREENS */
+
+/* TWO COLUMN LAYOUT FOR SMALL SCREENS */
+@media ( width < 768px) {
+  .row:has(.two-col-mobile) { 
+    display: flex; 
+    gap: var(--gridgap); 
+  }
+  .row .two-col-mobile { width: calc( 50% - calc( var(--gridgap) * .5 ) ); }
+}
+
+// /* FOR DEMO PURPOSES ONLY */
+// .demo .row > * {
+//   padding: 1em;
+//   background: rgba(204, 204, 204, 0.7);
+//   color: rgba(51, 51, 51, 0.7);
+//   text-align: center;
+// }
+// .demo .row > * p {
+//   margin: 0;
+//   padding: 0 0.5em;
+//   max-width: none;
+// }
+
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .row > * {
+    background-color: #ddd;
+    padding: 1em;
+    text-align: center;
+}

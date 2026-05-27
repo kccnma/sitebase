@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>SiteBase | Docs</title>
-  <meta name="description" content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+  <title>SiteBase | Documentation</title>
+  <meta name="description"
+    content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
 
   <!-- VIEWPORT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,159 +15,808 @@
 </head>
 
 <body>
-  <header class="site-header toggle-nav animated" data-navstate="closed">
-    <div class="site-id">
-      <h1><a href="index.html">SiteBase</a></h1>
+  <header class="site-header toggle-nav animated">
+    <div class="site-logo">
+      <h1><a href="../index.html">SiteBase</a></h1>
     </div>
     <nav class="site-navigation">
-      <button class="menu-button navicon">Menu</button>
+      <button class="menu-button navicon"><span class="hidden">Menu</span></button>
       <ul class="nav">
-        <li class="hidden"><a href="index.html">Home</a></li>
-        <li><a href="lessons.html">Get Started</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
+        <li class="hidden"><a href="../index.html">Home</a></li>
+        <!-- <li><a href="../dist/index.html">Demo</a></li> -->
+        <li><a href="lessons.html">Lessons</a></li>
+        <li class="selected"><a href="index.html">Docs</a></li>
         <li><a href="examples.html">Examples</a></li>
+        <li><a class="button" href="variations/sitebase-static.zip">Download</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="site-main">
     <section class="hero text-centered">
-      <h2>SiteBase</h2>
+      <h2>SiteBase Docs</h2>
       <p>
-        A minimalistic HTML + CSS + JS base front-end framework for simple
-        web site projects.
+        An overview of framework features including core HTML elements and
+        default CSS settings.
       </p>
-      <p><a class="button" href="documentation.html">See the Docs</a></p>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="one-third column">
-            <h3>Student Friendly</h3>
-            <p>
-              Designed for web designers and front-end developers, SiteBase
-              is a simple HTML + CSS + JS framework created for students
-              learning how to code a basic front-end framework from scratch by
-              hand, line&nbsp;by&nbsp;line.
-            </p>
-            <!--
-                <p><a class="button alt" href="base-lessons.html">Step-by-Step Lessons</a></p>
-              -->
-          </div>
-          <div class="one-third column">
-            <h3>Nothing Required</h3>
-            <p>
-              No prior web design experience is required. Designed for
-              first-time front-end coders, SiteBase 1.0 uses no
-              pre-processing, no command line, and no special software. All
-              you need is a text editor and&nbsp;a&nbsp;browser.
-            </p>
-            <!--
-                <p><a class="button alt" href="base-docs.html">Documentation</a></p>
-              -->
-          </div>
-          <div class="one-third column">
-            <h3>Customizable CSS</h3>
-            <p>
-              All styling is intentionally minimal for simple, basic web
-              sites. Core CSS includes base typography, a simple responsive
-              grid, and a default site structure with a mobile-friendly
-              navigation&nbsp;system.
-            </p>
-            <!--
-                <p><a class="button alt" href="index.html">Demo Site Example</a></p>
-              -->
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="text-centered">
-      <div class="container">
-        <div class="row">
-          <div class="one-whole column centered">
-            <h2>Modular, Scalable, and Extensible</h2>
-            <p>
-              There are four different variations of SiteBase, each one is
-              designed for different developer preferences and contexts.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="container">
 
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="one-half column">
-            <h3>SiteBase Static</h3>
-            <p><em>Static CSS Variation</em></p>
+      <div class="subpage-twocol">
+
+        <aside class="subpage-sidebar">
+          <h4 class="subheader">Get Started</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li><a href="#download">Download</a></li>
+              <li><a href="#lessons">Lessons</a></li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Overview</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li><a href="#folder">Folder Structure</a></li>
+              <li>
+                <a href="#boilerplatetemplate">Boilerplate</a>
+                <ul>
+                  <li><a href="#html">HTML</a></li>
+                  <li><a href="#css">CSS</a></li>
+                  <li><a href="#js">JS</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Core CSS</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li>
+                <a href="#globals">Globals</a>
+                <ul>
+                  <li><a href="#globalreset">Resets</a></li>
+                  <li><a href="#globalcolors">Colors</a></li>
+                  <li><a href="#globalvariables">Variables</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Content</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li>
+                <a href="#typography">Typography</a>
+                <ul>
+                  <li><a href="#headings">Headings</a></li>
+                  <li><a href="#paragraphs">Paragraphs</a></li>
+                  <li><a href="#lists">Lists</a></li>
+                  <li><a href="#links">Links</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#media">Media</a>
+                <ul>
+                  <li><a href="#images">Images</a></li>
+                  <li><a href="#videos">Videos</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#components">Components</a>
+                <ul>
+                  <li><a href="#buttons">Buttons</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Layout</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li><a href="#mediaqueries">Media Queries</a></li>
+              <li><a href="#container">Container</a></li>
+              <li><a href="#grid">Grid System</a></li>
+            </ul>
+          </nav>
+          <h4 class="subheader">Page Structure</h4>
+          <nav class="subpage-navigation">
+            <ul class="nav">
+              <li>
+                <a href="#headermainfooter">Header, Main, &amp; Footer</a>
+              </li>
+              <li><a href="#pagesections">Page Sections</a></li>
+              <li><a href="#subpages">Sub Pages</a></li>
+              <li>
+                <a href="#navigation">Navigation</a>
+                <ul>
+                  <li><a href="#mobilemenu">Mobile Menu</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div class="subpage-main">
+
+          <section id="getsetup">
+
+            <h2 class="section-header">Get Started</h2>
+            <p>SiteBase was designed to be used two different ways:</p>
+            <ol>
+              <li>As a blank starter project - to be downloaded as a starter set of boilerplate code that developers can
+                then "save as" and modified as quick-and-easy way to custom build a bespoke static website.</li>
+              <li>As a learning project - to be manually recoded from scratch by following a set of step-by-step lessons
+                designed specifically for beginner level web designers and frontend web developers looking to learn how
+                to manually code bespoke static sites from scratch.</li>
+            </ol>
+
+            <h3 id="download">Download SiteBase .zip File</h3>
+            <p>The easiest way to jump right in and get started is to download SiteBase as a blank starter set of files
+              and folders that are already set up to be customized to begin manually coding any bespoke static website
+              project. No build tool required. Just download the project folder, rename it, and customize it. It's that
+              simple.</p>
+            <p><a class="button" href="variations/sitebase-static.zip">Download SiteBase [.zip]</a></p>
+
+            <h3 id="lessons">Follow the Step-by-Step Lessons</h3>
+            <p>The harder (but more meaningful) way to begin using SiteBase, is to manually recode it from scratch by
+              following along with step-by-step lessons with detailed instructions to create your own site base.
+              SiteBase was designed for UX/UI designers and beginner-level frontend web development students. It is
+              100% open source and free to use for any and all projects inclusing personal and commercial websites.</p>
+            <p><a class="button alt" href="lessons.html">Go to the SiteBase Lessons</a></p>
+
+          </section>
+
+          <hr>
+
+          <section>
+            <div class="eyebrow">Overview</div>
+            <h2 id="folder" class="section-header">Folder Structure</h2>
+            <pre><code>
+base/
+├── <a href="https://github.com/kccnma/sitebase/blob/master/docs/demos/base-boilerplate-starter/index.html">index.html</a>
+├── css/
+│   ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/css/style.css">style.css</a>
+└── js/
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/js/script.js">scripts.js</a>
+    
+</code></pre>
+
+            <h2 id="boilerplatetemplate" class="section-header">Boilerplate Template</h2>
+
+            <h3 id="html">HTML</h3>
+            <p>Mobile ready with links to external CSS and JS files.</p>
+            <script src="https://gist.github.com/kccnma/242163d9a5f67b896750365d5581f94f.js"></script>
+
+            <h3 id="css">CSS</h3>
+            <p>CSS Table of Contents:</p>
+            <script src="https://gist.github.com/kccnma/3cce7281cfe835b687fedfe80c099c12.js"></script>
+
+            <!-- COMMENT OUT SASS FOR NOW -->
+            <!-- <h3 id="scss">SCSS (Optional)</h3>
+            <p>SiteBase is also able to optionally support SASS/SCSS for those that prefer to build static websites using a build tool/step to compile modular partials into a singular style.css file.</p>
+            <p>SCSS File Structure:</p>
+            <pre><code>
+base/
+├── css/
+│   ├── <a href="https://github.com/kccnma/sitebase/blob/master/dist/css/style.css">style.css</a>
+└── scss/
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/style.scss">style.scss</a>
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/_variables.scss">_variables.scss</a>
+    ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/_base.scss">_base.scss</a>
+    ├── partials/
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_toc-base.scss">_toc-base.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_typography.scss">_typography.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_media.scss">_media.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_components.scss">_components.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_layout.scss">_layout.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_structure.scss">_structure.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_site-navigation.scss">_site-navigation.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_site-navigation-togglenav.scss">_site-navigation-togglenav.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_forms.scss">_forms.scss</a>
+        ├── <a href="https://github.com/kccnma/sitebase/blob/master/src/scss/partials/_animation-pageload-fadein.scss">_animation-pageload-fadein.scss</a>
+    
+</code></pre> -->
+
+            <h3 id="js">JS</h3>
+            <p>Vanilla Javascript inside of one script.js file.</p>
+            <script src="https://gist.github.com/kccnma/64a7d365cb4d2aa90de0cb383aaf5213.js"></script>
+            <!-- <pre><code>
+document.addEventListener('DOMContentLoaded', function() {
+
+    //JAVASCRIPT FUNCTIONS GO HERE
+    
+})
+</code></pre> -->
+
+          </section>
+
+          <hr>
+
+          <section id="globals">
+            <div class="eyebrow">Core CSS</div>
+            <h2 class="section-header">Global Styles</h2>
+
+            <h3 id="globalreset">Global CSS Resets</h3>
+            <p>Basic CSS reset to remove default browser styling (e.g. default body margins) and enable helpful features
+              such as smooth-scrolling.</p>
+            <pre><code>/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* { box-sizing: border-box; }
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body { margin: 0; }
+
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html { scroll-behavior: smooth; } </code></pre>
+
+            <h3 id="globalcolors">Global Colors</h3>
+            <p>SiteBase comes with a starter set of global colors defined in CSS custom properties (variables).</p>
+
+            <style>
+              .color-chips,
+              .color-chips li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+              }
+
+              .color-chips {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+                text-align: center;
+              }
+
+              .color-chips span {
+                padding: 2em;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                display: block;
+              }
+            </style>
+            <ul class="color-chips">
+              <li><span style="background-color: #fff; color: black;">#fff</span> Body BG</li>
+              <li><span style="background-color: #333; color: white;">#333</span> Text</li>
+              <li><span style="background-color: #000; color: white;">#000</span> Headings</li>
+              <li><span style="background-color: #036; color: white;">#036</span> Links</li>
+              <li><span style="background-color: #003; color: white;">#003</span> Link Hovers</li>
+              <li><span style="background-color: #ddd; color: black;">#ddd</span> Hero BG</li>
+              <!-- <li><span style="background-color: #000; color: white;">#000</span> Black</li>
+                <li><span style="background-color: #fff; color: black;">#fff</span> White</li> -->
+            </ul>
+
+            <h3 id="globalvariables">Global CSS Custom Properties (Variables)</h3>
+            <p>CSS custom properties (variables) for global (site-level) colors and fonts.</p>
+
+            <pre><code>:root {
+
+  /* BASE COLORS */
+  --color-body-background: #fff;
+  --color-text-body: rgb(0 0 0 / 0.8);
+  --color-text-headings: rgb(0 0 0 / 1);
+  --color-links: #036;
+  --color-links-hover: #003;
+
+  /* BASE TYPOGRAPHY */
+  --font-body: system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: system-ui, Helvetica, Arial, sans-serif;
+
+}</code></pre>
+
+          </section>
+
+          <hr>
+
+          <section id="typography">
+            <div class="eyebrow">Content</div>
+            <h2 class="section-header">Typography</h2>
+
+            <h3 id="headings">Default Heading Styles</h3>
+            <p>SiteBase comes with default styling settings that help to support best practices for good typography
+              specifically for headings.</p>
+
+            <pre><code>/* # GLOBAL HEADING SETTINGS */
+h1, h2, h3, h4, h5, h6 {
+
+  /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
+  font-family: var(--font-headings);
+
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+
+  /* SET THE DEFAUT MARGINS ALL HEADINGS */
+  margin: 1em 0 0.5em 0;
+
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+
+}
+            </code></pre>
+
+            <h1>This is a Heading 1</h1>
+            <h2>This is a Heading 2</h2>
+            <h3>This is a Heading 3</h3>
+            <h4>This is a Heading 4</h4>
+            <h5>This is a Heading 5</h5>
+            <h6>This is a Heading 6</h6>
+
+            <pre><code>&#60;h1&#62;This is a Heading 1&#60;/h1&#62;
+&#60;h2&#62;This is a Heading 2&#60;/h2&#62;
+&#60;h3&#62;This is a Heading 3&#60;/h3&#62;
+&#60;h4&#62;This is a Heading 4&#60;/h4&#62;
+&#60;h5&#62;This is a Heading 5&#60;/h5&#62;
+&#60;h6&#62;This is a Heading 6&#60;/h6&#62;
+</code></pre>
+
             <p>
-              A basic front-end framework for beginners learning how to code
-              from scratch by hand, line-by-line. No build tools. Straight up
-              HTML, CSS, &amp; JS.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut
+              fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris
+              elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id
+              elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis
+              orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla
+              porttitor sagittis.
             </p>
+
             <p>
-              <a class="button" href="https://github.com/kccnma/sitebase1-static">SiteBase Static on Github</a>
-              <a class="button alt" href="lessons.html#sitebase1">Static Lessons</a>
+              Suspendisse pulvinar bibendum laoreet. Suspendisse eget dignissim
+              risus. Cras eget sodales enim. Phasellus accumsan dui metus, quis
+              vulputate turpis congue at. Praesent rutrum consequat rhoncus.
+              Maecenas adipiscing justo vitae massa porta pretium. In egestas
+              orci vehicula, tempus lorem ut, facilisis metus.
             </p>
-          </div>
-          <div class="one-half column">
-            <h3>SiteBase Sassy</h3>
-            <p><em>Sassy Sass-Ready Variation</em></p>
+
+            <h3 id="paragraphs">Default Paragraph Syles</h3>
+            <p>SiteBase comes with default text styling that embraces best practices for good typography specifically
+              for body text and paragraphs, such as limiting the number of characters per line for readability
+              (horizontal measure) and modern browser support for <code>text-wrap: pretty</code> to avoid widows.</p>
+
+            <pre><code>p {
+
+  /* SET THE DEFAUT MARGINS ALL PARAGRAPHS */
+  margin: 0.5em 0;
+
+  /* SET THE NUMBER OF CHARACTERS PER LINE */
+  max-width: 65ch;
+
+  /* WIDOW FIXER */
+  text-wrap: pretty;
+
+}</code></pre>
+
             <p>
-              Same as the static version, but using SASS to modularize
-              the CSS via a pre-processing build tool such as Prepros, a GUI-based compiler and task manager.
+              Vivamus eu mollis velit. Maecenas id massa libero. Aliquam
+              accumsan mauris vulputate purus volutpat vestibulum. Phasellus sed
+              tellus id tortor ornare molestie. Quisque massa sapien, elementum
+              sed tortor vitae, suscipit congue massa. Curabitur tempor arcu
+              eget leo placerat, a porta augue pharetra. Nulla velit nibh,
+              laoreet at hendrerit sit amet, adipiscing eget dolor.
             </p>
+
+            <pre><code>&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
+</code></pre>
+
+            <h3 id="lists">Lists with Native User Agent Styles</h3>
+            <p>SiteBase does not override the default user agent styles for lists.</p>
+
+            <h4>Unordered Lists:</h4>
+            <ul>
+              <li>List Item</li>
+              <li>List Item</li>
+              <li>
+                Nested Unordered List:
+                <ul>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ul>
+              </li>
+              <li>
+                Nested Ordered List:
+                <ol>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ol>
+              </li>
+              <li>List Item</li>
+              <li>List Item</li>
+            </ul>
+
+            <pre><code>&#60;ul&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+&#60;/ul&#62;
+</code></pre>
+
+            <h4>Ordered Lists:</h4>
+            <ol>
+              <li>List Item</li>
+              <li>List Item</li>
+              <li>
+                Nested Unordered List:
+                <ul>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ul>
+              </li>
+              <li>
+                Nested Ordered List:
+                <ol>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ol>
+              </li>
+              <li>List Item</li>
+              <li>List Item</li>
+            </ol>
+
+            <pre><code>&#60;ol&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+    &#60;li&#62;List Item&#60;li/&#62;
+&#60;/ol&#62;
+</code></pre>
+
+            <h4 id="links">Links:</h4>
+            <p>This is a <a href="#">link</a>.</p>
+
+            <pre><code>&#60;a href="#"&#62;link&#60;/a&#62;
+</code></pre>
+
+            <!-- COMMENT OUT BLOCKQUOTES FOR NOW -->
+            <!-- <h4 id="blockquotes">Blockquotes:</h4>
+            <blockquote>
+              <p>
+                This is a blockquote. Donec sed rhoncus massa. Suspendisse
+                rutrum viverra felis. Vestibulum augue lacus, ullamcorper non
+                suscipit nec, ornare et mauris. Proin mattis fermentum nibh quis
+                gravida.
+              </p>
+              <cite>Citation Source</cite>
+            </blockquote>
+
+            <pre><code>&#60;blockquote&#62;
+    &#60;p&#62;This is a blockquote. Donec sed rhoncus massa. Suspendisse 
+    rutrum viverra felis. Vestibulum augue lacus, ullamcorper non 
+    suscipit nec, ornare et mauris. Proin mattis.&#60;/p&#62;
+    &#60;cite&#62;Citation Source&#60;/cite&#62;
+&#60;/blockquote&#62;
+</code></pre> -->
+
+            <h4 id="helpers">Helpers:</h4>
+            <p class="text-centered">This is center-aligned text</p>
+
+            <pre><code>&#60;p class="text-centered"&#62;This is center-aligned text&#60;/p&#62;
+</code></pre>
+          </section>
+
+          <section id="media">
+            <h2 class="section-header">Media</h2>
+            <p>Default support for responsive images and videos.</p>
+
+            <pre><code>img, video {
+    max-width: 100%;
+    height: auto;
+}
+</code></pre>
+
+            <p id="images">This is a responsive inline image:</p>
+            <img src="img/placeholder-3x1.gif" alt="placeholder" width="1500" height="500">
+
+            <pre><code>&#60;img src="path/to/image.jpg" alt="placeholder" width="1200" height="400"&#62;
+</code></pre>
+
+            <p id="videos">This is a responsive inline video:</p>
+            <video controls>
+              <source src="videos/placeholder-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <pre><code>&#60;video controls&#62;
+  &#60;source src="videos/placeholder-video.mp4" type="video/mp4"&#62;
+  Your browser does not support the video tag.
+&#60;/video&#62;</code></pre>
+
+          </section>
+
+          <section id="components">
+            <h2 class="section-header">UI Components</h2>
+
+            <h4 id="buttons">Buttons:</h4>
+
+            <a href="#" class="button">Default Link Button</a>
+            <a href="#" class="button alt">Alt Link Button</a>
+            <button>Default Button Element</button>
+
+            <pre><code>&#60;a href="#" class="button"&#62;Default Link Button&#60;/a&#62;
+&#60;a href="#" class="button alt"&#62;Alt Link Button&#60;/a&#62;
+&#60;button&#62;Default Button Element&#60;/button&#62;
+</code></pre>
+          </section>
+
+          <hr>
+
+          <section class="demo grid-demo">
+            <div class="eyebrow">Layout</div>
+            <h2 id="mediaqueries" class="section-header">Media Queries</h2>
+            <p>Mobile-first media queries with four target screen sizes:</p>
+
+            <img src="img/sitebase-responsive.jpg"
+              alt="Visual of SiteBase in four devices: mobile phone, tablet, notebook, and desktop monitor" width="1800"
+              height="900">
+
+            <ul>
+              <li>Small (Mobile): 0-767px+ (default)</li>
+              <li>Medium (Tablet): min-width: 768px+</li>
+              <li>Large (Notebook): min-width: 1050px+</li>
+              <li>ExtraLarge (Desktop): min-width: 1250px+</li>
+            </ul>
+
+            <pre><code>// MOBILE FIRST DEFAULT FOR SMALL/MOBILE SCREENS
+
+// MEDIUM/TABLET SCREENS
+@media (min-width:  768px) { .. }
+
+// LARGE/NOTEBOOK SCREENS
+@media (min-width: 1050px) { .. }
+
+// FOR EXTRA-LARGE/DESKTOP+ SCREENS
+@media (min-width: 1250px) { .. }
+</code></pre>
+
+            <h2 id="container" class="section-header">Container</h2>
             <p>
-              <a class="button" href="https://github.com/kccnma/sitebase2-sassy">SiteBase Sassy on Github</a>
-              <!-- <a class="button alt" href="lessons.html#sitebase2">2.0 Lessons</a> -->
+              Reusable container div that is fluid width (percentage based) on
+              small screens and fixed width on large screens.
             </p>
-          </div>
+
+            <img src="img/sitelayout-container.png" alt="Visual of Container Layout" width="2400" height="1800">
+
+            <pre><code>&#60;div class="container"&#62;&#60;/div&#62;
+</code></pre>
+
+            <h2 id="grid" class="section-header">A Simple Semantic Grid System</h2>
+            <p>By default, SiteBase comes with a simple semantic grid system based on stacked rows
+              (<code>&#60;div class="row"&#62;</code>) with nested columns and a default set of commonly used,
+              easy-to-remember semantic class names such as <code>class="one-half"</code> or
+              <code>class="one-third"</code>.
+            </p>
+
+            <img src="img/sitelayout-grid-semantic.png" alt="Visual of Semantic Grid Layout" width="2400" height="1800">
+
+            <div class="row">
+              <div class="one-whole column">
+                <p>One Whole Column</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="one-half column">
+                <p>One-half Column</p>
+              </div>
+              <div class="one-half column">
+                <p>One-half Column</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="one-third column">
+                <p>One-third Column</p>
+              </div>
+              <div class="one-third column">
+                <p>One-third Column</p>
+              </div>
+              <div class="one-third column">
+                <p>One-third Column</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="one-third column">
+                <p>One-third Column</p>
+              </div>
+              <div class="two-thirds column">
+                <p>Two-thirds Column</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="one-fourth column">
+                <p>One-fourth Column</p>
+              </div>
+              <div class="one-fourth column">
+                <p>One-fourth Column</p>
+              </div>
+              <div class="one-fourth column">
+                <p>One-fourth Column</p>
+              </div>
+              <div class="one-fourth column">
+                <p>One-fourth Column</p>
+              </div>
+            </div>
+
+            <pre><code>&#60;div class="row"&#62;
+    &#60;div class="one-half column"&#62;
+        &#60;p&#62;One-half Column&#60;/p&#62;
+    &#60;/div&#62;
+    &#60;div class="one-half column"&#62;
+        &#60;p&#62;One-half Column&#60;/p&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+</code></pre>
+
+            <div class="row">
+              <div class="one-half column centered">
+                <p>One-half Column Centered</p>
+              </div>
+            </div>
+
+            <pre><code>&#60;div class="row"&#62;
+    &#60;div class="one-half column centered"&#62;
+        &#60;p&#62;One-half Column Centered&#60;/p&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+</code></pre>
+          </section>
+
+          <hr>
+
+          <section id="sitestructure">
+            <div class="eyebrow">Structure</div>
+            <h2 class="section-header">Page Structure</h2>
+
+            <h3 id="headermainfooter">
+              Header, Main Content Area, &amp; Footer
+            </h3>
+
+            <p>
+              The base site structure consists of three main parts in the body section of the web
+              page: the header, main, and footer. Many websites are structured this way, with each stacked one on top
+              another vertically and rendering via normal flow (top to bottom) in the browser.
+            </p>
+
+            <img src="img/sitestructure-header-main-footer.png"
+              alt="Visual of Site Structure: Header, Main Content Area, Footer" width="1600" height="1200">
+
+            <pre><code>&#60;body&#62;
+
+    &#60;header class="site-header"&#62;
+    &#60;/header&#62;
+
+    &#60;main class="site-main"&#62;
+    &#60;/main&#62;
+
+    &#60;footer class="site-footer"&#62;
+    &#60;/footer&#62;
+
+&#60;/body&#62;
+</code></pre>
+
+            <h4 id="pagesections">One Main Content Area with Multiple Stacked Sections</h4>
+            <p>By default, each page has one <code>&#60;main&#62;</code> element for all main content to reside with no
+              default styling (e.g. no margins or padding) to allow multiple <code>&#60;section&#62;</code> elements to
+              be nested inside and stacked on top of one another</p>
+
+            <img src="img/sitestructure-main-sections.png"
+              alt="Visual of One Main Content Area with Multiple Stacked Sections" width="1600" height="1200">
+
+            <p>Each <code>&#60;section&#62;</code> is full-width by default, extending to the full-width of the browser.
+              To constrain content width, sections can either be nested within a parent
+              <code>&#60;div class="container"&#62;&#60;/div&#62;</code> element, or each section can have nested <code>&#60;div class="container"&#62;&#60;/div&#62;
+</code> elements inside of each (recommended). This base also includes default styling for a "hero" section.
+            </p>
+
+            <img src="img/sitestructure-sections-with-nested-containers.png"
+              alt="Visual of Sections with Nested Containers" width="1600" height="1200">
+
+            <pre><code>&#60;main class="site-main"&#62;
+
+    &#60;section class="hero"&#62;
+        &#60;div class="container"&#62;
+            HERO SECTION CONTENT
+        &#60;/div&#62;
+    &#60;/section&#62;
+
+    &#60;section&#62;
+        &#60;div class="container"&#62;
+          SECTION CONTENT IN A CONTAINER
+        &#60;/div&#62;
+    &#60;/section&#62;
+
+    &#60;section&#62;
+        SECTION CONTENT NOT IN A CONTAINER
+    &#60;/section&#62;
+    
+&#60;/main&#62;
+</code></pre>
+
+            <h3 id="navigation">Site Navigation</h3>
+
+            <p>
+              This base consists of a primary navigation area on the top of each page with the site header. By default
+              it renders the logo on the left and navigation on the right, but can be easily customized.
+            </p>
+
+            <img src="img/site-navigation.png"
+              alt="Visual of a Site Header with a Logo on the left and Site Navigation on the right" width="2400"
+              height="1800">
+
+            <pre><code>&#60;nav class="site-navigation"&#62;
+    &#60;ul&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;
+</code></pre>
+
+            <h3 id="mobilemenu">Responsive Mobile Menu Option</h3>
+
+            <p>
+              For small screens, this base comes with a toggle-nav option with a three-bar navicon as
+              a menu button. Javascript is used to toggle the menu on/off by
+              changing the value of a data-attribute. CSS is then
+              used to control the appearance of the menu.
+            </p>
+
+            <img src="img/site-navigation-mobile.png" alt="Visual of Mobile Menu Toggle" width="2400" height="1800">
+
+            <p>Mobile menu HTML:</p>
+
+            <pre><code>&#60;nav class="site-navigation"&#62;
+    <strong>&#60;button class="menu-button navicon"&#62;Menu&#60;/button&#62;</strong>
+    &#60;ul class="nav"&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="#"&#62;Nav Item&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;
+</code></pre>
+            <p>Mobile menu Javascript:</p>
+            <pre><code>
+  //TOGGLE MENU NAV VIA ADDING/REMOVING A DATA-ATTRIBUTE
+  const menubutton = document.querySelector('.menu-button');
+  const menunav = document.querySelector('.toggle-nav'); 
+  menubutton.addEventListener('click', function() {
+    if (menunav.getAttribute('data-navstate') === 'open') {
+        menunav.setAttribute('data-navstate', 'closed');
+    } else {
+        menunav.setAttribute('data-navstate', 'open');
+    }
+  }); 
+</code></pre>
+          </section>
         </div>
-        <div class="row">
-          <div class="one-half column">
-            <h3>SiteBase Gulp</h3>
-            <p><em>NPM Gulp Variation</em></p>
-            <p>
-              Similar to the Sass variation, but using a CLI-based workflow for all
-              build tools. NPM for package management. Gulp for tasks. Github
-              for version control.
-            </p>
-            <p>
-              <a class="button" href="https://github.com/kccnma/sitebase3-npmgulp">SiteBase Gulp on Github</a>
-              <!-- <a class="button alt" href="lessons.html#sitebase3">3.0 Lessons</a> -->
-            </p>
-          </div>
-          <div class="one-half column">
-            <h3>SiteBase Parcel</h3>
-            <p><em>Parcel Variation</em></p>
-            <p>
-              Similar to the Gulp variation, but using Parcel to compile and bundle the code with zero configuration.
-            </p>
-            <p>
-              <a class="button" href="https://github.com/kccnma/sitebase4-parcel">SiteBase Parcel on Github</a>
-              <!-- <a class="button alt" href="lessons.html#sitebase3">3.0 Lessons</a> -->
-            </p>
-          </div>
-        </div>
+
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav group">
-          <li><a href="#">Home</a></li>
-          <li><a href="lessons.html">Get Started</a></li>
-          <li><a href="documentation.html">Documentation</a></li>
-          <li><a href="examples.html">Examples</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>SiteBase</h3>
+          <p>SiteBase is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke static
+            websites. It was created for students learning the fundamentals of front-end web development. It can be used
+            as a blank starter for custom websites, or as a hands-on learning experience by going through a series of
+            lessons and exercises manually recoding it from scratch.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="lessons.html">Lessons</a></li>
+              <li class="selected">
+                <a href="index.html">Documentation</a>
+              </li>
+              <li><a href="examples.html">Examples</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- MAIN JS -->

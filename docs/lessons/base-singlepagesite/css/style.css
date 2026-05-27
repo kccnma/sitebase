@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-logo (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+                #...
+--------------------------------- */
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL VARIABLES ----- */
+:root {
+  /* BASE COLORS */
+  --color-body-background: white;
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-text-headings: black;
+  --color-links: #003366;
+  --color-links-hover: #000033;
+  /* BASE TYPOGRAPHY */
+  --font-body: system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: system-ui, Helvetica, Arial, sans-serif;
+}
+
+/* GLOBAL RESETS */
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* {
+  box-sizing: border-box;
+}
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body {
+  margin: 0;
+}
+
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* GLOBAL COLORS */
+body {
+  /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+  background-color: var(--color-body-background);
+  /* SET THE COLOR OF THE MAIN BODY TEXT */
+  color: var(--color-text-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+}
+
+a {
+  /* SET THE COLOR OF ALL TEXT LINKS */
+  color: var(--color-links);
+}
+a:hover {
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+  color: var(--color-links-hover);
+}
+
+/* ----------------------------- */
+/* ------ BASE CONTENT --------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL TYPOGRAPHY ----- */
+/* # GLOBAL BODY FONT SETTINGS */
+body {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
+  font-family: var(--font-body);
+  /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
+  /* 100% = 16px */
+  font-size: 100%;
+  /* SET THE DEFAULT LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+  line-height: 1.4;
+}
+
+/* # GLOBAL HEADING SETTINGS */
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
+  font-family: var(--font-headings);
+  /* SET THE DEFAUT MARGINS ALL HEADINGS */
+  margin: 1em 0 0.25em 0;
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+  /* REDUCE TOP MARGIN IF FIRST CHILD */
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0.5em;
+}
+
+/* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
+   (e.g. a "Traditional" Scale) */
+h1 {
+  /* 48px / 16px = 3em */
+  font-size: 3em;
+  line-height: 1;
+}
+
+h2 {
+  /* 36px / 16px = 2.25em */
+  font-size: 2.25em;
+  line-height: 1.1;
+}
+
+h3 {
+  /* 24px / 16px = 1.5em */
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+h4 {
+  /* 21px / 16px = 1.3125em */
+  font-size: 1.3125em;
+  line-height: 1.3;
+}
+
+h5 {
+  /* 18px / 16px = 1.125em */
+  font-size: 1.125em;
+  line-height: 1.4;
+}
+
+h6 {
+  /* 16px / 16px = 1em */
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* # GLOBAL PARAGRAPH SETTINGS */
+p {
+  /* SET THE DEFAUT MARGINS ALL PARAGRAPHS */
+  margin: 0.5em 0;
+  /* SET THE NUMBER OF CHARACTERS PER LINE */
+  max-width: 65ch;
+  /* WIDOW FIXER */
+  text-wrap: pretty;
+}
+
+/* TEXT CENTERING HELPER CLASS */
+.text-centered {
+  text-align: center;
+}
+
+/* CENTER PARAGRAPHS WITH THE TEXT-CENTERED CLASS */
+p.text-centered,
+.text-centered p {
+  margin-inline: auto;
+}
+
+/* ----- #MEDIA (Images, Videos, etc) -----  */
+/* #IMAGES - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* #VIDEO - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- #COMPONENTS -----  */
+/* #BUTTONS */
+button,
+a.button {
+  display: inline-block;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
+  color: white;
+  padding: 0.75em 1em;
+  border-radius: 0.32em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+}
+
+button.alt,
+a.button.alt {
+  background-color: transparent;
+  border: 1px solid var(--color-links);
+  color: var(--color-links);
+}
+
+button:hover,
+a.button:hover {
+  background-color: var(--color-links-hover);
+  color: #fff;
+  border-color: var(--color-links-hover);
+  text-decoration: none;
+}
+
+/* ----------------------------- */
+/* --------- LAYOUT ------------ */
+/* ----------------------------- */
+/* ----- SITE-WIDE CONTAINER -----  */
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1em;
+}
+
+/* ----- RESPONSIVE TYPE -----  */
+/* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
+/* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
+body {
+  font-size: 87.5%;
+}
+
+/* MIDSIZE / LAPTOP SCREENS = 16px */
+@media (min-width: 1050px) {
+  body {
+    font-size: 100%;
+  }
+}
+/* LARGE / DESKTOP SCREENS = 18px */
+@media (min-width: 1250px) {
+  body {
+    font-size: 112.5%;
+  }
+}
+/* ----- GRID SYSTEM -----  */
+/* A SIMPLE SEMANTIC GRID USING CSS FLEX BOX */
+.row {
+  /* SET THE GAP BETWEEN COLUMNS */
+  --gridgap: 4%;
+}
+
+/* GIVE EACH ROW SOME TOP AND BOTTOM MARGINS VIA THE CHILD COLUMNS */
+.row > * {
+  margin-block: calc(var(--gridgap) * 0.5);
+}
+
+/* ENABLE THE GRID LAYOUT FOR MEDIUM SCREENS AND UP */
+@media (width >= 768px) {
+  .row {
+    display: flex;
+    gap: var(--gridgap);
+  }
+
+  /* SIMPLE SEMANTIC COLUMN WIDTHS */
+  .row .one-whole {
+    width: 100%;
+  }
+
+  .row .one-half {
+    width: calc(50% - var(--gridgap) * 0.5);
+  }
+
+  .row .one-third {
+    width: calc(33.3333% - var(--gridgap) * 0.6666);
+  }
+
+  .row .two-thirds {
+    width: calc(66.6666% - var(--gridgap) * 0.3333);
+  }
+
+  .row .one-fourth {
+    width: calc(25% - var(--gridgap) * 0.75);
+  }
+
+  .row .three-fourths {
+    width: calc(75% - var(--gridgap) * 0.25);
+  }
+
+  /* GRID SPECIFIC HELPER CLASSES  */
+  /* SWAPPED COLUMNS */
+  .row.swapped {
+    flex-direction: row-reverse;
+  }
+
+  /* CENTERED COLUMNS */
+  .row .centered {
+    margin-inline: auto;
+  }
+
+  .row.centered {
+    justify-content: center;
+  }
+}
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .row > * {
+  background-color: #ddd;
+  padding: 1em;
+  text-align: center;
+}
+
+/* ----------------------------- */
+/* ----- SITE STRUCTURE -------- */
+/* ----------------------------- */
+/* Site Header */
+.site-header {
+  background-color: transparent;
+  padding: 0.5em 1em;
+}
+@media (width >= 768px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-start: 0.75em;
+  }
+}
+.site-header a {
+  color: var(--color-text-body);
+  text-decoration: none;
+}
+.site-header a:hover {
+  color: var(--color-links-hover);
+}
+.site-header a.button,
+.site-header .site-navigation a.button {
+  color: white;
+}
+
+/* Site Logo */
+.site-logo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.site-logo a img,
+.site-logo a svg {
+  display: block;
+}
+.site-logo h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  color: var(--color-text-body);
+  padding: 0.5em 0 0.4em 0;
+}
+.site-logo h1 a {
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Site Footer */
+.site-footer {
+  background: rgba(0, 0, 0, 0.05);
+  padding-block: 4em;
+}
+
+/* Main Site Section (Main Content Area) */
+/* All Sections */
+section {
+  padding: 3em 0;
+}
+
+/* Hero Sections */
+.hero {
+  background: #dddddd;
+  padding: 4em 1em;
+}
+.hero h1,
+.hero h2 {
+  font-size: 4em;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+}
+.hero h1,
+.hero h2,
+.hero p {
+  text-wrap: balance;
+}
+.hero.full-width {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ----- SITE NAVIGATION ------ */
+/* SITE-HEADER SITE-NAVIGATION */
+.site-header {
+  /* RESET THE LIST DEFAULT STYLING */
+  /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
+  /* STYLE NAV LINKS DIFFERENTLY THAN DEFAULT INLINE LINKS*/
+  /* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+}
+.site-header .site-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+@media (width >= 768px) {
+  .site-header .site-navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+}
+.site-header .site-navigation a {
+  text-decoration: none;
+  color: var(--color-text-headings);
+  padding: 0.5em 1em;
+  display: block;
+}
+.site-header .site-navigation .menu-button {
+  display: none;
+}
+
+/* SITE-FOOTER  SITE-NAVIGATION */
+.site-footer {
+  /* RESET THE LIST DEFAULT STYLING */
+}
+.site-footer .site-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* TOGGLE NAV */
+@media (width < 768px) {
+  .site-header.toggle-nav {
+    /* Align the inline-block menu button to the right on small screens */
+    text-align: right;
+  }
+  .site-header.toggle-nav .site-logo {
+    /* Position the logo absolutely to the left of the nav (intentionally breaking normal flow) */
+    position: absolute;
+  }
+  .site-header.toggle-nav .site-navigation ul li a {
+    /* Increase the padding of nav links on small screens (thumb friendly) */
+    padding: 0.75em;
+  }
+  .site-header.toggle-nav li a:hover {
+    /* Style the hover/touch state of nav links on small screens */
+    color: #fff;
+    background: #003366;
+  }
+  .site-header.toggle-nav .menu-button {
+    /* SHOW THE MENU BUTTON if inside of toggle-nav */
+    display: inline-block;
+    margin: 0.6em 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-text-headings);
+  }
+  .site-header.toggle-nav .menu-button::selection {
+    background-color: transparent;
+  }
+  .site-header.toggle-nav .menu-button.navicon {
+    color: transparent;
+  }
+  .site-header.toggle-nav .menu-button.navicon::after {
+    color: var(--color-text-body);
+    content: "☰";
+    font-size: 2em;
+    margin-top: -0.1em;
+    margin-bottom: 0.1em;
+    margin-left: 0;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    display: inline-block;
+  }
+  .site-header.toggle-nav[data-navstate=open] .menu-button.navicon::after {
+    content: "✕";
+    font-size: 1.6em;
+    margin-top: 0.2em;
+    margin-right: 0.1em;
+  }
+  .site-header.toggle-nav ul {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .site-header.toggle-nav[data-navstate=open] ul {
+    max-height: none;
+    padding: 1em 0;
+  }
+  .site-header.toggle-nav[data-navstate=open] ul ul {
+    padding: 0;
+  }
+}
+
+/* Animated Toggle-Nav Menu */
+@media (width < 768px) {
+  .toggle-nav.animated ul {
+    transition: all 0.4s ease-out;
+  }
+}
+/* SUB SECTION STYLING */
+.subsection-title {
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.subsection-title::after {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #ccc;
+  width: 50px;
+  margin-inline: auto;
+  margin-block: 1em 3em;
+}

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Site Name | Style Guide</title>
+    <meta name="description"
+        content="A style Guide example for SiteBase, minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- MAIN CSS FILE -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="site-header toggle-nav">
+        <div class="site-logo">
+            <a href="index.html"><img src="img/placeholder-logo-500x500.svg" alt="Placeholder Logo" width="45"
+                    height="45"></a>
+            <h1><a href="index.html">Site Name</a></h1>
+        </div>
+        <nav class="site-navigation">
+            <button class="menu-button navicon"><span class="hidden">Menu</span></button>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="selected">
+                    <a href="pages.html">Pages</a>
+                    <ul>
+                        <li><a href="page.html">Sub Page</a></li>
+                        <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
+                        <li><a href="post.html">Sample Post</a></li>
+                        <li><a href="styleguide.html">Sample Style Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <section class="hero text-centered">
+            <h1>Sample Style Guide</h1>
+            <p>This is an example of a style guide sub page.</p>
+        </section>
+
+        <section>
+            <div class="container">
+
+                <h2 class="subheader">Colors</h2>
+
+                <style>
+                    .color-chips,
+                    .color-chips li {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                    }
+
+                    .color-chips {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 1em;
+                        text-align: center;
+                    }
+
+                    .color-chips span {
+                        padding: 2em;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        display: block;
+                    }
+                </style>
+                <ul class="color-chips">
+                    <li><span style="background-color: #888; color: white;">#888</span> Brand</li>
+                    <li><span style="background-color: #333; color: white;">#333</span> Text</li>
+                    <li><span style="background-color: #036; color: white;">#036</span> Links</li>
+                    <li><span style="background-color: #003; color: white;">#003</span> Link Hovers</li>
+                    <li><span style="background-color: #ddd; color: black;">#ddd</span> Hero BG</li>
+                    <!-- <li><span style="background-color: #000; color: white;">#000</span> Black</li>
+                    <li><span style="background-color: #fff; color: black;">#fff</span> White</li> -->
+                </ul>
+
+                <hr />
+
+                <h2 class="subheader">Typography</h2>
+
+                <h3 class="subheader">Headings</h3>
+                <h1>This is a Heading 1</h1>
+                <h2>This is a Heading 2</h2>
+                <h3>This is a Heading 3</h3>
+                <h4>This is a Heading 4</h4>
+                <h5>This is a Heading 5</h5>
+                <h6>This is a Heading 6</h6>
+
+                <hr />
+
+                <h3 class="subheader">Paragraphs</h3>
+                <p>
+                    This is a default paragraph. Here is <strong>bold text</strong> and <em>italic text</em>. Here is a
+                    <a href="#">text
+                        link</a>. Lorem ipsum dolor
+                    sit
+                    amet, consectetur adipiscing elit. Duis ut
+                    fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris
+                    elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id
+                    elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis
+                    orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla
+                    porttitor sagittis.
+                </p>
+
+                <p>
+                    Suspendisse pulvinar bibendum laoreet. Suspendisse eget dignissim
+                    risus. Cras eget sodales enim. Phasellus accumsan dui metus, quis
+                    vulputate turpis congue at. Praesent rutrum consequat rhoncus.
+                    Maecenas adipiscing justo vitae massa porta pretium. In egestas orci
+                    vehicula, tempus lorem ut, facilisis metus.
+                </p>
+
+                <p>
+                    Vivamus eu mollis velit. Maecenas id massa libero. Aliquam accumsan
+                    mauris vulputate purus volutpat vestibulum. Phasellus sed tellus id
+                    tortor ornare molestie. Quisque massa sapien, elementum sed tortor
+                    vitae, suscipit congue massa. Curabitur tempor arcu eget leo
+                    placerat, a porta augue pharetra. Nulla velit nibh, laoreet at
+                    hendrerit sit amet, adipiscing eget dolor.
+                </p>
+
+                <h4 class="subheader">Full-Width Paragraphs</h4>
+                <p class="full-width">
+                    This is a full-width paragraph, which is not the default. Default paragraphs have a max-width in
+                    order to limit the number of characters per line for good horizontal measure. However, if needed,
+                    you can remove the max-width with a <code>class="full-width"</code> helper class on any paragraph.
+                    Lorem ipsum dolor
+                    sit
+                    amet, consectetur adipiscing elit. Duis ut
+                    fringilla ipsum, sed bibendum augue. Nullam euismod nec mauris
+                    elementum porta. Sed varius nisl eu lobortis fringilla. Morbi id
+                    elit sollicitudin, venenatis lacus id, cursus quam. Aliquam mollis
+                    orci vel enim fermentum adipiscing. Duis facilisis lorem a nulla
+                    porttitor sagittis.
+                </p>
+
+                <hr />
+
+                <h3 class="subheader">Lists</h3>
+
+                <h4>Unordered List:</h4>
+                <ul>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                    <li>
+                        Nested Unordered List:
+                        <ul>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Nested Ordered List:
+                        <ol>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ol>
+                    </li>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                </ul>
+
+                <h4>Ordered List:</h4>
+                <ol>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                    <li>
+                        Nested Unordered List:
+                        <ul>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Nested Ordered List:
+                        <ol>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ol>
+                    </li>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                </ol>
+
+                <hr />
+
+                <h3 class="subheader">Block Quotes</h3>
+
+                <blockquote>
+                    This is a blockquote. Donec sed rhoncus massa. Suspendisse rutrum
+                    viverra felis. Vestibulum augue lacus, ullamcorper non suscipit nec,
+                    ornare et mauris. Proin mattis fermentum nibh quis gravida.
+                    <cite>Citation Source</cite>
+                </blockquote>
+
+                <hr />
+
+                <h3 class="subheader">Buttons</h3>
+                <a href="#" class="button">Default Link Button</a>
+                <a href="#" class="button alt">Alt Link Button</a>
+                <button>Default Button Element</button>
+
+                <hr />
+
+                <h3 class="subheader">Responsive Media</h3>
+
+                <h4 class="subheader">Responsive Images:</h4>
+                <img src="img/placeholder-3x1.gif" alt="placeholder" width="1500" height="500">
+
+                <h4 class="subheader">Responsive Videos:</h4>
+                <div class="video">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/ru_mj49u_Xc?rel=0&amp;showinfo=0" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="container">
+            <hr />
+        </div>
+
+        <section class="grid-demo">
+            <div class="container">
+                <h2 class="subheader">Layout</h2>
+
+                <h3 class="subheader">Grid System</h3>
+
+                <div class="row">
+                    <div class="one-whole column">
+                        <p>One Whole Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-half column">
+                        <p>One-half Column</p>
+                    </div>
+                    <div class="one-half column">
+                        <p>One-half Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-third column">
+                        <p>One-third Column</p>
+                    </div>
+                    <div class="two-thirds column">
+                        <p>Two-thirds Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                    <div class="one-fourth column">
+                        <p>One-fourth Column</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="three-fourths column push-one-fourth">
+                        <p>Three-Fourths Column Pushed</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="two-thirds column push-one-third">
+                        <p>Two-thirds Column Pushed</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-third column centered">
+                        <p>One-third Column Centered</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="one-half column centered">
+                        <p>One-half Column Centered</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="two-thirds column centered">
+                        <p>Two-thirds Column Centered</p>
+                    </div>
+                </div>
+
+
+                <hr />
+
+                <h3 class="subheader">Grid System Outside of a Container</h3>
+
+            </div>
+
+            <div class="row">
+                <div class="one-whole column">
+                    <p>One Whole Column</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="one-half column">
+                    <p>One-half Column</p>
+                </div>
+                <div class="one-half column">
+                    <p>One-half Column</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="one-third column">
+                    <p>One-third Column</p>
+                </div>
+                <div class="one-third column">
+                    <p>One-third Column</p>
+                </div>
+                <div class="one-third column">
+                    <p>One-third Column</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="one-third column">
+                    <p>One-third Column</p>
+                </div>
+                <div class="two-thirds column">
+                    <p>Two-thirds Column</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="one-fourth column">
+                    <p>One-fourth Column</p>
+                </div>
+                <div class="one-fourth column">
+                    <p>One-fourth Column</p>
+                </div>
+                <div class="one-fourth column">
+                    <p>One-fourth Column</p>
+                </div>
+                <div class="one-fourth column">
+                    <p>One-fourth Column</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="three-fourths column push-one-fourth">
+                    <p>Three-Fourths Column Pushed</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="two-thirds column push-one-third">
+                    <p>Two-thirds Column Pushed</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="one-third column centered">
+                    <p>One-third Column Centered</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="one-half column centered">
+                    <p>One-half Column Centered</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="two-thirds column centered">
+                    <p>Two-thirds Column Centered</p>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="container">
+            <hr>
+            <h3 class="subheader">Section w/ a Light Color Background</h3>
+        </div>
+
+        <section class="superlightgrey">
+            <div class="container">
+                <div class="row">
+                    <div class="one-whole column text-centered">
+                        <h2>Heading 2</h2>
+                        <blockquote>
+                            This is a blockquote. Donec sed rhoncus massa. Suspendisse rutrum viverra felis. Vestibulum
+                            augue lacus, ullamcorper non suscipit nec, ornare et mauris. Proin mattis fermentum nibh
+                            quis gravida.
+                            <cite>Citation Source</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <hr>
+            <h3 class="subheader">Section w/ a Dark Color Background</h3>
+        </div>
+
+        <section class="darkgrey">
+            <div class="container">
+                <div class="row">
+                    <div class="one-whole column text-centered">
+                        <h2>Heading 2</h2>
+                        <blockquote>
+                            This is a blockquote. Donec sed rhoncus massa. Suspendisse rutrum viverra felis. Vestibulum
+                            augue lacus, ullamcorper non suscipit nec, ornare et mauris. Proin mattis fermentum nibh
+                            quis gravida.
+                            <cite>Citation Source</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+                <hr>
+
+                <h3 class="subheader">Grid List of Media Objects w/ Thumb Images</h3>
+                <ul class="thumblist-grid">
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                    <li>
+                        <a href="product-detail.html"><img src="img/placeholder-1x1.jpg" alt="placeholder" width="1500"
+                                height="1500"></a>
+                        <h5><a href="product-detail.html">Title</a></h5>
+                        <p>Brief Description ...</p>
+                        <p><a class="button" href="product-detail.html">Button</a></p>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+                <hr>
+
+                <h3 class="subheader">Two-column List (e.g. Features) Section</h3>
+
+                <br>
+
+                <div class="row">
+                    <div class="two-thirds column centered">
+                        <div class="row">
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                            <div class="one-half column">
+                                <img src="img/placeholder-80x80.gif" class="float-left" alt="placeholder" width="80"
+                                    height="80">
+                                <h4>Heading 4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="two-thirds">
+                    <h3>SiteBase</h3>
+                    <p>SiteBase is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke
+                        static
+                        websites. It was created for students learning the fundamentals of front-end web development. It
+                        can be used
+                        as a blank starter for custom websites, or as a hands-on learning experience by going through a
+                        series of
+                        lessons and exercises manually recoding it from scratch.</p>
+                </div>
+
+                <div class="one-third">
+                    <h3>Pages</h3>
+                    <nav class="site-navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pages.html">List of Sub Pages</a>
+                                <ul>
+                                    <li><a href="page.html">Standard Sub Page</a></li>
+                                    <li><a href="page-sidebar.html">Sub Page w/ Sidebar</a></li>
+                                    <li><a href="post.html">Post Example</a></li>
+                                    <li><a href="styleguide.html">Style Guide Example</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

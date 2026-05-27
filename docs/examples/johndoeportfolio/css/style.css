@@ -343,20 +343,20 @@ body.demo:after {
   border-bottom: none; }
 
 /* Site Branding */
-.site-id {
+.site-logo {
   text-align: center; }
-  .site-id h1 {
+  .site-logo h1 {
     font-size: 1.5em;
     font-weight: normal;
     font-style: normal;
     margin: 0;
     color: #666;
     padding: .5em 0 .4em 0; }
-    .site-id h1 a {
+    .site-logo h1 a {
       font-weight: bold;
       display: inline-block; }
   @media (min-width: 768px) {
-    .site-id {
+    .site-logo {
       float: left; } }
 
 /* Footer Only */
@@ -523,7 +523,7 @@ section.darkgrey {
     content: '\2715'; }
 
 /* Toggle-Nav */
-.toggle-nav .site-id {
+.toggle-nav .site-logo {
   float: left; }
 
 .toggle-nav .menu,
@@ -612,7 +612,7 @@ section.darkgrey {
 		#BODY
 		#CONTAINER
     #NAVIGATION
-        # site-id
+        # site-logo
         #SITE-NAVIGATION
     #CONTENT
         #SECTIONS
@@ -689,15 +689,15 @@ section.red .sectionhead:after {
     background: rgba(255,255,255,1);
 }
 
-.site-id a {
+.site-logo a {
     display: inline-block;
 }
 
-.site-id img {
+.site-logo img {
     width: 2em;
     margin: .4em .5em 0 0;
 }
-.site-id h1 {
+.site-logo h1 {
     display: inline-block;
     padding: 0;
     vertical-align: top;
@@ -705,7 +705,7 @@ section.red .sectionhead:after {
     font-size: 1em;
     font-weight: 400;
 }
-.site-id h1 a {
+.site-logo h1 a {
     font-weight: inherit;
 }
 

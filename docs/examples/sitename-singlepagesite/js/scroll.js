@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const siteheaderfixed = haveClass(siteheader, "sticky");
     var offset;
     if (siteheaderfixed) {
-      offset = document.querySelector(".site-id").offsetHeight + 15;
+      offset = document.querySelector(".site-logo").offsetHeight + 15;
     } else {
       offset = 0;
     }

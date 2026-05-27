@@ -1,31 +1,98 @@
-@use '../variables' as *;
+/* TO MAKE ANY ELEMENT FULL WIDTH */
+.full-width {
+  max-width: none;
+  width: 100%;
+}
 
-/* #CODE  */
+/* TO CENTER ANY ELEMENT HORIZONTALLY */
+.horiz-center {
+  margin-inline: auto;
+}
+
+/* TO HIDE ELEMENTS VISUALLY, BUT NOT FROM SCREEN READERS */
+.hide,
+.hidden,
+.screen-reader-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* EYEBROWS */
+.eyebrow {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* SECTION TITLES */
+.section-title {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  padding-block-start: 3em;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 50px;
+    border: 4px solid #ccc;
+    margin: 1em auto;
+  }
+}
+
+
+/* # SUBHEADERS */
+.subheader {
+  color: $text-color-light;
+  margin-top: 1em;
+  font-style: normal;
+  font-weight: normal;
+  clear: both;
+}
+
+/* HORIZONTAL RULES */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 3em 0;
+}
+
+/* #CODE and #PRE STYLING */
 pre,
 code {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", monospace;
-  font-size: 0.875em;
 }
 
 pre {
   margin: 1.5em 0 3em 0;
   line-height: 1.2em;
+  font-size: 0.875em;
 }
 
 code {
+  padding-inline: 0.2em;
+}
+
+pre code {
   display: block;
   padding: 1em 1.875em;
   background: #f9f9f9;
-
   border: 1px solid $border-color;
   border-left: 2px solid #ccc;
   overflow-x: auto;
 }
 
-/* BLOCKED LOAD */
+
+/* BLOCKED DEV HELPER */
+/* Use the optional class="blocked" dev helper class to see elements as grey blocks while developing your website. */
 
 .blocked {
+
   body,
   h1,
   h2,
@@ -37,8 +104,8 @@ code {
   a,
   .site-header a,
   .site-footer a,
-  .site-id h1,
-  .site-id h1 a,
+  .site-logo h1,
+  .site-logo h1 a,
   li,
   blockquote,
   a.button,

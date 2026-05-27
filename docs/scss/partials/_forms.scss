@@ -1,7 +1,4 @@
-@use '../variables' as *;
-
 /* FORMS */
-
 form {
 	margin: 1.75em 0;
 }
@@ -12,7 +9,7 @@ form label {
 
 form input,
 form textarea {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: var(--font-body);
 	font-size: 1em;
 	line-height: 1.15em;
 	display: block;
@@ -32,20 +29,17 @@ form input[type=button],
 form input[type=submit],
 form input[type=reset] {
 	width: auto;
-
-	background-color: $link-color;
-	border: 1px solid $link-color;
+	background-color: var(--color-links);
+	border: 1px solid var(--color-links);
 	color: #fff;
 	padding: .75em 1em;
-	-webkit-border-radius: .32em;
-	-moz-border-radius: .32em;
 	border-radius: .32em;
 	margin-top: .5em;
 	margin-bottom: .5em;
-	
+
 	&:hover {
-		background-color: $link-color-dark;
-		border-color: $link-color-dark;
+		background-color: var(--color-links-hover);
+		border-color: var(--color-links-hover);
 	}
 
 }
