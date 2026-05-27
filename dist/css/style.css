@@ -1101,9 +1101,6 @@ article .date + p {
     cursor: pointer;
     color: var(--color-text-headings);
   }
-  .site-header.toggle-nav .menu-button::-moz-selection {
-    background-color: transparent;
-  }
   .site-header.toggle-nav .menu-button::selection {
     background-color: transparent;
   }

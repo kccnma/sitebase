@@ -54,11 +54,10 @@ $ npm run dev
 ## Known Issues
 - Legacy SiteBase1 Accordion UI components are dated (need to be updated to details summary elements)
 - SASS/SCSS Related
-  - Some css comments are awkward due to native css nesting 
-  - Some vendor prefixed propoerties are still appearing and need to be removed
+  - Some css comments are awkward due to how gulpsass handles native css nesting 
 
 ## Road Map
 - Update all SiteBase Video Lessons
 - Add SiteBase Logo as an Image/SVG to the Main/Docs Site Header
 - Convert more sass variables > css custom properties (eg sizing units, border styles, etc)
-- Remove sass compiler step once all css has been refactored to use modern css 
+- Consider removing gulpsass once all css has been updated and refactored to use modern css (i.e. only use it to combine partials) 

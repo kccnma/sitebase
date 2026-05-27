@@ -59,10 +59,10 @@ function html() {
 function css() {
   return src('src/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      // overrideBrowserslist: ['last 1 version', '> 1%', 'IE 10'],
-      cascade: false
-    }))
+    // .pipe(autoprefixer({
+    //   // overrideBrowserslist: ['last 1 version', '> 1%', 'IE 10'],
+    //   cascade: false
+    // }))
     .pipe(dest('dist/css'))
     // Stream changes to all browsers
     .pipe(browserSync.stream());
